@@ -137,7 +137,7 @@ the_post(); ?>
     }
 
 
-
+    .test{display:flex;}
 
 
 
