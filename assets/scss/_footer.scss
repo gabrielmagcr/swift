@@ -1,0 +1,59 @@
+*, *:before, *:after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#footer {
+    padding: 2rem;
+    background: $blue;
+    z-index: 100;
+    position: relative;
+}
+
+.ft-logo {
+    display: block;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) translateY(-1rem);
+    position: absolute;
+    z-index: 5;
+    height: 69px;
+}
+
+#ft-nav {
+    position: relative;
+
+    p {
+        color: #fff;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: .8rem;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        justify-content: center;
+
+        li {
+
+            // padding: 0 1%;
+            a {
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: $bourton;
+                display: inline-block;
+                transition: all 0.3s ease-in-out;
+                font-weight: 200;
+                // padding: 0 10px;
+
+                &:hover {
+                    color: $gold;
+                }
+            }
+
+        }
+    }
+}

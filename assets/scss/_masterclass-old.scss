@@ -1,0 +1,284 @@
+#masterclass-hero {
+    height: 560px;
+    .action-item {
+        height: 100%;
+        position: relative;
+        width: 20%;
+        background-size: cover;
+        transition: all 0.8s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        float: left;
+        cursor: pointer;
+        h2 {
+            color: #fff;
+            text-align: center;
+            font-family: $ts1;
+            font-size: 3rem;
+            transition: all 0.3s ease-in-out;
+            text-shadow: 2px 2px 8px #444;
+            span {
+                font-family: $ts1;
+                font-size: 1rem;
+            }
+        }
+        .overlay {
+            z-index: 2;
+        }
+        .wrap {
+            z-index: 3;
+        }
+        .vid-btn {
+            width: 87px;
+            height: 87px;
+            background: url('/wp-content/themes/swift/assets/img/mm-video-btn.png') no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -43.5px;
+            margin-left: -43.5px;
+            z-index: 6;
+            transition: all 0.3s ease-in-out;
+            display: none;
+            &:hover {
+                opacity: .8;
+            }
+        }
+        &.open {
+            width: 80%;
+            // background-position: top center;
+            h2 {
+                font-size: 5rem;
+                font-family: $ts4;
+            }
+            span {
+                font-size: 3rem;
+            }
+            .vid-btn {
+                display: block;
+            }
+        }
+    }
+}
+
+
+#mc-butcher {
+    background-image: url('/wp-content/themes/swift/assets/img/butcher-bg.jpg');
+}
+
+#mc-cook {
+    background-image: url('/wp-content/themes/swift/assets/img/cook-bg.jpg');
+}
+
+#know-your-cuts {
+    padding: 60px 0;
+    h2 {
+        color: #fff;
+        text-align: center;
+        font-family: $ts1;
+        font-size: 3rem;
+        text-shadow: 2px 2px #000;
+    }
+}
+
+#know-your-cuts-beef {
+    padding: 10px 0 40px 0;
+    h2 {
+        color: #fff;
+        text-align: center;
+        font-family: $ts1;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        text-shadow: 2px 2px #000;
+    }
+}
+
+.cut-desc {
+    h4 {
+        color: $gold;
+        text-decoration: underline;
+        font-size: 2rem;
+    }
+    p {
+        color: #fff;
+        font-family: $helv;
+        margin-bottom: 45px;
+        line-height: 2;
+    }
+    
+}
+
+.cuts-lm {
+    background: $gold;
+    display: table;
+    color: $blue;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background: $blue;
+        color: $gold;
+        text-decoration: none;
+    }
+}
+
+.cut-item .cuts-lm:hover {
+    background: $red;
+    color: #fff;
+}
+
+#cut-of-the-month {
+    // background: #fff url('/wp-content/themes/swift/assets/img/cuts-bg.jpg') no-repeat;
+    background: #fff;
+    padding: 3rem 0;
+}
+
+#the-pig {
+    img {
+        width: 100%;
+    }
+}
+
+.path-item {
+    cursor: pointer;
+}
+
+// .com-img {
+//     position: relative;
+//     img {
+//         z-index: 10;
+//         position: absolute;
+//         right: -2rem;
+//         top: 1.5rem;
+//     }
+// }
+
+.com-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.com-img {
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        margin-top: 10%;
+    }
+}
+
+.cut-item {
+    display: none;
+    transition: all 0.3s ease-in-out;
+    &.cuts-shown {
+       display: block;
+    }
+}
+
+.cls-1 {
+    fill: #fff;
+    transition: all 0.3s ease-in-out;
+    &.filled {
+        fill: $gold;
+    }
+    &.filled1 {
+        fill: $red;
+    }
+}
+
+.com-content {
+    background: #fff;
+    padding: 40px 0 40px 40px;
+    position: relative;
+    h3 {
+        text-decoration: underline;
+    }
+    p {
+        font-family: $helv;
+        margin-bottom: 25px;
+    }
+}
+
+.nl-item {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+#next-level {
+    background: #fff url('/wp-content/themes/swift/assets/img/paper-bg.jpg') top center no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    h3 {
+        text-align: center;
+        display: block;
+        font-size: 2.6rem;
+        margin-bottom: 120px;
+    }
+}
+
+.tip-content {
+    background: #fff;
+    padding: 3rem 2rem 2rem;
+    z-index: 2;
+    h4 {
+        text-align: center;
+    }
+    p {
+        font-family: $helv;
+    }
+}
+
+.tip-top {
+    position: absolute;
+    z-index: 5;
+    margin-top: -40px;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.tip-box {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    padding: 1rem;
+    color: #fff;
+    background: #c82a00;
+    margin: 0 auto -2rem auto;
+    z-index: 3;
+    span {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: -5px;
+        span {
+            font-size: 2.4rem;
+            margin-top: -10px;
+        }
+    }
+}
+
+.cow-path-item, .path-item {
+    cursor: pointer;
+    fill: #fff;
+    transition: all 0.3s ease-in-out;
+    &.filled {
+        fill: $red;
+    }
+    &.filled1 {
+        fill: $gold;
+    }
+    &.filled2 {
+        fill: $red;
+    }
+}

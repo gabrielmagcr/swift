@@ -1,0 +1,121 @@
+$primary: #28334a;
+$blue: #28334a;
+$gold: #ffb500;
+$red: #C80220;
+$gray: #616263;
+$gray-light: #ebebeb;
+$bourton: 'BourtonBase';
+$blanch: 'BlanchCaps';
+$ts4: 'TrendSansFour';
+$ts1: 'TrendSansOne';
+$rw: 'Rosewood';
+$helv: 'Helvetica-Nueue', Arial, Helvetica, sans-serif;
+$helvlit: 'HelveticaNeueLT', Arial, Helvetica, sans-serif;
+$bezier-ease-out: cubic-bezier(0.19, 1, 0.22, 1);
+$bezier-ease-in: cubic-bezier(1, 0.22, 1, 0.19);
+
+
+$ziet-bezier-out: cubic-bezier(.6, .04, .98, .335); // .15s
+$ziet-bezier-in: cubic-bezier(.05, .86, .47, 1.02); //.15s
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-4rem) translateY(-50%);
+    }
+
+    100% {
+        opacity: 100;
+        transform: translateX(0) translateY(-50%);
+    }
+}
+
+.bg-gold {
+    background-color: $gold!important;
+}
+
+.bg-red {
+    background-color: $red!important;
+}
+
+.bg-blue {
+    background-color: $blue!important;
+}
+
+.text-gold { 
+    color: $gold!important;
+}
+
+.text-red { 
+    color: $red!important;
+}
+
+.text-white {
+    color: $white!important;
+}
+
+.text-blue { 
+    color: $blue!important;
+}
+
+.text-gray {
+    color: $gray!important;
+}
+
+.text-bourton {
+    font-family: $bourton!important;
+}
+
+.text-blanch {
+    font-family: $blanch!important;
+}
+
+.text-rosewood {
+    font-family: $rw!important;
+}
+
+.text-trend-one {
+    font-family: $ts1!important;
+    text-transform: uppercase;
+}
+
+.text-trend-four {
+    font-family: $ts4!important;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+}
+
+.text-default {
+    font-family: $helv;
+}
+
+.text-default-lt {
+    font-family: $helvlit;
+}
+
+.btn.btn-outline-white {
+    color: #fff;
+    border-color: #fff;
+    border-width: 2px;
+
+    &:hover {
+        background: #fff;
+        color: $red;
+    }
+}
+
+
+.btn.btn-outline-red {
+    color: $red;
+    border-color: $red;
+    border-width: 2px;
+
+    &:hover {
+        background: $red;
+        color: #fff;
+    }
+}

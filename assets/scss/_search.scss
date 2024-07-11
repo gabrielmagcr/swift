@@ -1,0 +1,32 @@
+#search-results {
+    background: #fff;
+    padding: 5rem 0;
+}
+
+.sticky-links {
+    
+    position: fixed;
+    right: 0;
+    top: calc(150px + 3%);
+    z-index: 901;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: content-box;
+        background-color: $red;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        padding: 0 1rem 0 0;
+        border-radius: 0;
+        margin: 0 0 .25rem;
+        transform: translateX(1rem);
+        transition: transform .3s cubic-bezier(.19,1,.22,1);
+        &:hover {
+            background-color: $red;
+            transform: translateX(.5rem);
+            color: #fff;
+        }
+    }
+}

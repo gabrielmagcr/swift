@@ -1,0 +1,32 @@
+#offers-hero {
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    text-align: center;
+    .row {
+        display: block;
+    }
+    h1 {
+        display: block;
+        height: 200px;
+        width: 236px;
+        text-indent: -999em;
+        background: url('/wp-content/themes/swift/assets/img/offers-txt.png') center center no-repeat;
+        margin: 3rem auto 0 auto;
+    }
+    a.gold-btn {
+        width: 180px;
+        margin-top: 1rem;
+        padding: .8rem 1rem;
+    }
+}
+
+.coupon {
+    display: block;
+    margin-top: 1.4rem;
+    color: #fff;
+}

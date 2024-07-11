@@ -1,0 +1,49 @@
+#contact-wrap {
+    padding: 60px 0;
+    background: #fff;
+    h1 {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    p {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    form {
+        width: 60%;
+        margin: 40px auto;
+        // float: left;
+        // clear: right;
+        input[type=text], input[type=email] {
+            width: 100%;
+        }
+        select {
+            width: 100%;
+            height: 50px;
+            display: block;
+            // padding: 20px 0;
+            color: #fff;
+            background: $blue;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                background: $red;
+            }
+        }
+        .gform_button {
+            background: $blue;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            font-size: 1rem;
+            &:hover {
+                background: $red;
+            }
+        }
+    }
+    .gform_confirmation_message_1 {
+        text-align: center;
+    }
+}

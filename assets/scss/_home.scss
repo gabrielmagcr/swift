@@ -1,0 +1,617 @@
+body,
+html {
+    font-family: $bourton;
+    background: $blue;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $blue;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+.btn {
+    padding: 0.90rem 2rem 0.75rem;
+}
+
+.btn.btn-gold {
+    background: $gold;
+    border-color: $gold;
+    color: $blue;
+}
+
+.btn.btn-red {
+    background: $red;
+    border-color: $red;
+    color: $white;
+}
+
+
+.swift--chopped-logo {
+    text-align: center;
+    @media(min-width: 768px) {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+
+    @media(max-width: 768px) {
+        margin-bottom: 2rem;
+    }
+}
+
+.swift--chopped {
+    position: fixed;
+    left: 2rem;
+    max-width: 350px;
+    background: $blue;
+    border-radius: 6px;
+    padding: 3rem;
+    top: 50vh;
+    opacity: 0;
+    transform: translateX(-4rem) translateY(-50%);
+    z-index: 5000;
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.3);
+    animation: 0.5s ease-out 0.5s slideFromLeft forwards;
+
+    img {
+        max-width: 100%;
+    }
+
+    [data-close] {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 1rem;
+        height: 1rem;
+        background: url('/wp-content/themes/swift/assets/img/tailgate/close-gold.svg') no-repeat center / contain;
+    }
+}
+
+#main-navigation {
+    .navbar-nav {
+        height: 100%;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        
+        > a {
+            color: $blue;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+    }
+
+    .dropdown:hover {
+        .dropdown-menu {
+            display: block;
+        }
+    }
+
+    .dropdown-menu {
+        top: calc(100% - 1rem);
+        min-width: 15rem;
+        left: auto;
+        right: 0;
+        border-radius: 0;
+        border: 0;
+        padding: 0;
+        background: $red;
+
+        > li a {
+            padding: 0.75rem 1.5rem;
+            color: #fff;
+
+            &:hover {
+                background: $primary;
+            }
+        }
+    }
+
+    .dropdown-toggle::after {
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+}
+
+.main-search-form {
+    input {
+        outline: none;
+    }
+    input[type=search] {
+        -webkit-appearance: textfield;
+        -webkit-box-sizing: content-box;
+        font-family: inherit;
+        font-size: 100%;
+    }
+    input::-webkit-search-decoration,
+    input::-webkit-search-cancel-button {
+        display: none; 
+    }
+
+    input[type=search] {
+        background: transparent url('/wp-content/themes/swift/assets/img/search-icon.png') no-repeat 9px center;
+        // border: solid 1px #ccc;
+        border: none;
+        padding: 9px 10px 9px 32px;
+        width: 0;
+        cursor: pointer;
+        
+        -webkit-border-radius: 10em;
+        -moz-border-radius: 10em;
+        border-radius: 10em;
+        
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        transition: all .5s;
+    }
+    
+    input[type=search]:focus {
+        width: 130px;
+        background-color: #fff;
+        border-color: #66CC75;
+        
+        -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+        -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+        box-shadow: 0 0 5px rgba(109,207,246,.5);
+    }
+    
+    input:-moz-placeholder {
+        color: #999;
+    }
+    input::-webkit-input-placeholder {
+        color: #999;
+    }
+}
+
+
+
+#up-your-game {
+    padding: 5% 0;
+    background: #fff;
+    h2 {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        color: $blue;
+        clear: both;
+    }
+    p {
+        text-align: center;
+        display: block;
+        width: 100%;
+        color: $blue;
+    }
+}
+
+.game-nav {
+    width: 80%;
+    margin: 30px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gn-item {
+    width: 115px;
+    // width: 18%;
+    height: 115px;
+    border: 3px solid $blue;
+    border-radius: 50%;
+    // padding: 2%;
+    transition: all 0.3s ease-in-out;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    background-color: $blue;
+    cursor: pointer;
+    color: #fff;
+    // line-height: 68px;
+    // border: 2px solid #fff;
+    // border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    .inner {
+        border: 3px solid #fff;
+        border-radius: 50%;
+        height: 80%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a {
+        // display: block;
+        // height: 100%;
+        // width: 100%;
+        // padding: 2%;
+        text-align: center;
+        background-color: $blue;
+        color: #fff;
+        // line-height: 68px;
+        // border: 2px solid #fff;
+        // border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+    }
+    &:after {
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+        border-color: $gold;
+        a {
+            border-color: $gold;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    &.active {
+        border-color: $gold;
+        background-color: $gold;
+        a {
+            border-color: #fff;
+            background-color: $gold;
+        }
+        &:after {
+            content: " ";
+            display: block;
+            z-index: 5;
+            // margin: 250px auto 0 auto;
+            position: absolute;
+            bottom: -70px;
+            background-image: url(/wp-content/themes/swift/assets/img/fork-marker.png);
+            background-size: cover;
+            height: 101px;
+            width: 60px;
+        }
+    }
+}
+
+#game-target {
+    background: $gold;
+    // height: 400px;
+    margin-top: -20px;
+    // padding: 25px 0;
+    .a-left {
+        .game-images {
+            padding-top: 40px;
+            background: url('/wp-content/themes/swift/assets/img/game-bg-left.jpg') center center no-repeat;
+            background-size: cover;
+            position: relative;
+            .img-wrap {
+                position: absolute;
+                right: -10%;
+                img {
+                    float: right;
+                    clear: both;
+                    &:first-child {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .a-right {
+        .game-images {
+            padding-top: 40px;
+            background: url('/wp-content/themes/swift/assets/img/game-bg-right.jpg') center center no-repeat;
+            background-size: cover;
+            .img-wrap {
+                position: absolute;
+                left: -10%;
+                img {
+                    float: left;
+                    clear: both;
+                    &:first-child {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .gn-open {
+        display: flex;
+    }
+}
+
+.recipe-modal .modal-body {
+    h2 {
+        text-align: center;
+        margin-top: -34px;
+    }
+    ol {
+        font-weight: normal;
+        font-family: $helv;
+        li {
+            margin-bottom: 5px;
+        }
+    }
+    p.timing-info {
+        text-align: center;
+    }
+    img {
+        display: block;
+        margin: 0 auto 40px auto;
+        max-width: 100%;
+    }
+    p {
+        font-family: 'Helvetica-Nueue', Arial, Helvetica, sans-serif;
+    }
+    ul.ingredient-list {
+        font-family: 'Helvetica-Nueue', Arial, Helvetica, sans-serif;
+    }
+}
+
+.home-recipe-item.first {
+    margin-bottom: 80px;
+}
+
+a.recipe-link {
+    display: table;
+    color: #fff;
+    background: $blue;
+    font-size: .8rem;
+    padding: 11px 15px 8px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    margin-top: 2rem;
+    &:hover {
+        text-decoration: none;
+        color: $gold;
+    }
+}
+
+
+#up-your-game {
+    p {
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; 
+    }
+}
+
+.a-left {
+    .game-content {
+        padding: 60px;
+    }
+}
+
+.a-right {
+    .game-content {
+        padding: 60px;
+    }
+}
+
+.hm-technique {
+    display: none;
+    // height: 480px;
+    // padding: 60px 0 0 0;
+    // padding: 60px 0;
+    p {
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        margin-bottom: .3rem;
+    }
+}
+
+
+
+.timeline-wrap {
+    width: 490px;
+    height: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        // display: block;
+        flex-direction: row;
+        overflow: hidden;
+        li {
+            display: block;
+            height: 255px;
+            // float: left;
+            background-image: url('/wp-content/themes/swift/assets/img/timeline.png');
+            overflow: hidden;
+            cursor: pointer;
+        }
+    }
+}
+
+#tl1855 {
+    width: 75px;
+    background-position: 0 0;
+    &:hover {
+        background-position: 0 250.5px;
+    }
+}
+
+#tl1862 {
+    width: 40px;
+    background-position: -90px 0;
+    &:hover {
+        background-position: -90px 250.5px;
+    }
+}
+
+#tl1878 {
+    width: 40px;
+    background-position: -138px 0;
+    &:hover {
+        background-position: -138px 250.5px;
+    }
+}
+
+#tl1880 {
+    width: 60px;
+    background-position: -188px 0;
+    &:hover {
+        background-position: -188px 250.5px;
+    }
+}
+
+#tl1900 {
+    width: 48px;
+    background-position: -260px 0;
+    &:hover {
+        background-position: -260px 250.5px;
+    }
+}
+
+#tl1915 {
+    width: 43px;
+    background-position: -318px 0;
+    &:hover {
+        background-position: -318px 250.5px;
+    }
+}
+
+#tl1942 {
+    width: 58px;
+    background-position: -371px 0;
+    &:hover {
+        background-position: -371px 250.5px;
+    }
+}
+
+#tl1951 {
+    width: 44px;
+    background-position: -433px 0;
+    &:hover {
+        background-position: -433px 250.5px;
+    }
+}
+
+#tl1982 {
+    width: 68px;
+    background-position: -478px 0;
+    &:hover {
+        background-position: -478px 250.5px;
+    }
+}
+
+#tl2007 {
+    width: 56px;
+    background-position: -554px 0;
+    overflow: hidden;
+    &:hover {
+        background-position: -554px 250.5px;
+    }
+}
+
+.tl-target {
+    position: absolute;
+    top: 15%;
+    width: 200px;
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    p {
+        text-align: center;
+        display: block;
+        // padding: 0 20%;
+    }
+}
+
+#tl-target-right {
+    right: -50px;
+}
+
+#tl-target-left {
+    left: -50px;
+}
+
+.gold-btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: $blue;
+    background: $gold;
+    border-radius: 5px;
+    padding: 1.3rem 2rem 1rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    &:hover {
+        color: #fff;
+        background: $blue;
+        text-decoration: none;
+    }
+}
+
+
+
+
+.main-search-wrap {
+    width: 70px;
+}
+
+.mobile-search-form {
+    input {
+        outline: none;
+    }
+    label {
+        display: block;
+    }
+    input[type=search] {
+        -webkit-appearance: textfield;
+        -webkit-box-sizing: content-box;
+        font-family: inherit;
+        font-size: 100%;
+    }
+    input::-webkit-search-decoration,
+    input::-webkit-search-cancel-button {
+        display: none; 
+    }
+
+    input[type=search] {
+        background: transparent url('/wp-content/themes/swift/assets/img/search-icon.png') no-repeat 9px center;
+        // border: solid 1px #ccc;
+        border-color: #ccc;
+        padding: 9px 10px 9px 32px;
+        width: 160px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        
+        -webkit-border-radius: 10em;
+        -moz-border-radius: 10em;
+        border-radius: 10em;
+        
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        transition: all .5s;
+        
+    }
+    
+    
+    input:-moz-placeholder {
+        color: #999;
+    }
+    input::-webkit-input-placeholder {
+        color: #999;
+    }
+}
+
+.fa-search {
+    color: $blue;
+    margin-top: 10px;
+}

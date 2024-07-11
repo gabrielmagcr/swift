@@ -1,0 +1,66 @@
+#veal-hero {
+    background-size: cover;
+    background-position: top center;
+    height: 450px;
+    img {
+        width: 100%;
+    }
+}
+
+#veal-our-story {
+    padding: 3rem 0;
+    h1,h2,h3,h4,p {
+        color: #fff;
+    }
+    p {
+        font-family: "Helvetica-Nueue", Arial, Helvetica, sans-serif;
+    }
+    img {
+        display: block;
+        max-width: 98%;
+        margin: 0 auto;
+    }
+}
+
+#veal-products-wrap {
+    padding: 60px 0;
+    background: #fff;
+    .product-item {
+        margin-bottom: 40px;
+        position: relative;
+    }
+}
+
+.product-other-item {
+    .inner {
+        position: relative;
+    }
+    .tip-headline {
+        position: absolute;
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        h3 {
+            margin: 0!important;
+        }
+    }
+}
+
+.product-other-item:hover .veal-overlay {
+    opacity: 0;
+}
+
+.veal-overlay {
+    position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: black;
+   opacity: 0.3;
+   transition: all 0.4s ease-in-out;
+}

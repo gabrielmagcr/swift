@@ -1,0 +1,938 @@
+@media (max-width: 767px) {
+    
+}
+
+@media (max-width: 768px) { 
+    // @media (max-width: 1024px) { 
+    .sticky-links {
+        
+    }
+    .show-for-lg-only {
+        display: none;
+    }
+    // .sticky-links {
+    //     display: none;
+    // }
+
+    .hide-for-small {
+        display: none;
+    }
+    // .search-form {
+    //     display: none;
+    // }
+    // section {
+    //     overflow: hidden;
+    // }
+
+    .hh-top {
+        
+        height: 70vh;
+        .paper-bg {
+            display: none;
+        }
+        .mobile-title-text {
+            width: 90%!important;
+            // height: 70%;
+            height: 20%;
+            // margin: 10vh auto 0 auto!important;
+            margin: 5vh auto 0 auto!important;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .hh-top-1 {
+        background: url('/wp-content/themes/swift/assets/img/new-mobile-header.png') top center no-repeat;
+    }
+
+    .hh-top-2 {
+        background: url('/wp-content/themes/swift/assets/img/slide2-mobile.png') top center no-repeat;
+        background-size: cover;
+        img {
+            height: 100%!important;
+            width: 100%!important;
+            margin: 0 auto;
+        }
+    }
+
+    
+
+    section#filter-wrap {
+        // overflow: hidden;
+    }
+
+    .com-content {
+        padding: 70px 15px 20px 15px;
+    }
+
+    span.est-line {
+        &:after, &:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            height: 1px;
+            width: 30%;
+            border-bottom: 1px solid #fff;
+        }
+    }
+
+    .pi-product-img, .pi-cut-img, .pi-ingredients {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .pi-top .title-wrap::before {
+        top: -14px!important;
+    }
+
+    #products-hero {
+        background: url('/wp-content/themes/swift/assets/img/mobile-products-hero.jpg') center center no-repeat;
+        background-size: cover;
+    }
+
+    .filter-dropdown-wrap {
+        width: 80%;
+        z-index: 20;
+    }
+
+    .wd-mobile {
+        display: table;
+        margin-bottom: 2rem;
+        border-radius: 5px;
+    }
+    .cell-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .heritage-default {
+        height: 300px;
+        width: 300px;
+        font-size: 2rem;
+    }
+
+    .action-item.open {
+        h2 {
+            font-size: 4rem;
+        }
+        span {
+            font-size: 3rem;
+        }
+    }
+
+    // section#products-wrap, section#footer {
+    //     overflow: auto!important;
+    // }
+
+    #mc-butcher, #mc-cook {
+        background-size: cover!important;
+    }
+
+    .conv-description {
+        padding-top: 1rem;
+    }
+
+    .conv-year-wrap img {
+        max-width: 100%;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    .navbar-brand img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #main-navigation .nav-item a {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .dropdown-toggle {
+        &:after {
+            vertical-align: center;
+            // border-top: 0.5em solid;
+            // border-right: 0.3em solid;
+            border-left: 0.5em solid transparent;
+            margin-left: 0;
+        }
+    }
+
+    // #home-hero {
+    //     height: auto;
+    // }
+
+
+
+    // .hh-top {
+    //     background: url("/wp-content/themes/swift/assets/img/mobile-home-hero.png") top center no-repeat;
+    //     background-size: cover;
+    //     h1 {
+    //         text-align: center;
+    //         font-size: 1.8rem;
+    //         span {
+    //             font-size: 3rem;
+    //             letter-spacing: 0.01rem;
+    //         }
+    //     }
+    //     .overlay {
+    //         display: none;
+    //         position: absolute;
+    //         width: 100%;
+    //         height: 100%;
+    //         top: 0;
+    //         left: 0;
+    //         background: #000;
+    //         opacity: .5;
+    //     }
+    //     .textwrap {
+    //         width: 90%;
+    //         margin: 0 auto;
+    //         z-index: 5;
+    //     }
+    // }
+
+    
+
+    .navbar {
+        .row {
+            width: 60%;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+    }
+
+    #game-target {
+        background: $gold;
+    }
+
+    .game-nav {
+        width: 90%;
+        flex-wrap: wrap;
+        // justify-content: center;
+        .gn-item {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 20px;
+            padding: 6%;
+            display: flex;
+            .inner {
+                border: 2px solid #fff;
+                border-radius: 50%;
+                height: 98%;
+                width: 98%;
+            }
+            &.active {
+                &:after {
+                    background: none;
+                }
+            }
+        }
+    }
+
+    #game-target {
+        padding-bottom: 40px;
+        background: $gold;
+        background-image: none;
+        &.target-left {
+            background: $gold;
+            background-image: none; 
+        }
+    }
+
+    .game-images {
+        display: none;
+    }
+
+    // #ft-nav {
+    //     .col-12 {
+    //         padding-left: 0;
+    //         padding-right: 0;
+    //     }
+    // }
+
+    #ft-nav ul {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 20px;
+        li {
+            text-align: center;
+            padding: 0;
+            display: block;
+            margin-bottom: 10px;
+            a {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    #butcher h2 {
+        font-size: 4rem;
+    }
+
+    .home-recipe-item {
+        width: 100%!important;
+    }
+
+    // .product-filters {
+    //     flex-direction: column;
+    //     li {
+    //         margin-bottom: 10px;
+    //     }
+    // }
+    ul.product-filter {
+        display: none;
+    }
+
+    #products-hero .row {
+        justify-content: center;
+    }
+
+    #products-hero h1 {
+        text-align: center;
+        // padding-right: 20px;
+    }
+
+    #locator-hero h1 {
+        text-align: center;
+    }
+
+    #location-nav {
+        // padding: 60px 0 0 0;
+        overflow: auto;
+    }
+
+    #products-wrap .product-item .image {
+        margin: 0 auto;
+    }
+
+    a.recipe-link {
+        font-size: 1rem;
+        padding: 8px 8px 6px 8px;
+    }
+    .hm-technique {
+        height: auto;
+    }
+    .com-img {
+        img {
+            z-index: 10;
+            position: relative;
+            top: 0;
+            left: 0;
+            max-width: 100%;;
+        }
+    }
+
+    .recipe-filter-wrap {
+        width: 100%;
+        // width: 60%;
+        flex-direction: column;
+        
+        .wil-dropdown {
+            width: 80%;
+            margin: 0 auto 10px auto;
+        }
+    }
+
+    #masterclass-hero {
+        height: auto;
+        .action-item {
+            width: 100%;
+            clear: both;
+            height: 200px;
+            &.open {
+                width: 100%;
+            }
+        }
+    }
+
+    #ft-nav ul {
+        width: 100%;
+        margin: 40px auto 20px auto;
+        flex-direction: column;
+    }
+    
+}
+
+@media (min-width: 1100px) and (max-width: 1199) {
+    .hh-left {
+        margin-right: 0;
+        width: 55%;
+        padding-right: 0;
+        height: 549px;
+        background: url("/wp-content/themes/swift/assets/img/mobile-home-hero.png") center center no-repeat;
+        background-size: cover;
+        .overlay {
+            display: block;
+            z-index: 1!important;
+        }
+        .textwrap {
+            z-index: 3;
+            width: 100%!important;
+        }
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            span {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .hh-right {
+        width: 45%;
+        .item {
+            margin-bottom: 0;
+            height: 183px;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .overlay-text a {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    #game-target {
+        // padding-bottom: 40px;
+        background: $gold;
+        background-image: none;
+        &.target-left {
+            background: $gold;
+            background-image: none; 
+        }
+    }
+
+
+    .game-images {
+        display: none;
+    }
+
+    #history {
+        display: none;
+    }
+
+    .md-100 {
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .navbar .row {
+        width: 100%;
+    }
+
+    .conv-year-wrap {
+        min-height: 0;
+        img {
+            right: 0!important;
+            display: block;
+            max-width: 100%;
+            margin: 2rem auto;
+            position: relative;
+        }
+    }
+
+    .conv-description {
+        padding-top: 0;
+    }
+
+    #locator-hero {
+        background: url('/wp-content/themes/swift/assets/img/mobile-location-hero.png') center center no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        // align-items: flex-start;
+        // padding-top: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .row {
+            justify-content: center;
+            
+        }
+        h1 {
+            font-family: $bourton;
+            font-size: 2.5rem;
+            line-height: 1;
+            span {
+                font-size: 3.5rem;
+                font-family: $ts1;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    #c1880 img {
+        margin: 2rem auto;
+        width: 100%;
+        right: 0;
+        top: auto;
+    }
+
+    #c1915 img {
+        left: 0;
+        top: auto;
+        margin-bottom: 2rem;
+    }
+
+    #c1943 img {
+        left: 0;
+        top: auto;
+        margin: 0 auto 2rem auto;
+    }
+
+    #c1893 img {
+        left: 0;
+        top: auto;
+        margin: 0 auto 2rem auto;
+    }
+
+    .conv-year {
+        display: none!important;
+    }
+
+    .navbar-brand {
+        float: none;
+        margin: 0 auto;
+    }
+
+    #main-navigation {
+        // padding-left: 3.8rem;
+    }
+    .navbar-toggler {
+        position: absolute;
+        top: 33.5px;
+        margin-top: -1.1rem;
+        &:focus {
+            position: absolute;
+            top: 2rem;  
+        }
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("/wp-content/themes/swift/assets/img/navbar.png")!important;
+        outline: none;
+        border: none;
+        border-image-width: 0;
+    }
+
+    .navbar .row {
+        position: relative;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .hm-technique {
+        height: auto;
+    }
+    .show-for-sm-only {
+        display: block;
+    }
+
+    .home-recipe-item {
+        width: 50%;
+    }
+
+    .wd-mobile {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+        border-radius: 5px;
+    }
+
+
+    #cut-of-the-month {
+        background-size: cover;
+    }
+
+    .com-img {
+        width: 100%!important;
+        img {
+            display: block;
+            position: relative;
+            margin: 2rem auto -4rem auto;
+            top: auto;
+            right: auto;
+        }
+    }
+
+    .related-product {
+        width: 100%;
+        position: relative;
+        flex-direction: column;
+        .rel-product-desc {
+            width: 100%;
+            padding-bottom: 5%;
+            img {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            p {
+                font-family: $helv;
+            }
+        }
+        .rel-ingredient-list {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+    
+}
+
+@media (max-width: 1068px) {
+    .hh-bottom {
+        // height: 60vh;
+        flex-direction: column;
+        .item {
+            width: 100%;
+            margin-top: .5rem;
+        }
+    }
+
+    .hh-top {
+        background-size: cover;
+        // height: 100vh;
+        display: flex;
+        margin-bottom: 0!important;
+        // justify-content: center;
+        // align-items: center;
+        .paper-bg {
+            display: none;
+        }
+        .mobile-title-text {
+            width: 70%;
+            // height: 70%;
+            margin: 5% auto 0 auto;
+        }
+    }
+
+    .hh-top-1 {
+        background: url('/wp-content/themes/swift/assets/img/new-tablet-header.png') top center no-repeat;
+    }
+
+    .hh-top-2 {
+        background: url('/wp-content/themes/swift/assets/img/slide2-tablet.png') top center no-repeat;
+        background-size: cover;
+        img {
+            height: 30%;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 1068px) {
+    .hh-bottom {
+        // height: 60vh;
+        flex-direction: column;
+        .item {
+            width: 100%;
+        }
+    }
+
+    .hh-top {
+        background-size: cover;
+        // height: 100vh;
+        display: flex;
+        // justify-content: center;
+        // align-items: center;
+        .paper-bg {
+            display: none;
+        }
+        .mobile-title-text {
+            width: 70%;
+            // height: 70%;
+            margin: 5% auto 0 auto;
+        }
+    }
+
+    .hh-top-1 {
+        background: url('/wp-content/themes/swift/assets/img/new-tablet-header.png') top center no-repeat;
+    }
+
+    .hh-top-2 {
+        background: url('/wp-content/themes/swift/assets/img/slide2-tablet.png') top center no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
+@media (min-width: 1070px)  {
+    .hide-for-large {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1200px) and (min-width: 768px ) {
+    .game-nav {
+        // width: 60%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .gn-item {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+            padding: 2%;
+            .inner {
+                border: 2px solid #fff;
+                border-radius: 50%;
+                height: 98%;
+                width: 98%;
+            }
+            &.active {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:after {
+                    background: none;
+                }
+            }
+        }
+    }
+
+    .com-content {
+        padding: 20px 15px;
+    }
+
+    // #home-hero {
+    //     display: flex;
+    //     justify-content: space-between;
+    // }
+
+    .hh-left {
+        margin-right: 0;
+        width: 55%;
+        padding-right: 0;
+        height: 549px;
+        background: url("/wp-content/themes/swift/assets/img/mobile-home-hero.png") center center no-repeat;
+        background-size: cover;
+        align-items: flex-start;
+        padding-top: 2rem;
+        .overlay {
+            display: block;
+            z-index: 1!important;
+        }
+        .textwrap {
+            z-index: 3;
+            width: 100%!important;
+        }
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            span {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .game-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px;
+        .home-recipe-item {
+            width: 46%;
+        }
+    }
+
+    span.est-line {
+        &:after, &:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            height: 1px;
+            width: 26%;
+            border-bottom: 1px solid #fff;
+        }
+        &:before {
+            left: 10%;
+        }
+        &:after {
+            right: 10%;
+        }
+    }
+
+    .recipe-filter-wrap {
+        width: 100%;
+    }
+
+    .show-for-lg-only {
+        display: none;
+    }
+    // a.gn-item-sv {
+    //     padding-top: 0!important;
+    // }
+    #products-hero {
+        background: url('/wp-content/themes/swift/assets/img/products-hero.jpg') center center no-repeat;
+        background-size: cover;
+    }
+
+    #ft-nav ul {
+        width: 50%;
+        margin: 60px auto 40px auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 1201px) { 
+    // a.gn-item-sv {
+    //     line-height: 1;
+    //     padding-top: 20px;
+    // }
+    .hide-for-large {
+        display: none;
+    }
+    .navbar-brand {
+        margin-right: 2rem!important;
+    }
+
+    .hh-right .item img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #products-hero {
+        background: url('/wp-content/themes/swift/assets/img/products-hero.jpg') center center no-repeat;
+        background-size: cover;
+    }
+
+    .show-for-lg-only {
+        display: block;
+    }
+    .show-for-sm-only {
+        display: none;
+    }
+    #location-nav h2 {
+        padding: 0 26%;
+    }
+
+    .slick-next, .slick-prev {
+        width: 104px;
+        height: 320px;
+        text-indent: -999em;
+        transition: all 0.3s ease-in-out;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: none!important;
+        top: 50%;
+        margin-top: -160px;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .slick-prev:focus, .slick-next:focus {
+        outline: none;
+    }
+    
+    .slick-prev {
+        background-color: transparent;
+        background-image: url("/wp-content/themes/swift/assets/img/next-arrow.png");
+        position: absolute;
+        left: -130px;
+        // top: 0;
+    }
+    
+    .slick-next {
+        background-color: transparent;
+        background-image: url("/wp-content/themes/swift/assets/img/prev-arrow.png");
+        position: absolute;
+        right: -130px;
+        // top:0;
+    }
+
+    .navbar-nav > .active > a::after, .navbar-nav > li:hover > a::after {
+        border-bottom: 2px solid $blue;
+        bottom: 5px;
+        content: " ";
+        left: 0;
+        position: absolute;
+        right: 0;
+      }
+
+    .recipe-modal .modal-body {
+        background: #fff;
+        h2 {
+            padding: 0 20%;
+            // margin-top: -40px;
+        }
+    }
+
+    .recipe-filter-wrap {
+        // width: 35%;
+        width: 50%;
+    }
+
+    .modal-content {
+        background: transparent;
+        border: none;
+    }
+
+    .recipe-modal .modal-header {
+        background: transparent url('/wp-content/themes/swift/assets/img/new-arch.png')  no-repeat 50% bottom / auto 60%;
+        border: none;
+        height: 138px;
+    }
+
+    .tips-modal .modal-header {
+        background: transparent url('/wp-content/themes/swift/assets/img/new-arch.png')  no-repeat 50% bottom / auto 60%;
+        border: none;
+        height: 138px;
+    }
+
+    #ft-nav ul {
+        width: 40%;
+        margin: 60px auto 30px auto;
+        flex-direction: row;
+        justify-content: space-evenly;
+        li {
+            display: block;
+        }
+        .middle {
+            a {
+                // padding-left: 28px;
+                
+            }
+            &:after {
+                content: "\2022";
+                margin-left: 28px;
+                color: #fff;
+                text-decoration: none!important;
+            }
+            &:before {
+                content: "\2022";
+                margin-right: 28px;
+                color: #fff;
+                text-decoration: none!important;
+            }
+            
+        }
+        
+    }
+}

@@ -1,0 +1,38 @@
+.main-hero {
+    // background: url('/wp-content/themes/swift/assets/img/products-hero.jpg') center center no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        color: #fff;
+        font-size: 4rem;
+        line-height: 1;
+        font-family: $ts1;
+        text-transform: uppercase;
+        text-align: center;
+        span {
+            font-size: 2.8rem;
+            font-family: $bourton;
+            padding-left: 3px;
+        }
+    }
+}
+
+#coming-soon-hero h1 {
+    font-size: 3rem;
+    font-family: $bourton;
+    text-shadow: 4px 2px #444;
+    span {
+        font-size: 5rem;
+        font-family: $ts1;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,107 @@
+#locator-hero {
+    background: url('/wp-content/themes/swift/assets/img/locator-hero.png') top center no-repeat;
+    background-size: cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    .row {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    h1 {
+        color: $blue;
+        font-size: 2.7rem;
+        line-height: 1;
+        font-family: $ts1;
+        text-transform: uppercase;
+        span {
+            font-size: 5rem;
+        }
+    }
+}
+
+
+#location-nav {
+    padding: 60px 0;
+    // margin-bottom: 40px;
+    font-family: $helv;
+    background: #fff;
+    #dropdownMenuLink {
+        width: 17.5%;
+    }
+    h2 {
+        color: $blue;
+        font-size: 2rem;
+        text-align: center;
+        font-family: $bourton;
+        margin-bottom: 30px;
+    }
+    .wil-select {
+        font-family: $bourton;
+        font-size: 1.2rem;
+    }
+    .wil-dropdown {
+        width: 100%;
+        color: #fff;
+        background: $blue;
+        border-radius: 5px;
+        i {
+            color: #fff;
+        }
+    }
+    .wil-dropdown-menu {
+        background: $blue;
+        color: #fff;
+        min-height: 200px;
+        li:hover {
+            background-color: $red;
+        }
+    }
+}
+
+ul.locator-nav {
+    width: 80%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    li {
+        font-family: $bourton;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        &:hover {
+            color: $red;
+            &:after {
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 80px;
+                height: 15px;
+                content: "";
+                background: url('/wp-content/themes/swift/assets/img/locator-fork.png') center center no-repeat;
+            }
+        }
+        &.active {
+            &:after {
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: $blue;
+                content: "";
+            }
+        }
+    }
+}
+
+#locator-map {
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
