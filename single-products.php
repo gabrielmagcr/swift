@@ -403,7 +403,7 @@ $cooking_methods = get_field('cooking_methods'); ?>
             <?php } ?>
 
             <?php if (get_field('smoke_image')) { ?>
-                <div id="hm-smoke" class="pgt-cards">
+                <div id="hm-smoke" class="pgt-cards test">
                     <div class="pgt-card first-card">
                         <h3>
                             <?php
