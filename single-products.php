@@ -117,14 +117,36 @@ the_post(); ?>
 
     .first-card {
         background-color: #C61A1D;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
     }
 
+    .second-card-img {
+        height: 40dvh;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .sm-badgebar h3 span {
+        font-family: monospace;
+        font-weight: bold;
+    }
+
+
+
+
+
+
     @media (min-width: 767px) {
+        .sm-badgebar h3 span {
+            top: 35%;
+            font-size: 8rem;
+        }
+
         .pgt-media {
             min-width: 95%;
         }
@@ -136,28 +158,61 @@ the_post(); ?>
         .pgt-card {
             width: 50%;
         }
+
         .first-card {
             padding: 40px;
         }
-        .first-card h3{
-            font-size:32px
+
+        .first-card h3 {
+            font-size: 32px
+        }
+
+        .second-card-img {
+            height: 60dvh;
 
         }
 
-
+        .sm-nextlevel-item--body h3 {
+            font-size: 1.1rem;
+        }
     }
+
+    @media (min-width: 1023px) {
+        .sm-nextlevel-item--body h3 {
+            font-size: 1.4rem;
+        }
+    }
+
     @media (min-width: 1339px) {
         .first-card {
-        padding: 116px;
-    }
-        .first-card h3{
-            font-size:64px
-
+            padding: 116px;
         }
-        
+
+        .first-card h3 {
+            font-size: 64px
+        }
+
+        .sm-nextlevel-item--body h3 {
+            font-size: 1.7rem;
+        }
+
+    }
+
+    @media (min-width: 1919px) {
+
+        .pgt-media {
+            min-width: 1850px;
+        }
     }
 </style>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const firstCard = document.querySelector('.pgt-cards');
+        if (firstCard) {
+            firstCard.style.display = 'flex';
+        }
+    });
+</script>
 <section class="sm-prodhero">
     <div class="container">
         <div class="row">
@@ -246,9 +301,13 @@ $cooking_methods = get_field('cooking_methods'); ?>
     <section id="product-game-target">
         <div class="container pgt-media">
             <?php if (get_field('grilling_image')) { ?>
-                <div id="hm-grill" class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12">
-                        <h3>Grill</h3>
+                <div id="hm-grill" class="pgt-cards">
+                    <div class="pgt-card first-card">
+                        <h3>
+                        <?php
+                        $title = get_field('roast_content_title');
+                        echo $title ? $title : 'Roast';
+                        ?></h3>
                         <?php the_field('grilling_content'); ?>
                         <?php if (get_field('grill_recipe')) {
                             $item_id = get_field('grill_recipe');
@@ -257,25 +316,32 @@ $cooking_methods = get_field('cooking_methods'); ?>
                             <a href="<?= $rlink; ?>" class="gold-btn-recipe" target="_blank">View Recipe</a>
                         <?php } ?>
                     </div>
-                    <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 cooking-method-img">
+                    <!-- /.pgt-card first-card -->
+                    <div class="pgt-card second-card ">
                         <?php if (get_field('grill_video')) { ?>
                             <video poster="<?= the_field('grilling_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
                                 <source src="<?= the_field('grill_video'); ?>" type="video/mp4">
                             </video>
                         <?php } else { ?>
-                            <img src="<?php the_field('grilling_image'); ?>" alt="Grill">
+                            <div class="second-card-img" style="
+                            background-image: url('<?php the_field('grilling_image'); ?>');
+                            ">
+                            </div>
                         <?php } ?>
                     </div>
                     <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
                 </div>
-                <!-- /.row -->
+                <!-- /.pgt-cards -->
             <?php } ?>
 
-            <?php if (get_field('sear_image')) { ?>
-                <div id="hm-sear" class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12">
-                        <h3>Sear</h3>
+            <?php if (get_field('sear_image'|| 'sear_video')) { ?>
+                <div id="hm-sear" class="pgt-cards">
+                    <div class="pgt-card first-card">
+                        <h3>
+                            <?php
+                            $title = get_field('sear');
+                            echo $title ? $title : 'Sear';
+                            ?></h3>
                         <?php the_field('sear_content'); ?>
                         <?php if (get_field('sear_recipe')) {
                             $item_id = get_field('sear_recipe');
@@ -284,25 +350,32 @@ $cooking_methods = get_field('cooking_methods'); ?>
                             <a href="<?= $rlink; ?>" class="gold-btn-recipe" target="_blank">View Recipe</a>
                         <?php } ?>
                     </div>
-                    <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 cooking-method-img">
+                    <!-- /.pgt-card first-card -->
+                    <div class="pgt-card second-card">
                         <?php if (get_field('sear_video')) { ?>
                             <video poster="<?= the_field('sear_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
                                 <source src="<?= the_field('sear_video'); ?>" type="video/mp4">
                             </video>
                         <?php } else { ?>
-                            <img src="<?php the_field('sear_image'); ?>" alt="Sear">
+                            <div class="second-card-img" style="
+                            background-image: url('<?php the_field('sear_image'); ?>');
+                            ">
+                            </div>
+
                         <?php } ?>
                     </div>
-                    <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
+                    <!-- pgt-card second-card -->
                 </div>
-                <!-- /.row -->
+                <!-- /.pgt-cards -->
             <?php } ?>
 
             <?php if (get_field('roast_image')) { ?>
                 <div id="hm-roast" class="pgt-cards">
                     <div class="pgt-card first-card">
-                        <h3>Roast</h3>
+                        <h3><?php
+                                $title = get_field('grilling_content_title');
+                                echo $title ? $title : 'Grilling';
+                                ?></h3>
                         <?php the_field('roast_content'); ?>
                         <?php if (get_field('roast_recipe')) {
                             $item_id = get_field('roast_recipe');
@@ -311,27 +384,32 @@ $cooking_methods = get_field('cooking_methods'); ?>
                             <a href="<?= $rlink; ?>" class="gold-btn-recipe" target="_blank">Make this Recipe</a>
                         <?php } ?>
                     </div>
-                    <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
+                    <!-- pgt-card first-card -->
                     <div class="pgt-card second-card">
                         <?php if (get_field('roast_video')) { ?>
                             <video poster="<?= the_field('roast_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
                                 <source src="<?= the_field('roast_video'); ?>" type="video/mp4">
                             </video>
                         <?php } else { ?>
-                            <div class="cooking-method-img">
-                                <img src="<?php the_field('roast_image'); ?>" alt="Roast">
+                            <div class="second-card-img" style="
+                            background-image: url('<?php the_field('roast_image'); ?>');
+                            ">
                             </div>
                         <?php } ?>
                     </div>
-                    <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
+                    <!-- pgt-card second-card -->
                 </div>
-                <!-- /.row -->
+                <!-- /.pgt-cards -->
             <?php } ?>
 
             <?php if (get_field('smoke_image')) { ?>
-                <div id="hm-smoke" class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12">
-                        <h3>Smoke</h3>
+                <div id="hm-smoke" class="pgt-cards">
+                    <div class="pgt-card first-card">
+                        <h3>
+                            <?php
+                            $title = get_field('smoke_content_title');
+                            echo $title ? $title : 'Smoke';
+                            ?></h3>
                         <?php the_field('smoke_content'); ?>
                         <?php if (get_field('smoke_recipe')) {
                             $item_id = get_field('smoke_recipe');
@@ -340,25 +418,31 @@ $cooking_methods = get_field('cooking_methods'); ?>
                             <a href="<?= $rlink; ?>" class="gold-btn-recipe" target="_blank">View Recipe</a>
                         <?php } ?>
                     </div>
-                    <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 cooking-method-img">
+                    <!-- pgt-card first-card -->
+                    <div class="pgt-card second-card ">
                         <?php if (get_field('smoke_video')) { ?>
                             <video poster="<?= the_field('smoke_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
                                 <source src="<?= the_field('smoke_video'); ?>" type="video/mp4">
                             </video>
                         <?php } else { ?>
-                            <img src="<?php the_field('smoke_image'); ?>" alt="Smoke">
+                            <div class="second-card-img" style="
+                            background-image: url('<?php the_field('smoke_image'); ?>');
+                            ">
+                            </div>
                         <?php } ?>
                     </div>
-                    <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
+                    <!-- pgt-card second-card -->
                 </div>
-                <!-- /.row -->
+                <!-- /.pgt-cards -->
             <?php } ?>
 
             <?php if (get_field('braise_image')) { ?>
-                <div id="hm-braise" class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12">
-                        <h3>Braise</h3>
+                <div id="hm-braise" class="pgt-cards">
+                    <div class="pgt-card first-card">
+                        <h3> <?php
+                                $title = get_field('braise');
+                                echo $title ? $title : 'Braise';
+                                ?></h3>
                         <?php the_field('braise_content'); ?>
                         <?php if (get_field('braise_recipe')) {
                             $item_id = get_field('braise_recipe');
@@ -367,25 +451,31 @@ $cooking_methods = get_field('cooking_methods'); ?>
                             <a href="<?= $rlink; ?>" class="gold-btn-recipe" target="_blank">View Recipe</a>
                         <?php } ?>
                     </div>
-                    <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 cooking-method-img">
+                    <!-- /.pgt-card first-card -->
+                    <div class="pgt-card second-card ">
                         <?php if (get_field('braise_video')) { ?>
                             <video poster="<?= the_field('braise_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
                                 <source src="<?= the_field('braise_video'); ?>" type="video/mp4">
                             </video>
                         <?php } else { ?>
-                            <img src="<?php the_field('braise_image'); ?>" alt="Braise">
+                            <div class="second-card-img" style="
+                            background-image: url('<?php the_field('braise_image'); ?>');
+                            ">
+                            </div>
                         <?php } ?>
                     </div>
-                    <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
+                    <!-- /.pgt-card second-card -->
                 </div>
-                <!-- /.row -->
+                <!-- /.pgt-cards -->
             <?php } ?>
 
             <?php if (get_field('sous_vide_image')) { ?>
-                <div id="hm-sous-vide" class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12">
-                        <h3>Sous Vide</h3>
+                <div id="hm-sous-vide" class="pgt-cards">
+                    <div class="pgt-card first-card">
+                        <h3> <?php
+                                $title = get_field('sous_vide_content_title');
+                                echo $title ? $title : 'Sour Vide';
+                                ?></h3>
                         <?php the_field('sous_vide_content'); ?>
                         <?php if (get_field('sous_vide_recipe')) {
                             $item_id = get_field('sous_vide_recipe');
@@ -394,19 +484,22 @@ $cooking_methods = get_field('cooking_methods'); ?>
                             <a href="<?= $rlink; ?>" class="gold-btn-recipe" target="_blank">View Recipe</a>
                         <?php } ?>
                     </div>
-                    <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 cooking-method-img">
+                    <!-- /.pgt-card first-card -->
+                    <div class="pgt-card second-card ">
                         <?php if (get_field('sousvide_video')) { ?>
                             <video poster="<?= the_field('sous_vide_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
                                 <source src="<?= the_field('sousvide_video'); ?>" type="video/mp4">
                             </video>
                         <?php } else { ?>
-                            <img src="<?php the_field('sous_vide_image'); ?>" alt="Sous Vide">
+                            <div class="second-card-img" style="
+                            background-image: url('<?php the_field('sous_vide_image'); ?>');
+                            ">
+                            </div>
                         <?php } ?>
                     </div>
-                    <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
+                    <!-- /.pgt-card second-card -->
                 </div>
-                <!-- /.row -->
+                <!-- /.pgt-cards -->
             <?php } ?>
         </div>
         <!-- /.container -->
