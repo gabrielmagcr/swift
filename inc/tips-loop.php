@@ -32,12 +32,14 @@
     <!-- ===== RECIPE TYPE ===== -->
     <div class="col-lg-4 tip-item ti-recipe col-sm-6 col-md-6 grid-item all <?= the_field('cooking_style');?> <?= the_field('ingredient_item');?>">
         <div class="inner">
-            <div class="tip-overlay" data-toggle="modal" data-target="#tip-<?= $id;?>"></div><!-- /.tip-overlay -->
-            <?php if(get_field('image')) { ?>
-                <img class="lazy" src="<?= the_field('image');?>" alt="<?php the_title();?>">
-            <?php } else { ?>
-                <img class="lazy" src="<?= get_template_directory_uri();?>/assets/img/tips/recipe-ex.jpg" alt="The title">
-            <?php } ?>
+        <a href="<?= $post_link; ?>">
+                <div class="tip-overlay"></div>
+                <?php if(get_field('image')) { ?>
+                    <img class="lazy" src="<?= the_field('image');?>" alt="<?php the_title();?>">
+                <?php } else { ?>
+                    <img class="lazy" src="<?= get_template_directory_uri();?>/assets/img/tips/recipe-ex.jpg" alt="The title">
+                <?php } ?>
+            </a>
             
         </div>
         <!-- /.inner -->
