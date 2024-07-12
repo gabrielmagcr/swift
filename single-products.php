@@ -267,7 +267,7 @@ $cooking_methods = get_field('cooking_methods'); ?>
                 <!-- /.pgt-cards row -->
             <?php } ?>
 
-            <?php if ((in_array("sous vide", $cooking_methods))) { ?>
+            <?php if ((in_array("sous-vide", $cooking_methods))) { ?>
                 <div id="hm-sous-vide" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3> <?php
