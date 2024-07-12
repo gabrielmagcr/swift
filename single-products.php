@@ -7,7 +7,9 @@ get_header();
 the_post(); ?>
 
 <style>
-
+.second-card-video{
+    position: relative;
+}
   
 </style>
 
@@ -151,9 +153,12 @@ $cooking_methods = get_field('cooking_methods'); ?>
                     <!-- /.pgt-card first-card -->
                     <div class="pgt-card second-card">
                         <?php if (get_field('sear_video')) { ?>
+                            <div class="second-card-video">                            
                             <video poster="<?= the_field('sear_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
                                 <source src="<?= the_field('sear_video'); ?>" type="video/mp4">
                             </video>
+                            <img src="/wp-content/uploads/2024/07/Play-Button.svg" alt="Play Video">
+                            </div>
                         <?php } else { ?>
                             <div class="second-card-img" style="
                             background-image: url('<?php the_field('sear_image'); ?>');
