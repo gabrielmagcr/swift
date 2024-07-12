@@ -72,6 +72,8 @@ jQuery(document).ready(function($) {
         }
     });
 
+
+
     const nextLevelItems = document.querySelectorAll('.sm-nextlevel-item');
 
         // Function to add hover classes
@@ -82,6 +84,7 @@ jQuery(document).ready(function($) {
                 nextLevelBody.classList.add('hovered-background');
             }
         };
+    
 
         // Function to remove hover classes
         const removeHoverClass = (event) => {

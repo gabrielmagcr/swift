@@ -16,16 +16,20 @@ the_post(); ?>
         position: absolute;
     top: 50%;
     left: 50%;
-    width: 50px; /* Ajusta el tamaño según sea necesario */
-    height: 50px; /* Ajusta el tamaño según sea necesario */
+    width: 75px; 
     transform: translate(-50%, -50%);
     cursor: pointer;
-    z-index: 10; /* Asegura que el botón esté sobre el video */
+    z-index: 10; 
     }
     .video-container video {
     display: block;
     width: 100%;
     height: auto;
+}  
+@media (min-width:767px) {
+    .play-btn{
+        width: 100px;
+    }
 }
     
 </style>
@@ -170,13 +174,10 @@ $cooking_methods = get_field('cooking_methods'); ?>
                     <!-- /.pgt-card first-card -->
                     <div class="pgt-card second-card">
                         <?php if (get_field('sear_video')) { ?>
-                            <div class="second-card-video">
+
                                 <video poster="<?= the_field('sear_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
-                                    <source src="<?= the_field('sear_video'); ?>" type="video/mp4">
-                                </video>
-                                <img class="play-btn" src="/wp-content/uploads/2024/07/Play-Button.svg" alt="Play Video">
-                                
-                            </div>
+                                    <source src="<?= the_field('sear_video'); ?>" type="video/mp4">   
+                                </video> 
                         <?php } else { ?>
                             <div class="second-card-img" style="
                             background-image: url('<?php the_field('sear_image'); ?>');
