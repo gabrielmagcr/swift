@@ -9,10 +9,25 @@ the_post(); ?>
 <style>
     .second-card-video {
         position: relative;
+        width: 100%;
+        height: 100%;
     }
     .second-card-playbtn{
-        position: relative;
+        position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px; /* Ajusta el tamaño según sea necesario */
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10; /* Asegura que el botón esté sobre el video */
     }
+    .video-container video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+    
 </style>
 
 <section class="sm-prodhero">
@@ -159,8 +174,8 @@ $cooking_methods = get_field('cooking_methods'); ?>
                                 <video poster="<?= the_field('sear_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
                                     <source src="<?= the_field('sear_video'); ?>" type="video/mp4">
                                 </video>
-                                <div class="second-card-playbtn"> <img src="/wp-content/uploads/2024/07/Play-Button.svg" alt="Play Video">
-                                </div>
+                                <img class="play-btn" src="/wp-content/uploads/2024/07/Play-Button.svg" alt="Play Video">
+                                
                             </div>
                         <?php } else { ?>
                             <div class="second-card-img" style="
