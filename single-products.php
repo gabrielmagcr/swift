@@ -132,7 +132,7 @@ $cooking_methods = get_field('cooking_methods'); ?>
                 <!-- /.pgt-cards row -->
             <?php } ?>
 
-            <?php if (get_field('sear_image'|| 'sear_video')) { ?>
+            <?php if (get_field('sear_image'|| 'sear_video')) { var_dump('sear_image'); var_dump('sear_video'); ?>
                 <div id="hm-sear" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3>
@@ -201,7 +201,7 @@ $cooking_methods = get_field('cooking_methods'); ?>
             <?php } ?>
 
             <?php if (get_field('smoke_image' || 'smoke_video')) { ?>
-                <div id="hm-smoke" class="pgt-cards row test">
+                <div id="hm-smoke" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3>
                             <?php
