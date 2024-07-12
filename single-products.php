@@ -80,7 +80,7 @@ $cooking_methods = get_field('cooking_methods'); ?>
                             <button class="gn-item <?php if ($count == 0) {
                                                         echo 'active first-item';
                                                     } ?> left-target" data-target="#hm-<?= $term; ?>">
-                                <?= $term; ?>
+                                <?= $term = 'sousvide' ? "Sous vide": $term; ?>
                             </button>
                             <!-- /.gn-item -->
                             <?php $count++; ?>
@@ -234,7 +234,7 @@ $cooking_methods = get_field('cooking_methods'); ?>
                 <!-- /.pgt-cards row -->
             <?php } ?>
 
-            <?php if ((in_array("braise", $cooking_methods))) {  var_dump($cooking_methods)?>
+            <?php if ((in_array("braise", $cooking_methods))) { ?>
                 <div id="hm-braise" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3> <?php
