@@ -26,6 +26,7 @@
             $query->the_post();
             $id = $post->ID;
             $type = get_field('type');
+            $post_link = get_permalink($id);  
             if($type == 'recipe') {
     ?>
     <!-- ===== RECIPE TYPE ===== -->
@@ -116,8 +117,10 @@
     <!-- ===== GRAPHIC TYPE ===== -->
     <div class="col-lg-4 tip-item ti-graphic col-sm-6 col-md-6 grid-item all skillet oven grill smoker multicooker sous vide fryer <?= the_field('ingredient_item');?>">
         <div class="inner">
-            <div class="tip-overlay" data-toggle="modal" data-target="#tip-<?= $id;?>""></div>
-            <img src="<?= the_field('image');?>" alt="<?php the_title();?>">
+        <a href="<?= $post_link; ?>">
+                <div class="tip-overlay"></div>
+                <img src="<?= the_field('image');?>" alt="<?php the_title();?>">
+            </a>
             <!-- /.tip-overlay -->
            <!-- <div class="tip-social">
                 <ul>
@@ -169,8 +172,10 @@
     <!-- ===== IMAGE TYPE ===== -->
     <div class="col-lg-4 tip-item ti-image col-sm-6 col-md-6 grid-item all <?= the_field('cooking_style');?> <?= the_field('ingredient_item');?>">
         <div class="inner">
-            <div class="tip-overlay" data-toggle="modal" data-target="#tip-<?= $id; ?>"></div>
-            <img src="<?= the_field('image');?>" alt="<?php the_title();?>">
+        <a href="<?= $post_link; ?>">
+                <div class="tip-overlay"></div>
+                <img src="<?= the_field('image');?>" alt="<?php the_title();?>">
+            </a>
             <!-- /.tip-overlay -->
             <!-- <div class="tip-social">
                 <ul>
