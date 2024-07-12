@@ -63,7 +63,8 @@ the_post(); ?>
 
 
 <?php $add_cooking_method = get_field('add_cooking_method');
-$cooking_methods = get_field('cooking_methods'); ?>
+$cooking_methods = get_field('cooking_methods'); 
+var_dump($cooking_methods)?>
 <?php if ($add_cooking_method) : ?>
     <section id="up-your-game" class="single-how-to-cook">
         <div class="container">
@@ -132,7 +133,7 @@ $cooking_methods = get_field('cooking_methods'); ?>
                 <!-- /.pgt-cards row -->
             <?php } ?>
 
-            <?php if (get_field('sear_image'|| 'sear_video')) { var_dump('sear_image'); var_dump('sear_video'); ?>
+            <?php if (get_field('sear_image'|| 'sear_video')) {  ?>
                 <div id="hm-sear" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3>
