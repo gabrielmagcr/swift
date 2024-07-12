@@ -63,8 +63,7 @@ the_post(); ?>
 
 
 <?php $add_cooking_method = get_field('add_cooking_method');
-$cooking_methods = get_field('cooking_methods'); 
-var_dump($cooking_methods)?>
+$cooking_methods = get_field('cooking_methods'); ?>
 <?php if ($add_cooking_method) : ?>
     <section id="up-your-game" class="single-how-to-cook">
         <div class="container">
@@ -99,7 +98,7 @@ var_dump($cooking_methods)?>
 
     <section id="product-game-target">
         <div class="container pgt-media">
-            <?php if (get_field('grilling_image')) { ?>
+            <?php if (in_array("grill", $cooking_methods)) { ?>
                 <div id="hm-grill" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3>
@@ -133,7 +132,7 @@ var_dump($cooking_methods)?>
                 <!-- /.pgt-cards row -->
             <?php } ?>
 
-            <?php if (get_field('sear_image'|| 'sear_video')) {  ?>
+            <?php if ((in_array("sear", $cooking_methods))) {  ?>
                 <div id="hm-sear" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3>
@@ -168,7 +167,7 @@ var_dump($cooking_methods)?>
                 <!-- /.pgt-cards row -->
             <?php } ?>
 
-            <?php if (get_field('roast_image')) { ?>
+            <?php if (in_array("roast", $cooking_methods)) { ?>
                 <div id="hm-roast" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3><?php
@@ -201,7 +200,7 @@ var_dump($cooking_methods)?>
                 <!-- /.pgt-cards row -->
             <?php } ?>
 
-            <?php if (get_field('smoke_image' || 'smoke_video')) { ?>
+            <?php if ((in_array("smoke", $cooking_methods))) { ?>
                 <div id="hm-smoke" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3>
@@ -235,7 +234,7 @@ var_dump($cooking_methods)?>
                 <!-- /.pgt-cards row -->
             <?php } ?>
 
-            <?php if (get_field('braise_image')) { ?>
+            <?php if ((in_array("braise", $cooking_methods))) { ?>
                 <div id="hm-braise" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3> <?php
@@ -268,7 +267,7 @@ var_dump($cooking_methods)?>
                 <!-- /.pgt-cards row -->
             <?php } ?>
 
-            <?php if (get_field('sous_vide_image')) { ?>
+            <?php if ((in_array("sous vide", $cooking_methods))) { ?>
                 <div id="hm-sous-vide" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3> <?php
