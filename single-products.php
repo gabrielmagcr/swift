@@ -99,7 +99,7 @@ $cooking_methods = get_field('cooking_methods'); ?>
     <section id="product-game-target">
         <div class="container pgt-media">
             <?php if (get_field('grilling_image')) { ?>
-                <div id="hm-grill" class="pgt-cards">
+                <div id="hm-grill" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3>
                         <?php
@@ -129,11 +129,11 @@ $cooking_methods = get_field('cooking_methods'); ?>
                     </div>
                     <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
                 </div>
-                <!-- /.pgt-cards -->
+                <!-- /.pgt-cards row -->
             <?php } ?>
 
             <?php if (get_field('sear_image'|| 'sear_video')) { ?>
-                <div id="hm-sear" class="pgt-cards">
+                <div id="hm-sear" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3>
                             <?php
@@ -164,11 +164,11 @@ $cooking_methods = get_field('cooking_methods'); ?>
                     </div>
                     <!-- pgt-card second-card -->
                 </div>
-                <!-- /.pgt-cards -->
+                <!-- /.pgt-cards row -->
             <?php } ?>
 
             <?php if (get_field('roast_image')) { ?>
-                <div id="hm-roast" class="pgt-cards">
+                <div id="hm-roast" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3><?php
                                 $title = get_field('grilling_content_title');
@@ -197,11 +197,11 @@ $cooking_methods = get_field('cooking_methods'); ?>
                     </div>
                     <!-- pgt-card second-card -->
                 </div>
-                <!-- /.pgt-cards -->
+                <!-- /.pgt-cards row -->
             <?php } ?>
 
             <?php if (get_field('smoke_image')) { ?>
-                <div id="hm-smoke" class="pgt-cards test">
+                <div id="hm-smoke" class="pgt-cards row test">
                     <div class="pgt-card first-card">
                         <h3>
                             <?php
@@ -231,11 +231,11 @@ $cooking_methods = get_field('cooking_methods'); ?>
                     </div>
                     <!-- pgt-card second-card -->
                 </div>
-                <!-- /.pgt-cards -->
+                <!-- /.pgt-cards row -->
             <?php } ?>
 
             <?php if (get_field('braise_image')) { ?>
-                <div id="hm-braise" class="pgt-cards">
+                <div id="hm-braise" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3> <?php
                                 $title = get_field('braise');
@@ -264,11 +264,11 @@ $cooking_methods = get_field('cooking_methods'); ?>
                     </div>
                     <!-- /.pgt-card second-card -->
                 </div>
-                <!-- /.pgt-cards -->
+                <!-- /.pgt-cards row -->
             <?php } ?>
 
             <?php if (get_field('sous_vide_image')) { ?>
-                <div id="hm-sous-vide" class="pgt-cards">
+                <div id="hm-sous-vide" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3> <?php
                                 $title = get_field('sous_vide_content_title');
@@ -297,7 +297,7 @@ $cooking_methods = get_field('cooking_methods'); ?>
                     </div>
                     <!-- /.pgt-card second-card -->
                 </div>
-                <!-- /.pgt-cards -->
+                <!-- /.pgt-cards row -->
             <?php } ?>
         </div>
         <!-- /.container -->
