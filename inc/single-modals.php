@@ -1,5 +1,5 @@
 <?php if($type == 'recipe') { ?>
-<div class="modal fade tips-modal testmodal" tabindex="-1" role="dialog" id="tip-<?= $item_id;?>" data-title="<?= $item->post_title; ?>" data-id="<?= $item_id;?>" data-path="<?= $item->post_name; ?>">
+<div class="modal fade tips-modal" tabindex="-1" role="dialog" id="tip-<?= $item_id;?>" data-title="<?= $item->post_title; ?>" data-id="<?= $item_id;?>" data-path="<?= $item->post_name; ?>">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
         <div class="modal-header">

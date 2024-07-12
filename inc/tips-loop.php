@@ -54,7 +54,7 @@
     </div>
     <!-- /.col-lg-4 tip-item col-sm-6 col-md-6 -->
 
-    <div class="modal fade tips-modal" tabindex="-1" role="dialog" id="tip-<?= $id;?>" data-title="<?= get_the_title(); ?>" data-id="<?= get_the_ID(); ?>" data-path="<?= $post->post_name; ?>">
+    <div class="modal fade tips-modal testmodal2" tabindex="-1" role="dialog" id="tip-<?= $id;?>" data-title="<?= get_the_title(); ?>" data-id="<?= get_the_ID(); ?>" data-path="<?= $post->post_name; ?>">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
             <div class="modal-header">
