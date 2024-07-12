@@ -80,7 +80,7 @@ $cooking_methods = get_field('cooking_methods'); ?>
                             <button class="gn-item <?php if ($count == 0) {
                                                         echo 'active first-item';
                                                     } ?> left-target" data-target="#hm-<?= $term; ?>">
-                                <?= $term = 'sousvide' ? "Sous vide": $term; ?>
+                                <?= $term = ($term == 'sousvide') ? "Sous vide" : $term; ?>
                             </button>
                             <!-- /.gn-item -->
                             <?php $count++; ?>
