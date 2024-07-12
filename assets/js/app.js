@@ -72,6 +72,33 @@ jQuery(document).ready(function($) {
         }
     });
 
+    const nextLevelItems = document.querySelectorAll('.sm-nextlevel-item');
+
+        // Function to add hover classes
+        const addHoverClass = (event) => {
+            event.target.classList.add('hovered-background');
+            const nextLevelBody = event.target.querySelector('.sm-nextlevel-item--body');
+            if (nextLevelBody) {
+                nextLevelBody.classList.add('hovered-background');
+            }
+        };
+
+        // Function to remove hover classes
+        const removeHoverClass = (event) => {
+            event.target.classList.remove('hovered-background');
+            const nextLevelBody = event.target.querySelector('.sm-nextlevel-item--body');
+            if (nextLevelBody) {
+                nextLevelBody.classList.remove('hovered-background');
+            }
+        };
+
+        // Add event listeners to each element
+        nextLevelItems.forEach(item => {
+            item.addEventListener('mouseenter', addHoverClass);
+            item.addEventListener('mouseleave', removeHoverClass);
+        });
+
+
     $('#timeline-ul li').hover(function() {
         if($(this).hasClass('tl-left')) {
             var target = $("#tl-target-left");
