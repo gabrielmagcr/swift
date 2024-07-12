@@ -7,10 +7,12 @@ get_header();
 the_post(); ?>
 
 <style>
-.second-card-video{
-    position: relative;
-}
-  
+    .second-card-video {
+        position: relative;
+    }
+    .second-card-playbtn{
+        position: relative;
+    }
 </style>
 
 <section class="sm-prodhero">
@@ -104,10 +106,10 @@ $cooking_methods = get_field('cooking_methods'); ?>
                 <div id="hm-grill" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3>
-                        <?php
-                        $title = get_field('roast_content_title');
-                        echo $title ? $title : 'Roast';
-                        ?></h3>
+                            <?php
+                            $title = get_field('roast_content_title');
+                            echo $title ? $title : 'Roast';
+                            ?></h3>
                         <?php the_field('grilling_content'); ?>
                         <?php if (get_field('grill_recipe')) {
                             $item_id = get_field('grill_recipe');
@@ -153,11 +155,12 @@ $cooking_methods = get_field('cooking_methods'); ?>
                     <!-- /.pgt-card first-card -->
                     <div class="pgt-card second-card">
                         <?php if (get_field('sear_video')) { ?>
-                            <div class="second-card-video">                            
-                            <video poster="<?= the_field('sear_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
-                                <source src="<?= the_field('sear_video'); ?>" type="video/mp4">
-                            </video>
-                            <img src="/wp-content/uploads/2024/07/Play-Button.svg" alt="Play Video">
+                            <div class="second-card-video">
+                                <video poster="<?= the_field('sear_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
+                                    <source src="<?= the_field('sear_video'); ?>" type="video/mp4">
+                                </video>
+                                <div class="second-card-playbtn"> <img src="/wp-content/uploads/2024/07/Play-Button.svg" alt="Play Video">
+                                </div>
                             </div>
                         <?php } else { ?>
                             <div class="second-card-img" style="
@@ -176,9 +179,9 @@ $cooking_methods = get_field('cooking_methods'); ?>
                 <div id="hm-roast" class="pgt-cards row">
                     <div class="pgt-card first-card">
                         <h3><?php
-                                $title = get_field('grilling_content_title');
-                                echo $title ? $title : 'Grilling';
-                                ?></h3>
+                            $title = get_field('grilling_content_title');
+                            echo $title ? $title : 'Grilling';
+                            ?></h3>
                         <?php the_field('roast_content'); ?>
                         <?php if (get_field('roast_recipe')) {
                             $item_id = get_field('roast_recipe');
