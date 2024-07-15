@@ -51,7 +51,7 @@
         </div>
         <!-- /.row -->
         <div class="clearfix"></div>
-        <div id="tips-content-wrap" class="row grid">
+        <div id="tips-content-wrap" class="row iso">
         <?php
     // WP_Query arguments
     $args = array(
@@ -85,7 +85,80 @@
             if ($type == 'recipe') {
            
                 ?>
-                <a target="_blank" href="<?php echo esc_url($post_link); ?>">Read more</a>
+                 <div class="product-item all <?= the_field('type');?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4">
+                <div class="pi-top">
+                    
+                    <div class="pi-top--shim">
+                        <div class="pi-top--shim-bg" style="background-image: url('<?=the_field("image");?>');"></div>
+                    </div>
+                    
+                    <div class="title-wrap">
+                        <div class="title">
+                            <?php the_title();?>
+                        </div>
+                        <!-- /.title -->
+                    </div>
+                    <!-- /.title-wrap -->
+                </div>
+                <!-- /.pi-top -->
+                <div class="pi-bottom">
+                    <?php if(get_field('cut_image')) { ?>
+                        <img src="<?=the_field("cut_image");?>" alt="<?php the_title();?>" class="pi-cut-img">
+                    <?php } ?>
+                    <?php if(get_field('product_description')) { ?>
+                        <p><?=the_field("product_description");?></p>
+                    <?php } ?>
+                    
+                    <?php if(have_rows('variation_images')) { ?>
+                        <div class="variation-carousel">
+                            <?php while( have_rows('variation_images') ): the_row(); ?>
+                                <div class="carousel-cell">
+                                    <img src="<?= the_sub_field('image');?>" alt="Variation">
+                                </div>
+                                <!-- /.carousel-cell -->
+                            <?php endwhile;?>
+                        </div>
+                        <!-- /.variation-carousel -->
+                    <?php } else { ?>
+                        <?php if(get_field('product_image')) { ?>
+                            <img src="<?=the_field("product_image");?>" alt="<?php the_title();?>" class="pi-product-img">
+                        <?php } ?>
+                    <?php } ?>
+                    <?php if(get_field('also_available_in')) { ?>
+                        <p>Available in:<?=the_field("also_available_in");?></p>
+                        <!-- /.ingredients-list -->
+                    <?php } ?>
+                    <?php if(get_field('highlights')) { ?>
+                        <p class="ing-list">
+                            <?=the_field("highlights");?>
+                        </p>
+                        <!-- /.ingredients-list -->
+                    <?php } ?>
+                    <?php if(get_field('ingredients')) { ?>
+                        <p class="ing-list">
+                            <span>Ingredients:</span> <?=the_field("ingredients");?> 
+                        </p>
+                        <!-- /.ingredients-list -->
+                    <?php } ?>
+                    <?php if(get_field('allergens')) { ?>
+                        <p class="ing-list">
+                            <span>Allergens:</span> <?=the_field("allergens");?> 
+                        </p>
+                        <!-- /.ingredients-list -->
+                    <?php } ?>
+                    <?php if(get_field('nutrition_facts')) { ?>
+                        <img class="pi-ingredients" src="<?=the_field("nutrition_facts");?>" alt="Nutrition Facts">
+                    <?php } ?>
+                    <?php if(get_field('image_source')) { ?>
+                        <div class="product-img-cite"><?= the_field('image_source');?></div>
+                    <?php } ?>
+                    <!-- /.product-img-cite -->
+                    <?php if(get_field('has_product_page') == 1) { ?>
+                        <a class="product-link" href="<?php the_permalink();?>">Read More</a>
+                    <?php } ?>
+                </div>
+                <!-- /.pi-bottom -->
+            </div>
                 <?php
             } // End of the if
         } // End of the while
@@ -97,5 +170,8 @@
     </div>
     <!-- /.container -->
 </section>
+
 <!-- /#tips-recipes-wrap -->
-<?php get_footer();?>
+<?php
+get_template_part('parts/pre-footer-ctas');
+get_footer();?>
