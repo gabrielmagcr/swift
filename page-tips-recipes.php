@@ -52,7 +52,46 @@
         <!-- /.row -->
         <div class="clearfix"></div>
         <div id="tips-content-wrap" class="row grid">
-            <?php get_template_part('inc/tips', 'loop'); ?>
+        <?php
+    // WP_Query arguments
+    $args = array(
+        'post_type'              => 'tips',
+        'posts_per_page' => -1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'meta_query' => array(
+            array(
+                'key' => 'hide_on_tips_page',
+                'compare' => '!=',
+                'value' => 1
+            ),
+        )
+        // 'meta_key' => 'hide_on_tips_page',
+        // 'meta_value' => 1
+    );
+
+    // The Query
+    $query = new WP_Query( $args );
+    // $i = 0;
+    
+    // The Loop
+    if ( $query->have_posts() ) {
+        while ( $query->have_posts() ) {
+            $query->the_post();
+            $id = get_the_ID(); 
+            $type = get_field('type');
+            $post_link = get_permalink($id);  
+            
+            if ($type == 'recipe') {
+           
+                ?>
+                <a target="_blank" href="<?php echo esc_url($post_link); ?>">Read more</a>
+                <?php
+            } // End of the if
+        } // End of the while
+    } // End of the if
+    ?>
+    
         </div>
         <!-- /#tips-content-wrap.row -->
     </div>
