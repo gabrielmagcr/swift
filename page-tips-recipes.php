@@ -8,6 +8,9 @@
     width: 100%;
     background-size: cover;
     }
+    .tips-container{
+        background: none;
+    }
 </style>
 
 <section id="tips-recipes-wrap">
@@ -62,7 +65,7 @@
         </div>
         <!-- /.row -->
         <div class="clearfix"></div>
-        <div id="products-wrap" class="row iso">
+        <div id="products-wrap" class="row iso tips-container">
         <?php
     // WP_Query arguments
     $args = array(
