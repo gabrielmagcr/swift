@@ -1,4 +1,15 @@
 <?php get_header();?>
+<style>
+    .pi-top--shim-bg-tips{
+        position: absolute;
+    top: 0;
+    bottom: 0rem;
+    left: 0%;
+    width: 100%;
+    background-size: cover;
+    }
+</style>
+
 <section id="tips-recipes-wrap">
     <div class="container">
         <div class="row">
@@ -89,7 +100,7 @@
                 <div class="pi-top">
                     
                     <div class="pi-top--shim">
-                        <div class="pi-top--shim-bg" style="background-image: url('<?=the_field("image");?>');"></div>
+                        <div class="pi-top--shim-bg pi-top--shim-bg-tips" style="background-image: url('<?=the_field("image");?>');"></div>
                     </div>
                     
                     <div class="title-wrap">
