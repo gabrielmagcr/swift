@@ -62,7 +62,7 @@
         </div>
         <!-- /.row -->
         <div class="clearfix"></div>
-        <div id="tips-content-wrap" class="row iso">
+        <div id="products-wrap" class="row iso">
         <?php
     // WP_Query arguments
     $args = array(
