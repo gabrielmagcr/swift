@@ -395,31 +395,37 @@ jQuery(document).ready(function($) {
             resetgrid();
         }, 50);
     });
-    let urlParams = new URLSearchParams(window.location.search)
+    let urlParams = new URLSearchParams(window.location.search);
     if(urlParams.has('filter')) {
         if(urlParams.get('filter') == 'pork') {
+            viewMore();
+            console.log('bacon');
             let param = ".Pork"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Pork");
-            console.log('bacon');
-            viewMore();
+            
+            
         } else if (urlParams.get('filter')=='beef'){
+            viewMore();
+            console.log('beef');
             let param = ".Beef"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Beef");
-            viewMore();
-            console.log('bacon');
+            
+            
         }   else if (urlParams.get('filter')=='bacon') {
+            viewMore();
             let param = ".Bacon"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Bacon");
-            viewMore();
+            
             console.log('bacon');
         } else if (urlParams.get('filter')=='lamb') {
+            viewMore();
             let param = ".Lamb"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Lamb");
-            viewMore();
+            
             console.log('lamb');
         }
     }
