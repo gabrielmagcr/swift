@@ -404,11 +404,12 @@ jQuery(document).ready(function($) {
             
         }   else if (urlParams.get('filter')=='bacon') {
             viewMore();
+            console.log('bacon');
             let param = ".Bacon"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Bacon");
             
-            console.log('bacon');
+           
         } else if (urlParams.get('filter')=='lamb') {
             viewMore();
             let param = ".Lamb"
