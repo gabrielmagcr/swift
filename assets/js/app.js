@@ -327,6 +327,7 @@ jQuery(document).ready(function($) {
     });
     $('.wil-dropdown .wil-dropdown-menu li').click(function () {
         $(this).parents('.wil-dropdown').find('span').text($(this).text());
+        viewMore()
         // $(this).parents('.wil-dropdown').find('input').attr('value', $(this).attr('id'));
     });
     /*End Dropdown Menu*/
