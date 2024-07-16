@@ -100,11 +100,13 @@
                     if ($type == 'recipe') {
 
             ?>
-                        <a href="<?php the_permalink(); ?>">
+                       
                             <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4">
                                 <div class="pi-top">
                                     <div class="pi-top--shim">
+                                    <a href="<?php the_permalink(); ?>">
                                         <div class="pi-top--shim-bg pi-top--shim-bg-tips" style="background-image: url('<?= the_field("image"); ?>');"></div>
+                                        </a>
                                     </div>
                                     <div class="title-wrap">
                                         <div class="title">
@@ -116,7 +118,7 @@
                                 </div>
                                 <!-- /.pi-top -->
                             </div>
-                        </a>
+                    
             <?php
                     } // End of the if
                 } // End of the while
