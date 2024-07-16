@@ -401,22 +401,22 @@ jQuery(document).ready(function($) {
             let param = ".Pork"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Pork");
-            viewMore()
+            viewMore();
         } else if (urlParams.get('filter')=='beef'){
             let param = ".Beef"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Beef");
-            viewMore()
+            viewMore();
         }   else if (urlParams.get('filter')=='bacon') {
             let param = ".Bacon"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Bacon");
-            viewMore()
+            viewMore();
         } else if (urlParams.get('filter')=='lamb') {
             let param = ".Lamb"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Lamb");
-            viewMore()
+            viewMore();
         }
     }
     function filter_from_param(param) {
