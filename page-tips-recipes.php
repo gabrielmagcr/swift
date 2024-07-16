@@ -12,6 +12,10 @@
     .tips-container {
         background: none;
     }
+    .pi-top-link{
+        display: block;
+        width: 100%;
+    }
 </style>
 
 <section id="tips-recipes-wrap">
@@ -102,12 +106,12 @@
             ?>
                        
                             <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4">
-                            <a href="<?php the_permalink(); ?>">
                                 <div class="pi-top">
                                     <div class="pi-top--shim">
-                                    
+                                    <a href="<?php the_permalink(); ?>" class=pi-top-link>
+
                                         <div class="pi-top--shim-bg pi-top--shim-bg-tips" style="background-image: url('<?= the_field("image"); ?>');"></div>
-                                    
+                                        </a>
                                     </div>
                                     <div class="title-wrap">
                                         <div class="title">
@@ -118,7 +122,7 @@
                                     <!-- /.title-wrap -->
                                 </div>
                                 <!-- /.pi-top -->
-                                </a>
+                            
                             </div>
                     
             <?php
