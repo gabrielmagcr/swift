@@ -383,7 +383,17 @@ jQuery(document).ready(function($) {
     }
     return value;
     }
-
+    function viewMore() {
+        console.log('view more');
+        $('.product-item.hidden').removeClass('hidden');
+        $(this).remove();
+        setTimeout(function() {
+            resetgrid();
+        }, 50);
+    }
+    /* view all products button */
+    $('#sm-products-view-more').on('click', viewMore());
+    
     let urlParams = new URLSearchParams(window.location.search);
     if(urlParams.has('filter')) {
         if(urlParams.get('filter') == 'pork') {
@@ -425,15 +435,7 @@ jQuery(document).ready(function($) {
         $('ul#protein-dd')
     }
 
-    /* view all products button */
-    $('#sm-products-view-more').on('click', function viewMore() {
-        console.log('view more');
-        $('.product-item.hidden').removeClass('hidden');
-        $(this).remove();
-        setTimeout(function() {
-            resetgrid();
-        }, 50);
-    });
+  
    
     /* accordion / drawer */
     $('button[data-toggle]').on('click', function() {
