@@ -384,6 +384,17 @@ jQuery(document).ready(function($) {
     return value;
     }
 
+  
+
+    /* view all products button */
+    $('#sm-products-view-more').on('click', function viewMore() {
+        console.log('view more');
+        $('.product-item.hidden').removeClass('hidden');
+        $(this).remove();
+        setTimeout(function() {
+            resetgrid();
+        }, 50);
+    });
     let urlParams = new URLSearchParams(window.location.search)
     if(urlParams.has('filter')) {
         if(urlParams.get('filter') == 'pork') {
@@ -403,24 +414,13 @@ jQuery(document).ready(function($) {
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Lamb");
         }
-        
+    viewMore()
     }
     function filter_from_param(param) {
         let theFilterValue = param
         $grid.isotope({ filter: theFilterValue });
         $('ul#protein-dd')
     }
-
-    /* view all products button */
-    $('#sm-products-view-more').on('click', function() {
-        console.log('view more');
-        $('.product-item.hidden').removeClass('hidden');
-        $(this).remove();
-        setTimeout(function() {
-            resetgrid();
-        }, 50);
-    });
-
     /* accordion / drawer */
     $('button[data-toggle]').on('click', function() {
         var $this = $(this);
