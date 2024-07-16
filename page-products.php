@@ -12,7 +12,7 @@
 </style>
 <section id="products-hero">
     <div class="container">
-        <div class="row">
+        <div class="row textcenter">
             <h1>Swift<br><span>Makes the Meal</span></h1>
         </div>
         <!-- /.row -->
