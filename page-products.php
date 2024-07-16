@@ -88,7 +88,7 @@
     <!-- /.container -->
 </section>
 <!-- /#filter-wrap -->
-<section id="products-wrap testclass">
+<section id="products-wrap">
     <div class="container">
         <div class="row iso">
             <?php
