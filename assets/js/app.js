@@ -72,36 +72,6 @@ jQuery(document).ready(function($) {
         }
     });
 
-
-
-    const nextLevelItems = document.querySelectorAll('.sm-nextlevel-item');
-
-        // Function to add hover classes
-        const addHoverClass = (event) => {
-            event.target.classList.add('hovered-background');
-            const nextLevelBody = event.target.querySelector('.sm-nextlevel-item--body');
-            if (nextLevelBody) {
-                nextLevelBody.classList.add('hovered-background');
-            }
-        };
-    
-
-        // Function to remove hover classes
-        const removeHoverClass = (event) => {
-            event.target.classList.remove('hovered-background');
-            const nextLevelBody = event.target.querySelector('.sm-nextlevel-item--body');
-            if (nextLevelBody) {
-                nextLevelBody.classList.remove('hovered-background');
-            }
-        };
-
-        // Add event listeners to each element
-        nextLevelItems.forEach(item => {
-            item.addEventListener('mouseenter', addHoverClass);
-            item.addEventListener('mouseleave', removeHoverClass);
-        });
-
-
     $('#timeline-ul li').hover(function() {
         if($(this).hasClass('tl-left')) {
             var target = $("#tl-target-left");
@@ -327,7 +297,7 @@ jQuery(document).ready(function($) {
     });
     $('.wil-dropdown .wil-dropdown-menu li').click(function () {
         $(this).parents('.wil-dropdown').find('span').text($(this).text());
-        viewMore()
+        viewMore();
         // $(this).parents('.wil-dropdown').find('input').attr('value', $(this).attr('id'));
     });
     /*End Dropdown Menu*/
@@ -384,9 +354,7 @@ jQuery(document).ready(function($) {
     }
     return value;
     }
-   
     
-
     function viewMore() {
         console.log('view more');
         $('.product-item.hidden').removeClass('hidden');
@@ -396,41 +364,26 @@ jQuery(document).ready(function($) {
         }, 50);
     }
 
-    
-    let urlParams = new URLSearchParams(window.location.search);
+    let urlParams = new URLSearchParams(window.location.search)
     if(urlParams.has('filter')) {
         if(urlParams.get('filter') == 'pork') {
-            viewMore();
-            console.log('bacon');
             let param = ".Pork"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Pork");
-            
-            
         } else if (urlParams.get('filter')=='beef'){
-            viewMore();
-            console.log('beef');
             let param = ".Beef"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Beef");
-            
-            
         }   else if (urlParams.get('filter')=='bacon') {
-            viewMore();
-            console.log('bacon');
             let param = ".Bacon"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Bacon");
-            
-           
         } else if (urlParams.get('filter')=='lamb') {
-            viewMore();
             let param = ".Lamb"
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Lamb");
-            
-            console.log('lamb');
         }
+        
     }
     function filter_from_param(param) {
         let theFilterValue = param
@@ -441,6 +394,7 @@ jQuery(document).ready(function($) {
   /* view all products button */
   $('#sm-products-view-more').on('click', viewMore);
    
+
     /* accordion / drawer */
     $('button[data-toggle]').on('click', function() {
         var $this = $(this);
