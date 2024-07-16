@@ -412,6 +412,7 @@ jQuery(document).ready(function($) {
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Bacon");
             viewMore();
+            console.log('bacon');
         } else if (urlParams.get('filter')=='lamb') {
             let param = ".Lamb"
             filter_from_param(param)
