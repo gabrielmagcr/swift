@@ -417,6 +417,7 @@ jQuery(document).ready(function($) {
             filter_from_param(param)
             $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Lamb");
             viewMore();
+            console.log('lamb')
         }
     }
     function filter_from_param(param) {
