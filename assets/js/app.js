@@ -383,57 +383,45 @@ jQuery(document).ready(function($) {
     }
     return value;
     }
-    function viewMore() {
-        console.log('view more');
-        $('.product-item.hidden').removeClass('hidden');
-        $(this).remove();
-        setTimeout(function() {
-            resetgrid();
-        }, 50);
+   
+ // Definir funciones globalmente
+function viewMore() {
+    console.log('view more');
+    $('.product-item.hidden').removeClass('hidden');
+    $('#sm-products-view-more').remove();
+    setTimeout(function() {
+        resetgrid();
+    }, 50);
+}
+
+function filter_from_param(param) {
+    let theFilterValue = param;
+    $grid.isotope({ filter: theFilterValue });
+    $('ul#protein-dd');
+}
+
+// Evento del botón 'view more'
+$('#sm-products-view-more').on('click', viewMore);
+
+// Manejo de parámetros de URL
+let urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has('filter')) {
+    let filterValue = urlParams.get('filter');
+    let filterMap = {
+        'pork': 'Pork',
+        'beef': 'Beef',
+        'bacon': 'Bacon',
+        'lamb': 'Lamb'
+    };
+
+    if (filterMap[filterValue]) {
+        viewMore();
+        console.log(filterValue);
+        let param = `.${filterMap[filterValue]}`;
+        filter_from_param(param);
+        $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text(filterMap[filterValue]);
     }
-    /* view all products button */
-    $('#sm-products-view-more').on('click', viewMore());
-    
-    let urlParams = new URLSearchParams(window.location.search);
-    if(urlParams.has('filter')) {
-        if(urlParams.get('filter') == 'pork') {
-            viewMore();
-            console.log('bacon');
-            let param = ".Pork"
-            filter_from_param(param)
-            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Pork");
-            
-            
-        } else if (urlParams.get('filter')=='beef'){
-            viewMore();
-            console.log('beef');
-            let param = ".Beef"
-            filter_from_param(param)
-            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Beef");
-            
-            
-        }   else if (urlParams.get('filter')=='bacon') {
-            viewMore();
-            console.log('bacon');
-            let param = ".Bacon"
-            filter_from_param(param)
-            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Bacon");
-            
-           
-        } else if (urlParams.get('filter')=='lamb') {
-            viewMore();
-            let param = ".Lamb"
-            filter_from_param(param)
-            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Lamb");
-            
-            console.log('lamb');
-        }
-    }
-    function filter_from_param(param) {
-        let theFilterValue = param
-        $grid.isotope({ filter: theFilterValue });
-        $('ul#protein-dd')
-    }
+}
 
   
    
