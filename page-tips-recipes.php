@@ -12,12 +12,16 @@
     .tips-container {
         background: none;
     }
-    .pi-top-link{
+
+    .pi-top-link {
         display: block;
         width: 100%;
         height: 100%;
         position: absolute;
     }
+    .product-item-hidden {
+                display: none;
+            }
 </style>
 
 <section id="tips-recipes-wrap">
@@ -76,71 +80,70 @@
             <?php
             // WP_Query arguments
             $args = array(
-                'post_type'              => 'tips',
+                'post_type'      => 'tips',
                 'posts_per_page' => -1,
-                'orderby' => 'date',
-                'order' => 'DESC',
-                'meta_query' => array(
+                'orderby'        => 'date',
+                'order'          => 'DESC',
+                'meta_query'     => array(
                     array(
-                        'key' => 'hide_on_tips_page',
+                        'key'     => 'hide_on_tips_page',
                         'compare' => '!=',
-                        'value' => 1
+                        'value'   => 1
                     ),
                 )
-                // 'meta_key' => 'hide_on_tips_page',
-                // 'meta_value' => 1
             );
 
             // The Query
             $query = new WP_Query($args);
-            // $i = 0;
 
             // The Loop
             if ($query->have_posts()) {
+                $count = 0;
                 while ($query->have_posts()) {
                     $query->the_post();
                     $id = get_the_ID();
                     $type = get_field('type');
                     $post_link = get_permalink($id);
+                    $class = ($count >= 6) ? 'product-item-hidden' : '';
 
                     if ($type == 'recipe') {
-
             ?>
-                        <a href="<?php the_permalink(); ?>" class=pi-top-link>
-                            <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4">
-                           
+                        <a href="<?php the_permalink(); ?>" class="pi-top-link">
+                            <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4 <?= $class; ?>">
                                 <div class="pi-top">
-                               
                                     <div class="pi-top--shim">
-                                   
-
                                         <div class="pi-top--shim-bg pi-top--shim-bg-tips" style="background-image: url('<?= the_field("image"); ?>');"></div>
-                                      
                                     </div>
                                     <div class="title-wrap">
                                         <div class="title">
                                             <?php the_title(); ?>
                                         </div>
-                                        <!-- /.title -->
                                     </div>
-                                    <!-- /.title-wrap -->
-                                   
                                 </div>
-                            
-                                <!-- /.pi-top -->
-                            
                             </div>
                         </a>
             <?php
+                        $count++;
                     } // End of the if
                 } // End of the while
             } // End of the if
+            wp_reset_postdata();
             ?>
-
         </div>
-        <!-- /#tips-content-wrap.row -->
-    </div>
-    <!-- /.container -->
+        <!-- /#products-wrap.row -->
+
+        <a class="product-link" href="<?php the_permalink(); ?>" id="load-more">View More</a>
+
+
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('#load-more').click(function() {
+                    $('.product-item-hidden').fadeIn();
+                    $(this).hide();
+                });
+            });
+        </script>
+        <!-- /.container -->
 </section>
 
 <!-- /#tips-recipes-wrap -->
