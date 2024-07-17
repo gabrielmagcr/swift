@@ -369,19 +369,19 @@ jQuery(document).ready(function($) {
         if(urlParams.get('filter') == 'pork') {
             let param = ".Pork"
             filter_from_param(param)
-            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('div').text("Pork");
+            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Pork");
         } else if (urlParams.get('filter')=='beef'){
             let param = ".Beef"
             filter_from_param(param)
-            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('div').text("Beef");
+            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Beef");
         }   else if (urlParams.get('filter')=='bacon') {
             let param = ".Bacon"
             filter_from_param(param)
-            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('div').text("Bacon");
+            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Bacon");
         } else if (urlParams.get('filter')=='lamb') {
             let param = ".Lamb"
             filter_from_param(param)
-            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('div').text("Lamb");
+            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Lamb");
         }
         
     }
