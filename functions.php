@@ -54,6 +54,22 @@ function enqueue_lazyload_script() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_lazyload_script' );
 
+function initialize_lazy_load_script() {
+    ?>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('.lazy').Lazy({
+            attribute: 'data-bg',
+            afterLoad: function(element) {
+                element.css('background-image', element.attr('data-bg'));
+                element.removeAttr('data-bg'); 
+            }
+        });
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'initialize_lazy_load_script');
 
 // ALLOW SVG
 function add_file_types_to_uploads($file_types){
