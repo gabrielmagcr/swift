@@ -106,7 +106,7 @@
                     $id = get_the_ID();
                     $type = get_field('type');
                     $post_link = get_permalink($id);
-                    $class = ($count >= 6) ? 'hidden' : '';
+                    $class = ($count >= 9) ? 'hidden' : '';
 
                     if ($type == 'recipe') {
             ?>
@@ -114,7 +114,7 @@
                             <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4 <?= $class; ?>">
                                 <div class="pi-top">
                                     <div class="pi-top--shim">
-                                        <div class="pi-top--shim-bg pi-top--shim-bg-tips" style="background-image: url('<?= the_field("image"); ?>');"></div>
+                                        <div class="pi-top--shim-bg pi-top--shim-bg-tips lazy"  data-bg=<?= the_field("image"); ?>></div>
                                     </div>
                                     <div class="title-wrap">
                                         <div class="title">
