@@ -106,7 +106,7 @@
                     $id = get_the_ID();
                     $type = get_field('type');
                     $post_link = get_permalink($id);
-                    $class = ($count >= 6) ? 'product-item-hidden' : '';
+                    $class = ($count >= 6) ? 'hidden' : '';
 
                     if ($type == 'recipe') {
             ?>
@@ -134,17 +134,24 @@
         </div>
         <!-- /#products-wrap.row -->
 
-        <a class="product-link view-more-link" href="#" id="load-more">View More</a>
+        <div class="sm-products--view-more">
+            <button id="sm-products-view-more">
+                <span>View More Products</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" fill="none">
+                <g clip-path="url(#clip0_350_1057)">
+                    <path d="M27.4366 0L14.9936 12.443L2.55051 0L0.77832 1.77219L13.2214 14.2152L14.9936 16L29.2214 1.77219L27.4366 0Z" fill="#28334A"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_350_1057">
+                    <rect width="28.443" height="16" fill="white" transform="translate(0.77832)"/>
+                    </clipPath>
+                </defs>
+                </svg>
+            </button>
+        </div>
 
 
-        <script type="text/javascript">
-            jQuery(document).ready(function($) {
-                $('#load-more').click(function() {
-                    $('.product-item-hidden').fadeIn();
-                    $(this).hide();
-                });
-            });
-        </script>
+
         <!-- /.container -->
 </section>
 
