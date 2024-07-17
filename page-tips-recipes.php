@@ -22,6 +22,8 @@
     .product-item-hidden {
                 display: none;
             }
+            .view-more-link{position: relative;
+            z-index: 1000;}
 </style>
 
 <section id="tips-recipes-wrap">
@@ -132,7 +134,7 @@
         </div>
         <!-- /#products-wrap.row -->
 
-        <a class="product-link" href="<?php the_permalink(); ?>" id="load-more">View More</a>
+        <a class="product-link view-more-link" href="#" id="load-more">View More</a>
 
 
         <script type="text/javascript">
