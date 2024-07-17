@@ -79,36 +79,38 @@
         <!-- /.row -->
         <div class="clearfix"></div>
         <div id="products-wrap" class="row iso tips-container">
-            <?php
+        <?php
             // WP_Query arguments
             $args = array(
-                'post_type'      => 'tips',
+                'post_type'              => 'tips',
                 'posts_per_page' => -1,
-                'orderby'        => 'date',
-                'order'          => 'DESC',
-                'meta_query'     => array(
+                'orderby' => 'date',
+                'order' => 'DESC',
+                'meta_query' => array(
                     array(
-                        'key'     => 'hide_on_tips_page',
+                        'key' => 'hide_on_tips_page',
                         'compare' => '!=',
-                        'value'   => 1
+                        'value' => 1
                     ),
                 )
+                // 'meta_key' => 'hide_on_tips_page',
+                // 'meta_value' => 1
             );
 
             // The Query
             $query = new WP_Query($args);
+            // $i = 0;
 
             // The Loop
             if ($query->have_posts()) {
-                $count = 0;
                 while ($query->have_posts()) {
                     $query->the_post();
                     $id = get_the_ID();
                     $type = get_field('type');
                     $post_link = get_permalink($id);
-                    $class = ($count >= 9) ? 'hidden' : '';
 
                     if ($type == 'recipe') {
+
             ?>
                         <a href="<?php the_permalink(); ?>" class="pi-top-link">
                             <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4 <?= $class; ?>">
@@ -134,25 +136,7 @@
         </div>
         <!-- /#products-wrap.row -->
 
-        <div class="sm-products--view-more">
-            <button id="sm-products-view-more">
-                <span>View More Products</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" fill="none">
-                <g clip-path="url(#clip0_350_1057)">
-                    <path d="M27.4366 0L14.9936 12.443L2.55051 0L0.77832 1.77219L13.2214 14.2152L14.9936 16L29.2214 1.77219L27.4366 0Z" fill="#28334A"/>
-                </g>
-                <defs>
-                    <clipPath id="clip0_350_1057">
-                    <rect width="28.443" height="16" fill="white" transform="translate(0.77832)"/>
-                    </clipPath>
-                </defs>
-                </svg>
-            </button>
-        </div>
-
-
-
-        <!-- /.container -->
+            <!-- /.container -->
 </section>
 
 <!-- /#tips-recipes-wrap -->
