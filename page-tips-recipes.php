@@ -1,30 +1,5 @@
 <?php get_header(); ?>
-<style>
-    .pi-top--shim-bg-tips {
-        position: absolute;
-        top: 0;
-        bottom: 0rem;
-        left: 0%;
-        width: 100%;
-        background-size: cover;
-    }
 
-    .tips-container {
-        background: none;
-    }
-
-    .pi-top-link {
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    }
-    .product-item-hidden {
-                display: none;
-            }
-            .view-more-link{position: relative;
-            z-index: 1000;}
-</style>
 
 <section id="tips-recipes-wrap">
     <div class="container">
