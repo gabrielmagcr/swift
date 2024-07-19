@@ -44,7 +44,8 @@
                     <span class="made-with-span">MADE WITH:</span>
                     <?php foreach ($made_with as $post) :
                         setup_postdata($post); ?>
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?><div class="made-with">
+                        <a href="<?php the_permalink(); ?>"><div class="made-with">
+                            <span><?php the_title(); ?></span>
                                 <?php
                                 $product_image = get_field('product_image');
                                 if ($product_image) : ?>
