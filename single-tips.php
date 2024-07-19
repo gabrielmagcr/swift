@@ -24,35 +24,50 @@
         padding: 5px 10px;
         color: white;
         margin: 15px 0 16px 0;
-    } 
-    .badgebar-section{
+    }
+
+    .badgebar-section {
         background: #FFAA2B;
         padding: 15px 0;
     }
-    .tips-badgebar{
+
+    .tips-badgebar {
         display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
     }
-    .badgebar{
+
+    .badgebar {
         display: flex;
+        align-items: center;
         gap: 10px;
     }
-    .badgebar h3{
+
+    .badgebar h3 {
         margin: 0;
-    }
-    .badgebar span{
         font-size: 2rem;
     }
-    .badgebar img{
+
+    .badgebar span {
+        font-size: 4rem;
+        font-family: monospace;
+        color: #28334a;
+        font-weight: bold;
+    }
+
+    .badgebar img {
         width: 50px;
     }
+
     @media (min-width:1023px) {
-        .badgebar img{
-        width: 75px;
-    }
+        .tips-servings{
+            gap: 20px;
+        }
+        .badgebar img {
+            width: 75px;
+        }
     }
 </style>
 <section class="sm-prodhero">
@@ -100,29 +115,32 @@
 </section>
 
 <section class="badgebar-section">
-    <?php 
-        $number_of_ingredients= get_field('number_of_ingredients');
-        $preparation_time= get_field('preparation_time');
-        $amount_of_time= get_field('amount_of_time');
-        $servings=get_field('servings');
+    <?php
+    $number_of_ingredients = get_field('number_of_ingredients');
+    $preparation_time = get_field('preparation_time');
+    $amount_of_time = get_field('amount_of_time');
+    $servings = get_field('servings');
     ?>
-    
-        <div class="tips-badgebar">
-            <div class="badgebar tips-ingredients">
-            <span><?php echo $number_of_ingredients; ?></span><h3> INGREDIENTS</h3>
-            </div>
-            <div class="badgebar tips-time">
-                <img src='/wp-content/uploads/2024/07/Vector.svg'><span><?php echo $preparation_time; ?></span><h3><?php echo $amount_of_time ?></h3>
-            </div>
-            <div class="badgebar tips-servings">
-                <img src='/wp-content/uploads/2024/07/Group.svg'><span><?php echo $servings; ?></span><h3>SERVINGS</h3>
-            </div>
-            <div class="badgebar tips-cooking-style">
-                <!-- agregar todos los tipos de coccion -->
-                <img src='/wp-content/uploads/2024/07/oven.svg'>
-            </div>
+
+    <div class="tips-badgebar">
+        <div class="badgebar tips-ingredients">
+            <span><?php echo $number_of_ingredients; ?></span>
+            <h3> INGREDIENTS</h3>
         </div>
-   
+        <div class="badgebar tips-time">
+            <img src='/wp-content/uploads/2024/07/Vector.svg'><span><?php echo $preparation_time; ?></span>
+            <h3><?php echo $amount_of_time ?></h3>
+        </div>
+        <div class="badgebar tips-servings">
+            <img src='/wp-content/uploads/2024/07/Group.svg'><span><?php echo $servings; ?></span>
+            <h3>SERVINGS</h3>
+        </div>
+        <div class="badgebar tips-cooking-style">
+            <!-- agregar todos los tipos de coccion -->
+            <img src='/wp-content/uploads/2024/07/oven.svg'>
+        </div>
+    </div>
+
 </section>
 <!-- /#tips-recipes-wrap -->
 <?php get_footer(); ?>
