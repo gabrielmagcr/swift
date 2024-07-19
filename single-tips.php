@@ -63,6 +63,10 @@
     }
     .tips-instructions{
         background: #28334A;
+        color: while;
+    }
+    .tips-instructions p{
+        color: white;
     }
     @media (min-width:767px) {
         .badgebar span {
@@ -93,25 +97,26 @@
 
     }
 </style>
-<section class="sm-prodhero">
+<meta property="og:SwiftMeats" content="https://stgswiftmeats.wpenginepowered.com" />
+<section class="sm-prodhero h-recipe">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--info">
-                <div class="sm-prodhero--breadcrumb"  itemscope itemtype="http://schema.org/Recipe"> 
+                <div class="sm-prodhero--breadcrumb"  > 
                     <ol>
                         <li><a href="/tips-recipes">Recipes</a></li>
                         <li><?php the_title(); ?></li>
                     </ol>
                 </div>
-                <h1  itemprop="name"><?php the_title(); ?></h1>
-                <p itemprop="description"><?= the_field('description'); ?></p>
+                <h1 class="p-name"><?php the_title(); ?></h1>
+                <p class="p-summary"><?= the_field('description'); ?></p>
                 <form class="sm-prodhero--wtb" action="/products" method="GET">
                     <button class="btn btn-outline-red" type="submit">Find your Protein</button>
                 </form>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--img">
                 <figure>
-                    <img src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
+                    <img class="u-photo" src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
                 </figure>
                 <?php $made_with = get_field('made_with');
                 if ($made_with) : ?>
