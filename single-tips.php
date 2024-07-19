@@ -179,7 +179,7 @@
                             <!-- /.cite -->
                             <?php } ?>
                             <div class="cite-left">
-                                Share Recipe on Pinterest <a class="share-pin-link" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?=bloginfo('url');?>/tips-recipes/%23tip-<?=$id;?>&media=<?= the_field('image');?>&description=<?php the_title();?>"><img src="<?=get_template_directory_uri();?>/assets/img/share/pinterest.png"></a>
+                                Share Recipe on Pinterest <a class="share-pin-link" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?= the_field('image');?>&title=<?php the_title();?>&description=<?= the_field('description'); ?>"><img src="<?=get_template_directory_uri();?>/assets/img/share/pinterest.png"></a>
                             </div>
                             <!-- /.cite-left -->
                         </div>
