@@ -28,8 +28,18 @@
     .badgebar-section{
         background: #FFAA2B;
     }
+    .tips-badgebar{
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    }
     .badgebar{
         display: flex;
+    }
+    .badgebar h3{
+        margin: 0;
     }
     .badgebar img{
         width: 50px;
