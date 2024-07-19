@@ -77,23 +77,23 @@
         $amount_of_time= get_field('amount_of_time');
         $servings=get_field('servings');
     ?>
-    <div class="container">
-        <div class="row">
-            <div class="tips-ingredients">
+    
+        <div class="row tips-badgebar">
+            <div class="badgebar tips-ingredients">
                 <h3><span><?php echo $number_of_ingredients; ?></span> INGREDIENTS</h3>
             </div>
-            <div class="tips-time">
+            <div class="badgebar tips-time">
                 <img src='/wp-content/uploads/2024/07/Vector.svg'><h3><span><?php echo $preparation_time; ?></span><?php echo $amount_of_time ?></h3>
             </div>
-            <div class="tips-servings">
+            <div class="badgebar tips-servings">
                 <img src='/wp-content/uploads/2024/07/Group.svg'><h3><span><?php echo $servings; ?></span>SERVINGS</h3>
             </div>
-            <div class="tips-cooking-style">
+            <div class="badgebar tips-cooking-style">
                 <!-- agregar todos los tipos de coccion -->
                 <img src='/wp-content/uploads/2024/07/oven.svg'>
             </div>
         </div>
-    </div>
+   
 </section>
 <!-- /#tips-recipes-wrap -->
 <?php get_footer(); ?>
