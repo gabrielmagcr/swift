@@ -43,6 +43,9 @@
     .badgebar h3{
         margin: 0;
     }
+    .badgebar span{
+        font-size: 2rem;
+    }
     .badgebar img{
         width: 50px;
     }
