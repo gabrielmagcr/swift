@@ -61,39 +61,47 @@
     .badgebar img {
         width: 50px;
     }
-    .tips-instructions{
+
+    .tips-instructions {
         background: #28334A;
         color: while;
     }
-    .tips-instructions p{
+
+    .tips-instructions p {
         color: white;
     }
+
     @media (min-width:767px) {
         .badgebar span {
             font-size: 6rem;
         }
 
     }
+
     @media (min-width:1023px) {
-        .tips-servings{
+        .tips-servings {
             gap: 20px;
         }
+
         .badgebar img {
             width: 75px;
         }
     }
+
     @media (min-width:1439px) {
         .badgebar span {
             font-size: 9rem;
             line-height: normal;
 
         }
-        .badgebar h3{
+
+        .badgebar h3 {
             font-size: 3rem;
         }
+
         .badgebar img {
-        width: 100px;
-    }
+            width: 100px;
+        }
 
     }
 </style>
@@ -102,7 +110,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--info">
-                <div class="sm-prodhero--breadcrumb"  > 
+                <div class="sm-prodhero--breadcrumb">
                     <ol>
                         <li><a href="/tips-recipes">Recipes</a></li>
                         <li><?php the_title(); ?></li>
@@ -172,17 +180,21 @@
 </section>
 
 <section class="tips-instructions">
-    <?php echo get_field('content');?>
+    <?php echo get_field('content'); ?>
     <div class="cites">
-                            <?php if(get_field('recipe_source')) { ?>
-                                <div class="cite"><?= the_field('recipe_source');?></div>
-                            <!-- /.cite -->
-                            <?php } ?>
-                            <div class="cite-left">
-                                Share Recipe on Pinterest <a class="share-pin-link" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?= the_field('image');?>&title=<?php the_title();?>&description=<?= the_field('description'); ?>"><img src="<?=get_template_directory_uri();?>/assets/img/share/pinterest.png"></a>
-                            </div>
-                            <!-- /.cite-left -->
-                        </div>
+        <?php if (get_field('recipe_source')) { ?>
+            <div class="cite"><?= the_field('recipe_source'); ?></div>
+            <!-- /.cite -->
+        <?php } ?>
+        <div class="cite-left">
+            Share Recipe on Pinterest
+            <a class="share-pin-link" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&description=<?php echo urlencode(get_field('description')); ?>&title=<?php echo urlencode(get_the_title()); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/share/pinterest.png">
+            </a>
+        </div>
+
+        <!-- /.cite-left -->
+    </div>
 </section>
 
 
