@@ -20,7 +20,7 @@
                 <figure>
                     <img src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
                 </figure>
-                <?php $made_with= get_field('made-with');
+                <?php $made_with= get_field('made_with');
                 if($made_with): ?>          
                 <?php foreach( $made_with as $post ): 
                 setup_postdata($post); ?>
