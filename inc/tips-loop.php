@@ -1,4 +1,4 @@
-
+<?php get_header(); ?>
 <section class="sm-prodhero">
     <div class="container">
         <div class="row">
@@ -23,3 +23,6 @@
         </div>
     </div>
 </section>
+<?php
+get_template_part('parts/pre-footer-ctas');
+get_footer(); ?>
