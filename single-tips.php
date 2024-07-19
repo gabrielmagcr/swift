@@ -24,6 +24,9 @@
         padding: 5px 10px;
         color: white;
         margin: 15px 0 16px 0;
+    } 
+    .badgebar-section{
+        background: #FFAA2B;
     }
     .badgebar{
         display: flex;
@@ -81,7 +84,7 @@
     </div>
 </section>
 
-<section class="sm-badgebar">
+<section class="badgebar-section">
     <?php 
         $number_of_ingredients= get_field('number_of_ingredients');
         $preparation_time= get_field('preparation_time');
@@ -89,7 +92,7 @@
         $servings=get_field('servings');
     ?>
     
-        <div class="row tips-badgebar">
+        <div class="tips-badgebar">
             <div class="badgebar tips-ingredients">
                 <h3><span><?php echo $number_of_ingredients; ?></span> INGREDIENTS</h3>
             </div>
