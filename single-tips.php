@@ -3,19 +3,26 @@
 </script>
 <?php get_header(); ?>
 <style>
-    .made-with{
+    .made-with {
         background: #EBEBEB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
     }
-    .made-with img{
+
+    .made-with img {
         width: 50%;
     }
-    .made-with-span{
+
+    .made-with-span {
         background: #FFAA2B;
+        width: 100%;
+        display: block;
+        padding: 5px 10px;
+        color: white;
+        margin: 15px 0;
     }
 </style>
 <section class="sm-prodhero">
@@ -44,14 +51,16 @@
                     <span class="made-with-span">MADE WITH:</span>
                     <?php foreach ($made_with as $post) :
                         setup_postdata($post); ?>
-                        <a href="<?php the_permalink(); ?>"><div class="made-with">
-                            <span><?php the_title(); ?></span>
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="made-with">
+                                <span><?php the_title(); ?></span>
                                 <?php
                                 $product_image = get_field('product_image');
                                 if ($product_image) : ?>
                                     <img src="<?= $product_image; ?>" alt="<?php the_title(); ?>" />
                                 <?php endif; ?>
-                            </div></a>
+                            </div>
+                        </a>
                     <?php endforeach; ?>
                     <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
