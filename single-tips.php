@@ -61,6 +61,9 @@
     .badgebar img {
         width: 50px;
     }
+    .tips-instructions{
+        background: #28334A;
+    }
     @media (min-width:767px) {
         .badgebar span {
             font-size: 6rem;
@@ -78,6 +81,8 @@
     @media (min-width:1439px) {
         .badgebar span {
             font-size: 9rem;
+            line-height: normal;
+
         }
         .badgebar h3{
             font-size: 3rem;
@@ -159,6 +164,10 @@
         </div>
     </div>
 
+</section>
+
+<section class="tips-instructions">
+    <?php echo get_field('content');?>
 </section>
 <!-- /#tips-recipes-wrap -->
 <?php get_footer(); ?>
