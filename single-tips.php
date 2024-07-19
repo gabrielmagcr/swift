@@ -25,6 +25,17 @@
         color: white;
         margin: 15px 0 16px 0;
     }
+    .badgebar{
+        display: flex;
+    }
+    .badgebar img{
+        width: 50px;
+    }
+    @media (min-width:1023px) {
+        .badgebar img{
+        width: 75px;
+    }
+    }
 </style>
 <section class="sm-prodhero">
     <div class="container">
