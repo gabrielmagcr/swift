@@ -20,6 +20,17 @@
                 <figure>
                     <img src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
                 </figure>
+                <?php $made_with= get_field('made-with');
+                if($made_with): ?>          
+                <?php foreach( $made_with as $post ): 
+                setup_postdata($post); ?>
+                     <li>
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        <img href=" <?php get_field( 'product_image' ); ?>" />
+                      </li>
+                <?php endforeach; ?>
+                <?php wp_reset_postdata(); ?>
+                    <?php endif; ?>
             </div>
         </div>
     </div>
