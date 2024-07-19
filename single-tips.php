@@ -77,7 +77,7 @@
                 <h3><span><?php get_field('number_of_ingredients'); ?></span> INGREDIENTS</h3>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 tips-time">
-                <img href='/wp-content/uploads/2024/07/Vector.svg'><h3><span><?php get_field('number_of_ingredients'); ?></span><?php get_field('amount_of_time')?></h3>
+                <img href='/wp-content/uploads/2024/07/Vector.svg'><h3><span><?php get_field('number_of_ingredients'); ?></span><?php get_field('amount_of_time');?></h3>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 tips-servings">
                 <img href='/wp-content/uploads/2024/07/Group.svg'><h3><span><?php get_field('servings'); ?></span>SERVINGS</h3>
