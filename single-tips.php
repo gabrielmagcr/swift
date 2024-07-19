@@ -188,7 +188,7 @@
         <?php } ?>
         <div class="cite-left">
             Share Recipe on Pinterest
-            <a class="share-pin-link" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&description=<?php echo urlencode(get_field('description')); ?>&title=<?php echo urlencode(get_the_title()); ?>">
+            <a class="share-pin-link" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/share/pinterest.png">
             </a>
         </div>
