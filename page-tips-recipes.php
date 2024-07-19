@@ -1,41 +1,5 @@
 <?php get_header(); ?>
 
-<script>
-    jQuery(document).ready(function($) {
-    // Inicializa Isotope
-    var $grid = $('.tips-container').isotope({
-        itemSelector: '.pi-top-link',
-        layoutMode: 'fitRows'
-    });
-
-    // Filtrar elementos al hacer clic en un filtro
-    $('.wil-dropdown-menu').on('click', 'li', function() {
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-    });
-
-    // Filtrar por búsqueda
-    $('#tip-search').on('keyup', function() {
-        var searchValue = $(this).val().toLowerCase();
-        $grid.isotope({
-            filter: function() {
-                var itemText = $(this).find('.title').text().toLowerCase();
-                return itemText.indexOf(searchValue) !== -1;
-            }
-        });
-    });
-
-    // Estilos activos para filtros seleccionados
-    $('.wil-dropdown-menu').each(function(i, dropdown) {
-        var $dropdown = $(dropdown);
-        $dropdown.on('click', 'li', function() {
-            $dropdown.find('.active').removeClass('active');
-            $(this).addClass('active');
-        });
-    });
-});
-
-</script>
 <section id="tips-recipes-wrap">
     <div class="container">
         <div class="row">
