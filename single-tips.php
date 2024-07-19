@@ -7,9 +7,10 @@
         background: #EBEBEB;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         text-align: center;
         font-size: 20px;
+        margin-top: -1px;
     }
 
     .made-with img {
@@ -22,7 +23,7 @@
         display: block;
         padding: 5px 10px;
         color: white;
-        margin: 15px 0;
+        margin: 15px 0 16px 0;
     }
 </style>
 <section class="sm-prodhero">
@@ -69,5 +70,24 @@
     </div>
 </section>
 
+<section class="sm-badgebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 tips-ingredients">
+                <h3><span><?php get_field('number_of_ingredients'); ?></span> INGREDIENTS</h3>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 tips-time">
+                <img href='/wp-content/uploads/2024/07/Vector.svg'><h3><span><?php get_field('number_of_ingredients'); ?></span><?php get_field('amount_of_time')?></h3>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 tips-servings">
+                <img href='/wp-content/uploads/2024/07/Group.svg'><h3><span><?php get_field('servings'); ?></span>SERVINGS</h3>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 tips-servings">
+                <!-- agregar todos los tipos de coccion -->
+                <img href='/wp-content/uploads/2024/07/oven.svg'>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- /#tips-recipes-wrap -->
 <?php get_footer(); ?>
