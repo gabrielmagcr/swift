@@ -48,6 +48,7 @@
     .badgebar h3 {
         margin: 0;
         font-size: 2rem;
+        padding-top: 10px;
     }
 
     .badgebar span {
@@ -60,7 +61,12 @@
     .badgebar img {
         width: 50px;
     }
+    @media (min-width:767px) {
+        .badgebar span {
+            font-size: 6rem;
+        }
 
+    }
     @media (min-width:1023px) {
         .tips-servings{
             gap: 20px;
@@ -68,6 +74,18 @@
         .badgebar img {
             width: 75px;
         }
+    }
+    @media (min-width:1439px) {
+        .badgebar span {
+            font-size: 9rem;
+        }
+        .badgebar h3{
+            font-size: 3rem;
+        }
+        .badgebar img {
+        width: 100px;
+    }
+
     }
 </style>
 <section class="sm-prodhero">
