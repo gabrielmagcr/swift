@@ -97,14 +97,14 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--info">
-                <div class="sm-prodhero--breadcrumb">
+                <div class="sm-prodhero--breadcrumb"  itemscope itemtype="http://schema.org/Recipe"> 
                     <ol>
                         <li><a href="/tips-recipes">Recipes</a></li>
                         <li><?php the_title(); ?></li>
                     </ol>
                 </div>
-                <h1><?php the_title(); ?></h1>
-                <p><?= the_field('description'); ?></p>
+                <h1  itemprop="name"><?php the_title(); ?></h1>
+                <p itemprop="description"><?= the_field('description'); ?></p>
                 <form class="sm-prodhero--wtb" action="/products" method="GET">
                     <button class="btn btn-outline-red" type="submit">Find your Protein</button>
                 </form>
@@ -155,7 +155,7 @@
             <h3><?php echo $amount_of_time ?></h3>
         </div>
         <div class="badgebar tips-servings">
-            <img src='/wp-content/uploads/2024/07/Group.svg'><span><?php echo $servings; ?></span>
+            <img src='/wp-content/uploads/2024/07/Group.svg'><span itemprop="recipeYield"><?php echo $servings; ?></span>
             <h3>SERVINGS</h3>
         </div>
         <div class="badgebar tips-cooking-style">
@@ -168,6 +168,18 @@
 
 <section class="tips-instructions">
     <?php echo get_field('content');?>
+    <div class="cites">
+                            <?php if(get_field('recipe_source')) { ?>
+                                <div class="cite"><?= the_field('recipe_source');?></div>
+                            <!-- /.cite -->
+                            <?php } ?>
+                            <div class="cite-left">
+                                Share Recipe on Pinterest <a class="share-pin-link" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?=bloginfo('url');?>/tips-recipes/%23tip-<?=$id;?>&media=<?= the_field('image');?>&description=<?php the_title();?>"><img src="<?=get_template_directory_uri();?>/assets/img/share/pinterest.png"></a>
+                            </div>
+                            <!-- /.cite-left -->
+                        </div>
 </section>
+
+
 <!-- /#tips-recipes-wrap -->
 <?php get_footer(); ?>
