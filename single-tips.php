@@ -79,16 +79,16 @@
     ?>
     <div class="container">
         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 tips-ingredients">
+            <div class="tips-ingredients">
                 <h3><span><?php echo $number_of_ingredients; ?></span> INGREDIENTS</h3>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 tips-time">
+            <div class="tips-time">
                 <img src='/wp-content/uploads/2024/07/Vector.svg'><h3><span><?php echo $preparation_time; ?></span><?php echo $amount_of_time ?></h3>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 tips-servings">
+            <div class="tips-servings">
                 <img src='/wp-content/uploads/2024/07/Group.svg'><h3><span><?php echo $servings; ?></span>SERVINGS</h3>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 tips-servings">
+            <div class="tips-cooking-style">
                 <!-- agregar todos los tipos de coccion -->
                 <img src='/wp-content/uploads/2024/07/oven.svg'>
             </div>
