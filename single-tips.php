@@ -27,6 +27,7 @@
     } 
     .badgebar-section{
         background: #FFAA2B;
+        padding: 15px 0;
     }
     .tips-badgebar{
         display: flex;
@@ -37,6 +38,7 @@
     }
     .badgebar{
         display: flex;
+        gap: 10px;
     }
     .badgebar h3{
         margin: 0;
@@ -104,13 +106,13 @@
     
         <div class="tips-badgebar">
             <div class="badgebar tips-ingredients">
-                <h3><span><?php echo $number_of_ingredients; ?></span> INGREDIENTS</h3>
+            <span><?php echo $number_of_ingredients; ?></span><h3> INGREDIENTS</h3>
             </div>
             <div class="badgebar tips-time">
-                <img src='/wp-content/uploads/2024/07/Vector.svg'><h3><span><?php echo $preparation_time; ?></span><?php echo $amount_of_time ?></h3>
+                <img src='/wp-content/uploads/2024/07/Vector.svg'><span><?php echo $preparation_time; ?></span><h3><?php echo $amount_of_time ?></h3>
             </div>
             <div class="badgebar tips-servings">
-                <img src='/wp-content/uploads/2024/07/Group.svg'><h3><span><?php echo $servings; ?></span>SERVINGS</h3>
+                <img src='/wp-content/uploads/2024/07/Group.svg'><span><?php echo $servings; ?></span><h3>SERVINGS</h3>
             </div>
             <div class="badgebar tips-cooking-style">
                 <!-- agregar todos los tipos de coccion -->
