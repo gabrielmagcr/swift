@@ -269,19 +269,22 @@
 </section>
 
 <script>
-    const sharebtn = document.getElementById('sharebtn');
+     const sharebtn = document.getElementById('sharebtn');
     const hideIcons = document.getElementById('hide-icons');
-  
-        sharebtn.addEventListener('click', function() {
-            showbtn();
-        });
 
-    function showbtn() {
-        if(hideIcons.style.display == 'none'){
-            hideIcons.style.display = 'flex';  
-         }else{
-        hideIcons.style.display = 'none'
-         }}
+    if (sharebtn) {
+        sharebtn.addEventListener('click', function() {
+            toggleIcons();
+        });
+    }
+
+    function toggleIcons() {
+        if (hideIcons.style.display === 'none') {
+            hideIcons.style.display = 'flex';
+        } else {
+            hideIcons.style.display = 'none';
+        }
+    }
 </script>
 
 <!-- /#tips-recipes-wrap -->
