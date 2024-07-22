@@ -68,16 +68,21 @@
         flex-direction: column;
     }
 
-    .tips-i-left-section p, .tips-i-left-section li, .tips-i-left-section ul{
+    .tips-i-left-section p,
+    .tips-i-left-section li,
+    .tips-i-left-section ul {
         color: white;
     }
-    .tips-i-left-section p{
+
+    .tips-i-left-section p {
         font-size: 2rem;
     }
-    .tips-i-left-section{
+
+    .tips-i-left-section {
         padding: 50px;
     }
-    .tips-i-right-section{
+
+    .tips-i-right-section {
         background-color: #C61A1D;
         color: #fff;
         position: sticky;
@@ -85,27 +90,35 @@
         height: min-content;
         padding: 60px;
     }
-    .tips-i-right-section h5, .tips-i-right-section p{
+
+    .tips-i-right-section h5,
+    .tips-i-right-section p {
         color: #fff;
     }
-    .tips-i-right-section h5{
+
+    .tips-i-right-section h5 {
         font-size: 3rem;
     }
-    .share-icons-container{
+
+    .share-icons-container {
         display: flex;
         gap: 8px;
     }
-    .share-icons{
+
+    .share-icons {
         display: block;
         border: none;
         background: transparent;
     }
-    .share-icons img{
+
+    .share-icons img {
         width: 50px;
     }
-    .hide-icons{
+
+    .hide-icons {
         display: none;
     }
+
     @media (min-width:767px) {
         .badgebar span {
             font-size: 6rem;
@@ -114,9 +127,10 @@
     }
 
     @media (min-width:1023px) {
-        .tips-instructions{
+        .tips-instructions {
             flex-direction: row;
         }
+
         .tips-servings {
             gap: 20px;
         }
@@ -141,6 +155,9 @@
             width: 100px;
         }
 
+        .tips-i-left-section {
+            padding: 50px 50px 50px 150px;
+        }
     }
 </style>
 <meta property="og:SwiftMeats" content="https://stgswiftmeats.wpenginepowered.com" />
@@ -223,34 +240,37 @@
     </div>
 
     <div class="tips-i-right-section">
-      
-                <h5>SPREAD THE PASTA</h5>
-                <p>Why keep this culinary masterpiece to yourself? Share the recipe on social media and let the world join in the fun of twirling spaghetti like pros and savoring the juicy, flavorful meatballs. It's a surefire way to spread joy, laughter, and deliciousness across the world!</p>
 
-                <div class="share-icons-container">
-           
-                <a class="share-pin-link share-icons hide-icons" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>"  >
+        <h5>SPREAD THE PASTA</h5>
+        <p>Why keep this culinary masterpiece to yourself? Share the recipe on social media and let the world join in the fun of twirling spaghetti like pros and savoring the juicy, flavorful meatballs. It's a surefire way to spread joy, laughter, and deliciousness across the world!</p>
+
+        <div class="share-icons-container">
+            <div class="hide-icons">
+                <a class="share-pin-link share-icons" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>">
                     <img src="/wp-content/uploads/2024/07/Social-Pinterest-Streamline-Streamline-3.0-1.svg" alt="pinterest">
                 </a>
-                <a href="mailto:?subject=Hey check this recipe! &amp;body=Here is the recipe <?php echo get_permalink(); ?>" class="share-icons hide-icons">
+                <a href="mailto:?subject=Hey check this recipe! &amp;body=Here is the recipe <?php echo get_permalink(); ?>" class="share-icons">
                     <img src="/wp-content/uploads/2024/07/Email-Action-Unread-Streamline-Streamline-3.0-1.svg" alt="Share by email">
                 </a>
-                <button onclick="window.print()" class="share-icons hide-icons"><img src="/wp-content/uploads/2024/07/Print-Text-Streamline-Streamline-3.0-1.svg" alt="Print this recipe"></button>
-                <button class="share-icons" id="sharebtn">
+                <button onclick="window.print()" class="share-icons"><img src="/wp-content/uploads/2024/07/Print-Text-Streamline-Streamline-3.0-1.svg" alt="Print this recipe"></button>
+            </div>
+            <div id="sharebtn">
+                <button class="share-icons">
                     <img src="/wp-content/uploads/2024/07/Layer_1.svg" alt="Share">
                 </button>
-                </div>
-
-           
+            </div>
         </div>
+
+
+    </div>
     </div>
 
 
 </section>
 
 <script>
-    const sharebtn= document.getElementById('sharebtn');
-    const hideIcons=document.getElementsByClassName('hide-icons');
+    const sharebtn = document.getElementById('sharebtn');
+    const hideIcons = document.getElementsByClassName('hide-icons');
     if (sharebtn) {
         sharebtn.addEventListener('click', function() {
             showbtn(1);
@@ -264,12 +284,10 @@
             showbtn(2);
         });
     }
-   
+
 
     function showbtn(show) {
-        for (let i = 0; i < hideIcons.length; i++) {
-            hideIcons[i].style.display = show === 1 ? 'block' : 'none';
-        }
+        hideIcons.style.display = show === 1 ? 'block' : 'none';
     }
 </script>
 
