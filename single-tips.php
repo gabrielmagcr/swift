@@ -278,8 +278,11 @@
     }
 
     function showbtn() {
-        hideIcons.style.display = 'none'? 'flex': 'none';
-    }
+        if(hideIcons.style.display = 'none'){
+            hideIcons.style.display = 'flex';  
+    }else{
+        hideIcons.style.display = 'none'
+    }}
 </script>
 
 <!-- /#tips-recipes-wrap -->
