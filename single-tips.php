@@ -500,4 +500,7 @@ if (have_rows('product_page_next_level')) : ?>
 </script>
 
 <!-- /#tips-recipes-wrap -->
-<?php get_footer(); ?>
+<?php 
+get_template_part('parts/pre-footer-ctas');
+get_footer(); 
+?>
