@@ -271,18 +271,17 @@
 <script>
     const sharebtn = document.getElementById('sharebtn');
     const hideIcons = document.getElementById('hide-icons');
-    if (sharebtn) {
+  
         sharebtn.addEventListener('click', function() {
             showbtn();
         });
-    }
 
     function showbtn() {
-        if(hideIcons.style.display = 'none'){
+        if(hideIcons.style.display == 'none'){
             hideIcons.style.display = 'flex';  
-    }else{
+         }else{
         hideIcons.style.display = 'none'
-    }}
+         }}
 </script>
 
 <!-- /#tips-recipes-wrap -->
