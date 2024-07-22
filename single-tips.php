@@ -103,6 +103,9 @@
     .share-icons img{
         width: 50px;
     }
+    .hide-icons{
+        display: none;
+    }
     @media (min-width:767px) {
         .badgebar span {
             font-size: 6rem;
@@ -233,7 +236,7 @@
                     <img src="/wp-content/uploads/2024/07/Email-Action-Unread-Streamline-Streamline-3.0-1.svg" alt="Share by email">
                 </a>
                 <button onclick="window.print()" class="share-icons hide-icons"><img src="/wp-content/uploads/2024/07/Print-Text-Streamline-Streamline-3.0-1.svg" alt="Print this recipe"></button>
-                <button class="share-icons">
+                <button class="share-icons" id="sharebtn">
                     <img src="/wp-content/uploads/2024/07/Layer_1.svg" alt="Share">
                 </button>
                 </div>
@@ -245,6 +248,30 @@
 
 </section>
 
+<script>
+    const sharebtn= document.getElementById('sharebtn');
+    const hideIcons=document.getElementsByClassName('hide-icons');
+    if (sharebtn) {
+        sharebtn.addEventListener('click', function() {
+            showbtn(1);
+        });
+
+        sharebtn.addEventListener('mouseover', function() {
+            showbtn(1);
+        });
+
+        sharebtn.addEventListener('mouseout', function() {
+            showbtn(2);
+        });
+    }
+   
+
+    function showbtn(show) {
+        for (let i = 0; i < hideIcons.length; i++) {
+            hideIcons[i].style.display = show === 1 ? 'block' : 'none';
+        }
+    }
+</script>
 
 <!-- /#tips-recipes-wrap -->
 <?php get_footer(); ?>
