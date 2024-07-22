@@ -278,7 +278,7 @@
     }
 
     function showbtn() {
-        hideIcons.style.display = 'block'? 'none': 'block';
+        hideIcons.style.display = 'none'? 'flex': 'none';
     }
 </script>
 
