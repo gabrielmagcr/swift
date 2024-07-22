@@ -64,18 +64,37 @@
 
     .tips-instructions {
         background: #28334A;
-        color: while;
+        display: flex;
+        flex-direction: column;
     }
 
     .tips-i-left-section p, .tips-i-left-section li, .tips-i-left-section ul{
         color: white;
     }
+    .tips-i-left-section p{
+        font-size: 2rem;
+    }
     .tips-i-right-section{
         background-color: #C61A1D;
         color: #fff;
+        position: sticky;
+        top: 83px;
+        height: min-content;
+        padding: 60px;
+    }
+    .tips-i-right-section h5, .tips-i-right-section p{
+        color: #fff;
+    }
+    .tips-i-right-section h5{
+        font-size: 3rem;
+    }
+    .share-icons-container{
+        display: flex;
     }
     .share-icons{
         display: block;
+        border: none;
+        background: transparent;
     }
     .share-icons img{
         width: 75px;
@@ -88,6 +107,9 @@
     }
 
     @media (min-width:1023px) {
+        .tips-instructions{
+            flex-direction: row;
+        }
         .tips-servings {
             gap: 20px;
         }
@@ -198,10 +220,10 @@
                 <h5>SPREAD THE PASTA</h5>
                 <p>Why keep this culinary masterpiece to yourself? Share the recipe on social media and let the world join in the fun of twirling spaghetti like pros and savoring the juicy, flavorful meatballs. It's a surefire way to spread joy, laughter, and deliciousness across the world!</p>
 
-                <div>
+                <div class="share-icons-container">
            
                 <a class="share-pin-link share-icons hide-icons" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>"  >
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/share/pinterest.png">
+                    <img src="/wp-content/uploads/2024/07/Social-Pinterest-Streamline-Streamline-3.0-1.svg" alt="pinterest">
                 </a>
                 <a href="mailto:?subject=Hey check this recipe! &amp;body=Here is the recipe <?php echo get_permalink(); ?>" class="share-icons hide-icons">
                     <img src="/wp-content/uploads/2024/07/Email-Action-Unread-Streamline-Streamline-3.0-1.svg" alt="Share by email">
