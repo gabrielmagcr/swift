@@ -245,7 +245,7 @@
         <p>Why keep this culinary masterpiece to yourself? Share the recipe on social media and let the world join in the fun of twirling spaghetti like pros and savoring the juicy, flavorful meatballs. It's a surefire way to spread joy, laughter, and deliciousness across the world!</p>
 
         <div class="share-icons-container">
-            <div class="hide-icons">
+            <div id="hide-icons">
                 <a class="share-pin-link share-icons" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>">
                     <img src="/wp-content/uploads/2024/07/Social-Pinterest-Streamline-Streamline-3.0-1.svg" alt="pinterest">
                 </a>
@@ -270,24 +270,15 @@
 
 <script>
     const sharebtn = document.getElementById('sharebtn');
-    const hideIcons = document.getElementsByClassName('hide-icons');
+    const hideIcons = document.getElementById('hide-icons');
     if (sharebtn) {
         sharebtn.addEventListener('click', function() {
-            showbtn(1);
-        });
-
-        sharebtn.addEventListener('mouseover', function() {
-            showbtn(1);
-        });
-
-        sharebtn.addEventListener('mouseout', function() {
-            showbtn(2);
+            showbtn();
         });
     }
 
-
-    function showbtn(show) {
-        hideIcons.style.display = show === 1 ? 'block' : 'none';
+    function showbtn() {
+        hideIcons.style.display = 'block'? 'none': 'block';
     }
 </script>
 
