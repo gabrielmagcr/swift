@@ -261,7 +261,7 @@
 
         <div class="share-icons-container">
             <div id="hide-icons" style="display:none;">
-                <a class="share-pin-link share-icons" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>">
+                <a class="share-pin-link share-icons" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>&body=<?= the_field('description'); ?>">
                     <img src="/wp-content/uploads/2024/07/Social-Pinterest-Streamline-Streamline-3.0-1.svg" alt="pinterest">
                 </a>
                 <a href="mailto:?subject=Hey check this recipe! &amp;body=Here is the recipe : <?php echo get_permalink(); ?>" class="share-icons">
