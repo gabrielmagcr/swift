@@ -269,6 +269,7 @@
 </section>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
      const sharebtn = document.getElementById('sharebtn');
     const hideIcons = document.getElementById('hide-icons');
  
@@ -280,7 +281,7 @@
         }
         });
 
-
+    });
 </script>
 
 <!-- /#tips-recipes-wrap -->
