@@ -271,8 +271,7 @@
 <script>
      const sharebtn = document.getElementById('sharebtn');
     const hideIcons = document.getElementById('hide-icons');
-
-    if (sharebtn) {
+ 
         sharebtn.addEventListener('click', function() {
             if (hideIcons.style.display === 'none') {
             hideIcons.style.display = 'flex';
@@ -280,7 +279,7 @@
             hideIcons.style.display = 'none';
         }
         });
-    }
+
 
 </script>
 
