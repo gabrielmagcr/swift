@@ -274,17 +274,14 @@
 
     if (sharebtn) {
         sharebtn.addEventListener('click', function() {
-            toggleIcons();
-        });
-    }
-
-    function toggleIcons() {
-        if (hideIcons.style.display === 'none') {
+            if (hideIcons.style.display === 'none') {
             hideIcons.style.display = 'flex';
         } else {
             hideIcons.style.display = 'none';
         }
+        });
     }
+
 </script>
 
 <!-- /#tips-recipes-wrap -->
