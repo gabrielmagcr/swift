@@ -102,7 +102,7 @@
 
     .share-icons-container {
         display: flex;
-        gap: 8px;
+        transition: transform 0.5s ease-in-out;
     }
 
     .share-icons {
@@ -114,7 +114,9 @@
     .share-icons img {
         width: 50px;
     }
-
+    #hide-icons{
+        gap: 7px;
+    }
  
 
     @media (min-width:767px) {
@@ -267,19 +269,19 @@
 </section>
 
 <script>
-   
-     const sharebtn = document.getElementById('sharebtn');
+  const sharebtn = document.getElementById('sharebtn');
     const hideIcons = document.getElementById('hide-icons');
- 
-        sharebtn.addEventListener('click', function() {
-            if (hideIcons.style.display === 'none') {
+    const shareIconsContainer = document.querySelector('.share-icons-container');
+
+    sharebtn.addEventListener('click', function() {
+        if (hideIcons.style.display === 'none') {
             hideIcons.style.display = 'flex';
+            shareIconsContainer.style.transform = 'translateX(50px)';
         } else {
             hideIcons.style.display = 'none';
+            shareIconsContainer.style.transform = 'translateX(0)';
         }
-        });
-
-
+    });
 </script>
 
 <!-- /#tips-recipes-wrap -->
