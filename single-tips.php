@@ -115,9 +115,7 @@
         width: 50px;
     }
 
-    #hide-icons {
-        display: none;
-    }
+ 
 
     @media (min-width:767px) {
         .badgebar span {
@@ -245,7 +243,7 @@
         <p>Why keep this culinary masterpiece to yourself? Share the recipe on social media and let the world join in the fun of twirling spaghetti like pros and savoring the juicy, flavorful meatballs. It's a surefire way to spread joy, laughter, and deliciousness across the world!</p>
 
         <div class="share-icons-container">
-            <div id="hide-icons">
+            <div id="hide-icons" style="display:none;">
                 <a class="share-pin-link share-icons" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>">
                     <img src="/wp-content/uploads/2024/07/Social-Pinterest-Streamline-Streamline-3.0-1.svg" alt="pinterest">
                 </a>
