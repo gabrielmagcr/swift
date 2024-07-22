@@ -74,6 +74,9 @@
     .tips-i-left-section p{
         font-size: 2rem;
     }
+    .tips-i-left-section{
+        padding: 50px;
+    }
     .tips-i-right-section{
         background-color: #C61A1D;
         color: #fff;
@@ -90,6 +93,7 @@
     }
     .share-icons-container{
         display: flex;
+        gap: 8px;
     }
     .share-icons{
         display: block;
@@ -97,7 +101,7 @@
         background: transparent;
     }
     .share-icons img{
-        width: 75px;
+        width: 50px;
     }
     @media (min-width:767px) {
         .badgebar span {
@@ -228,7 +232,7 @@
                 <a href="mailto:?subject=Hey check this recipe! &amp;body=Here is the recipe <?php echo get_permalink(); ?>" class="share-icons hide-icons">
                     <img src="/wp-content/uploads/2024/07/Email-Action-Unread-Streamline-Streamline-3.0-1.svg" alt="Share by email">
                 </a>
-                <button onclick="winddow.print()" class="share-icons hide-icons"><img src="/wp-content/uploads/2024/07/Print-Text-Streamline-Streamline-3.0-1.svg" alt="Print this recipe"></button>
+                <button onclick="window.print()" class="share-icons hide-icons"><img src="/wp-content/uploads/2024/07/Print-Text-Streamline-Streamline-3.0-1.svg" alt="Print this recipe"></button>
                 <button class="share-icons">
                     <img src="/wp-content/uploads/2024/07/Layer_1.svg" alt="Share">
                 </button>
