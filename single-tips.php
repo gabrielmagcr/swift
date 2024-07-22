@@ -264,7 +264,7 @@
                 <a class="share-pin-link share-icons" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>">
                     <img src="/wp-content/uploads/2024/07/Social-Pinterest-Streamline-Streamline-3.0-1.svg" alt="pinterest">
                 </a>
-                <a href="mailto:?subject=Hey check this recipe! &amp;body=Here is the recipe <?= the_field("image"); ?> /n <?php echo get_permalink(); ?>" class="share-icons">
+                <a href="mailto:?subject=Hey check this recipe! &amp;body=Here is the recipe : <?php echo get_permalink(); ?>" class="share-icons">
                     <img src="/wp-content/uploads/2024/07/Email-Action-Unread-Streamline-Streamline-3.0-1.svg" alt="Share by email">
                 </a>
                 <button onclick="window.print()" class="share-icons"><img src="/wp-content/uploads/2024/07/Print-Text-Streamline-Streamline-3.0-1.svg" alt="Print this recipe"></button>
