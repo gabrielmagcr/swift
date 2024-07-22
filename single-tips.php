@@ -162,7 +162,10 @@
         .badgebar img {
             width: 100px;
         }
-
+        .tips-instructions{
+            max-width: 1600px;
+            margin: 0 auto;
+        }
         .tips-i-left-section {
             padding: 50px 50px 50px 150px;
         }
