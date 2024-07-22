@@ -112,7 +112,7 @@
     }
 
     .share-icons img {
-        width: 50px;
+        width: 40px;
     }
     #hide-icons{
         gap: 7px;
@@ -122,6 +122,9 @@
  
 
     @media (min-width:767px) {
+        .share-icons img {
+        width: 50px;
+    }
         .badgebar span {
             font-size: 6rem;
         }
