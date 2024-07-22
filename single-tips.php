@@ -276,6 +276,214 @@
 
 
 </section>
+<?php
+/* Next level section -------------- */
+
+if (have_rows('product_page_next_level')) : ?>
+    <section id="product-next-level">
+        <div class="container product-next-level-container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-12 col-xs-12">
+                    <h3 class="sm-nextlevel-heading">Take your Meal to the Next Level</h3>
+                </div>
+                <!-- /.col-xl-12 col-lg-12 col-md-12 col-12 col-xs-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <?php while (have_rows('product_page_next_level')) : the_row(); ?>
+                    <?php
+                    $item_id = get_sub_field('recipe_video');
+                    $dificulty_lvl = get_field('dificulty_level', $item_id);
+                    $item = get_post($item_id);
+                    $type = $item->type;
+                    $thaimage = wp_get_attachment_image_src($item->image, 'full');
+
+                    if ($thaimage != "") {
+                        $image = $thaimage[0];
+                    } else {
+                        $image = get_template_directory_uri() . "/assets/img/tips/recipe-ex.jpg";
+                    }
+
+                    ?>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-12 col-xs-12 product-other-item" data-toggle="modal" data-target="#tip-<?= $item_id; ?>">
+
+                        <div class="sm-nextlevel-item">
+                            <figure>
+                                <img src="<?= $image; ?>" alt="<?= $item->post_title; ?>">
+                            </figure>
+                            <div class="sm-nextlevel-item--body">
+                                <?php if ($dificulty_lvl) : ?>
+                                    <span>DIFICULTY LEVEL - <?= $dificulty_lvl; ?>/10</span>
+                                <?php endif; ?>
+                                <h3><?= $item->post_title; ?> </h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.col-xl-4 col-lg-4 col-md-4 col-12 col-xs-12 -->
+                    <?php //get_template_part('inc/single', 'modals');
+                    ?>
+                    <?php if ($type == 'recipe') { ?>
+                        <div class="modal fade tips-modal" tabindex="-1" role="dialog" id="tip-<?= $item_id; ?>" data-title="<?= $item->post_title; ?>" data-id="<?= $item_id; ?>" data-path="<?= $item->post_name; ?>">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true"><img src="<?= get_template_directory_uri(); ?>/assets/img/close.png" alt="Close button"></span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="modal-content-wrap">
+                                                        <h2><?= $item->post_title; ?></h2>
+                                                        <p class="timing-info"><?= $item->number_of_ingredients; ?> ingredients<?php if ($item->preparation_time != "") {
+                                                                                                                                    echo ", {$item->preparation_time}";
+                                                                                                                                } ?><?php if ($item->servings != "") {
+                                                                                                                                        echo ", Servings: {$item->servings}";
+                                                                                                                                    } ?> </p>
+                                                        <?php if ($item->video != "") { ?>
+                                                            <video width="100%" height="auto" controls>
+                                                                <source src="<?= $item->video; ?>" type="video/mp4">
+                                                                <!-- <source src="movie.ogg" type="video/ogg">-->
+                                                                Your browser does not support the video tag.
+                                                            </video>
+                                                        <?php } else { ?>
+                                                            <?php if ($item->image != "") { ?>
+                                                                <img class="recipe-img" src="<?= $image; ?>" alt="<?= $item->post_title; ?>">
+                                                            <?php } else { ?>
+                                                                <img class="recipe-img" src="<?= get_template_directory_uri(); ?>/assets/img/recipe-img.jpg" alt="<?= $item->post_title; ?>">
+                                                            <?php } ?>
+                                                        <?php } ?>
+                                                        <?php if ($item->image_source != "") { ?>
+                                                            <div class="cite image-cite"><?= $item->image_source; ?></div>
+                                                        <?php } ?>
+
+                                                        <div class="recipe-content-wrap">
+                                                            <?= $item->content; ?>
+                                                        </div>
+                                                        <!-- /.recipe-content-wrap -->
+                                                        <?php if ($item->recipe_source != "") { ?>
+                                                            <div class="cite">Source: <?= $item->recipe_source; ?></div>
+                                                            <!-- /.cite -->
+                                                        <?php } ?>
+                                                    </div>
+                                                    <!-- /.modal-content-wrap -->
+                                                </div>
+                                                <!-- /.col-12 -->
+                                            </div>
+                                            <!-- /.row -->
+                                        </div>
+                                        <!-- /.container -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ===== END RECIPE TYPE ===== -->
+
+                    <?php } elseif ($type == 'graphic') { ?>
+                        <!-- ===== GRAPHIC TYPE ===== -->
+                        <div class="modal fade tips-modal" tabindex="-1" role="dialog" id="tip-<?= $item->post_id; ?>" data-title="<?= $item->post_title; ?>" data-id="<?= $item_id; ?>" data-path="<?= $item->post_name; ?>">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true"><img src="<?= get_template_directory_uri(); ?>/assets/img/close.png" alt="Close button"></span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="modal-content-wrap">
+                                                        <img src="<?= $image; ?>" alt="<?= $item->post_title; ?>">
+                                                    </div>
+                                                    <!-- /.modal-content-wrap -->
+                                                </div>
+                                                <!-- /.col-12 -->
+                                            </div>
+                                            <!-- /.row -->
+                                        </div>
+                                        <!-- /.container -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ===== END GRAPHIC TYPE ===== -->
+                    <?php } elseif ($type == 'image') { ?>
+                        <!-- ===== IMAGE TYPE ===== -->
+                        <div class="modal fade tips-modal" tabindex="-1" role="dialog" id="tip-<?= $item->post_id; ?>" data-title="<?= $item->post_title; ?>" data-id="<?= $item_id; ?>" data-path="<?= $item->post_name; ?>">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true"><img src="<?= get_template_directory_uri(); ?>/assets/img/close.png" alt="Close button"></span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="modal-content-wrap">
+                                                        <img src="<?= $image; ?>" alt="<?= $item->post_title; ?>">
+                                                    </div>
+                                                    <!-- /.modal-content-wrap -->
+                                                </div>
+                                                <!-- /.col-12 -->
+                                            </div>
+                                            <!-- /.row -->
+                                        </div>
+                                        <!-- /.container -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ===== END IMAGE TYPE ===== -->
+                    <?php } elseif ($type == 'video') { ?>
+                        <!-- ===== VIDEO TYPE ===== -->
+                        <div class="modal fade tips-modal" tabindex="-1" role="dialog" id="tip-<?= $item->ID; ?>" data-title="<?= $item->post_title; ?>" data-id="<?= $item_id; ?>" data-path="<?= $item->post_name; ?>">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true"><img src="<?= get_template_directory_uri(); ?>/assets/img/close.png" alt="Close button"></span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="modal-content-wrap">
+                                                        <video width="100%" height="auto" controls>
+                                                            <source src="<?= $item->video; ?>" type="video/mp4">
+                                                            <!-- <source src="movie.ogg" type="video/ogg">-->
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                    <!-- /.modal-content-wrap -->
+                                                </div>
+                                                <!-- /.col-12 -->
+                                            </div>
+                                            <!-- /.row -->
+                                        </div>
+                                        <!-- /.container -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ===== END IMAGE TYPE ===== -->
+                    <?php } ?>
+
+                <?php endwhile; ?>
+            </div>
+        </div>
+        <a href="/tips-recipes"><button class="blue-btn">VIEW MORE RECIPES</button></a>
+
+        <!-- /.container -->
+    </section>
+    <!-- /#product-next-level -->
+<?php endif; ?>
 
 <script>
   const sharebtn = document.getElementById('sharebtn');
