@@ -67,10 +67,19 @@
         color: while;
     }
 
-    .tips-instructions p {
+    .tips-i-left-section p, .tips-i-left-section li, .tips-i-left-section ul{
         color: white;
     }
-
+    .tips-i-right-section{
+        background-color: #C61A1D;
+        color: #fff;
+    }
+    .share-icons{
+        display: block;
+    }
+    .share-icons img{
+        width: 75px;
+    }
     @media (min-width:767px) {
         .badgebar span {
             font-size: 6rem;
@@ -180,21 +189,34 @@
 </section>
 
 <section class="tips-instructions">
-    <?php echo get_field('content'); ?>
-    <div class="cites">
-        <?php if (get_field('recipe_source')) { ?>
-            <div class="cite"><?= the_field('recipe_source'); ?></div>
-            <!-- /.cite -->
-        <?php } ?>
-        <div class="cite-left">
-            Share Recipe on Pinterest
-            <a class="share-pin-link" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/share/pinterest.png">
-            </a>
-        </div>
-
-        <!-- /.cite-left -->
+    <div class="tips-i-left-section">
+        <?php echo get_field('content'); ?>
     </div>
+
+    <div class="tips-i-right-section">
+      
+                <h5>SPREAD THE PASTA</h5>
+                <p>Why keep this culinary masterpiece to yourself? Share the recipe on social media and let the world join in the fun of twirling spaghetti like pros and savoring the juicy, flavorful meatballs. It's a surefire way to spread joy, laughter, and deliciousness across the world!</p>
+
+                <div>
+           
+                <a class="share-pin-link share-icons hide-icons" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>"  >
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/share/pinterest.png">
+                </a>
+                <a href="mailto:?subject=Hey check this recipe! &amp;body=Here is the recipe <?php echo get_permalink(); ?>" class="share-icons hide-icons">
+                    <img src="/wp-content/uploads/2024/07/Email-Action-Unread-Streamline-Streamline-3.0-1.svg" alt="Share by email">
+                </a>
+                <button onclick="winddow.print()" class="share-icons hide-icons"><img src="/wp-content/uploads/2024/07/Print-Text-Streamline-Streamline-3.0-1.svg" alt="Print this recipe"></button>
+                <button class="share-icons">
+                    <img src="/wp-content/uploads/2024/07/Layer_1.svg" alt="Share">
+                </button>
+                </div>
+
+           
+        </div>
+    </div>
+
+
 </section>
 
 
