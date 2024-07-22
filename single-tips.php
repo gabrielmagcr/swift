@@ -160,6 +160,10 @@
         .tips-i-left-section {
             padding: 50px 50px 50px 150px;
         }
+        .tips-i-right-section {
+            padding: 100px 70px;
+            margin: 50px;
+        }
     }
 </style>
 <meta property="og:SwiftMeats" content="https://stgswiftmeats.wpenginepowered.com" />
@@ -280,7 +284,6 @@
     
         } else {
             hideIcons.style.display = 'none';
-            shareIconsContainer.style.transform = 'translateX(0)';
         }
     });
 </script>
