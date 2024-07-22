@@ -143,6 +143,9 @@
         .badgebar img {
             width: 75px;
         }
+        .tips-i-right-section {
+            max-width: 50%;
+        }
     }
 
     @media (min-width:1439px) {
