@@ -5,10 +5,14 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 20px;
-    }
+        justify-items: center;
 
+    }
+    .tips{
+        width: 100%;
+    }
     .tips-bg {
-        height: 100%;
+        height: 200px;
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 4px 4px 0 0;
