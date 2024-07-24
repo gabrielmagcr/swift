@@ -11,6 +11,7 @@
 
     .tips {
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -46,7 +47,9 @@
         .tips-container {
             gap: 30px;
         }
-
+        .tips-title-wrap{
+            padding: 10px 10px 10px 15px;
+        }
         .tips-title-wrap span {
             font-size: 1.1rem;
         }
