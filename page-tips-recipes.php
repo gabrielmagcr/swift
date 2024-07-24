@@ -86,11 +86,13 @@
                     if ($type == 'recipe') {
 
             ?>
-                        <a href="<?php the_permalink(); ?>" class="pi-top-link all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style');?>">
-                            <div class="product-item col-lg-4 col-sm-6 col-xs-12 col-md-4 ">
+                       
+                            <div class="product-item col-lg-4 col-sm-6 col-xs-12 col-md-4  all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style');?>">
                                 <div class="pi-top">
                                     <div class="pi-top--shim">
+                                    <a href="<?php the_permalink(); ?>" class="pi-top-link">
                                         <div class="pi-top--shim-bg pi-top--shim-bg-tips lazy"  data-bg=<?= the_field("image"); ?>></div>
+                                        </a>
                                     </div>
                                     <div class="title-wrap">
                                         <div class="title">
@@ -99,7 +101,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        
             <?php
                         $count++;
                     } // End of the if
