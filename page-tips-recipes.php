@@ -22,6 +22,7 @@
     .tips-title-wrap {
         background: #28334A;  
         padding: 10px; 
+        border-radius: 0 0 4px 4px;
          }
          .tips-title-wrap span{
             color: #fff
@@ -114,12 +115,10 @@
             ?>
 
                         <div class="tips all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
-                            <a href="<?php the_permalink(); ?>" class="pi-top-link">
                                 <div class="tips-bg lazy" data-bg=<?= the_field("image"); ?>></div>
                                 <div class="tips-title-wrap">
                                     <span><?php the_title(); ?></span>
                                 </div>
-                            </a>
                         </div>
 
             <?php
