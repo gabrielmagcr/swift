@@ -1,5 +1,26 @@
 <?php get_header(); ?>
 
+<style>
+    .tips-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .tips-bg {
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .tips-title-wrap {
+        background: #28334A;   
+         }
+         .tips-title-wrap span{
+            color: #fff
+         }
+</style>
 <section id="tips-recipes-wrap">
     <div class="container">
         <div class="row">
@@ -52,7 +73,7 @@
         </div>
         <!-- /.row -->
         <div id="tips-wrap" class="tips-container">
-        <?php
+            <?php
             // WP_Query arguments
             $args = array(
                 'post_type'              => 'tips',
@@ -85,24 +106,18 @@
                     if ($type == 'recipe') {
 
             ?>
-                       
-                            <div class="tips all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style');?>">
-                                                          
-                                    <a href="<?php the_permalink(); ?>" class="pi-top-link">
-                                        <div class="tips-bg lazy"  data-bg=<?= the_field("image"); ?>></div>
-                                       
-                                   
-                                    <div class="title-wrap">
-                                        <div class="title">
-                                            <?php the_title(); ?>
-                                        </div>
-                                    </div>
-    
-                                </a>
-                            </div>
-                        
+
+                        <div class="tips all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
+                            <a href="<?php the_permalink(); ?>" class="pi-top-link">
+                                <div class="tips-bg lazy" data-bg=<?= the_field("image"); ?>></div>
+                                <div class="tips-title-wrap">
+                                    <span><?php the_title(); ?></span>
+                                </div>
+                            </a>
+                        </div>
+
             <?php
-                      
+
                     } // End of the if
                 } // End of the while
             } // End of the if
@@ -111,7 +126,7 @@
         </div>
         <!-- /#products-wrap.row -->
 
-            <!-- /.container -->
+        <!-- /.container -->
 </section>
 
 <!-- /#tips-recipes-wrap -->
