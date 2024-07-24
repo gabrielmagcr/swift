@@ -39,6 +39,9 @@
     .tips-link{
         width: 100%;
     }
+    .tips-link:hover{
+        text-decoration: none;
+    }
     @media (min-width:1399px) {
         .tips-container {
             gap: 30px;
