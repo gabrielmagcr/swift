@@ -106,7 +106,7 @@
             </div>
         </div>
         <!-- /.row -->
-        <div id="tips-wrap" class="tips-container">
+        <div id="tips-content-wrap" class="tips-container">
             <?php
             // WP_Query arguments
             $args = array(
