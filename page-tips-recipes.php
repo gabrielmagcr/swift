@@ -51,8 +51,7 @@
             </div>
         </div>
         <!-- /.row -->
-        <div class="clearfix"></div>
-        <div id="products-wrap" class="row iso tips-container">
+        <div id="tips-wrap" class="tips-container">
         <?php
             // WP_Query arguments
             $args = array(
@@ -87,23 +86,23 @@
 
             ?>
                        
-                            <div class="product-item col-lg-4 col-sm-6 col-xs-12 col-md-4  all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style');?>">
-                                <div class="pi-top">
-                                    <div class="pi-top--shim">
+                            <div class="tips all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style');?>">
+                                                          
                                     <a href="<?php the_permalink(); ?>" class="pi-top-link">
-                                        <div class="pi-top--shim-bg pi-top--shim-bg-tips lazy"  data-bg=<?= the_field("image"); ?>></div>
-                                        </a>
-                                    </div>
+                                        <div class="tips-bg lazy"  data-bg=<?= the_field("image"); ?>></div>
+                                       
+                                   
                                     <div class="title-wrap">
                                         <div class="title">
                                             <?php the_title(); ?>
                                         </div>
                                     </div>
-                                </div>
+    
+                                </a>
                             </div>
                         
             <?php
-                        $count++;
+                      
                     } // End of the if
                 } // End of the while
             } // End of the if
