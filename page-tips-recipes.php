@@ -3,7 +3,7 @@
 <style>
     .tips-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 20px;
         justify-items: center;
 
@@ -12,14 +12,16 @@
         width: 100%;
     }
     .tips-bg {
-        height: 200px;
+        height: 280px;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         border-radius: 4px 4px 0 0;
     }
 
     .tips-title-wrap {
-        background: #28334A;   
+        background: #28334A;  
+        padding: 10px; 
          }
          .tips-title-wrap span{
             color: #fff
