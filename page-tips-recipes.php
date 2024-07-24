@@ -36,10 +36,12 @@
     .tips-title-wrap span {
         color: #fff
     }
+
     @media (min-width:1399px) {
         .tips-container {
             gap: 30px;
         }
+
         .tips-title-wrap span {
             font-size: 1.1rem;
         }
@@ -130,14 +132,14 @@
                     if ($type == 'recipe') {
 
             ?>
-
-                        <div class="tips all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
-                            <div class="tips-bg lazy" data-bg=<?= the_field("image"); ?>></div>
-                            <div class="tips-title-wrap">
-                                <span><?php the_title(); ?></span>
+                        <a href="<?php the_permalink(); ?>" class="all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
+                            <div class="tips all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
+                                <div class="tips-bg lazy" data-bg=<?= the_field("image"); ?>></div>
+                                <div class="tips-title-wrap">
+                                    <span><?php the_title(); ?></span>
+                                </div>
                             </div>
-                        </div>
-
+                        </a>
             <?php
 
                     } // End of the if
