@@ -8,11 +8,16 @@
         justify-items: center;
 
     }
-    .tips{
+
+    .tips {
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
+
     .tips-bg {
         height: 280px;
+        max-height: 80%;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -20,13 +25,25 @@
     }
 
     .tips-title-wrap {
-        background: #28334A;  
-        padding: 10px; 
+        background: #28334A;
+        padding: 10px;
         border-radius: 0 0 4px 4px;
-         }
-         .tips-title-wrap span{
-            color: #fff
-         }
+        height: 20%;
+        display: flex;
+        align-items: center;
+    }
+
+    .tips-title-wrap span {
+        color: #fff
+    }
+    @media (min-width:1399px) {
+        .tips-container {
+            gap: 30px;
+        }
+        .tips-title-wrap span {
+            font-size: 1.1rem;
+        }
+    }
 </style>
 <section id="tips-recipes-wrap">
     <div class="container">
@@ -115,10 +132,10 @@
             ?>
 
                         <div class="tips all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
-                                <div class="tips-bg lazy" data-bg=<?= the_field("image"); ?>></div>
-                                <div class="tips-title-wrap">
-                                    <span><?php the_title(); ?></span>
-                                </div>
+                            <div class="tips-bg lazy" data-bg=<?= the_field("image"); ?>></div>
+                            <div class="tips-title-wrap">
+                                <span><?php the_title(); ?></span>
+                            </div>
                         </div>
 
             <?php
