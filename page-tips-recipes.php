@@ -6,7 +6,6 @@
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 20px;
         justify-items: center;
-
     }
 
     .tips {
@@ -37,24 +36,30 @@
     .tips-title-wrap span {
         color: #fff
     }
-    .tips-link{
+
+    .tips-link {
         width: 100%;
     }
-    .tips-link:hover{
+
+    .tips-link:hover {
         text-decoration: none;
     }
-    @media (min-width:1399px) {
+
+    @media (min-width: 1399px) {
         .tips-container {
             gap: 30px;
         }
-        .tips-title-wrap{
+
+        .tips-title-wrap {
             padding: 10px 10px 10px 15px;
         }
+
         .tips-title-wrap span {
             font-size: 1.1rem;
         }
     }
 </style>
+
 <section id="tips-recipes-wrap">
     <div class="container">
         <div class="row">
@@ -100,17 +105,14 @@
                             </label>
                         </div>
                     </div>
-                    <!-- /.recipe-search-wrap -->
                 </div>
-                <!-- /.recipe-filter-wrap -->
             </div>
         </div>
-        <!-- /.row -->
         <div id="tips-content-wrap" class="tips-container">
             <?php
             // WP_Query arguments
             $args = array(
-                'post_type'              => 'tips',
+                'post_type' => 'tips',
                 'posts_per_page' => -1,
                 'orderby' => 'date',
                 'order' => 'DESC',
@@ -121,13 +123,10 @@
                         'value' => 1
                     ),
                 )
-                // 'meta_key' => 'hide_on_tips_page',
-                // 'meta_value' => 1
             );
 
             // The Query
             $query = new WP_Query($args);
-            // $i = 0;
 
             // The Loop
             if ($query->have_posts()) {
@@ -138,97 +137,93 @@
                     $post_link = get_permalink($id);
 
                     if ($type == 'recipe') {
-
             ?>
                         <a href="<?php the_permalink(); ?>" class="tips-link all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
                             <div class="tips all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
-                                <div class="tips-bg lazy" data-bg=<?= the_field("image"); ?>></div>
+                                <div class="tips-bg lazy" data-bg="<?= the_field('image'); ?>"></div>
                                 <div class="tips-title-wrap">
                                     <span><?php the_title(); ?></span>
                                 </div>
                             </div>
                         </a>
             <?php
-
-                    } // End of the if
-                } // End of the while
-            } // End of the if
+                    }
+                }
+            }
             wp_reset_postdata();
             ?>
         </div>
-        <!-- /#products-wrap.row -->
-
-        <!-- /.container -->
+    </div>
 </section>
 
 <script>
-    $(document).ready(function() {
-    // Dropdown toggle logic
-    $('.wil-select').click(function() {
-        $(this).next('.wil-dropdown-menu').toggle();
-    });
-
-    // Close dropdowns when clicking outside
-    $(document).click(function(e) {
-        if (!$(e.target).closest('.wil-dropdown').length) {
-            $('.wil-dropdown-menu').hide();
-        }
-    });
-
-    // Filter logic
-    var $container = $('#tips-content-wrap');
-    var $filters = $('.r-filter-group');
-
-    $filters.on('click', 'li', function() {
-        var $this = $(this);
-        var filterGroup = $this.closest('.r-filter-group').data('filter-group');
-        var filterValue = $this.attr('data-filter');
-        
-        // Update the active class
-        $this.siblings().removeClass('active');
-        $this.addClass('active');
-
-        // Combine filters
-        var groupFilters = {};
-        $filters.each(function() {
-            var group = $(this).data('filter-group');
-            groupFilters[group] = $(this).find('.active').attr('data-filter');
+    document.addEventListener("DOMContentLoaded", function() {
+        // Dropdown toggle logic
+        document.querySelectorAll('.wil-select').forEach(function(select) {
+            select.addEventListener('click', function() {
+                this.nextElementSibling.classList.toggle('show');
+            });
         });
 
-        // Generate the final filter string
-        var finalFilter = '';
-        for (var group in groupFilters) {
-            if (groupFilters[group] !== '.all') {
-                finalFilter += groupFilters[group];
-            }
-        }
-
-        // Filter the items
-        if (finalFilter === '') {
-            $container.find('.tips-link').show();
-        } else {
-            $container.find('.tips-link').hide();
-            $container.find('.tips-link').filter(finalFilter).show();
-        }
-    });
-
-    // Search logic
-    $('#tip-search').on('keyup', function() {
-        var searchText = $(this).val().toLowerCase();
-        $container.find('.tips-link').each(function() {
-            var title = $(this).find('.tips-title-wrap span').text().toLowerCase();
-            if (title.includes(searchText)) {
-                $(this).show();
-            } else {
-                $(this).hide();
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.wil-dropdown')) {
+                document.querySelectorAll('.wil-dropdown-menu').forEach(function(menu) {
+                    menu.classList.remove('show');
+                });
             }
         });
-    });
-});
 
+        // Filter logic
+        const container = document.getElementById('tips-content-wrap');
+        const filters = document.querySelectorAll('.r-filter-group li');
+
+        filters.forEach(function(filter) {
+            filter.addEventListener('click', function() {
+                const filterGroup = this.closest('.r-filter-group').dataset.filterGroup;
+                const filterValue = this.dataset.filter;
+
+                // Update the active class
+                this.parentElement.querySelectorAll('li').forEach(function(li) {
+                    li.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                // Combine filters
+                const groupFilters = {};
+                document.querySelectorAll('.r-filter-group').forEach(function(group) {
+                    const activeFilter = group.querySelector('.active');
+                    groupFilters[group.dataset.filterGroup] = activeFilter ? activeFilter.dataset.filter : '.all';
+                });
+
+                // Generate the final filter string
+                let finalFilter = '';
+                for (const group in groupFilters) {
+                    if (groupFilters[group] !== '.all') {
+                        finalFilter += groupFilters[group];
+                    }
+                }
+
+                // Filter the items
+                const items = container.querySelectorAll('.tips-link');
+                items.forEach(function(item) {
+                    item.style.display = finalFilter === '' || item.classList.contains(finalFilter.slice(1)) ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Search logic
+        const searchInput = document.getElementById('tip-search');
+        searchInput.addEventListener('keyup', function() {
+            const searchText = this.value.toLowerCase();
+            container.querySelectorAll('.tips-link').forEach(function(item) {
+                const title = item.querySelector('.tips-title-wrap span').textContent.toLowerCase();
+                item.style.display = title.includes(searchText) ? 'block' : 'none';
+            });
+        });
+    });
 </script>
 
-<!-- /#tips-recipes-wrap -->
 <?php
 get_template_part('parts/pre-footer-ctas');
 get_footer(); ?>
