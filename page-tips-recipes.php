@@ -72,7 +72,6 @@
                             <li data-filter=".all">All</li>
                             <li data-filter=".Pork">Pork</li>
                             <li data-filter=".Beef">Beef</li>
-                            <!-- <li data-filter=".Lamb">Lamb (coming soon)</li> -->
                         </ul>
                     </div>
 
@@ -100,17 +99,15 @@
                             </label>
                         </div>
                     </div>
-                    <!-- /.recipe-search-wrap -->
                 </div>
-                <!-- /.recipe-filter-wrap -->
             </div>
         </div>
-        <!-- /.row -->
+
         <div id="tips-content-wrap" class="tips-container">
             <?php
             // WP_Query arguments
             $args = array(
-                'post_type'              => 'tips',
+                'post_type' => 'tips',
                 'posts_per_page' => -1,
                 'orderby' => 'date',
                 'order' => 'DESC',
@@ -121,13 +118,10 @@
                         'value' => 1
                     ),
                 )
-                // 'meta_key' => 'hide_on_tips_page',
-                // 'meta_value' => 1
             );
 
             // The Query
             $query = new WP_Query($args);
-            // $i = 0;
 
             // The Loop
             if ($query->have_posts()) {
@@ -138,7 +132,6 @@
                     $post_link = get_permalink($id);
 
                     if ($type == 'recipe') {
-
             ?>
                         <a href="<?php the_permalink(); ?>" class="tips-link all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
                             <div class="tips all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
@@ -149,17 +142,15 @@
                             </div>
                         </a>
             <?php
-
-                    } // End of the if
-                } // End of the while
-            } // End of the if
+                    }
+                }
+            }
             wp_reset_postdata();
             ?>
         </div>
-        <!-- /#products-wrap.row -->
-
-        <!-- /.container -->
+    </div>
 </section>
+
 
 <!-- /#tips-recipes-wrap -->
 <?php
