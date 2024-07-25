@@ -72,6 +72,7 @@
                             <li data-filter=".all">All</li>
                             <li data-filter=".Pork">Pork</li>
                             <li data-filter=".Beef">Beef</li>
+                            <!-- <li data-filter=".Lamb">Lamb (coming soon)</li> -->
                         </ul>
                     </div>
 
@@ -99,15 +100,17 @@
                             </label>
                         </div>
                     </div>
+                    <!-- /.recipe-search-wrap -->
                 </div>
+                <!-- /.recipe-filter-wrap -->
             </div>
         </div>
-
+        <!-- /.row -->
         <div id="tips-content-wrap" class="tips-container">
             <?php
             // WP_Query arguments
             $args = array(
-                'post_type' => 'tips',
+                'post_type'              => 'tips',
                 'posts_per_page' => -1,
                 'orderby' => 'date',
                 'order' => 'DESC',
@@ -118,10 +121,13 @@
                         'value' => 1
                     ),
                 )
+                // 'meta_key' => 'hide_on_tips_page',
+                // 'meta_value' => 1
             );
 
             // The Query
             $query = new WP_Query($args);
+            // $i = 0;
 
             // The Loop
             if ($query->have_posts()) {
@@ -132,6 +138,7 @@
                     $post_link = get_permalink($id);
 
                     if ($type == 'recipe') {
+
             ?>
                         <a href="<?php the_permalink(); ?>" class="tips-link all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
                             <div class="tips all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
@@ -142,15 +149,84 @@
                             </div>
                         </a>
             <?php
-                    }
-                }
-            }
+
+                    } // End of the if
+                } // End of the while
+            } // End of the if
             wp_reset_postdata();
             ?>
         </div>
-    </div>
+        <!-- /#products-wrap.row -->
+
+        <!-- /.container -->
 </section>
 
+<script>
+    $(document).ready(function() {
+    // Dropdown toggle logic
+    $('.wil-select').click(function() {
+        $(this).next('.wil-dropdown-menu').toggle();
+    });
+
+    // Close dropdowns when clicking outside
+    $(document).click(function(e) {
+        if (!$(e.target).closest('.wil-dropdown').length) {
+            $('.wil-dropdown-menu').hide();
+        }
+    });
+
+    // Filter logic
+    var $container = $('#tips-content-wrap');
+    var $filters = $('.r-filter-group');
+
+    $filters.on('click', 'li', function() {
+        var $this = $(this);
+        var filterGroup = $this.closest('.r-filter-group').data('filter-group');
+        var filterValue = $this.attr('data-filter');
+        
+        // Update the active class
+        $this.siblings().removeClass('active');
+        $this.addClass('active');
+
+        // Combine filters
+        var groupFilters = {};
+        $filters.each(function() {
+            var group = $(this).data('filter-group');
+            groupFilters[group] = $(this).find('.active').attr('data-filter');
+        });
+
+        // Generate the final filter string
+        var finalFilter = '';
+        for (var group in groupFilters) {
+            if (groupFilters[group] !== '.all') {
+                finalFilter += groupFilters[group];
+            }
+        }
+
+        // Filter the items
+        if (finalFilter === '') {
+            $container.find('.tips-link').show();
+        } else {
+            $container.find('.tips-link').hide();
+            $container.find('.tips-link').filter(finalFilter).show();
+        }
+    });
+
+    // Search logic
+    $('#tip-search').on('keyup', function() {
+        var searchText = $(this).val().toLowerCase();
+        $container.find('.tips-link').each(function() {
+            var title = $(this).find('.tips-title-wrap span').text().toLowerCase();
+            if (title.includes(searchText)) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+});
+
+</script>
 
 <!-- /#tips-recipes-wrap -->
 <?php
