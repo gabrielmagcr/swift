@@ -303,7 +303,7 @@ get_header();
                                 <div class="inner">Sous<br> Vide</div>
                             </div>
                             <!-- /.gn-item -->
-                            <div class="mmc-gn-item" data-method="deli" data-target=".hm-deli">
+                            <div class="mmc-gn-item" data-method="quick-p" data-target=".hm-quick-p">
                                 <div class="inner">Quick<br> Prep</div>
                             </div>
                             <!-- /.gn-item -->
@@ -360,7 +360,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-                <div class="hm-deli mmc-game-nav-content">
+                <div class="hm-quick-p mmc-game-nav-content">
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
                             <p>Ready to eat and ideal for those who prefer to spend their time and energy exploring new flavors and food combinations, Quick Prep requires little, if any, cooking effort. And with Swift constantly bringing new products to the table, you’ll always have fresh, innovative options that help you think—and snack—outside the box.  </p>
@@ -622,20 +622,20 @@ get_header();
             </div>
         </div>
 
-        <div class="hm-deli mmc-game-nav-content">
+        <div class="hm-quick-p mmc-game-nav-content">
             <div class="container padded">
                 <div class="row">
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-deli-1.png" style="width: 100%;" />
+                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-quick-p-1.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-deli-2.png" style="width: 100%;" />
+                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-quick-p-2.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-deli-3.png" style="width: 100%;" />
+                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-quick-p-3.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-deli-4.png" style="width: 100%;" />
+                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-quick-p-4.png" style="width: 100%;" />
                     </div>
                 </div>
             </div>
@@ -644,7 +644,7 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Deli Meats</div></h2>
+                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Quick Prep</div></h2>
 
                             <ol class="mmc-ordered-list text-blue mt-4">
                                 <li><span>Pull your meat out of the package and enjoy!</span></li>
