@@ -82,7 +82,7 @@
     .tips-i-left-section ul {
         color: white;
     }
-    .tips-i-left-section li {
+    .tips-i-left-section li, .tips-i-right-section p {
         font-family: Arial, Helvetica, sans-serif;
     }
 
