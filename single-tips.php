@@ -8,6 +8,9 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 15px;
     }
+    .single-made-with{
+        display: block;
+    }
     .made-with {
         background: #EBEBEB;
         display: flex;
@@ -15,7 +18,7 @@
         flex-direction: column-reverse;
         justify-content: space-evenly;
         text-align: center;
-        font-size: 20px;
+        font-size: 16px;
         margin-top: -1px;
     }
 
@@ -203,10 +206,13 @@
                     <img class="u-photo" src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
                 </figure>
                 <?php $made_with = get_field('made_with');
-                if ($made_with) : ?>
+                if ($made_with) :
+                    $count = count($made_with);
+                    $single_made_with= $count === 1 ? 'single-made-with': '';
+                ?>
 
                     <span class="made-with-span">MADE WITH:</span>
-                    <div class="made-with-container">
+                    <div class="made-with-container <?php $single_made_with ?>">
                     <?php foreach ($made_with as $post) :
                         setup_postdata($post); ?>
                         <a href="<?php the_permalink(); ?>">
