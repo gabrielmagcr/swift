@@ -82,6 +82,9 @@
     .tips-i-left-section ul {
         color: white;
     }
+    .tips-i-left-section li {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
     .tips-i-left-section p {
         font-size: 2rem;
@@ -158,8 +161,11 @@
     }
 
     @media (min-width:1439px) {
+        .tips-badgebar{
+            gap: 40px;
+        }
         .badgebar span {
-            font-size: 9rem;
+            font-size: 7rem;
             line-height: normal;
 
         }
