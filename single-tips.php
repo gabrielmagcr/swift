@@ -3,6 +3,11 @@
 </script>
 <?php get_header(); ?>
 <style>
+    .made-with-container{
+        display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    }
     .made-with {
         background: #EBEBEB;
         display: flex;
