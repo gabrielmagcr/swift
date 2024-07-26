@@ -303,7 +303,7 @@ get_header();
                                 <div class="inner">Sous<br> Vide</div>
                             </div>
                             <!-- /.gn-item -->
-                            <div class="mmc-gn-item" data-method="deli" data-target=".hm-sv">
+                            <div class="mmc-gn-item" data-method="deli" data-target=".hm-deli">
                                 <div class="inner">Quick<br> Prep</div>
                             </div>
                             <!-- /.gn-item -->
@@ -357,6 +357,13 @@ get_header();
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
                             <p>If precision is your name, then sous vide is your game. Pronounced like "Sue-Veed," this slow cooking method dials into exact temperatures, down to the half degree. Using a vacuum-sealed bag, you can and should cook multiple pieces of meat all at once and surround them with aromatics and seasonings. This allows for maximum flavor to penetrate your proteins as they cook. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hm-deli mmc-game-nav-content">
+                    <div class="row">
+                        <div class="col-12 col-md-10 mx-auto">
+                            <p>Ready to eat and ideal for those who prefer to spend their time and energy exploring new flavors and food combinations, Quick Prep requires little, if any, cooking effort. And with Swift constantly bringing new products to the table, you’ll always have fresh, innovative options that help you think—and snack—outside the box.  </p>
                         </div>
                     </div>
                 </div>
@@ -596,6 +603,48 @@ get_header();
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
                             <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Sous Vide</div></h2>
+
+                            <ol class="mmc-ordered-list text-blue mt-4">
+                                <li><span>Season your protein of choice for your sous vide, and season it well with a generous amount of salt, favorite herbs, spices or pastes. </span></li>
+                                <li><span>Secure your protein with your aromatics into a food-grade vacuum sealing bag.</span></li>
+                                <li><span>Seal the deal with your vacuum sealer to lock in all that delicious seasoning.</span></li>
+                                <li><span>Set your water's temperature and start the timer to begin cooking your soon-to-be-stunning meal. </span></li>
+                                <li><span>Once the water has reached the desired temperature, drop in your sealed bags and let the sous vide machine work its magic.</span></li>
+                                <li><span>When your meat reaches the temperature you set, take it out to rest and soak up any last bit of seasoning. About 15-20 minutes.</span></li>
+                                <li><span>Some meats are delicious as is, while others benefit from a little searing to lock in robust flavors. Be sure to dry your meat thoroughly before searing.</span></li>
+                                <li><span>Sear your creation in a searing-hot pan on all sides to create that *chef's kiss* seasoned crust on the outside.</span></li>
+                                <li><span>Searing should be a quick process (1-2 minutes) as your protein is already cooked from the sous vide.</span></li>
+                                <li><span>Relish in your delectable efforts.</span></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hm-deli mmc-game-nav-content">
+            <div class="container padded">
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-4">
+                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-deli-1.png" style="width: 100%;" />
+                    </div>
+                    <div class="col-12 col-md-6 mb-4">
+                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-deli-2.png" style="width: 100%;" />
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-deli-3.png" style="width: 100%;" />
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-deli-4.png" style="width: 100%;" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-10 mx-auto">
+                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Deli Meats</div></h2>
 
                             <ol class="mmc-ordered-list text-blue mt-4">
                                 <li><span>Season your protein of choice for your sous vide, and season it well with a generous amount of salt, favorite herbs, spices or pastes. </span></li>
