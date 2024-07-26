@@ -212,7 +212,7 @@
                 ?>
 
                     <span class="made-with-span">MADE WITH:</span>
-                    <div class="made-with-container <?php $single_made_with ?>">
+                    <div class="made-with-container <?php echo $single_made_with; ?>">
                     <?php foreach ($made_with as $post) :
                         setup_postdata($post); ?>
                         <a href="<?php the_permalink(); ?>">
