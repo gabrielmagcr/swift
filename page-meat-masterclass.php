@@ -647,16 +647,7 @@ get_header();
                             <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Deli Meats</div></h2>
 
                             <ol class="mmc-ordered-list text-blue mt-4">
-                                <li><span>Season your protein of choice for your sous vide, and season it well with a generous amount of salt, favorite herbs, spices or pastes. </span></li>
-                                <li><span>Secure your protein with your aromatics into a food-grade vacuum sealing bag.</span></li>
-                                <li><span>Seal the deal with your vacuum sealer to lock in all that delicious seasoning.</span></li>
-                                <li><span>Set your water's temperature and start the timer to begin cooking your soon-to-be-stunning meal. </span></li>
-                                <li><span>Once the water has reached the desired temperature, drop in your sealed bags and let the sous vide machine work its magic.</span></li>
-                                <li><span>When your meat reaches the temperature you set, take it out to rest and soak up any last bit of seasoning. About 15-20 minutes.</span></li>
-                                <li><span>Some meats are delicious as is, while others benefit from a little searing to lock in robust flavors. Be sure to dry your meat thoroughly before searing.</span></li>
-                                <li><span>Sear your creation in a searing-hot pan on all sides to create that *chef's kiss* seasoned crust on the outside.</span></li>
-                                <li><span>Searing should be a quick process (1-2 minutes) as your protein is already cooked from the sous vide.</span></li>
-                                <li><span>Relish in your delectable efforts.</span></li>
+                                <li><span>Pull your meat out of the package and enjoy!</span></li>
                             </ol>
                         </div>
                     </div>
