@@ -7,6 +7,7 @@
         background: #EBEBEB;
         display: flex;
         align-items: center;
+        flex-direction: column-reverse;
         justify-content: space-evenly;
         text-align: center;
         font-size: 20px;
@@ -200,6 +201,7 @@
                 if ($made_with) : ?>
 
                     <span class="made-with-span">MADE WITH:</span>
+                    <div class="made-with-container">
                     <?php foreach ($made_with as $post) :
                         setup_postdata($post); ?>
                         <a href="<?php the_permalink(); ?>">
@@ -212,7 +214,10 @@
                                 <?php endif; ?>
                             </div>
                         </a>
+                        
                     <?php endforeach; ?>
+                    </div>
+                    
                     <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
             </div>
