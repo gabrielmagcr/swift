@@ -20,6 +20,7 @@
         text-align: center;
         font-size: 16px;
         margin-top: -1px;
+        min-height: 150px;
     }
 
     .made-with img {
