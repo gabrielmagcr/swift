@@ -75,7 +75,7 @@
 
 #know-your-cuts {
     background: url('/wp-content/themes/swift/assets/img/chalkboard.jpg') repeat-y center top / 100% auto;
-    padding: 60px 0;
+    padding-top: 60px;
     h1, h2 {
         text-align: center;
         font-family: $ts1;
@@ -325,6 +325,9 @@
     
     .padded {
         padding: 2rem 0;
+    }
+    p{
+        text-align: center;
     }
 
 
