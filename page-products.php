@@ -177,8 +177,8 @@
                                 if (have_rows('variation_images')) {
                                     the_row();
                                     $single_image = get_sub_field('image');
-                                ?>
-                                    <img src="<?= $single_image; ?>" alt="Variation">
+                                ?>  
+                                    <img class="pi-product-img" src="<?= $single_image; ?>" alt="Variation">
                                 <?php }
                             } else {
                                 // If there are no variation images, display the product image if available
