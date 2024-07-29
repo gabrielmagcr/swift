@@ -1,14 +1,16 @@
 <?php get_header(); ?>
 <style>
-#products-wrap {
-    overflow: hidden;
-}
-#products-wrap > .container {
-    max-width: 1220px;
-}
-#filter-wrap{
-    background-color: #FFAA2B;
-}
+    #products-wrap {
+        overflow: hidden;
+    }
+
+    #products-wrap>.container {
+        max-width: 1220px;
+    }
+
+    #filter-wrap {
+        background-color: #FFAA2B;
+    }
 </style>
 
 <section id="products-hero">
@@ -27,7 +29,7 @@
             <div class="col-12">
                 <h2>All Products</h2>
                 <p>Your next meal starts here. Choose from our cuts and cooking styles for a fresh take on dinner:</p>
-            <!-- <div class="show-for-lg-only">
+                <!-- <div class="show-for-lg-only">
                     <ul class="product-filters products-cooking filter-group" data-filter-group="method">
                         <li data-filter=".all">All</li>
                         <li data-filter=".sear">Sear</li>
@@ -41,8 +43,8 @@
                 </div>
                 <div class="show-for-sm-only">
                    <div class="dropdown-label">Select Cut</div> -->
-                    <!-- /.dropdown-label -->
-                   <!-- <div class="wil-dropdown wd-mobile">
+                <!-- /.dropdown-label -->
+                <!-- <div class="wil-dropdown wd-mobile">
                         <div class="wil-select">
                             <span>Cooking Method</span>
                             <i class="fa fa-chevron-down"></i>
@@ -93,116 +95,139 @@
     <div class="container">
         <div class="row iso">
             <?php
-                // WP_Query arguments
-                $args = array(
-                    'post_type'              => 'products',
-                    'posts_per_page' => -1,
-                    'orderby' => 'menu_order',
-                    'order' => 'ASC',
-                    'post_status'=> 'publish'
-                );
+            // WP_Query arguments
+            $args = array(
+                'post_type'              => 'products',
+                'posts_per_page' => -1,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'post_status' => 'publish'
+            );
 
-                // The Query
-                $query = new WP_Query( $args );
-                // $i = 0;
+            // The Query
+            $query = new WP_Query($args);
+            // $i = 0;
 
-                // The Loop
-                $count = 0;
-                if ( $query->have_posts() ) {
-                    while ( $query->have_posts() ) {
-                        $count++;
-                        $query->the_post();
-                        if(get_field('cooking_methods')) {
-                            $cmethods = get_field('cooking_methods');
-                            $methods = implode(' ', $cmethods);
-                        }
-                        $hidden = $count > 9 ? 'hidden' : '';
+            // The Loop
+            $count = 0;
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                    $count++;
+                    $query->the_post();
+                    if (get_field('cooking_methods')) {
+                        $cmethods = get_field('cooking_methods');
+                        $methods = implode(' ', $cmethods);
+                    }
+                    $hidden = $count > 9 ? 'hidden' : '';
 
             ?>
-                     
-            <div class="product-item all <?= the_field('type');?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4">
-                <div class="pi-top">
-                    
-                    <div class="pi-top--shim">
-                        <div class="pi-top--shim-bg" style="background-image: url('<?=the_field("product_image");?>');"></div>
-                    </div>
-                    
-                    <div class="title-wrap">
-                        <div class="title">
-                            <?php the_title();?>
-                        </div>
-                        <!-- /.title -->
-                    </div>
-                    <!-- /.title-wrap -->
-                </div>
-                <!-- /.pi-top -->
-                <div class="pi-bottom">
-                    <?php if(get_field('cut_image')) { ?>
-                        <img src="<?=the_field("cut_image");?>" alt="<?php the_title();?>" class="pi-cut-img">
-                    <?php } ?>
-                    <?php if(get_field('product_description')) { ?>
-                        <p><?=the_field("product_description");?></p>
-                    <?php } ?>
-                    
-                    <?php if(have_rows('variation_images')) { ?>
-                        <div class="variation-carousel">
-                            <?php while( have_rows('variation_images') ): the_row(); ?>
-                                <div class="carousel-cell">
-                                    <img src="<?= the_sub_field('image');?>" alt="Variation">
-                                </div>
-                                <!-- /.carousel-cell -->
-                            <?php endwhile;?>
-                        </div>
-                        <!-- /.variation-carousel -->
-                    <?php } else { ?>
-                        <?php if(get_field('product_image')) { ?>
-                            <img src="<?=the_field("product_image");?>" alt="<?php the_title();?>" class="pi-product-img">
-                        <?php } ?>
-                    <?php } ?>
-                    <?php if(get_field('also_available_in')) { ?>
-                        <p>Available in:<?=the_field("also_available_in");?></p>
-                        <!-- /.ingredients-list -->
-                    <?php } ?>
-                    <?php if(get_field('highlights')) { ?>
-                        <p class="ing-list">
-                            <?=the_field("highlights");?>
-                        </p>
-                        <!-- /.ingredients-list -->
-                    <?php } ?>
-                    <?php if(get_field('ingredients')) { ?>
-                        <p class="ing-list">
-                            <span>Ingredients:</span> <?=the_field("ingredients");?> 
-                        </p>
-                        <!-- /.ingredients-list -->
-                    <?php } ?>
-                    <?php if(get_field('allergens')) { ?>
-                        <p class="ing-list">
-                            <span>Allergens:</span> <?=the_field("allergens");?> 
-                        </p>
-                        <!-- /.ingredients-list -->
-                    <?php } ?>
-                    <?php if(get_field('nutrition_facts')) { ?>
-                        <img class="pi-ingredients" src="<?=the_field("nutrition_facts");?>" alt="Nutrition Facts">
-                    <?php } ?>
-                    <?php if(get_field('image_source')) { ?>
-                        <div class="product-img-cite"><?= the_field('image_source');?></div>
-                    <?php } ?>
-                    <!-- /.product-img-cite -->
-                    <?php if(get_field('has_product_page') == 1) { ?>
-                        <a class="product-link" href="<?php the_permalink();?>">Read More</a>
-                    <?php } ?>
-                </div>
-                <!-- /.pi-bottom -->
-            </div>
-            <!-- /.col-lg-6 col-sm-12 col-xs-12 col-md-6 -->
-            <?php   
-                } 
-                    } else {
-                        echo "No products";
-                    }
 
-                // Restore original Post Data
-                wp_reset_postdata();
+                    <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4">
+                        <div class="pi-top">
+
+                            <div class="pi-top--shim">
+                                <div class="pi-top--shim-bg" style="background-image: url('<?= the_field("product_image"); ?>');"></div>
+                            </div>
+
+                            <div class="title-wrap">
+                                <div class="title">
+                                    <?php the_title(); ?>
+                                </div>
+                                <!-- /.title -->
+                            </div>
+                            <!-- /.title-wrap -->
+                        </div>
+                        <!-- /.pi-top -->
+                        <div class="pi-bottom">
+                            <?php if (get_field('cut_image')) { ?>
+                                <img src="<?= the_field("cut_image"); ?>" alt="<?php the_title(); ?>" class="pi-cut-img">
+                            <?php } ?>
+                            <?php if (get_field('product_description')) { ?>
+                                <p><?= the_field("product_description"); ?></p>
+                            <?php } ?>
+
+                            <?php
+                            // Count the number of variation images
+                            $variation_images_count = 0;
+                            if (have_rows('variation_images')) {
+                                while (have_rows('variation_images')) {
+                                    the_row();
+                                    $variation_images_count++;
+                                }
+                            }
+
+                            // Reset the loop to reuse have_rows
+                            if (have_rows('variation_images')) {
+                                reset_rows();
+                            }
+
+                            if ($variation_images_count > 1) {
+                            ?>
+                                <div class="variation-carousel">
+                                    <?php while (have_rows('variation_images')) : the_row(); ?>
+                                        <div class="carousel-cell">
+                                            <img src="<?= the_sub_field('image'); ?>" alt="Variation">
+                                        </div>
+                                        <!-- /.carousel-cell -->
+                                    <?php endwhile; ?>
+                                </div>
+                                <!-- /.variation-carousel -->
+                            <?php } elseif ($variation_images_count == 1) {
+                                // Display the single image without the carousel
+                                the_row();
+                            ?>
+                                <img src="<?= the_sub_field('image'); ?>" alt="Variation">
+                                <?php } else {
+                                // If there are no variation images, display the product image if available
+                                if (get_field('product_image')) { ?>
+                                    <img src="<?= the_field("product_image"); ?>" alt="<?php the_title(); ?>" class="pi-product-img">
+                            <?php }
+                            } ?>
+
+                            <?php if (get_field('also_available_in')) { ?>
+                                <p>Available in:<?= the_field("also_available_in"); ?></p>
+                                <!-- /.ingredients-list -->
+                            <?php } ?>
+                            <?php if (get_field('highlights')) { ?>
+                                <p class="ing-list">
+                                    <?= the_field("highlights"); ?>
+                                </p>
+                                <!-- /.ingredients-list -->
+                            <?php } ?>
+                            <?php if (get_field('ingredients')) { ?>
+                                <p class="ing-list">
+                                    <span>Ingredients:</span> <?= the_field("ingredients"); ?>
+                                </p>
+                                <!-- /.ingredients-list -->
+                            <?php } ?>
+                            <?php if (get_field('allergens')) { ?>
+                                <p class="ing-list">
+                                    <span>Allergens:</span> <?= the_field("allergens"); ?>
+                                </p>
+                                <!-- /.ingredients-list -->
+                            <?php } ?>
+                            <?php if (get_field('nutrition_facts')) { ?>
+                                <img class="pi-ingredients" src="<?= the_field("nutrition_facts"); ?>" alt="Nutrition Facts">
+                            <?php } ?>
+                            <?php if (get_field('image_source')) { ?>
+                                <div class="product-img-cite"><?= the_field('image_source'); ?></div>
+                            <?php } ?>
+                            <!-- /.product-img-cite -->
+                            <?php if (get_field('has_product_page') == 1) { ?>
+                                <a class="product-link" href="<?php the_permalink(); ?>">Read More</a>
+                            <?php } ?>
+                        </div>
+                        <!-- /.pi-bottom -->
+                    </div>
+                    <!-- /.col-lg-6 col-sm-12 col-xs-12 col-md-6 -->
+            <?php
+                }
+            } else {
+                echo "No products";
+            }
+
+            // Restore original Post Data
+            wp_reset_postdata();
             ?>
 
         </div>
@@ -212,14 +237,14 @@
             <button id="sm-products-view-more">
                 <span>View More Products</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" fill="none">
-                <g clip-path="url(#clip0_350_1057)">
-                    <path d="M27.4366 0L14.9936 12.443L2.55051 0L0.77832 1.77219L13.2214 14.2152L14.9936 16L29.2214 1.77219L27.4366 0Z" fill="#28334A"/>
-                </g>
-                <defs>
-                    <clipPath id="clip0_350_1057">
-                    <rect width="28.443" height="16" fill="white" transform="translate(0.77832)"/>
-                    </clipPath>
-                </defs>
+                    <g clip-path="url(#clip0_350_1057)">
+                        <path d="M27.4366 0L14.9936 12.443L2.55051 0L0.77832 1.77219L13.2214 14.2152L14.9936 16L29.2214 1.77219L27.4366 0Z" fill="#28334A" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_350_1057">
+                            <rect width="28.443" height="16" fill="white" transform="translate(0.77832)" />
+                        </clipPath>
+                    </defs>
                 </svg>
             </button>
         </div>
@@ -228,7 +253,7 @@
 </section>
 <!-- /#products-wrap -->
 
-<?php 
+<?php
 get_template_part('parts/pre-footer-ctas');
 
 get_footer(); ?>
