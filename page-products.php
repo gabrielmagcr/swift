@@ -172,12 +172,15 @@
                                     <?php endwhile; ?>
                                 </div>
                                 <!-- /.variation-carousel -->
-                            <?php } elseif ($variation_images_count == 1) {
+                                <?php } elseif ($variation_images_count == 1) {
                                 // Display the single image without the carousel
-                                the_row();
-                            ?>
-                                <img src="<?= the_sub_field('image'); ?>" alt="Variation">
-                                <?php } else {
+                                if (have_rows('variation_images')) {
+                                    the_row();
+                                    $single_image = get_sub_field('image');
+                                ?>
+                                    <img src="<?= $single_image; ?>" alt="Variation">
+                                <?php }
+                            } else {
                                 // If there are no variation images, display the product image if available
                                 if (get_field('product_image')) { ?>
                                     <img src="<?= the_field("product_image"); ?>" alt="<?php the_title(); ?>" class="pi-product-img">
