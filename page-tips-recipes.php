@@ -75,15 +75,17 @@
                         </div>
                         <ul id="protein-dd" class="wil-dropdown-menu r-filter-group" data-filter-group="protein">
                             <li data-filter=".all">All</li>
-                            <li data-filter=".Pork">Pork</li>
                             <li data-filter=".Beef">Beef</li>
+                            <li data-filter=".Pork">Pork</li>
+                            <li data-filter=".Bacon">Bacon</li>
+                            <li data-filter=".Deli">Deli Meats</li>
                             <!-- <li data-filter=".Lamb">Lamb (coming soon)</li> -->
                         </ul>
                     </div>
 
                     <div class="wil-dropdown">
                         <div class="wil-select">
-                            <span>Cooking Style</span>
+                            <span>Dish Type</span>
                             <i class="fa fa-chevron-down"></i>
                         </div>
                         <ul id="cooking-style-dd" class="wil-dropdown-menu r-filter-group" data-filter-group="method">
