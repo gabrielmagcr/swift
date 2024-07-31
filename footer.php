@@ -13,9 +13,18 @@
 .social-links img:hover {
   filter: brightness(1.2);
 }
+@keyframes flavorTrain2 {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -4381px 0; 
+    }
+}
 .flavor-train {
-	background-image: url('<?php echo get_field('flavor_train_image'); ?>');
+	background-image: url('<?php echo get_field('flavor_train_image'); ?>') repeat-x left center/auto 100%;
 	height: 300px !important;
+	animation: flavorTrain2 35s linear infinite !important;
 }
 @media (min-width: 1201px) {
     #ft-nav ul {
