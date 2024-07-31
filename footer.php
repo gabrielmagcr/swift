@@ -14,7 +14,7 @@
   filter: brightness(1.2);
 }
 .flavor-train {
-	background-image: url('<?php get_field('flavor_train_image'); ?>');
+	background-image: url('<?php echo get_field('flavor_train_image'); ?>');
 	height: 300px !important;
 }
 @media (min-width: 1201px) {
