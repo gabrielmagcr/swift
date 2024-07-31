@@ -22,7 +22,7 @@
     }
 }
 .flavor-train {
-	background-image: url('<?php echo get_field('flavor_train_image'); ?>') repeat-x left center/auto 100%;
+	background-image: url('<?php echo get_field('flavor_train_image'); ?>');
 	height: 300px !important;
 	animation: flavorTrain2 35s linear infinite !important;
 }
