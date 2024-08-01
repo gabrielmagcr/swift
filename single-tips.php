@@ -296,7 +296,7 @@
                 case 'multicooker':
                     $img_cooking = '/assets/img/tips/Multicooker.svg';
                     break;
-                case 'sousvide':
+                case 'sous vide':
                     $img_cooking = '/assets/img/tips/SousVide.svg';
                     break;
                 default:
