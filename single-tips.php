@@ -282,34 +282,33 @@
             $img_cooking = '';
             switch ($cooking_style) {
                 case 'skillet':
-                    $img_cooking = '\assets\img\tips\Skillet.svg';
+                    $img_cooking = '/assets/img/tips/Skillet.svg';
                     break;
                 case 'oven':
-                    $img_cooking = '\assets\img\tips\Oven.svg';
+                    $img_cooking = '/assets/img/tips/Oven.svg';
                     break;
                 case 'grill':
-                    $img_cooking = '\assets\img\tips\Grill.svg';
+                    $img_cooking = '/assets/img/tips/Grill.svg';
                     break;
                 case 'smoker':
-                    $img_cooking = '\assets\img\tips\Smoker.svg';
+                    $img_cooking = '/assets/img/tips/Smoker.svg';
                     break;
                 case 'multicooker':
-                    $img_cooking = '\assets\img\tips\Multicooker.svg';
+                    $img_cooking = '/assets/img/tips/Multicooker.svg';
                     break;
                 case 'sousvide':
-                    $img_cooking = '\assets\img\tips\SousVide.svg';
+                    $img_cooking = '/assets/img/tips/SousVide.svg';
                     break;
                 default:
-                    $img_cooking = '\assets\img\tips\Fryer.svg';
+                    $img_cooking = '/assets/img/tips/Fryer.svg';
                     break;
             }
             ?>
-             <img src='<?php echo esc_url(get_template_directory_uri()$img_cooking); ?>' alt='Cooking style image'>
-        </div>
+            <img src='<?php echo esc_url(get_template_directory_uri() . '/' . $img_cooking); ?>' alt='Cooking style image'>        </div>
     </div>
 
 </section>
-
+ 
 <section class="tips-instructions">
     <div class="tips-i-left-section">
         <?php echo get_field('content'); ?>
