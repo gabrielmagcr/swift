@@ -3,14 +3,16 @@
 </script>
 <?php get_header(); ?>
 <style>
-    .made-with-container{
+    .made-with-container {
         display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
     }
-    .single-made-with{
+
+    .single-made-with {
         display: block;
     }
+
     .made-with {
         background: #EBEBEB;
         display: flex;
@@ -83,7 +85,9 @@
     .tips-i-left-section ul {
         color: white;
     }
-    .tips-i-left-section li, .tips-i-right-section p {
+
+    .tips-i-left-section li,
+    .tips-i-right-section p {
         font-family: Arial, Helvetica, sans-serif;
     }
 
@@ -127,17 +131,19 @@
     .share-icons img {
         width: 40px;
     }
-    #hide-icons{
+
+    #hide-icons {
         gap: 7px;
         transition: transform 0.8s ease-in-out;
 
     }
- 
+
 
     @media (min-width:767px) {
         .share-icons img {
-        width: 50px;
-    }
+            width: 50px;
+        }
+
         .badgebar span {
             font-size: 6rem;
         }
@@ -156,15 +162,17 @@
         .badgebar img {
             width: 75px;
         }
+
         .tips-i-right-section {
             max-width: 50%;
         }
     }
 
     @media (min-width:1439px) {
-        .tips-badgebar{
+        .tips-badgebar {
             gap: 40px;
         }
+
         .badgebar span {
             font-size: 7rem;
             line-height: normal;
@@ -178,13 +186,16 @@
         .badgebar img {
             width: 100px;
         }
-        .tips-instructions{
+
+        .tips-instructions {
             max-width: 1600px;
             margin: 0 auto;
         }
+
         .tips-i-left-section {
             padding: 50px 50px 50px 150px;
         }
+
         .tips-i-right-section {
             padding: 100px 70px;
             margin: 50px;
@@ -215,27 +226,27 @@
                 <?php $made_with = get_field('made_with');
                 if ($made_with) :
                     $count = count($made_with);
-                    $single_made_with= $count === 1 ? 'single-made-with': '';
+                    $single_made_with = $count === 1 ? 'single-made-with' : '';
                 ?>
 
                     <span class="made-with-span">MADE WITH:</span>
                     <div class="made-with-container <?php echo $single_made_with; ?>">
-                    <?php foreach ($made_with as $post) :
-                        setup_postdata($post); ?>
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="made-with">
-                                <span><?php the_title(); ?></span>
-                                <?php
-                                $product_image = get_field('product_image');
-                                if ($product_image) : ?>
-                                    <img src="<?= $product_image; ?>" alt="<?php the_title(); ?>" />
-                                <?php endif; ?>
-                            </div>
-                        </a>
-                        
-                    <?php endforeach; ?>
+                        <?php foreach ($made_with as $post) :
+                            setup_postdata($post); ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="made-with">
+                                    <span><?php the_title(); ?></span>
+                                    <?php
+                                    $product_image = get_field('product_image');
+                                    if ($product_image) : ?>
+                                        <img src="<?= $product_image; ?>" alt="<?php the_title(); ?>" />
+                                    <?php endif; ?>
+                                </div>
+                            </a>
+
+                        <?php endforeach; ?>
                     </div>
-                    
+
                     <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
             </div>
@@ -265,8 +276,34 @@
             <h3>SERVINGS</h3>
         </div>
         <div class="badgebar tips-cooking-style">
-            <!-- agregar todos los tipos de coccion -->
-            <img src='/wp-content/uploads/2024/07/oven.svg'>
+            <?php
+            $cooking_style = get_field('cooking_style');
+            $img_cooking = '';
+            switch ($cooking_style) {
+                case 'skillet':
+                    $img_cooking = 'assets\img\tips\Skillet.svg';
+                    break;
+                case 'oven':
+                    $img_cooking = 'assets\img\tips\Oven.svg';
+                    break;
+                case 'grill':
+                    $img_cooking = 'assets\img\tips\Grill.svg';
+                    break;
+                case 'smoker':
+                    $img_cooking = 'assets\img\tips\Smoker.svg';
+                    break;
+                case 'multicooker':
+                    $img_cooking = 'assets\img\tips\Multicooker.svg';
+                    break;
+                case 'sousvide':
+                    $img_cooking = 'assets\img\tips\SousVide.svg';
+                    break;
+                default:
+                    $img_cooking = 'assets\img\tips\Fryer.svg';
+                    break;
+            }
+            ?>
+            <img src='<?php $img_cooking ?>'>
         </div>
     </div>
 
@@ -515,13 +552,13 @@ if (have_rows('product_page_next_level')) : ?>
 <?php endif; ?>
 
 <script>
-  const sharebtn = document.getElementById('sharebtn');
+    const sharebtn = document.getElementById('sharebtn');
     const hideIcons = document.getElementById('hide-icons');
 
     sharebtn.addEventListener('click', function() {
         if (hideIcons.style.display === 'none') {
             hideIcons.style.display = 'flex';
-    
+
         } else {
             hideIcons.style.display = 'none';
         }
@@ -529,7 +566,7 @@ if (have_rows('product_page_next_level')) : ?>
 </script>
 
 <!-- /#tips-recipes-wrap -->
-<?php 
+<?php
 get_template_part('parts/pre-footer-ctas');
-get_footer(); 
+get_footer();
 ?>
