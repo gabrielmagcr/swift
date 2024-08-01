@@ -278,6 +278,7 @@
         <div class="badgebar tips-cooking-style">
             <?php
             $cooking_style = get_field('cooking_style');
+            var_dump($cooking_style);
             $img_cooking = '';
             switch ($cooking_style) {
                 case 'skillet':
