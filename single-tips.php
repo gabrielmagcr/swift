@@ -304,7 +304,7 @@
                     break;
             }
             ?>
-            <img src='<?php $img_cooking ?>'>
+            <img src='<?php get_template_directory_uri();echo $img_cooking ?>'>
         </div>
     </div>
 
