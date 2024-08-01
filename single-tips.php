@@ -304,7 +304,7 @@
                     break;
             }
             ?>
-             <img src='<?php echo esc_url(get_template_directory_uri() . '/' . $img_cooking); ?>' alt='Cooking style image'>
+             <img src='<?php echo esc_url(get_template_directory_uri()$img_cooking); ?>' alt='Cooking style image'>
         </div>
     </div>
 
