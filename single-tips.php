@@ -300,7 +300,7 @@
                     $img_cooking = '\assets\img\tips\SousVide.svg';
                     break;
                 default:
-                    $img_cooking = 'assets\img\tips\Fryer.svg';
+                    $img_cooking = '\assets\img\tips\Fryer.svg';
                     break;
             }
             ?>
