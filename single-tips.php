@@ -206,7 +206,7 @@
 <meta property="og:description" content="<?= the_field('description'); ?>"/>
 <meta property="og:site_name" content="<?php site_url();?>" />
 
-<section class="sm-prodhero h-recipe">
+<section class="sm-prodhero" itemscope itemtype="http://schema.org/Recipe">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--info">
