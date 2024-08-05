@@ -312,7 +312,7 @@
 </section>
  
 <section class="tips-instructions">
-    <div class="tips-i-left-section">
+    <div class="tips-i-left-section recipe-ingredients">
         <?php echo get_field('content'); ?>
     </div>
 
