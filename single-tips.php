@@ -202,7 +202,8 @@
         }
     }
 </style>
-<meta property="og:SwiftMeats" content="https://stgswiftmeats.wpenginepowered.com" />
+<meta property="og:title" content="<?php the_title(); ?>"/>
+<meta property="og:description" content="<?= the_field('description'); ?>"/>
 <section class="sm-prodhero h-recipe">
     <div class="container">
         <div class="row">
