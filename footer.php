@@ -23,7 +23,7 @@
 }
 .flavor-train {
 	background-image: url('<?php echo get_field('flavor_train_image'); ?>');
-	height: 300px !important;
+	height: <?php echo get_field('flavor_train_heigth'); ?>px !important;
 	animation: flavorTrain2 35s linear infinite !important;
 }
 @media (min-width: 1201px) {
