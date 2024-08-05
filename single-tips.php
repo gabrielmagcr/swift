@@ -204,6 +204,8 @@
 </style>
 <meta property="og:title" content="<?php the_title(); ?>"/>
 <meta property="og:description" content="<?= the_field('description'); ?>"/>
+<meta property="og:site_name" content="<?php site_url();?>" />
+
 <section class="sm-prodhero h-recipe">
     <div class="container">
         <div class="row">
@@ -214,7 +216,7 @@
                         <li><?php the_title(); ?></li>
                     </ol>
                 </div>
-                <h1 class="p-name"><?php the_title(); ?></h1>
+                <h1 itemprop="name" class="p-name"><?php the_title(); ?></h1>
                 <p class="p-summary"><?= the_field('description'); ?></p>
                 <form class="sm-prodhero--wtb" action="/products" method="GET">
                     <button class="btn btn-outline-red" type="submit">Find your Protein</button>
