@@ -6,11 +6,16 @@
     .made-with-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 15px;
     }
 
     .single-made-with {
         display: block;
+    }
+
+    .single-made-with span {
+        margin-top: -10px;
+        padding-bottom: 10px;
+        font-size: 1.5rem;
     }
 
     .made-with {
@@ -24,10 +29,12 @@
         margin-top: -1px;
         min-height: 150px;
     }
-    .made-with span{
+
+    .made-with span {
         padding-bottom: 5px;
 
     }
+
     .made-with img {
         width: 50%;
     }
@@ -140,14 +147,17 @@
         transition: transform 0.8s ease-in-out;
 
     }
-    .recipe-img img{
+
+    .recipe-img img {
         max-height: 300px;
         object-fit: cover;
     }
-    .recipe-title{
+
+    .recipe-title {
         font-size: 1.8rem;
         line-height: 1;
     }
+
     @media (min-width:767px) {
         .share-icons img {
             width: 50px;
@@ -160,6 +170,12 @@
     }
 
     @media (min-width:1023px) {
+        .recipe-hero{
+            padding: 2rem 0 0;
+        }
+        .recipes-info{
+            align-content: center;
+        }
         .tips-instructions {
             flex-direction: row;
         }
@@ -175,8 +191,9 @@
         .tips-i-right-section {
             max-width: 50%;
         }
-        .recipe-img img{
-            max-height: 375px;
+
+        .recipe-img img {
+            max-height: 365px;
         }
     }
 
@@ -214,13 +231,13 @@
         }
     }
 </style>
-<meta property="og:title" content="<?php the_title(); ?>"/>
-<meta property="og:description" content="<?= the_field('description'); ?>"/>
-<meta property="og:site_name" content="<?php site_url();?>" />
-<section class="sm-prodhero" itemscope itemtype="http://schema.org/Recipe">
+<meta property="og:title" content="<?php the_title(); ?>" />
+<meta property="og:description" content="<?= the_field('description'); ?>" />
+<meta property="og:site_name" content="<?php site_url(); ?>" />
+<section class="sm-prodhero recipe-hero" itemscope itemtype="http://schema.org/Recipe">
     <div class="container">
         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--info">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--info recipes-info">
                 <div class="sm-prodhero--breadcrumb">
                     <ol>
                         <li><a href="/tips-recipes">Recipes</a></li>
@@ -317,11 +334,12 @@
                     break;
             }
             ?>
-            <img src='<?php echo esc_url(get_template_directory_uri() . '/' . $img_cooking); ?>' alt='Cooking style image'>        </div>
+            <img src='<?php echo esc_url(get_template_directory_uri() . '/' . $img_cooking); ?>' alt='Cooking style image'>
+        </div>
     </div>
 
 </section>
- 
+
 <section class="tips-instructions">
     <div class="tips-i-left-section recipe-ingredients">
         <?php echo get_field('content'); ?>
