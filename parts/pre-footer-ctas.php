@@ -4,7 +4,7 @@
 
 <section class="block block-content padded learn-from-the-meat-master text-center bg-red has-background-image" style="--block-background-image: url('/wp-content/uploads/2023/03/learn-from-meat-master-bg-scaled.jpg')">
     <div class="container">
-        <h2 class="text-white">Learn from the Meat Master<br> <span class="text-trend-one">Our Founder, Gustavus Swift</span></h2>
+        <h2 class="text-white">Learn from the Meat Master<br><br>  <span class="text-trend-one">Our Founder, Gustavus Swift</span></h2>
         <div class="buttons">
             <a class="btn btn-outline-white" href="/meat-masterclass/">Get to Know the Basics</a><br> 
             <a class="btn btn-outline-white" href="/meat-masterclass/methods/">Up Your Cooking Methods</a>

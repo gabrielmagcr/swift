@@ -118,7 +118,7 @@
         position: sticky;
         top: 83px;
         height: min-content;
-        padding: 60px;
+        padding: 45px;
     }
 
     .tips-i-right-section h5,
@@ -127,7 +127,7 @@
     }
 
     .tips-i-right-section h5 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .share-icons-container {
@@ -177,6 +177,12 @@
     }
 
     @media (min-width:1023px) {
+        .tips-i-right-section {
+            padding: 60px;
+        }
+        .tips-i-right-section h5 {
+        font-size: 3rem;
+    }
         .recipe-hero{
             padding: 2rem 0 0;
         }
