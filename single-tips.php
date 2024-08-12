@@ -24,18 +24,21 @@
         margin-top: -1px;
         min-height: 150px;
     }
+    .made-with span{
+        padding-bottom: 5px;
 
+    }
     .made-with img {
         width: 50%;
     }
 
-    .made-with-span {
+    .made-with-title {
         background: #FFAA2B;
         width: 100%;
         display: block;
         padding: 5px 10px;
-        color: white;
-        margin: 15px 0 16px 0;
+        color: #28334A;
+        margin: 15px 0 0;
     }
 
     .badgebar-section {
@@ -137,8 +140,14 @@
         transition: transform 0.8s ease-in-out;
 
     }
-
-
+    .recipe-img img{
+        max-height: 300px;
+        object-fit: cover;
+    }
+    .recipe-title{
+        font-size: 1.8rem;
+        line-height: 1;
+    }
     @media (min-width:767px) {
         .share-icons img {
             width: 50px;
@@ -165,6 +174,9 @@
 
         .tips-i-right-section {
             max-width: 50%;
+        }
+        .recipe-img img{
+            max-height: 375px;
         }
     }
 
@@ -205,7 +217,6 @@
 <meta property="og:title" content="<?php the_title(); ?>"/>
 <meta property="og:description" content="<?= the_field('description'); ?>"/>
 <meta property="og:site_name" content="<?php site_url();?>" />
-
 <section class="sm-prodhero" itemscope itemtype="http://schema.org/Recipe">
     <div class="container">
         <div class="row">
@@ -216,13 +227,13 @@
                         <li><?php the_title(); ?></li>
                     </ol>
                 </div>
-                <h1 itemprop="name" class="p-name"><?php the_title(); ?></h1>
+                <h1 itemprop="name" class="p-name recipe-title"><?php the_title(); ?></h1>
                 <p class="p-summary"><?= the_field('description'); ?></p>
                 <form class="sm-prodhero--wtb" action="/products" method="GET">
                     <button class="btn btn-outline-red" type="submit">Find your Protein</button>
                 </form>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--img">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--img recipe-img">
                 <figure>
                     <img class="u-photo" src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
                 </figure>
@@ -232,7 +243,7 @@
                     $single_made_with = $count === 1 ? 'single-made-with' : '';
                 ?>
 
-                    <span class="made-with-span">MADE WITH:</span>
+                    <span class="made-with-title">MADE WITH:</span>
                     <div class="made-with-container <?php echo $single_made_with; ?>">
                         <?php foreach ($made_with as $post) :
                             setup_postdata($post); ?>
