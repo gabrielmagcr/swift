@@ -96,7 +96,9 @@
     .tips-i-left-section ul {
         color: white;
     }
-
+    .tips-i-left-section ul, .tips-i-left-section ol { 
+        padding-left: 20px;
+    }
     .tips-i-left-section li,
     .tips-i-right-section p {
         font-family: Arial, Helvetica, sans-serif;
