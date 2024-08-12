@@ -211,6 +211,9 @@
                         item.style.display = 'none';
                     }
                 });
+
+                // Re-initialize lazy load after filtering
+                $('.lazy').Lazy();
             });
         });
 
@@ -223,9 +226,13 @@
                 const isVisible = item.style.display !== 'none';
                 item.style.display = title.includes(searchText) && isVisible ? 'block' : 'none';
             });
+
+            // Re-initialize lazy load after search
+            $('.lazy').Lazy();
         });
     });
 </script>
+
 
 
 <?php
