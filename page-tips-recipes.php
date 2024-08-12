@@ -49,18 +49,20 @@
     opacity: 1;
     transform: scale(1);
     transition: opacity 0.3s ease, transform 0.3s ease;
-    display: block; 
+    display: block;
+}
 
 .tips-link.hidden {
     opacity: 0;
     transform: scale(0.9);
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 .tips-link.showing {
     opacity: 1;
     transform: scale(1);
 }
+
 
     @media (min-width: 1399px) {
         .tips-container {
@@ -175,23 +177,7 @@
     </div>
 </section>
 <script>
- document.addEventListener("DOMContentLoaded", function() {
-    // Dropdown toggle logic
-    document.querySelectorAll('.wil-select').forEach(function(select) {
-        select.addEventListener('click', function() {
-            this.nextElementSibling.classList.toggle('show');
-        });
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.wil-dropdown')) {
-            document.querySelectorAll('.wil-dropdown-menu').forEach(function(menu) {
-                menu.classList.remove('show');
-            });
-        }
-    });
-
+document.addEventListener("DOMContentLoaded", function() {
     // Filter logic
     const container = document.getElementById('tips-content-wrap');
     const filters = document.querySelectorAll('.r-filter-group li');
@@ -210,13 +196,13 @@
             if (matchesProtein && matchesMethod) {
                 item.classList.remove('hidden');
                 item.classList.add('showing');
-                item.style.display = 'block'; 
+                item.style.display = 'block';
             } else {
                 item.classList.remove('showing');
                 item.classList.add('hidden');
                 setTimeout(function() {
                     item.style.display = 'none';
-                }, 300); 
+                }, 300); // Make sure this matches the CSS transition duration
             }
         });
 
@@ -261,13 +247,13 @@
                 if (title.includes(searchText) && matchesProtein && matchesMethod) {
                     item.classList.remove('hidden');
                     item.classList.add('showing');
-                    item.style.display = 'block'; 
+                    item.style.display = 'block';
                 } else {
                     item.classList.remove('showing');
                     item.classList.add('hidden');
                     setTimeout(function() {
                         item.style.display = 'none';
-                    }, 300); 
+                    }, 300); // Make sure this matches the CSS transition duration
                 }
             });
         }
@@ -276,6 +262,7 @@
         $('.lazy').Lazy();
     });
 });
+
 
 </script>
 
