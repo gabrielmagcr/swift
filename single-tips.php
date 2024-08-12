@@ -232,7 +232,7 @@
             padding: 100px 70px;
             margin: 50px;
         }
-        .recipe-img img{
+        .made-with img{
             height: 40%;
         }
     }
