@@ -64,7 +64,7 @@
     .badgebar {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 15px;
     }
 
     .badgebar h3 {
@@ -198,6 +198,9 @@
     }
 
     @media (min-width:1439px) {
+        .badgebar {
+            gap: 25px;
+        }
         .tips-badgebar {
             gap: 40px;
         }
@@ -209,7 +212,7 @@
         }
 
         .badgebar h3 {
-            font-size: 3rem;
+            font-size: 2rem;
         }
 
         .badgebar img {
@@ -228,6 +231,9 @@
         .tips-i-right-section {
             padding: 100px 70px;
             margin: 50px;
+        }
+        .recipe-img img{
+            height: 40%;
         }
     }
 </style>
