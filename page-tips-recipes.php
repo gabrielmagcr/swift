@@ -157,7 +157,6 @@
         </div>
     </div>
 </section>
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Dropdown toggle logic
@@ -185,6 +184,23 @@
             method: '.all'
         };
 
+        function applyFilters() {
+            const items = container.querySelectorAll('.tips-link');
+            items.forEach(function(item) {
+                const matchesProtein = selectedFilters.protein === '.all' || item.classList.contains(selectedFilters.protein.slice(1));
+                const matchesMethod = selectedFilters.method === '.all' || item.classList.contains(selectedFilters.method.slice(1));
+
+                if (matchesProtein && matchesMethod) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Re-initialize lazy load after filtering
+            $('.lazy').Lazy();
+        }
+
         filters.forEach(function(filter) {
             filter.addEventListener('click', function() {
                 const filterGroup = this.closest('.r-filter-group').dataset.filterGroup;
@@ -199,21 +215,8 @@
                 // Update the selected filter for the group
                 selectedFilters[filterGroup] = filterValue;
 
-                // Filter the items
-                const items = container.querySelectorAll('.tips-link');
-                items.forEach(function(item) {
-                    const matchesProtein = selectedFilters.protein === '.all' || item.classList.contains(selectedFilters.protein.slice(1));
-                    const matchesMethod = selectedFilters.method === '.all' || item.classList.contains(selectedFilters.method.slice(1));
-
-                    if (matchesProtein && matchesMethod) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-
-                // Re-initialize lazy load after filtering
-                $('.lazy').Lazy();
+                // Apply filters
+                applyFilters();
             });
         });
 
@@ -221,11 +224,24 @@
         const searchInput = document.getElementById('tip-search');
         searchInput.addEventListener('keyup', function() {
             const searchText = this.value.toLowerCase();
-            container.querySelectorAll('.tips-link').forEach(function(item) {
-                const title = item.querySelector('.tips-title-wrap span').textContent.toLowerCase();
-                const isVisible = item.style.display !== 'none';
-                item.style.display = title.includes(searchText) && isVisible ? 'block' : 'none';
-            });
+
+            if (searchText === '') {
+                // If search is cleared, reapply the filters
+                applyFilters();
+            } else {
+                container.querySelectorAll('.tips-link').forEach(function(item) {
+                    const title = item.querySelector('.tips-title-wrap span').textContent.toLowerCase();
+                    const matchesProtein = selectedFilters.protein === '.all' || item.classList.contains(selectedFilters.protein.slice(1));
+                    const matchesMethod = selectedFilters.method === '.all' || item.classList.contains(selectedFilters.method.slice(1));
+
+                    // Display items that match the search text and currently selected filters
+                    if (title.includes(searchText) && matchesProtein && matchesMethod) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
 
             // Re-initialize lazy load after search
             $('.lazy').Lazy();
