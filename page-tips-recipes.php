@@ -180,6 +180,11 @@
         const container = document.getElementById('tips-content-wrap');
         const filters = document.querySelectorAll('.r-filter-group li');
 
+        const selectedFilters = {
+            protein: '.all',
+            method: '.all'
+        };
+
         filters.forEach(function(filter) {
             filter.addEventListener('click', function() {
                 const filterGroup = this.closest('.r-filter-group').dataset.filterGroup;
@@ -191,25 +196,20 @@
                 });
                 this.classList.add('active');
 
-                // Combine filters
-                const groupFilters = {};
-                document.querySelectorAll('.r-filter-group').forEach(function(group) {
-                    const activeFilter = group.querySelector('.active');
-                    groupFilters[group.dataset.filterGroup] = activeFilter ? activeFilter.dataset.filter : '.all';
-                });
-
-                // Generate the final filter string
-                let finalFilter = '';
-                for (const group in groupFilters) {
-                    if (groupFilters[group] !== '.all') {
-                        finalFilter += groupFilters[group];
-                    }
-                }
+                // Update the selected filter for the group
+                selectedFilters[filterGroup] = filterValue;
 
                 // Filter the items
                 const items = container.querySelectorAll('.tips-link');
                 items.forEach(function(item) {
-                    item.style.display = finalFilter === '' || item.classList.contains(finalFilter.slice(1)) ? 'block' : 'none';
+                    const matchesProtein = selectedFilters.protein === '.all' || item.classList.contains(selectedFilters.protein.slice(1));
+                    const matchesMethod = selectedFilters.method === '.all' || item.classList.contains(selectedFilters.method.slice(1));
+
+                    if (matchesProtein && matchesMethod) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
                 });
             });
         });
@@ -220,11 +220,13 @@
             const searchText = this.value.toLowerCase();
             container.querySelectorAll('.tips-link').forEach(function(item) {
                 const title = item.querySelector('.tips-title-wrap span').textContent.toLowerCase();
-                item.style.display = title.includes(searchText) ? 'block' : 'none';
+                const isVisible = item.style.display !== 'none';
+                item.style.display = title.includes(searchText) && isVisible ? 'block' : 'none';
             });
         });
     });
 </script>
+
 
 <?php
 get_template_part('parts/pre-footer-ctas');
