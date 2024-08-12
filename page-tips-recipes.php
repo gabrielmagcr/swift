@@ -44,6 +44,23 @@
     .tips-link:hover {
         text-decoration: none;
     }
+    .tips-link {
+    width: 100%;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: block; 
+
+.tips-link.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none; 
+}
+
+.tips-link.showing {
+    opacity: 1;
+    transform: scale(1);
+}
 
     @media (min-width: 1399px) {
         .tips-container {
@@ -158,95 +175,108 @@
     </div>
 </section>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Dropdown toggle logic
-        document.querySelectorAll('.wil-select').forEach(function(select) {
-            select.addEventListener('click', function() {
-                this.nextElementSibling.classList.toggle('show');
-            });
+ document.addEventListener("DOMContentLoaded", function() {
+    // Dropdown toggle logic
+    document.querySelectorAll('.wil-select').forEach(function(select) {
+        select.addEventListener('click', function() {
+            this.nextElementSibling.classList.toggle('show');
         });
+    });
 
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.wil-dropdown')) {
-                document.querySelectorAll('.wil-dropdown-menu').forEach(function(menu) {
-                    menu.classList.remove('show');
-                });
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.wil-dropdown')) {
+            document.querySelectorAll('.wil-dropdown-menu').forEach(function(menu) {
+                menu.classList.remove('show');
+            });
+        }
+    });
+
+    // Filter logic
+    const container = document.getElementById('tips-content-wrap');
+    const filters = document.querySelectorAll('.r-filter-group li');
+
+    const selectedFilters = {
+        protein: '.all',
+        method: '.all'
+    };
+
+    function applyFilters() {
+        const items = container.querySelectorAll('.tips-link');
+        items.forEach(function(item) {
+            const matchesProtein = selectedFilters.protein === '.all' || item.classList.contains(selectedFilters.protein.slice(1));
+            const matchesMethod = selectedFilters.method === '.all' || item.classList.contains(selectedFilters.method.slice(1));
+
+            if (matchesProtein && matchesMethod) {
+                item.classList.remove('hidden');
+                item.classList.add('showing');
+                item.style.display = 'block'; 
+            } else {
+                item.classList.remove('showing');
+                item.classList.add('hidden');
+                setTimeout(function() {
+                    item.style.display = 'none';
+                }, 300); 
             }
         });
 
-        // Filter logic
-        const container = document.getElementById('tips-content-wrap');
-        const filters = document.querySelectorAll('.r-filter-group li');
+        // Re-initialize lazy load after filtering
+        $('.lazy').Lazy();
+    }
 
-        const selectedFilters = {
-            protein: '.all',
-            method: '.all'
-        };
+    filters.forEach(function(filter) {
+        filter.addEventListener('click', function() {
+            const filterGroup = this.closest('.r-filter-group').dataset.filterGroup;
+            const filterValue = this.dataset.filter;
 
-        function applyFilters() {
-            const items = container.querySelectorAll('.tips-link');
-            items.forEach(function(item) {
+            // Update the active class
+            this.parentElement.querySelectorAll('li').forEach(function(li) {
+                li.classList.remove('active');
+            });
+            this.classList.add('active');
+
+            // Update the selected filter for the group
+            selectedFilters[filterGroup] = filterValue;
+
+            // Apply filters
+            applyFilters();
+        });
+    });
+
+    // Search logic
+    const searchInput = document.getElementById('tip-search');
+    searchInput.addEventListener('keyup', function() {
+        const searchText = this.value.toLowerCase();
+
+        if (searchText === '') {
+            // If search is cleared, reapply the filters
+            applyFilters();
+        } else {
+            container.querySelectorAll('.tips-link').forEach(function(item) {
+                const title = item.querySelector('.tips-title-wrap span').textContent.toLowerCase();
                 const matchesProtein = selectedFilters.protein === '.all' || item.classList.contains(selectedFilters.protein.slice(1));
                 const matchesMethod = selectedFilters.method === '.all' || item.classList.contains(selectedFilters.method.slice(1));
 
-                if (matchesProtein && matchesMethod) {
-                    item.style.display = 'block';
+                // Display items that match the search text and currently selected filters
+                if (title.includes(searchText) && matchesProtein && matchesMethod) {
+                    item.classList.remove('hidden');
+                    item.classList.add('showing');
+                    item.style.display = 'block'; 
                 } else {
-                    item.style.display = 'none';
+                    item.classList.remove('showing');
+                    item.classList.add('hidden');
+                    setTimeout(function() {
+                        item.style.display = 'none';
+                    }, 300); 
                 }
             });
-
-            // Re-initialize lazy load after filtering
-            $('.lazy').Lazy();
         }
 
-        filters.forEach(function(filter) {
-            filter.addEventListener('click', function() {
-                const filterGroup = this.closest('.r-filter-group').dataset.filterGroup;
-                const filterValue = this.dataset.filter;
-
-                // Update the active class
-                this.parentElement.querySelectorAll('li').forEach(function(li) {
-                    li.classList.remove('active');
-                });
-                this.classList.add('active');
-
-                // Update the selected filter for the group
-                selectedFilters[filterGroup] = filterValue;
-
-                // Apply filters
-                applyFilters();
-            });
-        });
-
-        // Search logic
-        const searchInput = document.getElementById('tip-search');
-        searchInput.addEventListener('keyup', function() {
-            const searchText = this.value.toLowerCase();
-
-            if (searchText === '') {
-                // If search is cleared, reapply the filters
-                applyFilters();
-            } else {
-                container.querySelectorAll('.tips-link').forEach(function(item) {
-                    const title = item.querySelector('.tips-title-wrap span').textContent.toLowerCase();
-                    const matchesProtein = selectedFilters.protein === '.all' || item.classList.contains(selectedFilters.protein.slice(1));
-                    const matchesMethod = selectedFilters.method === '.all' || item.classList.contains(selectedFilters.method.slice(1));
-
-                    // Display items that match the search text and currently selected filters
-                    if (title.includes(searchText) && matchesProtein && matchesMethod) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
-
-            // Re-initialize lazy load after search
-            $('.lazy').Lazy();
-        });
+        // Re-initialize lazy load after search
+        $('.lazy').Lazy();
     });
+});
+
 </script>
 
 
