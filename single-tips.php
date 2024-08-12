@@ -144,6 +144,7 @@
     }
 
     #hide-icons {
+        display: flex;
         gap: 15px;
         transition: transform 0.8s ease-in-out;
 
@@ -154,9 +155,12 @@
         object-fit: cover;
     }
 
-    .recipe-title {
-        font-size: 1.8rem;
+    @media (max-width: 766px) {
+        .recipe-title {
+        font-size: 1.8rem !important;
         line-height: 1;
+    }
+        
     }
 
     @media (min-width:767px) {
