@@ -36,7 +36,7 @@
     }
 
     .made-with img {
-        width: 50%;
+        width: 60%;
     }
 
     .made-with-title {
@@ -58,13 +58,14 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 25px;
+        gap: 0 25px;
     }
 
     .badgebar {
         display: flex;
         align-items: center;
         gap: 15px;
+        padding: 0 10px;
     }
 
     .badgebar h3 {
@@ -143,7 +144,7 @@
     }
 
     #hide-icons {
-        gap: 7px;
+        gap: 15px;
         transition: transform 0.8s ease-in-out;
 
     }
@@ -185,7 +186,7 @@
         }
 
         .badgebar img {
-            width: 75px;
+            width: 60px;
         }
 
         .tips-i-right-section {
@@ -202,7 +203,7 @@
             gap: 25px;
         }
         .tips-badgebar {
-            gap: 40px;
+            gap: 0 50px;
         }
 
         .badgebar span {
@@ -215,9 +216,6 @@
             font-size: 2rem;
         }
 
-        .badgebar img {
-            width: 100px;
-        }
 
         .tips-instructions {
             max-width: 1600px;
@@ -357,7 +355,7 @@
         <p>Why keep this culinary masterpiece to yourself? Share the recipe on social media and let the world join in the fun of twirling spaghetti like pros and savoring the juicy, flavorful meatballs. It's a surefire way to spread joy, laughter, and deliciousness across the world!</p>
 
         <div class="share-icons-container">
-            <div id="hide-icons" style="display:none;">
+            <div id="hide-icons">
                 <a class="share-pin-link share-icons" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>&media=<?php echo get_field('image'); ?>&title=<?php echo urlencode(get_the_title()); ?>">
                     <img src="/wp-content/uploads/2024/07/Social-Pinterest-Streamline-Streamline-3.0-1.svg" alt="pinterest">
                 </a>
@@ -366,11 +364,13 @@
                 </a>
                 <button onclick="window.print()" class="share-icons"><img src="/wp-content/uploads/2024/07/Print-Text-Streamline-Streamline-3.0-1.svg" alt="Print this recipe"></button>
             </div>
+            <!--
             <div id="sharebtn">
                 <button class="share-icons">
                     <img src="/wp-content/uploads/2024/07/Layer_1.svg" alt="Share">
                 </button>
             </div>
+        -->
         </div>
 
 
