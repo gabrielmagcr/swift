@@ -156,7 +156,9 @@
         max-height: 300px;
         object-fit: cover;
     }
-
+    .nl-links:hover{
+        text-decoration: none;
+    }
     @media (max-width: 766px) {
         .recipe-title {
         font-size: 1.8rem !important;
@@ -421,7 +423,7 @@ if (have_rows('product_page_next_level')) : ?>
 
                     ?>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-12 col-xs-12 product-other-item" data-toggle="modal" data-target="#tip-<?= $item_id; ?>">
-                        <a href="<?php the_permalink(); ?>" title="<?= $item->post_title; ?>">
+                        <a href="<?php echo get_permalink($item_id); ?>" title="<?= $item->post_title; ?>" class="nl-links">
                             <div class="sm-nextlevel-item">
                                 <figure>
                                     <img src="<?= $image; ?>" alt="<?= $item->post_title; ?>">
