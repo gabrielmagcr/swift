@@ -435,7 +435,7 @@ if (have_rows('product_page_next_level')) : ?>
                             </div>
                         </a>                    
                     </div>
-                    <!-- /.col-xl-4 col-lg-4 col-md-4 col-12 col-xs-12 -->
+                    <!-- /.col-xl-4 col-lg-4 col-md-4 col-12 -->
                  
 
                 <?php endwhile; ?>
