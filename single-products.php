@@ -596,6 +596,9 @@ if (have_rows('product_page_next_level')) : ?>
     .single-info{
         margin-bottom: 15px;
     }
+    .single-info span{
+        color: #FFAA2B;
+    }
 </style>
 
 <?php
