@@ -569,7 +569,7 @@ if (have_rows('product_page_next_level')) : ?>
         </div>
 
         <div id="sm-prod-nutrition-info" class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 product-nutrition">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 product-nutrition t">
                 <?php if (get_field('nutrition_facts')) { ?>
                     <img src="<?php echo esc_url(get_field('nutrition_facts')); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
                 <?php } ?>
