@@ -12,26 +12,28 @@ the_post(); ?>
         width: 100%;
         height: 100%;
     }
-    .play-btn{
+
+    .play-btn {
         position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 75px; 
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    z-index: 10; 
+        top: 50%;
+        left: 50%;
+        width: 75px;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        z-index: 10;
     }
+
     .video-container video {
-    display: block;
-    width: 100%;
-    height: auto;
-}  
-@media (min-width:767px) {
-    .play-btn{
-        width: 100px;
+        display: block;
+        width: 100%;
+        height: auto;
     }
-}
-    
+
+    @media (min-width:767px) {
+        .play-btn {
+            width: 100px;
+        }
+    }
 </style>
 
 <section class="sm-prodhero">
@@ -175,9 +177,9 @@ $cooking_methods = get_field('cooking_methods'); ?>
                     <div class="pgt-card second-card">
                         <?php if (get_field('sear_video')) { ?>
 
-                                <video poster="<?= the_field('sear_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
-                                    <source src="<?= the_field('sear_video'); ?>" type="video/mp4">   
-                                </video> 
+                            <video poster="<?= the_field('sear_image'); ?>" preload="none" width="100%" height="300" controls style="object-fit:cover;">
+                                <source src="<?= the_field('sear_video'); ?>" type="video/mp4">
+                            </video>
                         <?php } else { ?>
                             <div class="second-card-img" style="
                             background-image: url('<?php the_field('sear_image'); ?>');
@@ -576,10 +578,10 @@ if (have_rows('product_page_next_level')) : ?>
             </div>
             <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 single-allergens">
-             
-                <?php echo get_field('highlights') ?  get_field('highlights') : ''; ?> <br><br>
-                <?php echo get_field('ingredients') ? '<span>INGREDIENTS: </span>' . get_field('ingredients') : ''; ?> <br><br>
-                <?php echo get_field('allergens') ? '<span>ALLERGENS: </span>' . get_field('allergens') : ''; ?> 
+
+                <div class="single-info"> <?php echo get_field('highlights') ?  get_field('highlights') : ''; ?> </div>
+                <div class="single-info"> <?php echo get_field('ingredients') ? '<span>INGREDIENTS: </span>' . get_field('ingredients') : ''; ?> </div>
+                <div class="single-info"> <?php echo get_field('allergens') ? '<span>ALLERGENS: </span>' . get_field('allergens') : ''; ?> </div>
             </div>
             <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
         </div>
@@ -587,7 +589,11 @@ if (have_rows('product_page_next_level')) : ?>
     </div>
 </section>
 
-
+<style>
+    .single-info{
+        margin-bottom: 15px;
+    }
+</style>
 
 <?php
 get_template_part('parts/pre-footer-ctas');
