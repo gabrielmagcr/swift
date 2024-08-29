@@ -590,6 +590,9 @@ if (have_rows('product_page_next_level')) : ?>
 </section>
 
 <style>
+    .product-nutrition img{
+        margin-bottom: 25px;
+    }
     .single-info{
         margin-bottom: 15px;
     }
