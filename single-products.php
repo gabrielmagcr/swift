@@ -577,8 +577,8 @@ if (have_rows('product_page_next_level')) : ?>
             <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 single-allergens">
              
-                <?php echo get_field('highlights') ?  get_field('highlights') : ''; ?> <br>
-                <?php echo get_field('ingredients') ? '<span>INGREDIENTS: </span>' . get_field('ingredients') : ''; ?> <br>
+                <?php echo get_field('highlights') ?  get_field('highlights') : ''; ?> <br><br>
+                <?php echo get_field('ingredients') ? '<span>INGREDIENTS: </span>' . get_field('ingredients') : ''; ?> <br><br>
                 <?php echo get_field('allergens') ? '<span>ALLERGENS: </span>' . get_field('allergens') : ''; ?> 
             </div>
             <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
