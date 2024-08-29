@@ -569,7 +569,7 @@ if (have_rows('product_page_next_level')) : ?>
         </div>
 
         <div id="sm-prod-nutrition-info" class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 product-nutrition t">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 product-nutrition">
                 <?php if (get_field('nutrition_facts')) { ?>
                     <img src="<?php echo esc_url(get_field('nutrition_facts')); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
                 <?php } ?>
@@ -579,7 +579,7 @@ if (have_rows('product_page_next_level')) : ?>
              
                 <?php echo get_field('highlights') ?  get_field('highlights') : ''; ?> <br>
                 <?php echo get_field('ingredients') ? '<span>INGREDIENTS: </span>' . get_field('ingredients') : ''; ?> <br>
-                <?php echo get_field('allergens') ? '<span>ALLERGENS: </span>' . get_field('ingredients') : ''; ?> 
+                <?php echo get_field('allergens') ? '<span>ALLERGENS: </span>' . get_field('allergens') : ''; ?> 
             </div>
             <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
         </div>
