@@ -577,6 +577,7 @@ if (have_rows('product_page_next_level')) : ?>
             <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 single-allergens">
                 <?= the_field("highlights"); ?>
+                <?= the_field("ingredients"); ?>
                 <?= the_field('allergens'); ?>
             </div>
             <!-- /.col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 -->
