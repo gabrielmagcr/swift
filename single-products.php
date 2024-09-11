@@ -68,7 +68,7 @@ the_post(); ?>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--img">
                 <figure>
                     <img src="<?= the_field("product_image"); ?>" alt="<?php the_title(); ?> in packaging">
-                    <span><? $imageSource=get_field('image_source')? $imageSource : '';?></span>
+                    <span><?php $imageSource = get_field('image_source')? $imageSource : '';?></span>
                 </figure>
             </div>
         </div>
