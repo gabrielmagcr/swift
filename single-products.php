@@ -37,6 +37,9 @@ the_post(); ?>
     .single-info span{
         color: #FFAA2B;
     }
+    .recipes-next-level{
+        justify-content: center;
+    }
     @media (min-width:767px) {
         .play-btn {
             width: 100px;
@@ -356,11 +359,10 @@ if (have_rows('product_page_next_level')) : ?>
                 <!-- /.col-xl-12 col-lg-12 col-md-12 col-12 col-xs-12 -->
             </div>
             <!-- /.row -->
-            <div class="row">
+            <div class="row recipes-next-level">
                 <?php while (have_rows('product_page_next_level')) : the_row(); ?>
                     <?php
                     $item_id = get_sub_field('recipe_video');
-                    $dificulty_lvl = get_field('dificulty_level', $item_id);
                     $item = get_post($item_id);
                     $type = $item->type;
                     $thaimage = wp_get_attachment_image_src($item->image, 'full');
@@ -379,9 +381,6 @@ if (have_rows('product_page_next_level')) : ?>
                                 <img src="<?= $image; ?>" alt="<?= $item->post_title; ?>">
                             </figure>
                             <div class="sm-nextlevel-item--body">
-                                <?php if ($dificulty_lvl) : ?>
-                                    <span>DIFICULTY LEVEL - <?= $dificulty_lvl; ?>/10</span>
-                                <?php endif; ?>
                                 <h3><?= $item->post_title; ?> </h3>
                             </div>
                         </div>
