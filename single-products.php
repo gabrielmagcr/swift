@@ -28,7 +28,15 @@ the_post(); ?>
         width: 100%;
         height: auto;
     }
-
+    .product-nutrition img{
+        margin-bottom: 25px;
+    }
+    .single-info{
+        margin-bottom: 15px;
+    }
+    .single-info span{
+        color: #FFAA2B;
+    }
     @media (min-width:767px) {
         .play-btn {
             width: 100px;
@@ -60,6 +68,7 @@ the_post(); ?>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--img">
                 <figure>
                     <img src="<?= the_field("product_image"); ?>" alt="<?php the_title(); ?> in packaging">
+                    <span><? $imageSource=get_field('image_source')? $imageSource : '';?></span>
                 </figure>
             </div>
         </div>
@@ -589,17 +598,6 @@ if (have_rows('product_page_next_level')) : ?>
     </div>
 </section>
 
-<style>
-    .product-nutrition img{
-        margin-bottom: 25px;
-    }
-    .single-info{
-        margin-bottom: 15px;
-    }
-    .single-info span{
-        color: #FFAA2B;
-    }
-</style>
 
 <?php
 get_template_part('parts/pre-footer-ctas');
