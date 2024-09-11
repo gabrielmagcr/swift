@@ -83,6 +83,9 @@
     .badgebar img {
         width: 50px;
     }
+    .tips-time span{
+        font-size: 2rem;
+    }
 
     .tips-instructions {
         background: #28334A;
@@ -136,6 +139,7 @@
     color: white;
     font-size: 0.8rem;
     }
+
     .share-icons-container {
         display: flex;
         transition: transform 0.8s ease-in-out;
@@ -343,7 +347,6 @@
         </div>
         <div class="badgebar tips-time">
             <img src='/wp-content/uploads/2024/07/Vector.svg'><span><?php echo $preparation_time; ?></span>
-            <h3><?php echo $amount_of_time ?></h3>
         </div>
         <div class="badgebar tips-servings">
             <img src='/wp-content/uploads/2024/07/Group.svg'><span itemprop="recipeYield"><?php echo $servings; ?></span>
