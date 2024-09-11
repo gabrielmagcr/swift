@@ -45,7 +45,6 @@
         display: block;
         padding: 5px 10px;
         color: #28334A;
-        margin: 15px 0 0;
     }
 
     .badgebar-section {
@@ -163,7 +162,13 @@
     .nl-links:hover {
         text-decoration: none;
     }
-
+    .image-source{
+        color: var(--gray);
+    font-size: 0.8rem;
+    font-family: "Helvetica-Nueue", Arial, Helvetica, sans-serif;
+    text-align: end;
+    margin: 10px 5px;
+    }
     @media (max-width: 766px) {
         .recipe-title {
             font-size: 1.8rem !important;
@@ -282,9 +287,11 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--img recipe-img">
                 <figure>
                     <img class="u-photo" src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
+                    <div class="image-source">
                     <?php if ($imageSource = get_field('image_source')): ?>
-                        <div class="image-source"><?php echo $imageSource; ?></div>
+                        <?php echo $imageSource; ?>
                     <?php endif; ?>
+                    </div>
                 </figure>
                 <?php $made_with = get_field('made_with');
                 if ($made_with) :
