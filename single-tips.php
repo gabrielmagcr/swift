@@ -96,9 +96,12 @@
     .tips-i-left-section ul {
         color: white;
     }
-    .tips-i-left-section ul, .tips-i-left-section ol { 
+
+    .tips-i-left-section ul,
+    .tips-i-left-section ol {
         padding-left: 20px;
     }
+
     .tips-i-left-section li,
     .tips-i-right-section p {
         font-family: Arial, Helvetica, sans-serif;
@@ -156,15 +159,17 @@
         max-height: 300px;
         object-fit: cover;
     }
-    .nl-links:hover{
+
+    .nl-links:hover {
         text-decoration: none;
     }
+
     @media (max-width: 766px) {
         .recipe-title {
-        font-size: 1.8rem !important;
-        line-height: 1;
-    }
-        
+            font-size: 1.8rem !important;
+            line-height: 1;
+        }
+
     }
 
     @media (min-width:767px) {
@@ -182,15 +187,19 @@
         .tips-i-right-section {
             padding: 60px;
         }
+
         .tips-i-right-section h5 {
-        font-size: 3rem;
-    }
-        .recipe-hero{
+            font-size: 3rem;
+        }
+
+        .recipe-hero {
             padding: 2rem 0 0;
         }
-        .recipes-info{
+
+        .recipes-info {
             align-content: center;
         }
+
         .tips-instructions {
             flex-direction: row;
         }
@@ -216,6 +225,7 @@
         .badgebar {
             gap: 25px;
         }
+
         .tips-badgebar {
             gap: 0 50px;
         }
@@ -244,7 +254,8 @@
             padding: 100px 70px;
             margin: 50px;
         }
-        .made-with img{
+
+        .made-with img {
             height: 40%;
         }
     }
@@ -271,7 +282,9 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--img recipe-img">
                 <figure>
                     <img class="u-photo" src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
-                    <span><?php $imageSource = get_field('image_source') ?? ''; ?></span>
+                    <?php if ($imageSource = get_field('image_source')): ?>
+                        <div class="image-source"><?php echo $imageSource; ?></div>
+                    <?php endif; ?>
                 </figure>
                 <?php $made_with = get_field('made_with');
                 if ($made_with) :
@@ -436,10 +449,10 @@ if (have_rows('product_page_next_level')) : ?>
                                     <h3><?= $item->post_title; ?> </h3>
                                 </div>
                             </div>
-                        </a>                    
+                        </a>
                     </div>
                     <!-- /.col-xl-4 col-lg-4 col-md-4 col-12 -->
-                 
+
 
                 <?php endwhile; ?>
             </div>
