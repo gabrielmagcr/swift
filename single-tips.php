@@ -92,7 +92,7 @@
 
     .tips-i-left-section p,
     .tips-i-left-section li,
-    .tips-i-left-section ul, .tips-i-left-section span {
+    .tips-i-left-section ul {
         color: white;
     }
 
@@ -113,9 +113,7 @@
     .tips-i-left-section {
         padding: 50px;
     }
-    .tips-i-left-section span{
-        text-align: end;
-    }
+
     .tips-i-right-section {
         background-color: #C61A1D;
         color: #fff;
@@ -133,7 +131,11 @@
     .tips-i-right-section h5 {
         font-size: 2rem;
     }
-
+    .recipe-source{
+        text-align: end;
+    color: white;
+    font-size: 0.8rem;
+    }
     .share-icons-container {
         display: flex;
         transition: transform 0.8s ease-in-out;
@@ -385,7 +387,7 @@
     <div class="tips-i-left-section recipe-ingredients">
         <?php echo get_field('content'); ?>
         <?php if ($recipeSource = get_field('recipe_source')): ?>
-    <span><?php echo $recipeSource; ?></span>
+    <div class="recipe-source"><?php echo $recipeSource; ?></div>
 <?php endif; ?>
     </div>
 
