@@ -167,7 +167,7 @@
         object-fit: cover;
     }
     .tips-time span{
-        font-size: 2rem;
+        font-size: 2rem !important;
     }
     .nl-links:hover {
         text-decoration: none;
