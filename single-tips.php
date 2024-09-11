@@ -166,7 +166,9 @@
         max-height: 300px;
         object-fit: cover;
     }
-
+    .tips-time span{
+        font-size: 2rem;
+    }
     .nl-links:hover {
         text-decoration: none;
     }
