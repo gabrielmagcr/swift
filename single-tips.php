@@ -271,6 +271,7 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--img recipe-img">
                 <figure>
                     <img class="u-photo" src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
+                    <span><?php $imageSource = get_field('image_source') ?? ''; ?></span>
                 </figure>
                 <?php $made_with = get_field('made_with');
                 if ($made_with) :
