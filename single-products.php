@@ -45,6 +45,15 @@ the_post(); ?>
             width: 100px;
         }
     }
+    @media (min-width:1023px) {
+        .product-other-item{
+            flex: 0 0 27.333333%;
+              max-width: 23.333333%;
+        }
+        .product-next-level-container {
+        max-width: 100%;
+    }
+    }
 </style>
 
 <section class="sm-prodhero">
@@ -374,7 +383,7 @@ if (have_rows('product_page_next_level')) : ?>
                     }
 
                     ?>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-12 col-xs-12 product-other-item" data-toggle="modal" data-target="#tip-<?= $item_id; ?>">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-12 col-xs-12 product-other-item " data-toggle="modal" data-target="#tip-<?= $item_id; ?>">
 
                         <div class="sm-nextlevel-item">
                             <figure>
