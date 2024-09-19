@@ -6,7 +6,8 @@
         <div class="sitemap col-12">
 
 <h1 class="title">Site Map</h1>  
-
+<p>Welcome to the Swift Meats site map. Here, you’ll find an organized overview of our website to help you easily navigate through our offerings. Explore our range of premium meats, from succulent steaks to flavorful ribs, and discover our cooking tips and recipes. Whether you’re looking for product details, cooking suggestions, or company information, our site map is designed to guide you quickly to the content you need. Enjoy a seamless browsing experience as you explore the best in quality meat with Swift Meats.
+</p>
 <div class="sitemap-loop-pages">
 
         <h2 class="subtitle">Pages</h2>                 
