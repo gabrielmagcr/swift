@@ -128,6 +128,11 @@ get_header();
             </div>
             <!-- /.col-12 -->
         </div>
+        <div class="pagination">
+    <div class="pagination-dot active"></div>
+    <div class="pagination-dot"></div>
+    <div class="pagination-dot"></div>
+</div>
     </div>
 
         <?php if($active_page == ''): ?>
