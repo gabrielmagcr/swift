@@ -110,21 +110,21 @@ get_header();
                 <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
                 <div class="mmc-page-nav-item--text">Get to Know</div>
                 <div class="mmc-page-nav-item--text">The Basics</div>
-                <div class="mmc-page-nav-item--bg" style="background: url('<?=get_template_directory_uri();?>/assets/img/mmc/the-basics.jpg') no-repeat center / cover;"></div>
+                <div class="mmc-page-nav-item--bg" style="background: url('<?=get_template_directory_uri();?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;"></div>
             </div>
 
             <div class="mmc-page-nav-item <?php print is_mmc_active('methods') ? 'active' : ''; ?>">
                 <a class="stretched-link" href="<?php print get_the_permalink(); ?>/methods"></a>
                 <div class="mmc-page-nav-item--text">Cooking Methods To</div>
                 <div class="mmc-page-nav-item--text">Up Your Game</div>
-                <div class="mmc-page-nav-item--bg" style="background: url('<?=get_template_directory_uri();?>/assets/img/mmc/up-your-game.jpg') no-repeat center / cover;"></div>
+                <div class="mmc-page-nav-item--bg" style="background: url('<?=get_template_directory_uri();?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;"></div>
             </div>
 
             <div class="mmc-page-nav-item <?php print is_mmc_active('tips') ? 'active' : ''; ?>">
                 <a class="stretched-link" href="/tips-recipes"></a>
                 <div class="mmc-page-nav-item--text">Recipes For</div>
                 <div class="mmc-page-nav-item--text">Any Occasion</div>
-                <div class="mmc-page-nav-item--bg" style="background: url('<?=get_template_directory_uri();?>/assets/img/mmc/any-occasion.jpg') no-repeat center / cover;"></div>
+                <div class="mmc-page-nav-item--bg" style="background: url('<?=get_template_directory_uri();?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;"></div>
             </div>
             <!-- /.col-12 -->
         </div>
