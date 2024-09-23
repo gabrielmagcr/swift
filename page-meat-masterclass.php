@@ -95,7 +95,16 @@ function render_cut_products($meat, $cut_id) { ?>
 }
 
 get_header();
+
+
 ?>
+<script>
+    $('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true
+});
+</script>
 <!-- /#masterclass-hero -->
 
 <section id="know-your-cuts">
@@ -130,10 +139,12 @@ get_header();
             </div>
             <!-- /.col-12 -->
         </div>
-        <div class="pagination">
-    <div class="pagination-dot active"></div>
-    <div class="pagination-dot"></div>
-    <div class="pagination-dot"></div>
+        <div class="main-carousel">
+  <div class="carousel-cell">...</div>
+  <div class="carousel-cell">...</div>
+  <div class="carousel-cell">...</div>
+  ...
+</div>
 </div>
     </div>
 
