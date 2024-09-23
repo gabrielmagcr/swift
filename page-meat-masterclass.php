@@ -98,13 +98,7 @@ get_header();
 
 
 ?>
-<script>
-    $('.main-carousel').flickity({
-  // options
-  cellAlign: 'left',
-  contain: true
-});
-</script>
+
 <!-- /#masterclass-hero -->
 
 <section id="know-your-cuts">
@@ -700,4 +694,11 @@ get_header();
 </section>
 <!-- /#know-your-cuts -->
 
+<script>
+    $('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true
+});
+</script>
 <?php get_footer();?>
