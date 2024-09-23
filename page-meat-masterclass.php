@@ -133,7 +133,7 @@ get_header();
             </div>
             <!-- /.col-12 -->
         </div>
-        <div class="main-carousel">
+        <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
   <div class="carousel-cell">...</div>
   <div class="carousel-cell">...</div>
   <div class="carousel-cell">...</div>
@@ -694,11 +694,4 @@ get_header();
 </section>
 <!-- /#know-your-cuts -->
 
-<script>
-    $('.main-carousel').flickity({
-  // options
-  cellAlign: 'left',
-  contain: true
-});
-</script>
 <?php get_footer();?>
