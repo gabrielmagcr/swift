@@ -133,7 +133,7 @@ get_header();
             </div>
             <!-- /.col-12 -->
         </div>
-        <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+        <div class="main-carousel" data-flickity='{ "wrapAround": true }'>
   <div class="carousel-cell">...</div>
   <div class="carousel-cell">...</div>
   <div class="carousel-cell">...</div>
