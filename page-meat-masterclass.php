@@ -1,10 +1,10 @@
 <?php get_template_part('components/blocks'); ?>
 
-<?php 
+<?php
 
 
 $active_page = get_query_var('mmc');
-switch($active_page) {
+switch ($active_page) {
     case 'tips':
     case 'methods':
     case '':
@@ -13,7 +13,8 @@ switch($active_page) {
         mmc_show_not_found();
 }
 
-function is_mmc_active($slug) {
+function is_mmc_active($slug)
+{
     global $active_page;
     return $slug == $active_page;
 }
@@ -43,53 +44,61 @@ $meat_cuts_taxonomy_map = [
     ]
 ];
 
-function get_cut_slug($meat, $cut_id) {
+function get_cut_slug($meat, $cut_id)
+{
     global $meat_cuts_taxonomy_map;
     return $meat_cuts_taxonomy_map[$meat][$cut_id];
 }
 
-function get_cut_id($meat, $cut_slug) {
+function get_cut_id($meat, $cut_slug)
+{
     global $meat_cuts_taxonomy_map;
-    foreach($meat_cuts_taxonomy_map[$meat] as $id => $slug) {
-        if($slug == $cut_slug) return $id;
+    foreach ($meat_cuts_taxonomy_map[$meat] as $id => $slug) {
+        if ($slug == $cut_slug) return $id;
     }
 }
 
-function mmc_check_product($meat, $cut) {
-    if(!$cut || get_sub_field('meat_type') != $meat || $cut != get_sub_field('meat_cut')) {
+function mmc_check_product($meat, $cut)
+{
+    if (!$cut || get_sub_field('meat_type') != $meat || $cut != get_sub_field('meat_cut')) {
         return false;
     }
 
     return true;
 }
 
-function render_cut_products($meat, $cut_id) { ?>
+function render_cut_products($meat, $cut_id)
+{ ?>
     <?php $term = get_term_by('slug', get_cut_slug($meat, $cut_id), 'meat_cuts'); ?>
 
     <div class="text-white row mmc-product-tabs">
         <div class="col-12 col-md-6">
             <h3 class="h4 text-gold">Cuts From The <?php print_r($term->name); ?></h3>
             <div class="mmc-product-links">
-            <?php $i=1; while(have_rows('meat_cuts')): the_row(); ?>
-                <?php if(!mmc_check_product($meat, $term)) continue; ?>
+                <?php $i = 1;
+                while (have_rows('meat_cuts')): the_row(); ?>
+                    <?php if (!mmc_check_product($meat, $term)) continue; ?>
 
-                <a class="text-white mmc-product-link" href="#" data-meat="<?php print $meat; ?>" data-cut-number="<?php print $cut_id; ?>" data-product-index="<?php print $i; ?>"><?php print get_sub_field('product_name'); ?></a>
-            <?php $i++; endwhile; ?>
+                    <a class="text-white mmc-product-link" href="#" data-meat="<?php print $meat; ?>" data-cut-number="<?php print $cut_id; ?>" data-product-index="<?php print $i; ?>"><?php print get_sub_field('product_name'); ?></a>
+                <?php $i++;
+                endwhile; ?>
             </div>
         </div>
         <div class="col-12 col-md-6">
-            <?php $i=1; while(have_rows('meat_cuts')): the_row(); ?>
-                <?php if(!mmc_check_product($meat, $term)) continue; ?>
+            <?php $i = 1;
+            while (have_rows('meat_cuts')): the_row(); ?>
+                <?php if (!mmc_check_product($meat, $term)) continue; ?>
 
                 <div class="mmc-product-tab" data-meat="<?php print $meat; ?>" data-cut-number="<?php print $cut_id; ?>" data-product-index="<?php print $i; ?>">
                     <div class="mmc-product-tab-inner">
                         <img src="<?php print get_sub_field('product_image'); ?>" />
                     </div>
-                    <?php if($link = get_sub_field('linked_product')): ?><div class="text-center mt-4"><a href="<?php print $link; ?>" class="btn btn-gold">View Product</a></div><?php endif; ?>
+                    <?php if ($link = get_sub_field('linked_product')): ?><div class="text-center mt-4"><a href="<?php print $link; ?>" class="btn btn-gold">View Product</a></div><?php endif; ?>
                 </div>
-            <?php $i++; endwhile; ?>
+            <?php $i++;
+            endwhile; ?>
         </div>
-    
+
     </div>
 <?php
 }
@@ -115,34 +124,46 @@ get_header();
                 <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
                 <div class="mmc-page-nav-item--text">Get to Know</div>
                 <div class="mmc-page-nav-item--text">The Basics</div>
-                <div class="mmc-page-nav-item--bg" style="background: url('<?=get_template_directory_uri();?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;"></div>
+                <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;"></div>
             </div>
 
             <div class="mmc-page-nav-item <?php print is_mmc_active('methods') ? 'active' : ''; ?>">
                 <a class="stretched-link" href="<?php print get_the_permalink(); ?>/methods"></a>
                 <div class="mmc-page-nav-item--text">Cooking Methods To</div>
                 <div class="mmc-page-nav-item--text">Up Your Game</div>
-                <div class="mmc-page-nav-item--bg" style="background: url('<?=get_template_directory_uri();?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;"></div>
+                <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;"></div>
             </div>
 
             <div class="mmc-page-nav-item <?php print is_mmc_active('tips') ? 'active' : ''; ?>">
                 <a class="stretched-link" href="/tips-recipes"></a>
                 <div class="mmc-page-nav-item--text">Recipes For</div>
                 <div class="mmc-page-nav-item--text">Any Occasion</div>
-                <div class="mmc-page-nav-item--bg" style="background: url('<?=get_template_directory_uri();?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;"></div>
+                <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;"></div>
             </div>
             <!-- /.col-12 -->
         </div>
         <div class="main-carousel" data-flickity='{ "wrapAround": true }'>
-  <div class="carousel-cell">...</div>
-  <div class="carousel-cell">...</div>
-  <div class="carousel-cell">...</div>
-  ...
-</div>
-</div>
+            <div class="carousel-cell" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;">
+            <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
+                <div class="mmc-page-nav-item--text">Get to Know</div>
+                <div class="mmc-page-nav-item--text">The Basics</div>
+            </div>
+            <div class="carousel-cell" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;">
+            <a class="stretched-link" href="<?php print get_the_permalink(); ?>/methods"></a>
+                <div class="mmc-page-nav-item--text">Cooking Methods To</div>
+                <div class="mmc-page-nav-item--text">Up Your Game</div>
+            </div>
+            <div class="carousel-cell" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;">
+            <a class="stretched-link" href="/tips-recipes"></a>
+                <div class="mmc-page-nav-item--text">Recipes For</div>
+                <div class="mmc-page-nav-item--text">Any Occasion</div>
+            </div>
+            ...
+        </div>
+    </div>
     </div>
 
-        <?php if($active_page == ''): ?>
+    <?php if ($active_page == ''): ?>
         <div class="container">
             <div class="row mb-4">
                 <div class="col-12">
@@ -151,7 +172,7 @@ get_header();
                 <!-- /.col-12 -->
             </div>
             <!-- /.row -->
-            
+
             <div class="row">
                 <div class="col-lg-6 the-pig">
                     <?php get_template_part('inc/pig', 'svg'); ?>
@@ -167,14 +188,14 @@ get_header();
                     <div id="pcut-1" class="cut-item cuts-shown">
                         <h4>1. Leg</h4>
                         <p>Ham comes from the hind leg and has usually either been cured or smoked prior to purchase. Fresh, uncured ham is a melt-in-your-mouth treat when it's cooked low and slow. There's a slew of other bone-in and boneless options, from specialty cuts like prosciutto and serrano to both the popular city ham and its saltier, chewier cousin, country ham. No matter how you slice it, ham makes a tasty meal. </p>
-                    
+
                         <?php render_cut_products('pork', 1); ?>
                     </div>
                     <!-- /.cut-item -->
 
                     <div id="pcut-2" class="cut-item">
                         <h4>2. Loin</h4>
-                        <p>One of the most tender and lean cuts of pork, the loin is cut right from the back. At the meat counter, you will find it sliced wide and flat, and sold both as boneless and bone-in. Best grilled or roasted, pork loin is an easy way to get a juicy, tasty cut of meat for dinner any night of the week. Try it in chops, as a roast or tenderloin, or as country style ribs.  </p>
+                        <p>One of the most tender and lean cuts of pork, the loin is cut right from the back. At the meat counter, you will find it sliced wide and flat, and sold both as boneless and bone-in. Best grilled or roasted, pork loin is an easy way to get a juicy, tasty cut of meat for dinner any night of the week. Try it in chops, as a roast or tenderloin, or as country style ribs. </p>
 
                         <?php render_cut_products('pork', 2); ?>
                     </div>
@@ -182,7 +203,7 @@ get_header();
                     <div id="pcut-3" class="cut-item">
                         <h4>3. Butt</h4>
                         <p>Pork butt, also called the Boston butt or the shoulder butt, actually comes from the front shoulder. Often thicker and marbled with fat throughout, this cut is a little more substantial than the pork picnic, which it's often confused with. Try pulled pork with the butt because it holds up well when slow cooked and delivers meat that falls off the bone. Other cuts you'll find from the pork butt include the boneless blade roast, bone-in blade roast, blade steak, and country-style ribs.</p>
-                        
+
                         <?php render_cut_products('pork', 3); ?>
                     </div>
                     <!-- /.cut-item -->
@@ -233,7 +254,7 @@ get_header();
                     <div id="beef-5" class="cut-item">
                         <h4>5. Plate</h4>
                         <p>Right under the ribs is the plate primal cut, sometimes referred to as short plate or long plate, depending on, well, its length. It's a somewhat fatty area, making the short ribs and skirt steaks cut from this part of the animal tender and flavorful. For a quick and delicious entrée, make fajitas with inside skirt steak. In minutes, cooks of every skill level can make a simple, tasty meal. </p>
-                        
+
                         <?php render_cut_products('beef', 5); ?>
                     </div>
                     <!-- /.cut-item -->
@@ -255,14 +276,14 @@ get_header();
                         <h4>8. Top Sirloin</h4>
                         <p>A versatile and flavorful cut, the Top Sirloin Steak is best for grilling. It can be cut and served as a steak or cut into smaller portions for kabobs. The Top Sirloin Steak carries an intense depth of flavor similar to a roast but cooks easy and quick like a steak. Top Sirloin Steaks are easy to prepare and are generally more affordable than other cuts which gained it the reputation as the "weeknight steak."</p>
                         <h4>Bottom Sirloin</h4>
-                        <p>Known for leaner cuts of meat like the Tri-Tip and Sirloin Bavette, cuts from the Bottom Sirloin are best for roasting or grilling. This cut is often ground up to make burgers or thinly sliced for fajitas and barbecue.  </p>
+                        <p>Known for leaner cuts of meat like the Tri-Tip and Sirloin Bavette, cuts from the Bottom Sirloin are best for roasting or grilling. This cut is often ground up to make burgers or thinly sliced for fajitas and barbecue. </p>
 
                         <?php render_cut_products('beef', 8); ?>
                     </div>
                     <!-- /.cut-item -->
                     <div id="beef-9" class="cut-item">
                         <h4>9. Tenderloin</h4>
-                        <p>Found within the loin, beef tenderloin is among the most tender cuts of beef. Extending from the short loin into the sirloin, the filet mignon and chateaubriand come from the tenderloin cut. Due to the tenderness of the meat, beef tenderloin is great when cooked using dry-heat methods such as grilling or broiling.  </p>
+                        <p>Found within the loin, beef tenderloin is among the most tender cuts of beef. Extending from the short loin into the sirloin, the filet mignon and chateaubriand come from the tenderloin cut. Due to the tenderness of the meat, beef tenderloin is great when cooked using dry-heat methods such as grilling or broiling. </p>
 
                         <?php render_cut_products('beef', 9); ?>
                     </div>
@@ -283,8 +304,8 @@ get_header();
                 </div>
             </div>
         </div>
-        
-        <?php elseif($active_page == 'methods'): ?>
+
+    <?php elseif ($active_page == 'methods'): ?>
         <section class="bg-gold py-5">
             <div class="container">
                 <div class="row">
@@ -375,7 +396,7 @@ get_header();
                 <div class="hm-quick-p mmc-game-nav-content">
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
-                            <p>Ready to eat and ideal for those who prefer to spend their time and energy exploring new flavors and food combinations, Quick Prep requires little, if any, cooking effort. And with Swift constantly bringing new products to the table, you’ll always have fresh, innovative options that help you think—and snack—outside the box.  </p>
+                            <p>Ready to eat and ideal for those who prefer to spend their time and energy exploring new flavors and food combinations, Quick Prep requires little, if any, cooking effort. And with Swift constantly bringing new products to the table, you’ll always have fresh, innovative options that help you think—and snack—outside the box. </p>
                         </div>
                     </div>
                 </div>
@@ -387,16 +408,16 @@ get_header();
             <div class="container padded">
                 <div class="row">
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-sear-1.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-1.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-sear-2.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-2.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6 mb-4 mb-md-0">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-sear-3.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-3.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6 mb-4 mb-md-0">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-sear-4.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-4.png" style="width: 100%;" />
                     </div>
                 </div>
             </div>
@@ -405,7 +426,9 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Searing</div></h2>
+                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
+                                <div>Searing</div>
+                            </h2>
 
                             <ol class="mmc-ordered-list text-blue mt-4">
                                 <li><span>Searing isn't just for steaks &ndash; it's also great for burgers, pork chops, chicken, fish and even eggplant for vegetarians.</span></li>
@@ -413,8 +436,8 @@ get_header();
                                 <li><span>Before searing, allow your choice cut to come to room temperature, so meat cooks evenly.</span></li>
                                 <li><span>Season your meat well to set it up for a delectable crust. Be aware, too much seasoning could cause scorching.</span></li>
                                 <li><span>For a crunchy sear, get your pan HOT! Like over 500&deg;F. This is why having a heavy-duty pan is important.</span></li>
-                                <li><span>Once the pan is hot, lay your cut down flat. You want to hear a furious crackle as it hits your pan. That's how you  
-         know it's piping hot.</span></li>
+                                <li><span>Once the pan is hot, lay your cut down flat. You want to hear a furious crackle as it hits your pan. That's how you
+                                        know it's piping hot.</span></li>
                                 <li><span>Place a steak weight, smaller pan or metal plate on top to flatten out the meat and get all the corners down.</span></li>
                                 <li><span>Don't forget to lay the meat on its thin sides for a few seconds to connect the crust you're creating on both sides.</span></li>
                                 <li><span>Once cooked to your liking, remove the meat from the pan and DO NOT CUT IT. Allow it to rest for five minutes or else all the delicious juices you locked in with your sear will flood your plate.</span></li>
@@ -431,16 +454,16 @@ get_header();
             <div class="container padded">
                 <div class="row">
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-roast-1.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-1.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-roast-2.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-2.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-roast-3.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-3.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-roast-4.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-4.png" style="width: 100%;" />
                     </div>
                 </div>
             </div>
@@ -449,7 +472,9 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Roasting</div></h2>
+                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
+                                <div>Roasting</div>
+                            </h2>
 
                             <ol class="mmc-ordered-list text-blue mt-4">
                                 <li><span>Take your meat out of the fridge at least 2 hours prior to cooking to help control doneness and cook evenly.</span></li>
@@ -473,16 +498,16 @@ get_header();
             <div class="container padded">
                 <div class="row">
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-grill-1.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-1.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-grill-2.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-2.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-grill-3.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-3.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-grill-4.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-4.png" style="width: 100%;" />
                     </div>
                 </div>
             </div>
@@ -491,7 +516,9 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Grilling</div></h2>
+                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
+                                <div>Grilling</div>
+                            </h2>
 
                             <ol class="mmc-ordered-list text-blue mt-4">
                                 <li><span>Pat your cuts dry with a paper towel or lint-free kitchen towel. Moisture can hold back the perfect caramelized sear. </span></li>
@@ -512,16 +539,16 @@ get_header();
             <div class="container padded">
                 <div class="row">
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-smoke-1.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-1.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-smoke-2.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-2.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-smoke-3.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-3.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-smoke-4.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-4.png" style="width: 100%;" />
                     </div>
                 </div>
             </div>
@@ -530,7 +557,9 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Smoking</div></h2>
+                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
+                                <div>Smoking</div>
+                            </h2>
 
                             <ol class="mmc-ordered-list text-blue mt-4">
                                 <li><span>Choose your meat-smoking timeline &ndash; a few hours, an afternoon or an all-day affair. </span></li>
@@ -554,16 +583,16 @@ get_header();
             <div class="container padded">
                 <div class="row">
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-braise-1.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-1.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-braise-2.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-2.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-braise-3.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-3.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-braise-4.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-4.png" style="width: 100%;" />
                     </div>
                 </div>
             </div>
@@ -572,7 +601,9 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Braising</div></h2>
+                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
+                                <div>Braising</div>
+                            </h2>
 
                             <ol class="mmc-ordered-list text-blue mt-4">
                                 <li><span>Sear your meat on all sides to seal in moisture and flavor with a carmelized and textured crust. </span></li>
@@ -596,16 +627,16 @@ get_header();
             <div class="container padded">
                 <div class="row">
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-sv-1.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-1.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-sv-2.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-2.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-sv-3.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-3.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-sv-4.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-4.png" style="width: 100%;" />
                     </div>
                 </div>
             </div>
@@ -614,7 +645,9 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Sous Vide</div></h2>
+                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
+                                <div>Sous Vide</div>
+                            </h2>
 
                             <ol class="mmc-ordered-list text-blue mt-4">
                                 <li><span>Season your protein of choice for your sous vide, and season it well with a generous amount of salt, favorite herbs, spices or pastes. </span></li>
@@ -638,16 +671,16 @@ get_header();
             <div class="container padded">
                 <div class="row">
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-quick-p-1.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-1.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6 mb-4">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-quick-p-2.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-2.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-quick-p-3.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-3.png" style="width: 100%;" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="<?=get_template_directory_uri();?>/assets/img/mmc/mmc-quick-p-4.png" style="width: 100%;" />
+                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-4.png" style="width: 100%;" />
                     </div>
                 </div>
             </div>
@@ -656,7 +689,9 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span> <div>Quick Prep</div></h2>
+                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
+                                <div>Quick Prep</div>
+                            </h2>
 
                             <ol class="mmc-ordered-list text-blue mt-4">
                                 <li><span>Pull your meat out of the package and enjoy!</span></li>
@@ -667,31 +702,37 @@ get_header();
             </div>
         </div>
 
-        <?php elseif($active_page == 'tips'): ?>
-            <div class="container">
-                <?php if(have_rows('recipe_tabs')): ?>
-                    <div class="d-flex mb-5 mmc-recipe-tabs">
-                    <?php while(have_rows('recipe_tabs')): the_row(); ?>
-                        <a href="#" data-target="#recipes-<?php print sanitize_title(get_sub_field('tab_name')); ?>" class="btn gold-btn flex-grow-1 mx-2 <?php if(get_row_index() == 1) { print 'active'; } ?>"><?php print get_sub_field('tab_name'); ?></a>
+    <?php elseif ($active_page == 'tips'): ?>
+        <div class="container">
+            <?php if (have_rows('recipe_tabs')): ?>
+                <div class="d-flex mb-5 mmc-recipe-tabs">
+                    <?php while (have_rows('recipe_tabs')): the_row(); ?>
+                        <a href="#" data-target="#recipes-<?php print sanitize_title(get_sub_field('tab_name')); ?>" class="btn gold-btn flex-grow-1 mx-2 <?php if (get_row_index() == 1) {
+                                                                                                                                                                print 'active';
+                                                                                                                                                            } ?>"><?php print get_sub_field('tab_name'); ?></a>
                     <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if (have_rows('recipe_tabs')): ?>
+                <?php while (have_rows('recipe_tabs')): the_row(); ?>
+                    <div class="mmc-recipe-tabs-content <?php if (get_row_index() == 1) {
+                                                            print 'active';
+                                                        } ?>" id="recipes-<?php print sanitize_title(get_sub_field('tab_name')); ?>">
+                        <?php get_template_part('inc/tips', 'meatmasterclass'); ?>
                     </div>
-                <?php endif; ?>
+                <?php endwhile; ?>
 
-                <?php if(have_rows('recipe_tabs')): ?>
-                    <?php while(have_rows('recipe_tabs')): the_row(); ?>
-                        <div class="mmc-recipe-tabs-content <?php if(get_row_index() == 1) { print 'active'; } ?>" id="recipes-<?php print sanitize_title(get_sub_field('tab_name')); ?>">
-                            <?php get_template_part('inc/tips', 'meatmasterclass'); ?>
-                        </div>
-                    <?php endwhile; ?>
-                
-                <?php endif; ?>
-            </div>
-        <?php endif; ?>
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
 
-        <script>var activeTip = <?php print isset($_GET['tip']) ? $_GET['tip'] : 'null'; ?>;</script>
-        <!-- /.row -->
+    <script>
+        var activeTip = <?php print isset($_GET['tip']) ? $_GET['tip'] : 'null'; ?>;
+    </script>
+    <!-- /.row -->
     <!-- /.container -->
 </section>
 <!-- /#know-your-cuts -->
 
-<?php get_footer();?>
+<?php get_footer(); ?>
