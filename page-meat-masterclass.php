@@ -119,7 +119,7 @@ get_header();
             <!-- /.col-12 -->
         </div>
 
-        <div class="mmc-page-nav main-carousel" style="padding: 4rem 0;" data-flickity='{ "wrapAround": true }'>
+        <div class="mmc-page-nav" style="padding: 4rem 0;" >
             <div class="mmc-page-nav-item <?php print is_mmc_active('') ? 'active' : ''; ?>">
                 <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
                 <div class="mmc-page-nav-item--text">Get to Know</div>
