@@ -143,20 +143,18 @@ get_header();
             <!-- /.col-12 -->
         </div>
         <div class="main-carousel" data-flickity='{ "wrapAround": true }'>
-            <div class="carousel-cell" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;">
+            <div id="carrousel-cell-1" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;">
             <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
-                <div class="mmc-page-nav-item--text">Get to Know</div>
-                <div class="mmc-page-nav-item--text">The Basics</div>
+                <div class="mmc-page-nav-item--text">Get to Know <br>The Basics</div>
             </div>
-            <div class="carousel-cell" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;">
-            <a class="stretched-link" href="<?php print get_the_permalink(); ?>/methods"></a>
-                <div class="mmc-page-nav-item--text">Cooking Methods To</div>
-                <div class="mmc-page-nav-item--text">Up Your Game</div>
+            <div id="carrousel-cell-2" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;">
+            <a class="stretched-link" href="<?php print get_the_permalink(); ?>/methods#carrousel-cell-2"></a>
+                <div class="mmc-page-nav-item--text">Cooking Methods To <br>Up Your Game</div>
+           
             </div>
-            <div class="carousel-cell" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;">
+            <div id="carrousel-cell-3" class="carousel-cell" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;">
             <a class="stretched-link" href="/tips-recipes"></a>
-                <div class="mmc-page-nav-item--text">Recipes For</div>
-                <div class="mmc-page-nav-item--text">Any Occasion</div>
+                <div class="mmc-page-nav-item--text">Recipes For <br>Any Occasion</div>
             </div>
             ...
         </div>
