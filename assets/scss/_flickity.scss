@@ -134,6 +134,8 @@ https://flickity.metafizzy.co
   }
   .is-selected{
     border: 2px solid #FFAA2B;
+    height: 230px;
+
 
   }
   .flickity-page-dots .dot.is-selected {
@@ -148,9 +150,9 @@ body { font-family: sans-serif; }
 }
 
 .carousel-cell {
-  width: 70%;
-  height: 200px;
-  margin-right: 20px;
+  width: 66%;
+  height: 280px;
+  margin-right: 15px;
   counter-increment: carousel-cell;
   display: flex;
   align-items: center;
@@ -163,8 +165,8 @@ body { font-family: sans-serif; }
   span{
     font-size: 2.3rem;
   }
-  .is-selected{
-    height: 230px;
+  .carousel-cell:hover{
+    background-color: #FFAA2B;
   }
 }
 
