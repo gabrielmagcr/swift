@@ -132,7 +132,7 @@ get_header();
             </div>
             <!-- /.col-12 -->
         </div>
-        <div class="main-carousel" data-flickity='{ "wrapAround": true , "contain": true}'>
+        <div class="main-carousel" data-flickity='{ "contain": true}'>
             <div id="carrousel-cell-1" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;">
             <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
                 <div class="mmc-page-nav-item--text">Get to Know <br><span>The Basics</span></div>
