@@ -11,7 +11,7 @@ https://flickity.metafizzy.co
   .flickity-viewport {
     overflow: hidden;
     position: relative;
-    height: 100%;
+    height: 300px;
   }
   
   .flickity-slider {
@@ -155,13 +155,16 @@ body { font-family: sans-serif; }
   font-family: BourtonBase;
   font-size: 1.4rem;
   line-height: 31px;
+  transition: 1s ease-in-out 0s;
   span{
     font-size: 2.3rem;
   }
+ 
 
 }
 .carousel-cell:hover{
   background-color: #FFAA2B !important;
+  transition: background-color 1s ease 0s;
 }
 /* cell number */
 .carousel-cell:before {
@@ -175,4 +178,6 @@ body { font-family: sans-serif; }
   border: 2px solid #FFAA2B;
   height: 300px;
   padding-bottom: 10px;
+  transition: 1s ease-in-out 0s;
+
 }
