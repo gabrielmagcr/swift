@@ -57,7 +57,7 @@
                             <div>Place: <a href="<?php print get_sub_field('directions_url'); ?>" target="_blank"><span class="text-default text-white text-decoration-none"><?php print get_sub_field('location'); ?></span></a></div>
                         </div>
                         <div class="col-12 col-md-5 mt-4 mt-md-0">
-                            <img src="<?php print get_sub_field('image')['url']; ?>" style="max-width: 100%;width: 100%;" />
+                            <img alt="<?php print get_sub_field('title'); ?>" src="<?php print get_sub_field('image')['url']; ?>" style="max-width: 100%;width: 100%;" />
                         </div>
                     </div>
                     <div class="row justify-content-center">

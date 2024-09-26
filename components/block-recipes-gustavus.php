@@ -20,9 +20,9 @@
     </div>
 </div>
 <div class="gustavus-wrapper bg-blue">
-    <img class="desktop" data-frame="1" src="<?php print get_stylesheet_directory_uri(); ?>/assets/img/Gustavus-Desktop.gif" />
+    <img class="desktop" data-frame="1" alt="Gustavus SwiftMeats Desktop" src="<?php print get_stylesheet_directory_uri(); ?>/assets/img/Gustavus-Desktop.gif" />
     
     
-    <img class="mobile" data-frame="1" src="<?php print get_stylesheet_directory_uri(); ?>/assets/img/Gustavus-Mobile.gif" />
+    <img class="mobile" data-frame="1" alt="Gustavus SwiftMeats Mobile" src="<?php print get_stylesheet_directory_uri(); ?>/assets/img/Gustavus-Mobile.gif" />
    
 </div>

@@ -11,7 +11,7 @@ $hide_gustavus = get_sub_field('hide_gustavus');
                 <?php foreach ($products as $product): $image = get_field('product_image', $product); ?>
                 <div class="product-carousel--item text-center">
                     <?php if($image): ?>
-                    <div class="product-carousel--image"><img src="<?php print $image; ?>" /></div>
+                    <div class="product-carousel--image"><img src="<?php print $image; ?>" alt="<?php print get_the_title($product); ?>" /></div>
                     <?php endif; ?>
                     <p class="text-white"><?php print get_the_title($product); ?></p>
                     <!-- <a href="<?php print get_the_permalink($product); ?>" class="btn btn-outline-white">View Product</a> -->
