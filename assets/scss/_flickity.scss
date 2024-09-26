@@ -132,15 +132,8 @@ https://flickity.metafizzy.co
     opacity: 1;
     cursor: pointer;
   }
-  .is-selected{
-    border: 2px solid #FFAA2B;
-    height: 230px;
 
 
-  }
-  .flickity-page-dots .dot.is-selected {
-    background: #FFAA2B;
-  }
   * { box-sizing: border-box; }
 
 body { font-family: sans-serif; }
@@ -165,11 +158,11 @@ body { font-family: sans-serif; }
   span{
     font-size: 2.3rem;
   }
-  .carousel-cell:hover{
-    background-color: #FFAA2B;
-  }
-}
 
+}
+.carousel-cell:hover{
+  background-color: #FFAA2B;
+}
 /* cell number */
 .carousel-cell:before {
   display: block;
@@ -177,4 +170,9 @@ body { font-family: sans-serif; }
   line-height: 200px;
   font-size: 80px;
   color: white;
+}
+.is-selected{
+  border: 2px solid #FFAA2B;
+  height: 230px;
+  background: #FFAA2B;
 }
