@@ -109,46 +109,46 @@ get_header();
 <!-- /#masterclass-hero -->
 <?php get_template_part('components/blocks'); ?>
 <section id="know-your-cuts">
-        <div class="mmc-page-nav" style="padding: 4rem 0;" >
-            <div class="mmc-page-nav-item <?php print is_mmc_active('') ? 'active' : ''; ?>">
-                <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
-                <div class="mmc-page-nav-item--text">Get to Know</div>
-                <div class="mmc-page-nav-item--text">The Basics</div>
-                <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;"></div>
-            </div>
-
-            <div class="mmc-page-nav-item <?php print is_mmc_active('methods') ? 'active' : ''; ?>">
-                <a class="stretched-link" href="<?php print get_the_permalink(); ?>/methods"></a>
-                <div class="mmc-page-nav-item--text">Cooking Methods To</div>
-                <div class="mmc-page-nav-item--text">Up Your Game</div>
-                <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;"></div>
-            </div>
-
-            <div class="mmc-page-nav-item <?php print is_mmc_active('tips') ? 'active' : ''; ?>">
-                <a class="stretched-link" href="/tips-recipes"></a>
-                <div class="mmc-page-nav-item--text">Recipes For</div>
-                <div class="mmc-page-nav-item--text">Any Occasion</div>
-                <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;"></div>
-            </div>
-            <!-- /.col-12 -->
-        </div>
-        <div class="main-carousel" data-flickity='{ "contain": true}'>
-            <div id="carrousel-cell-1" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;">
+    <div class="mmc-page-nav" style="padding: 4rem 0;">
+        <div class="mmc-page-nav-item <?php print is_mmc_active('') ? 'active' : ''; ?>">
             <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
-                <div class="mmc-page-nav-item--text">Get to Know <br><span>The Basics</span></div>
-            </div>
-            <div id="carrousel-cell-2" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;">
-            <a class="stretched-link" href="<?php print get_the_permalink(); ?>methods"></a>
-                <div class="mmc-page-nav-item--text">Cooking Methods To <br><span>Up Your Game</span></div>
-           
-            </div>
-            <div id="carrousel-cell-3" class="carousel-cell" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;">
-            <a class="stretched-link" href="/tips-recipes"></a>
-                <div class="mmc-page-nav-item--text">Recipes For <br><span>Any Occasion</span></div>
-            </div>
-            ...
+            <div class="mmc-page-nav-item--text">Get to Know</div>
+            <div class="mmc-page-nav-item--text">The Basics</div>
+            <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;"></div>
         </div>
-   
+
+        <div class="mmc-page-nav-item <?php print is_mmc_active('methods') ? 'active' : ''; ?>">
+            <a class="stretched-link" href="<?php print get_the_permalink(); ?>/methods"></a>
+            <div class="mmc-page-nav-item--text">Cooking Methods To</div>
+            <div class="mmc-page-nav-item--text">Up Your Game</div>
+            <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;"></div>
+        </div>
+
+        <div class="mmc-page-nav-item <?php print is_mmc_active('tips') ? 'active' : ''; ?>">
+            <a class="stretched-link" href="/tips-recipes"></a>
+            <div class="mmc-page-nav-item--text">Recipes For</div>
+            <div class="mmc-page-nav-item--text">Any Occasion</div>
+            <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;"></div>
+        </div>
+        <!-- /.col-12 -->
+    </div>
+    <div class="main-carousel" data-flickity='{ "contain": true}'>
+        <div id="carrousel-cell-1" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;">
+            <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
+            <div class="mmc-page-nav-item--text">Get to Know <br><span>The Basics</span></div>
+        </div>
+        <div id="carrousel-cell-2" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;">
+            <a class="stretched-link" href="<?php print get_the_permalink(); ?>methods#carrousel-cell-2"></a>
+            <div class="mmc-page-nav-item--text">Cooking Methods To <br><span>Up Your Game</span></div>
+
+        </div>
+        <div id="carrousel-cell-3" class="carousel-cell" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;">
+            <a class="stretched-link" href="/tips-recipes"></a>
+            <div class="mmc-page-nav-item--text">Recipes For <br><span>Any Occasion</span></div>
+        </div>
+        ...
+    </div>
+
     </div>
 
     <?php if ($active_page == ''): ?>
@@ -295,101 +295,103 @@ get_header();
 
     <?php elseif ($active_page == 'methods'): ?>
         <section class="bg-gold py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="game-nav mmc-game-nav">
-                            <div class="mmc-gn-item active" data-method="sear" data-target=".hm-sear">
-                                <div class="inner">Sear</div>
-                                <!-- /.inner -->
-                            </div>
-                            <!-- /.gn-item -->
-                            <div class="mmc-gn-item" data-method="roast" data-target=".hm-roast">
-                                <div class="inner">Roast</div>
-                            </div>
-                            <!-- /.gn-item -->
-                            <div class="mmc-gn-item" data-method="grill" data-target=".hm-grill">
-                                <div class="inner">Grill</div>
-                            </div>
-                            <!-- /.gn-item -->
-                            <div class="mmc-gn-item" data-method="smoke" data-target=".hm-smoke">
-                                <div class="inner">Smoke</div>
-                            </div>
-                            <!-- /.gn-item -->
-                            <div class="mmc-gn-item" data-method="braise" data-target=".hm-braise">
-                                <div class="inner">Braise</div>
-                            </div>
-                            <!-- /.gn-item -->
-                            <div class="mmc-gn-item" data-method="sous-vide" data-target=".hm-sv">
-                                <div class="inner">Sous<br> Vide</div>
-                            </div>
-                            <!-- /.gn-item -->
-                            <div class="mmc-gn-item" data-method="quick-p" data-target=".hm-quick-p">
-                                <div class="inner">Quick<br> Prep</div>
-                            </div>
-                            <!-- /.gn-item -->
-                        </div>
-                        <!-- /.game-nav -->
-                    </div>
-                    <!-- /.col-12 -->
-                </div>
-
-                <div class="hm-sear mmc-game-nav-content gn-open">
+            <div class="container cooking-methods">
+                <div class="left-section">
                     <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <p>While it doesn't take long to make a good sear, the results will go a long way and speak for themselves. Searing builds a textured crust that surrounds the inner, tender delicacy within. It locks in flavor with a caramelized crust and brings a professional edge to whatever you're making. If a recipe ever says searing is an optional step &ndash; trust us &ndash; sear the meat. The difference a good sear can make is palatable.</p>
+                        <div class="col-12">
+                            <div class="game-nav mmc-game-nav">
+                                <div class="mmc-gn-item active" data-method="sear" data-target=".hm-sear">
+                                    <div class="inner">Sear</div>
+                                    <!-- /.inner -->
+                                </div>
+                                <!-- /.gn-item -->
+                                <div class="mmc-gn-item" data-method="roast" data-target=".hm-roast">
+                                    <div class="inner">Roast</div>
+                                </div>
+                                <!-- /.gn-item -->
+                                <div class="mmc-gn-item" data-method="grill" data-target=".hm-grill">
+                                    <div class="inner">Grill</div>
+                                </div>
+                                <!-- /.gn-item -->
+                                <div class="mmc-gn-item" data-method="smoke" data-target=".hm-smoke">
+                                    <div class="inner">Smoke</div>
+                                </div>
+                                <!-- /.gn-item -->
+                                <div class="mmc-gn-item" data-method="braise" data-target=".hm-braise">
+                                    <div class="inner">Braise</div>
+                                </div>
+                                <!-- /.gn-item -->
+                                <div class="mmc-gn-item" data-method="sous-vide" data-target=".hm-sv">
+                                    <div class="inner">Sous<br> Vide</div>
+                                </div>
+                                <!-- /.gn-item -->
+                                <div class="mmc-gn-item" data-method="quick-p" data-target=".hm-quick-p">
+                                    <div class="inner">Quick<br> Prep</div>
+                                </div>
+                                <!-- /.gn-item -->
+                            </div>
+                            <!-- /.game-nav -->
                         </div>
+                        <!-- /.col-12 -->
                     </div>
                 </div>
+                <div class="right-section">
+                    <div class="hm-sear mmc-game-nav-content gn-open">
+                        <div class="row">
+                            <div class="col-12 col-md-10 mx-auto">
+                                <p>While it doesn't take long to make a good sear, the results will go a long way and speak for themselves. Searing builds a textured crust that surrounds the inner, tender delicacy within. It locks in flavor with a caramelized crust and brings a professional edge to whatever you're making. If a recipe ever says searing is an optional step &ndash; trust us &ndash; sear the meat. The difference a good sear can make is palatable.</p>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="hm-roast mmc-game-nav-content">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <p>While it may not seem like one would come from the other, if you're looking to create tender, juicy flavors from the inside-out, look no further than dry heat. Well, a dry-heat cooking style known as roasting. This style of cooking really allows the protein to take center stage and uses simple ingredients to pack a flavorful punch. The best part? No matter what protein you use, you'll create a showstopping meal that will bring everyone together.</p>
+                    <div class="hm-roast mmc-game-nav-content">
+                        <div class="row">
+                            <div class="col-12 col-md-10 mx-auto">
+                                <p>While it may not seem like one would come from the other, if you're looking to create tender, juicy flavors from the inside-out, look no further than dry heat. Well, a dry-heat cooking style known as roasting. This style of cooking really allows the protein to take center stage and uses simple ingredients to pack a flavorful punch. The best part? No matter what protein you use, you'll create a showstopping meal that will bring everyone together.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="hm-grill mmc-game-nav-content">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <p>Let's face it, grilling isn't a cooking technique, it's a national pastime. In fact, it's a whole culture. And knowing your grill, having the right tools, and using quality meat can turn a simple grill out into a whole get together. A clean grill at the start of every session can yield results every backyard griller dreams of. So crack one open and fire 'em up. </p>
+                    <div class="hm-grill mmc-game-nav-content">
+                        <div class="row">
+                            <div class="col-12 col-md-10 mx-auto">
+                                <p>Let's face it, grilling isn't a cooking technique, it's a national pastime. In fact, it's a whole culture. And knowing your grill, having the right tools, and using quality meat can turn a simple grill out into a whole get together. A clean grill at the start of every session can yield results every backyard griller dreams of. So crack one open and fire 'em up. </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="hm-smoke mmc-game-nav-content">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <p>The art of smoking is one that requires time and patience. But what you're rewarded with is a full-bodied, smoky-flavored scrumptious piece of heaven that'll have everyone gathering around. But before you run to throw your protein on the rack, be sure to flavorize it with plenty of marinades, sauces or rubs. Leave it on its back to cook through, but keep an eye on the temperature and ventilation while you sit back and crack open a cold one. </p>
+                    <div class="hm-smoke mmc-game-nav-content">
+                        <div class="row">
+                            <div class="col-12 col-md-10 mx-auto">
+                                <p>The art of smoking is one that requires time and patience. But what you're rewarded with is a full-bodied, smoky-flavored scrumptious piece of heaven that'll have everyone gathering around. But before you run to throw your protein on the rack, be sure to flavorize it with plenty of marinades, sauces or rubs. Leave it on its back to cook through, but keep an eye on the temperature and ventilation while you sit back and crack open a cold one. </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="hm-braise mmc-game-nav-content">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <p>Braising meat is the art of fall-off-the-bone indulgence. This style of cooking is for those who like their flavor bold from letting the seasonings soak into the meat over time. Because this longer cooking method produces meat that is more tender and delectable as time goes on, it also makes it harder to overcook. Meaning it is especially helpful when cooking tougher cuts of meat like short ribs, brisket, pork shoulder (pulled pork), chuck roast (pot roast). </p>
+                    <div class="hm-braise mmc-game-nav-content">
+                        <div class="row">
+                            <div class="col-12 col-md-10 mx-auto">
+                                <p>Braising meat is the art of fall-off-the-bone indulgence. This style of cooking is for those who like their flavor bold from letting the seasonings soak into the meat over time. Because this longer cooking method produces meat that is more tender and delectable as time goes on, it also makes it harder to overcook. Meaning it is especially helpful when cooking tougher cuts of meat like short ribs, brisket, pork shoulder (pulled pork), chuck roast (pot roast). </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="hm-sv mmc-game-nav-content">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <p>If precision is your name, then sous vide is your game. Pronounced like "Sue-Veed," this slow cooking method dials into exact temperatures, down to the half degree. Using a vacuum-sealed bag, you can and should cook multiple pieces of meat all at once and surround them with aromatics and seasonings. This allows for maximum flavor to penetrate your proteins as they cook. </p>
+                    <div class="hm-sv mmc-game-nav-content">
+                        <div class="row">
+                            <div class="col-12 col-md-10 mx-auto">
+                                <p>If precision is your name, then sous vide is your game. Pronounced like "Sue-Veed," this slow cooking method dials into exact temperatures, down to the half degree. Using a vacuum-sealed bag, you can and should cook multiple pieces of meat all at once and surround them with aromatics and seasonings. This allows for maximum flavor to penetrate your proteins as they cook. </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="hm-quick-p mmc-game-nav-content">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <p>Ready to eat and ideal for those who prefer to spend their time and energy exploring new flavors and food combinations, Quick Prep requires little, if any, cooking effort. And with Swift constantly bringing new products to the table, you’ll always have fresh, innovative options that help you think—and snack—outside the box. </p>
+                    <div class="hm-quick-p mmc-game-nav-content">
+                        <div class="row">
+                            <div class="col-12 col-md-10 mx-auto">
+                                <p>Ready to eat and ideal for those who prefer to spend their time and energy exploring new flavors and food combinations, Quick Prep requires little, if any, cooking effort. And with Swift constantly bringing new products to the table, you’ll always have fresh, innovative options that help you think—and snack—outside the box. </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
         </section>
 
         <div class="hm-sear mmc-game-nav-content gn-open">
@@ -689,6 +691,10 @@ get_header();
                 </div>
             </div>
         </div>
+        </div>
+
+
+
 
     <?php elseif ($active_page == 'tips'): ?>
         <div class="container">
