@@ -127,14 +127,17 @@ https://flickity.metafizzy.co
     width: 10px;
     height: 10px;
     margin: 0 8px;
-    background: #333;
+    background: #D9D9D9;
     border-radius: 50%;
-    opacity: 0.25;
+    opacity: 1;
     cursor: pointer;
   }
-  
+  .is-selected{
+    border: 2px solid #FFAA2B;
+
+  }
   .flickity-page-dots .dot.is-selected {
-    opacity: 1;
+    background: #FFAA2B;
   }
   * { box-sizing: border-box; }
 
@@ -145,11 +148,9 @@ body { font-family: sans-serif; }
 }
 
 .carousel-cell {
-  width: 66%;
+  width: 70%;
   height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
+  margin-right: 20px;
   counter-increment: carousel-cell;
   display: flex;
   align-items: center;
@@ -158,9 +159,12 @@ body { font-family: sans-serif; }
   text-align: center;
   font-family: BourtonBase;
   font-size: 1.4rem;
-  
+  line-height: 31px;
   span{
-    font-size: 2rem;
+    font-size: 2.3rem;
+  }
+  .is-selected{
+    height: 230px;
   }
 }
 
