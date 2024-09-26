@@ -161,7 +161,7 @@ body { font-family: sans-serif; }
 
 }
 .carousel-cell:hover{
-  background-color: #FFAA2B;
+  background-color: #FFAA2B !important;
 }
 /* cell number */
 .carousel-cell:before {
@@ -173,6 +173,6 @@ body { font-family: sans-serif; }
 }
 .is-selected{
   border: 2px solid #FFAA2B;
-  height: 230px;
-  background: #FFAA2B;
+  height: 300px;
+  padding-bottom: 10px;
 }
