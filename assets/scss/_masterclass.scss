@@ -294,6 +294,7 @@
 .mmc-page-nav-item--text {
     position: relative;
     display: flex;
+    flex-direction: column;
     font-size: 1.4rem;
     z-index: 2;
     color: #FFF;
@@ -307,7 +308,7 @@
    
   
 }
-.pick-span{
+.pick-span span{
     font-size: 3.3rem;
     margin-bottom: 30px;
 }
