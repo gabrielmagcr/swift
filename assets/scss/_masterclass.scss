@@ -167,6 +167,9 @@
 .mmc-game-nav.game-nav {
     margin-top: 0;
     margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 
     .mmc-gn-item {
         text-align: center;
@@ -286,35 +289,24 @@
         }
     }
 
-    .mmc-page-nav-item--text {
-        position: relative;
-        display: inline-flex;
-        font-size: 1.4rem;
-        z-index: 2;
-        span{
-            font-size: 2rem;
-        }
-        @media(max-width: 768px) {
-            font-size: 1rem;
-            line-height: 1.2;
-        } 
-    }
-
-    .mmc-page-nav-item--text:nth-child(3) {
-        font-family: $ts4;
-        text-transform: uppercase;
-        -webkit-font-smoothing: antialiased;
-        line-height: 1;
-        font-size: 2rem;
-        z-index: 2;
-
-        @media(max-width: 768px) {
-            font-size: 1.4rem;
-            margin-top: 0.25rem;
-        }
-    }
+   
 }
-
+.mmc-page-nav-item--text {
+    position: relative;
+    display: inline-flex;
+    font-size: 1.4rem;
+    z-index: 2;
+    color: #FFF;
+    text-align: center;
+    font-family: BourtonBase;
+    font-size: 1.4rem;
+    line-height: 31px;
+    span{
+      font-size: 2.3rem;
+    }
+   
+  
+}
 
 .mmc-game-nav-content {
     // margin-top: 2rem;

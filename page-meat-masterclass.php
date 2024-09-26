@@ -299,6 +299,7 @@ get_header();
                 <div class="left-section">
                     <div class="row">
                         <div class="col-12">
+                            <di class="mmc-page-nav-item--text">Pick your<br><span>Prep</span></di>
                             <div class="game-nav mmc-game-nav">
                                 <div class="mmc-gn-item active" data-method="sear" data-target=".hm-sear">
                                     <div class="inner">Sear</div>
