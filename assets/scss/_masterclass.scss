@@ -68,7 +68,21 @@
     }
 }
 
-
+.hero-meatclass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        text-align: center;
+        font-family: BourtonBase;
+        font-size: 32px;
+    }
+    @media (min-width:1023px) {
+        h1{
+            font-size: 56px;
+        }
+    }
+}
 #mc-butcher {
     background-image: url('/wp-content/themes/swift/assets/img/butcher-bg.jpg');
 }
