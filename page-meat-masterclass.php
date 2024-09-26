@@ -109,8 +109,6 @@ get_header();
 <!-- /#masterclass-hero -->
 <?php get_template_part('components/blocks'); ?>
 <section id="know-your-cuts">
-    <div class="container">
-  
         <div class="mmc-page-nav" style="padding: 4rem 0;" >
             <div class="mmc-page-nav-item <?php print is_mmc_active('') ? 'active' : ''; ?>">
                 <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
@@ -137,20 +135,20 @@ get_header();
         <div class="main-carousel" data-flickity='{ "wrapAround": true }'>
             <div id="carrousel-cell-1" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;">
             <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
-                <div class="mmc-page-nav-item--text">Get to Know <br>The Basics</div>
+                <div class="mmc-page-nav-item--text">Get to Know <br><span>The Basics</span></div>
             </div>
             <div id="carrousel-cell-2" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;">
             <a class="stretched-link" href="<?php print get_the_permalink(); ?>methods#carrousel-cell-2"></a>
-                <div class="mmc-page-nav-item--text">Cooking Methods To <br>Up Your Game</div>
+                <div class="mmc-page-nav-item--text">Cooking Methods To <br><span>Up Your Game</span></div>
            
             </div>
             <div id="carrousel-cell-3" class="carousel-cell" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;">
             <a class="stretched-link" href="/tips-recipes"></a>
-                <div class="mmc-page-nav-item--text">Recipes For <br>Any Occasion</div>
+                <div class="mmc-page-nav-item--text">Recipes For <br><span>Any Occasion</span></div>
             </div>
             ...
         </div>
-    </div>
+   
     </div>
 
     <?php if ($active_page == ''): ?>

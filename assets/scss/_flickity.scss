@@ -151,6 +151,17 @@ body { font-family: sans-serif; }
   background: #8C8;
   border-radius: 5px;
   counter-increment: carousel-cell;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  text-align: center;
+  font-family: BourtonBase;
+  font-size: 1.4rem;
+  
+  span{
+    font-size: 2rem;
+  }
 }
 
 /* cell number */
