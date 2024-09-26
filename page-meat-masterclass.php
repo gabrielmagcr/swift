@@ -390,11 +390,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-
-                </div>
-        </section>
-
-        <div class="hm-sear mmc-game-nav-content gn-open">
+                    <div class="hm-sear mmc-game-nav-content gn-open">
             <div class="container padded">
                 <div class="row">
                     <div class="col-12 col-md-6 mb-4">
@@ -691,6 +687,10 @@ get_header();
                 </div>
             </div>
         </div>
+                </div>
+        </section>
+
+        
         </div>
 
 
