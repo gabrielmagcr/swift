@@ -110,13 +110,7 @@ get_header();
 <?php get_template_part('components/blocks'); ?>
 <section id="know-your-cuts">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="text-white mb-0 text-center">Everything you need to know about meat together in one place</h1>
-            </div>
-            <!-- /.col-12 -->
-        </div>
-
+  
         <div class="mmc-page-nav" style="padding: 4rem 0;" >
             <div class="mmc-page-nav-item <?php print is_mmc_active('') ? 'active' : ''; ?>">
                 <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
