@@ -293,7 +293,7 @@
 }
 .mmc-page-nav-item--text {
     position: relative;
-    display: inline-flex;
+    display: flex;
     font-size: 1.4rem;
     z-index: 2;
     color: #FFF;
@@ -307,7 +307,10 @@
    
   
 }
-
+.pick-span{
+    font-size: 3.3rem;
+    margin-bottom: 30px;
+}
 .mmc-game-nav-content {
     // margin-top: 2rem;
     
