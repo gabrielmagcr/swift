@@ -294,7 +294,7 @@ get_header();
         </div>
 
     <?php elseif ($active_page == 'methods'): ?>
-        <section class="bg-gold py-5">
+        <section class="">
             <div class="container cooking-methods">
                 <div class="left-section">
                     <div class="row">
@@ -322,11 +322,11 @@ get_header();
                                 </div>
                                 <!-- /.gn-item -->
                                 <div class="mmc-gn-item" data-method="sous-vide" data-target=".hm-sv">
-                                    <div class="inner">Sous<br> Vide</div>
+                                    <div class="inner">Sous Vide</div>
                                 </div>
                                 <!-- /.gn-item -->
                                 <div class="mmc-gn-item" data-method="quick-p" data-target=".hm-quick-p">
-                                    <div class="inner">Quick<br> Prep</div>
+                                    <div class="inner">Quick Prep</div>
                                 </div>
                                 <!-- /.gn-item -->
                             </div>
