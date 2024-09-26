@@ -107,7 +107,7 @@ get_header();
 ?>
 
 <!-- /#masterclass-hero -->
-
+<?php get_template_part('components/blocks'); ?>
 <section id="know-your-cuts">
     <div class="container">
         <div class="row">
