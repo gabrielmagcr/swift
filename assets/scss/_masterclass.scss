@@ -337,13 +337,11 @@
   }
 .mmc-ordered-list {
     list-style: auto;
-   /* counter-reset: mmc-counter;*/
     margin: 0;
     padding: 0;
 
     li {
-        display: flex;
-       /* counter-increment: mmc-counter;*/
+        display: list-item;
         font-family: $helv;
         padding: 0;
         margin-left: 0;
@@ -351,13 +349,12 @@
         align-items: center;
         color: white;
 
-       /* &::before {
-            content: counter(mmc-counter) ')';
+       &::marker {
             font-family: 'BourtonBase';
             font-size: 1.2rem;
             margin-right: 1rem;
             color: #FFAA2B;
-        }*/
+        }
     }
 }
 
