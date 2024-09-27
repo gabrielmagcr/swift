@@ -172,6 +172,7 @@
     gap: 12px;
     @media(min-width: 1023px) {
         width: 100%;
+        flex-direction: column;
     }
     .mmc-gn-item {
         text-align: center;
@@ -179,7 +180,9 @@
         background: #516896;
         padding: 16px;
         transition: all 0.3s ease-in-out;
-
+        @media(min-width: 1023px) {
+            width: 100%;
+        }
         .inner {
             color: #fff;
             font-family: BourtonBase;
@@ -198,13 +201,17 @@
 
         &.active {
             background-color: #FFAA2B;
-            color: #28334A;
+            .inner{
+                color: #28334A;
+            }
             
         }
 
         &.active, &:hover {
             background-color: #FFAA2B;
-            color: #28334A;
+            .inner{
+                color: #28334A;
+            }
         }
     }
 }
