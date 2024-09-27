@@ -398,7 +398,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <div class="hm-sear mmc-game-nav-content-cards gn-open">
+                    <div class="hm-sear mmc-game-nav-content mmc-game-nav-content-cards gn-open">
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
@@ -444,7 +444,7 @@ get_header();
                         </div>
                     </div>
 
-                    <div class="hm-roast mmc-game-nav-content-cards">
+                    <div class="hm-roast mmc-game-nav-content mmc-game-nav-content-cards">
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
@@ -488,7 +488,7 @@ get_header();
                         </div>
                     </div>
 
-                    <div class="hm-grill mmc-game-nav-content-cards">
+                    <div class="hm-grill mmc-game-nav-content mmc-game-nav-content-cards">
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
@@ -529,7 +529,7 @@ get_header();
                         </div>
                     </div>
 
-                    <div class="hm-smoke mmc-game-nav-content-cards">
+                    <div class="hm-smoke mmc-game-nav-content mmc-game-nav-content-cards">
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
@@ -573,7 +573,7 @@ get_header();
                         </div>
                     </div>
 
-                    <div class="hm-braise mmc-game-nav-content-cards">
+                    <div class="hm-braise mmc-game-nav-content mmc-game-nav-content-cards">
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
@@ -617,7 +617,7 @@ get_header();
                         </div>
                     </div>
 
-                    <div class="hm-sv mmc-game-nav-content-cards">
+                    <div class="hm-sv mmc-game-nav-content mmc-game-nav-content-cards">
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
@@ -661,7 +661,7 @@ get_header();
                         </div>
                     </div>
 
-                    <div class="hm-quick-p mmc-game-nav-content-cards">
+                    <div class="hm-quick-p mmc-game-nav-content mmc-game-nav-content-cards">
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
