@@ -308,23 +308,27 @@
    
   
 }
-.pick-span span{
+.mmc-page-nav-pick-span span{
     font-size: 3.3rem;
     margin-bottom: 30px;
 }
 .mmc-game-nav-content {
     // margin-top: 2rem;
-    
+    background-color: #FFAA2B;
+    color: #28334A;
+    padding: 48px;
     .padded {
         padding: 2rem 0;
-    }
-    p{
-        text-align: center;
     }
 
 
 }
-  
+  .mmc-page-art-of {
+    color: #28334A;
+    span{
+        font-size: 3.3rem;
+      }
+  }
 .mmc-ordered-list {
     list-style: none;
     counter-reset: mmc-counter;
@@ -604,7 +608,7 @@
 .left-section{
     position: sticky;
     z-index: 1000;
-    top: 80px;
+    top: 6       0px;
     background-color: #28334A;
     padding-top: 40px;
 }
