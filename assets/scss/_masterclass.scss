@@ -96,7 +96,7 @@
         font-family: 'BourtonBase';
         text-transform: uppercase;
         font-size: 2rem;
-        line-height: 50px;
+        line-height: 35px;
     }
 }
 
@@ -625,4 +625,9 @@
     span{
         color: #FFAA2B;
     }
+}
+
+.mmc-game-nav-content-cards{
+    background-color: transparent;
+    padding: 0;
 }
