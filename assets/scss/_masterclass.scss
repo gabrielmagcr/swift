@@ -170,7 +170,9 @@
     justify-content: center;
     align-items: center;
     gap: 12px;
-
+    @media(min-width: 1023px) {
+        width: 100%;
+    }
     .mmc-gn-item {
         text-align: center;
         border-radius: 6px;
@@ -206,7 +208,12 @@
         }
     }
 }
-
+.cooking-methods{
+    @media (min-width:1023px) {
+        display: flex;
+        gap: 20px;
+    }
+}
 .mmc-page-nav {
     display: none;
     align-items: stretch;
@@ -616,6 +623,11 @@
     top: 60px;
     background-color: #28334A;
     padding-top: 40px;
+    @media(min-width: 1023px) {
+        top: 90px;
+        padding-top: 0;
+        height: 100%;
+    }
 }
 .mmc-game-nav-cooking-process{
     color: white;
