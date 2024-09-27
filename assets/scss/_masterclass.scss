@@ -222,10 +222,15 @@
     }
     @media (min-width:1400px) {
         gap: 40px;
-        max-width: 1400px;
+        
         .padded{
             max-width: 1400px;
         }
+    }
+}
+@media (min-width:1400px) {
+    .container{
+        max-width: 1400px;
     }
 }
 .mmc-page-nav {
