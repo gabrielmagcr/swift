@@ -92,11 +92,11 @@
     background: #28334A;
     padding: 60px 0;
     h1, h2 {
-        text-align: center;
-        font-family: $ts1;
+        text-align: start;
+        font-family: 'BourtonBase';
         text-transform: uppercase;
         font-size: 2rem;
-        // text-shadow: 2px 2px #000;
+        line-height: 50px;
     }
 }
 
@@ -317,6 +317,8 @@
     background-color: #FFAA2B;
     color: #28334A;
     padding: 48px;
+    margin-bottom: 20px;
+
     .padded {
         padding: 2rem 0;
     }
@@ -325,8 +327,12 @@
 }
   .mmc-page-art-of {
     color: #28334A;
+    text-align: start;
+    font-size: 2rem;
+    line-height: 56px;
+    margin-bottom: 20px;
     span{
-        font-size: 3.3rem;
+        font-size: 4.5rem;
       }
   }
 .mmc-ordered-list {
@@ -346,9 +352,10 @@
 
         &::before {
             content: counter(mmc-counter) ')';
-            font-family: $rw;
-            font-size: 3rem;
+            font-family: 'BourtonBase';
+            font-size: 1.2rem;
             margin-right: 1rem;
+            color: #FFAA2B;
         }
     }
 }
@@ -608,7 +615,7 @@
 .left-section{
     position: sticky;
     z-index: 1000;
-    top: 6       0px;
+    top: 60px;
     background-color: #28334A;
     padding-top: 40px;
 }

@@ -367,7 +367,7 @@ get_header();
                     <div class="hm-smoke mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>SMOKE</span></div>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>SMOKING</span></div>
                                 <p>The art of smoking is one that requires time and patience. But what you're rewarded with is a full-bodied, smoky-flavored scrumptious piece of heaven that'll have everyone gathering around. But before you run to throw your protein on the rack, be sure to flavorize it with plenty of marinades, sauces or rubs. Leave it on its back to cook through, but keep an eye on the temperature and ventilation while you sit back and crack open a cold one. </p>
                             </div>
                         </div>
@@ -398,307 +398,307 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <div class="hm-sear mmc-game-nav-content gn-open">
-            <div class="container padded">
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-1.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-2.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6 mb-4 mb-md-0">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-3.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6 mb-4 mb-md-0">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-4.png" style="width: 100%;" />
-                    </div>
-                </div>
-            </div>
+                    <div class="hm-sear mmc-game-nav-content-cards gn-open">
+                        <div class="container padded">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-1.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-2.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-3.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-4.png" style="width: 100%;" />
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="bg-white py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
-                                <div>Searing</div>
-                            </h2>
+                        <div class="py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-10 mx-auto">
+                                        <h2 class="mmc-game-nav-cooking-process">Cooking Process <br>
+                                            <span>for Searing</span>
+                                        </h2>
 
-                            <ol class="mmc-ordered-list text-blue mt-4">
-                                <li><span>Searing isn't just for steaks &ndash; it's also great for burgers, pork chops, chicken, fish and even eggplant for vegetarians.</span></li>
-                                <li><span>Using a cast-iron pan, or any pan that retains heat, is best since they can withstand high heat.</span></li>
-                                <li><span>Before searing, allow your choice cut to come to room temperature, so meat cooks evenly.</span></li>
-                                <li><span>Season your meat well to set it up for a delectable crust. Be aware, too much seasoning could cause scorching.</span></li>
-                                <li><span>For a crunchy sear, get your pan HOT! Like over 500&deg;F. This is why having a heavy-duty pan is important.</span></li>
-                                <li><span>Once the pan is hot, lay your cut down flat. You want to hear a furious crackle as it hits your pan. That's how you
-                                        know it's piping hot.</span></li>
-                                <li><span>Place a steak weight, smaller pan or metal plate on top to flatten out the meat and get all the corners down.</span></li>
-                                <li><span>Don't forget to lay the meat on its thin sides for a few seconds to connect the crust you're creating on both sides.</span></li>
-                                <li><span>Once cooked to your liking, remove the meat from the pan and DO NOT CUT IT. Allow it to rest for five minutes or else all the delicious juices you locked in with your sear will flood your plate.</span></li>
-                                <li><span>Once rested, plate that baby and cut through that beautiful, caramelized crust for a juicy, flavorful meal.</span></li>
+                                        <ol class="mmc-ordered-list text-blue mt-4">
+                                            <li><span>Searing isn't just for steaks &ndash; it's also great for burgers, pork chops, chicken, fish and even eggplant for vegetarians.</span></li>
+                                            <li><span>Using a cast-iron pan, or any pan that retains heat, is best since they can withstand high heat.</span></li>
+                                            <li><span>Before searing, allow your choice cut to come to room temperature, so meat cooks evenly.</span></li>
+                                            <li><span>Season your meat well to set it up for a delectable crust. Be aware, too much seasoning could cause scorching.</span></li>
+                                            <li><span>For a crunchy sear, get your pan HOT! Like over 500&deg;F. This is why having a heavy-duty pan is important.</span></li>
+                                            <li><span>Once the pan is hot, lay your cut down flat. You want to hear a furious crackle as it hits your pan. That's how you
+                                                    know it's piping hot.</span></li>
+                                            <li><span>Place a steak weight, smaller pan or metal plate on top to flatten out the meat and get all the corners down.</span></li>
+                                            <li><span>Don't forget to lay the meat on its thin sides for a few seconds to connect the crust you're creating on both sides.</span></li>
+                                            <li><span>Once cooked to your liking, remove the meat from the pan and DO NOT CUT IT. Allow it to rest for five minutes or else all the delicious juices you locked in with your sear will flood your plate.</span></li>
+                                            <li><span>Once rested, plate that baby and cut through that beautiful, caramelized crust for a juicy, flavorful meal.</span></li>
 
-                            </ol>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="hm-roast mmc-game-nav-content">
-            <div class="container padded">
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-1.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-2.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-3.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-4.png" style="width: 100%;" />
-                    </div>
-                </div>
-            </div>
+                    <div class="hm-roast mmc-game-nav-content-cards">
+                        <div class="container padded">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-1.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-2.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-3.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-4.png" style="width: 100%;" />
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="bg-white py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
-                                <div>Roasting</div>
-                            </h2>
+                        <div class="py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-10 mx-auto">
+                                        <h2 class="mmc-game-nav-cooking-process">Cooking Process <br>
+                                            <span>for Roasting</span>
+                                        </h2>
 
-                            <ol class="mmc-ordered-list text-blue mt-4">
-                                <li><span>Take your meat out of the fridge at least 2 hours prior to cooking to help control doneness and cook evenly.</span></li>
-                                <li><span>Preheat your oven for at least 20 min. so that your meat starts cooking at the proper temperature from the beginning.</span></li>
-                                <li><span>Place meat into a wide roasting pan or baking tray so it has room for circulation. </span></li>
-                                <li><span>Using a rack inside your pan helps, create flow and helps the meat cook thoroughly and evenly. </span></li>
-                                <li><span>Tying up your roast helps make the meat the same thickness throughout so it cooks evenly. You can always ask your butcher for help and some meats come pre-tied for your convenience.</span></li>
-                                <li><span>Cover the meat in oil or butter to help the salt and pepper stick to it as it is dry-cooked.</span></li>
-                                <li><span>Place the tied roast into the oven and let that baby marinate in the heat. Some recipes call for low and slow, while others cook high and fast. </span></li>
-                                <li><span>Remember, every time you open the oven, you lose 50ºF. So don't peek!</span></li>
-                                <li><span>When the timer goes off, test the meat's internal temperature to make sure it has reached the desired doneness. Be sure to test the meatiest part of the roast. Bones will affect the accuracy of the temperature reading.</span></li>
-                                <li><span>Let that roasted bad boy rest for about 10-15 minutes before you dig in and devour. </span></li>
-                            </ol>
+                                        <ol class="mmc-ordered-list text-blue mt-4">
+                                            <li><span>Take your meat out of the fridge at least 2 hours prior to cooking to help control doneness and cook evenly.</span></li>
+                                            <li><span>Preheat your oven for at least 20 min. so that your meat starts cooking at the proper temperature from the beginning.</span></li>
+                                            <li><span>Place meat into a wide roasting pan or baking tray so it has room for circulation. </span></li>
+                                            <li><span>Using a rack inside your pan helps, create flow and helps the meat cook thoroughly and evenly. </span></li>
+                                            <li><span>Tying up your roast helps make the meat the same thickness throughout so it cooks evenly. You can always ask your butcher for help and some meats come pre-tied for your convenience.</span></li>
+                                            <li><span>Cover the meat in oil or butter to help the salt and pepper stick to it as it is dry-cooked.</span></li>
+                                            <li><span>Place the tied roast into the oven and let that baby marinate in the heat. Some recipes call for low and slow, while others cook high and fast. </span></li>
+                                            <li><span>Remember, every time you open the oven, you lose 50ºF. So don't peek!</span></li>
+                                            <li><span>When the timer goes off, test the meat's internal temperature to make sure it has reached the desired doneness. Be sure to test the meatiest part of the roast. Bones will affect the accuracy of the temperature reading.</span></li>
+                                            <li><span>Let that roasted bad boy rest for about 10-15 minutes before you dig in and devour. </span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="hm-grill mmc-game-nav-content">
-            <div class="container padded">
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-1.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-2.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-3.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-4.png" style="width: 100%;" />
-                    </div>
-                </div>
-            </div>
+                    <div class="hm-grill mmc-game-nav-content-cards">
+                        <div class="container padded">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-1.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-2.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-3.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-4.png" style="width: 100%;" />
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="bg-white py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
-                                <div>Grilling</div>
-                            </h2>
+                        <div class="py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-10 mx-auto">
+                                        <h2 class="mmc-game-nav-cooking-process">Cooking Process <br>
+                                            <span>for Grilling</span>
+                                        </h2>
 
-                            <ol class="mmc-ordered-list text-blue mt-4">
-                                <li><span>Pat your cuts dry with a paper towel or lint-free kitchen towel. Moisture can hold back the perfect caramelized sear. </span></li>
-                                <li><span>Salt and pepper your meats so the salt can bring the moisture to the surface of your cut.</span></li>
-                                <li><span>Slap it on the grill and leave it to sit in the flames a few minutes to get those beautiful grill marks. </span></li>
-                                <li><span> Once the browning, or "fond," is formed, flip it over to cook it through evenly. </span></li>
-                                <li><span>After the meat is cooked through, let it rest. A cooled exterior helps retain the juices and flavors on the inside.</span></li>
-                                <li><span>You've let it rest for 5-10 minutes &ndash; 20 minutes for the thicket, cuts &ndash; and now it's time to eat! </span></li>
-                                <li><span>Slice against the grain and admire your grilled-to-perfection handiwork.</span></li>
-                            </ol>
+                                        <ol class="mmc-ordered-list text-blue mt-4">
+                                            <li><span>Pat your cuts dry with a paper towel or lint-free kitchen towel. Moisture can hold back the perfect caramelized sear. </span></li>
+                                            <li><span>Salt and pepper your meats so the salt can bring the moisture to the surface of your cut.</span></li>
+                                            <li><span>Slap it on the grill and leave it to sit in the flames a few minutes to get those beautiful grill marks. </span></li>
+                                            <li><span> Once the browning, or "fond," is formed, flip it over to cook it through evenly. </span></li>
+                                            <li><span>After the meat is cooked through, let it rest. A cooled exterior helps retain the juices and flavors on the inside.</span></li>
+                                            <li><span>You've let it rest for 5-10 minutes &ndash; 20 minutes for the thicket, cuts &ndash; and now it's time to eat! </span></li>
+                                            <li><span>Slice against the grain and admire your grilled-to-perfection handiwork.</span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="hm-smoke mmc-game-nav-content">
-            <div class="container padded">
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-1.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-2.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-3.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-4.png" style="width: 100%;" />
-                    </div>
-                </div>
-            </div>
+                    <div class="hm-smoke mmc-game-nav-content-cards">
+                        <div class="container padded">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-1.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-2.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-3.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-4.png" style="width: 100%;" />
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="bg-white py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
-                                <div>Smoking</div>
-                            </h2>
+                        <div class="py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-10 mx-auto">
+                                        <h2 class="mmc-game-nav-cooking-process">Cooking Process <br>
+                                            <span>for Smoking</span>
+                                        </h2>
 
-                            <ol class="mmc-ordered-list text-blue mt-4">
-                                <li><span>Choose your meat-smoking timeline &ndash; a few hours, an afternoon or an all-day affair. </span></li>
-                                <li><span>Use the right wood. Wood pellets and pellet smokers are easy to use and great for beginners. Wood chips bring the flavor. And wood chunks really bring the flavor and the whole neighborhood. Also note, soaked wood lasts longer, but drier wood creates a sharper smoke flavor. </span></li>
-                                <li><span>Use indirect heat to cook, averaging between 200-250F to produce a juicy piece of meat.</span></li>
-                                <li><span>When it comes to flavor, use plenty of marinades, sauces or rubs &ndash; oh my!</span></li>
-                                <li><span>Place your protein on the rack and leave it be. Keep an eye on the temperature, but there's no need to flip the meat. </span></li>
-                                <li><span>The right ventilation makes all the difference. You want enough to keep the wood burning, but not so much where you lose smoke and flavor. </span></li>
-                                <li><span>A Bluetooth or infrared thermometer will help ensure you cook your meat to the perfect internal temperature. </span></li>
-                                <li><span>Remember when we said leave the meat alone? We mean it. Checking the meat obsessively will result in a major flavor loss. </span></li>
-                                <li><span>A good sign of a well-smoked meat? The infamous "smoke ring." </span></li>
-                                <li><span>Enjoy the deliciously burnt-ended, crusted fruits of your labor.</span></li>
-                            </ol>
+                                        <ol class="mmc-ordered-list text-blue mt-4">
+                                            <li><span>Choose your meat-smoking timeline &ndash; a few hours, an afternoon or an all-day affair. </span></li>
+                                            <li><span>Use the right wood. Wood pellets and pellet smokers are easy to use and great for beginners. Wood chips bring the flavor. And wood chunks really bring the flavor and the whole neighborhood. Also note, soaked wood lasts longer, but drier wood creates a sharper smoke flavor. </span></li>
+                                            <li><span>Use indirect heat to cook, averaging between 200-250F to produce a juicy piece of meat.</span></li>
+                                            <li><span>When it comes to flavor, use plenty of marinades, sauces or rubs &ndash; oh my!</span></li>
+                                            <li><span>Place your protein on the rack and leave it be. Keep an eye on the temperature, but there's no need to flip the meat. </span></li>
+                                            <li><span>The right ventilation makes all the difference. You want enough to keep the wood burning, but not so much where you lose smoke and flavor. </span></li>
+                                            <li><span>A Bluetooth or infrared thermometer will help ensure you cook your meat to the perfect internal temperature. </span></li>
+                                            <li><span>Remember when we said leave the meat alone? We mean it. Checking the meat obsessively will result in a major flavor loss. </span></li>
+                                            <li><span>A good sign of a well-smoked meat? The infamous "smoke ring." </span></li>
+                                            <li><span>Enjoy the deliciously burnt-ended, crusted fruits of your labor.</span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="hm-braise mmc-game-nav-content">
-            <div class="container padded">
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-1.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-2.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-3.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-4.png" style="width: 100%;" />
-                    </div>
-                </div>
-            </div>
+                    <div class="hm-braise mmc-game-nav-content-cards">
+                        <div class="container padded">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-1.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-2.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-3.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-4.png" style="width: 100%;" />
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="bg-white py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
-                                <div>Braising</div>
-                            </h2>
+                        <div class="py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-10 mx-auto">
+                                        <h2 class="mmc-game-nav-cooking-process">Cooking Process <br>
+                                            <span>for Braising</span>
+                                        </h2>
 
-                            <ol class="mmc-ordered-list text-blue mt-4">
-                                <li><span>Sear your meat on all sides to seal in moisture and flavor with a carmelized and textured crust. </span></li>
-                                <li><span>Remove meat from your searing pan and add in aromatics such as garlic, onion, and herbs or spices to build flavor.</span></li>
-                                <li><span>Brazen aromatics intensify the flavor of your meat and your braising liquid.</span></li>
-                                <li><span>Deglaze your pan with your braising liquid, scraping up any brown bits, or "fond," from the bottom of the pan. Brown bits = big flavor. </span></li>
-                                <li><span>Bring your braising liquid to a boil, add your meat back in, and cover to cook to perfection.</span></li>
-                                <li><span>Some use the stove and others use an oven, but everyone gets the tenderness they sought to achieve.</span></li>
-                                <li><span>Depending on your type of meat, braising can range from 45 minutes to 8 hours.</span></li>
-                                <li><span>Remember, tending to your liquid levels periodically will promise you a worthwhile result.</span></li>
-                                <li><span>Using two forks or a low-speed hand mixer, shred your meat to release the savory goodness.</span></li>
-                                <li><span>Enjoy the flavors of your labor.</span></li>
-                            </ol>
+                                        <ol class="mmc-ordered-list text-blue mt-4">
+                                            <li><span>Sear your meat on all sides to seal in moisture and flavor with a carmelized and textured crust. </span></li>
+                                            <li><span>Remove meat from your searing pan and add in aromatics such as garlic, onion, and herbs or spices to build flavor.</span></li>
+                                            <li><span>Brazen aromatics intensify the flavor of your meat and your braising liquid.</span></li>
+                                            <li><span>Deglaze your pan with your braising liquid, scraping up any brown bits, or "fond," from the bottom of the pan. Brown bits = big flavor. </span></li>
+                                            <li><span>Bring your braising liquid to a boil, add your meat back in, and cover to cook to perfection.</span></li>
+                                            <li><span>Some use the stove and others use an oven, but everyone gets the tenderness they sought to achieve.</span></li>
+                                            <li><span>Depending on your type of meat, braising can range from 45 minutes to 8 hours.</span></li>
+                                            <li><span>Remember, tending to your liquid levels periodically will promise you a worthwhile result.</span></li>
+                                            <li><span>Using two forks or a low-speed hand mixer, shred your meat to release the savory goodness.</span></li>
+                                            <li><span>Enjoy the flavors of your labor.</span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="hm-sv mmc-game-nav-content">
-            <div class="container padded">
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-1.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-2.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-3.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-4.png" style="width: 100%;" />
-                    </div>
-                </div>
-            </div>
+                    <div class="hm-sv mmc-game-nav-content-cards">
+                        <div class="container padded">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-1.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-2.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-3.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-4.png" style="width: 100%;" />
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="bg-white py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
-                                <div>Sous Vide</div>
-                            </h2>
+                        <div class="py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-10 mx-auto">
+                                        <h2 class="mmc-game-nav-cooking-process">Cooking Process <br>
+                                            <span>for Sous Vide</span>
+                                        </h2>
 
-                            <ol class="mmc-ordered-list text-blue mt-4">
-                                <li><span>Season your protein of choice for your sous vide, and season it well with a generous amount of salt, favorite herbs, spices or pastes. </span></li>
-                                <li><span>Secure your protein with your aromatics into a food-grade vacuum sealing bag.</span></li>
-                                <li><span>Seal the deal with your vacuum sealer to lock in all that delicious seasoning.</span></li>
-                                <li><span>Set your water's temperature and start the timer to begin cooking your soon-to-be-stunning meal. </span></li>
-                                <li><span>Once the water has reached the desired temperature, drop in your sealed bags and let the sous vide machine work its magic.</span></li>
-                                <li><span>When your meat reaches the temperature you set, take it out to rest and soak up any last bit of seasoning. About 15-20 minutes.</span></li>
-                                <li><span>Some meats are delicious as is, while others benefit from a little searing to lock in robust flavors. Be sure to dry your meat thoroughly before searing.</span></li>
-                                <li><span>Sear your creation in a searing-hot pan on all sides to create that *chef's kiss* seasoned crust on the outside.</span></li>
-                                <li><span>Searing should be a quick process (1-2 minutes) as your protein is already cooked from the sous vide.</span></li>
-                                <li><span>Relish in your delectable efforts.</span></li>
-                            </ol>
+                                        <ol class="mmc-ordered-list text-blue mt-4">
+                                            <li><span>Season your protein of choice for your sous vide, and season it well with a generous amount of salt, favorite herbs, spices or pastes. </span></li>
+                                            <li><span>Secure your protein with your aromatics into a food-grade vacuum sealing bag.</span></li>
+                                            <li><span>Seal the deal with your vacuum sealer to lock in all that delicious seasoning.</span></li>
+                                            <li><span>Set your water's temperature and start the timer to begin cooking your soon-to-be-stunning meal. </span></li>
+                                            <li><span>Once the water has reached the desired temperature, drop in your sealed bags and let the sous vide machine work its magic.</span></li>
+                                            <li><span>When your meat reaches the temperature you set, take it out to rest and soak up any last bit of seasoning. About 15-20 minutes.</span></li>
+                                            <li><span>Some meats are delicious as is, while others benefit from a little searing to lock in robust flavors. Be sure to dry your meat thoroughly before searing.</span></li>
+                                            <li><span>Sear your creation in a searing-hot pan on all sides to create that *chef's kiss* seasoned crust on the outside.</span></li>
+                                            <li><span>Searing should be a quick process (1-2 minutes) as your protein is already cooked from the sous vide.</span></li>
+                                            <li><span>Relish in your delectable efforts.</span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="hm-quick-p mmc-game-nav-content">
-            <div class="container padded">
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-1.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6 mb-4">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-2.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-3.png" style="width: 100%;" />
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-4.png" style="width: 100%;" />
-                    </div>
-                </div>
-            </div>
+                    <div class="hm-quick-p mmc-game-nav-content-cards">
+                        <div class="container padded">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-1.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-2.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-3.png" style="width: 100%;" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-4.png" style="width: 100%;" />
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="bg-white py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <h2><span class="text-bourton" style="font-size: 0.7em;">Cooking Process for</span>
-                                <div>Quick Prep</div>
-                            </h2>
+                        <div class="py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-10 mx-auto">
+                                        <h2 class="mmc-game-nav-cooking-process">Cooking Process <br>
+                                            <span>for Quick Prep</span>
+                                        </h2>
 
-                            <ol class="mmc-ordered-list text-blue mt-4">
-                                <li><span>Pull your meat out of the package and enjoy!</span></li>
-                            </ol>
+                                        <ol class="mmc-ordered-list text-blue mt-4">
+                                            <li><span>Pull your meat out of the package and enjoy!</span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
                 </div>
         </section>
 
-        
+
         </div>
 
 
