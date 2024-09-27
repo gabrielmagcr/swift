@@ -213,6 +213,10 @@
         display: flex;
         gap: 20px;
     }
+    @media (min-width:1400px) {
+        gap: 40px;
+        max-width: 1400px;
+    }
 }
 .mmc-page-nav {
     display: none;
