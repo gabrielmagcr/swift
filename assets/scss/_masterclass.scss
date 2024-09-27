@@ -262,7 +262,7 @@
     overflow: hidden;
     flex-basis: 0;
     flex-grow: 1;
-    transition: height 1s ease 0s;
+    transition: height 0.25s ease 0s;
     &:not(:last-child), &:not(:first-child) {
         margin: 0 0.25rem;
     }
@@ -271,23 +271,15 @@
         border-color: $gold;
         border-width: 6px;
         height: 255px;
-        transition: height 1s ease 0s;
+        transition: height 0.25s ease 0s;
         .stretched-link{
             background-color: transparent;
-        }
-        @media(max-width: 768px) {
-            .mmc-page-nav-item--bg {
-                background: $gold!important;
-            }
-
-            color: $blue;
         }
     }
 
     &:hover {
-        border-color: $gold;
-        height: 290px;
-        .mmc-page-nav-item--bg {
+        height: 255px;
+        .stretched-link {
             background-color: #FFAA2B;
         }
     }
