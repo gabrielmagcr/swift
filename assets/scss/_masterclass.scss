@@ -223,6 +223,9 @@
     @media (min-width:1400px) {
         gap: 40px;
         max-width: 1400px;
+        .padded{
+            max-width: 1400px;
+        }
     }
 }
 .mmc-page-nav {
@@ -246,7 +249,7 @@
 .mmc-page-nav-item {
     position: relative;
     color: #fff;
-    height: 375px;
+    height: 235px;
     border: 4px solid #fff;
     display: flex;
     align-items: center;
@@ -266,7 +269,10 @@
     &.active {
         border-color: $gold;
         border-width: 6px;
-
+        height: 290px;
+        .stretched-link{
+            background-color: transparent;
+        }
         @media(max-width: 768px) {
             .mmc-page-nav-item--bg {
                 background: $gold!important;
@@ -278,9 +284,9 @@
 
     &:hover {
         border-color: $gold;
-
+        height: 290px;
         .mmc-page-nav-item--bg {
-            transform: scale(1.1);
+            background-color: #FFAA2B;
         }
     }
 
@@ -653,4 +659,6 @@
     .py-5{
         border: solid 2px #FFAA2B;
     }
+
+   
 }

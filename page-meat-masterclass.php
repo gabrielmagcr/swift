@@ -416,7 +416,7 @@ get_header();
                             </div>
                         </div>
 
-                        <div class="py-5">
+                        <div class="py-5 px-5">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12 col-md-10 mx-auto">
@@ -462,7 +462,7 @@ get_header();
                             </div>
                         </div>
 
-                        <div class="py-5">
+                        <div class="py-5 px-5">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12 col-md-10 mx-auto">
@@ -506,7 +506,7 @@ get_header();
                             </div>
                         </div>
 
-                        <div class="py-5">
+                        <div class="py-5 px-5">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12 col-md-10 mx-auto">
@@ -547,7 +547,7 @@ get_header();
                             </div>
                         </div>
 
-                        <div class="py-5">
+                        <div class="py-5 px-5">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12 col-md-10 mx-auto">
@@ -591,7 +591,7 @@ get_header();
                             </div>
                         </div>
 
-                        <div class="py-5">
+                        <div class="py-5 px-5">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12 col-md-10 mx-auto">
@@ -635,7 +635,7 @@ get_header();
                             </div>
                         </div>
 
-                        <div class="py-5">
+                        <div class="py-5 px-5">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12 col-md-10 mx-auto">
@@ -679,7 +679,7 @@ get_header();
                             </div>
                         </div>
 
-                        <div class="py-5">
+                        <div class="py-5 px-5">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12 col-md-10 mx-auto">
