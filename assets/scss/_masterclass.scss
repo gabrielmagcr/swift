@@ -336,14 +336,14 @@
       }
   }
 .mmc-ordered-list {
-    list-style: none;
-    counter-reset: mmc-counter;
+    list-style: auto;
+   /* counter-reset: mmc-counter;*/
     margin: 0;
     padding: 0;
 
     li {
         display: flex;
-        counter-increment: mmc-counter;
+       /* counter-increment: mmc-counter;*/
         font-family: $helv;
         padding: 0;
         margin-left: 0;
@@ -351,13 +351,13 @@
         align-items: center;
         color: white;
 
-        &::before {
+       /* &::before {
             content: counter(mmc-counter) ')';
             font-family: 'BourtonBase';
             font-size: 1.2rem;
             margin-right: 1rem;
             color: #FFAA2B;
-        }
+        }*/
     }
 }
 
