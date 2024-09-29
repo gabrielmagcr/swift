@@ -229,7 +229,7 @@
     }
 }
 @media (min-width:1400px) {
-    .container{
+    .container-meat{
         max-width: 1400px;
     }
 }
@@ -256,7 +256,6 @@
     position: relative;
     color: #fff;
     height: 235px;
-    border: 4px solid #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,11 +272,12 @@
     }
 
     &.active {
-        border-color: $gold;
+        border-color: #FFAA2B;
         border-width: 6px;
         height: 255px;
         transition: height 0.25s ease 0s;
         .stretched-link{
+            transition: all 0.2s ease-out;
             background-color: transparent;
         }
     }
@@ -285,6 +285,7 @@
     &:hover {
         height: 255px;
         .stretched-link {
+
             background-color: #FFAA2B;
         }
     }
@@ -319,7 +320,7 @@
     display: flex;
     flex-direction: column;
     font-size: 1.4rem;
-    z-index: 2;
+    z-index: 100;
     color: #FFF;
     text-align: center;
     font-family: BourtonBase;
