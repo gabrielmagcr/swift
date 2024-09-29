@@ -108,7 +108,7 @@ get_header();
 
 <!-- /#masterclass-hero -->
 <?php get_template_part('components/blocks'); ?>
-<section id="know-your-cuts">
+<section id="know-your-cuts" >
     <div class="mmc-page-nav container container-meat">
         <div class="mmc-page-nav-item <?php print is_mmc_active('') ? 'active' : ''; ?>">
             <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
@@ -692,6 +692,7 @@ get_header();
                             </div>
                         </div>
                     </div>
+                    <a href="#know-your-cuts"><button class="mmc-gn-item active back-to-top-meat">BACK TO TOP</button></a>
                 </div>
         </section>
 
