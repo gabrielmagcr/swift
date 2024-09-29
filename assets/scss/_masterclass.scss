@@ -236,7 +236,7 @@
 .mmc-page-nav {
     display: none;
     align-items: stretch;
-    
+    padding: 4rem 0;
 
     @media(max-width: 768px) {
         flex-direction: column;
@@ -244,7 +244,7 @@
     @media(min-width: 1023px) {
         display: flex;
         align-items: center;
-        padding: 0 11px;
+        padding: 4rem 11px;
     }
 }
 .main-carousel{
