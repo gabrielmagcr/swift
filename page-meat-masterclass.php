@@ -124,7 +124,7 @@ get_header();
 
         <div class="mmc-page-nav-item <?php print is_mmc_active('tips') ? 'active' : ''; ?>">
             <a class="stretched-link" href="/tips-recipes"></a>
-            <div class="mmc-page-nav-item--text">Recipes For<br><span>Any Occasion</span><</div>
+            <div class="mmc-page-nav-item--text">Recipes For<br><span>Any Occasion</span></div>
             <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;"></div>
         </div>
         <!-- /.col-12 -->
@@ -292,7 +292,7 @@ get_header();
 
     <?php elseif ($active_page == 'methods'): ?>
         <section class="">
-            <div class="container cooking-methods">
+            <div class="container container-meat cooking-methods">
                 <div class="left-section">
                     <div class="row">
                         <div class="col-12">

@@ -272,8 +272,7 @@
     }
 
     &.active {
-        border-color: #FFAA2B;
-        border-width: 6px;
+        border: solid 4px #FFAA2B;
         height: 255px;
         transition: height 0.25s ease 0s;
         .stretched-link{
