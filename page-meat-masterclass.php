@@ -729,6 +729,31 @@ get_header();
 
     <script>
         var activeTip = <?php print isset($_GET['tip']) ? $_GET['tip'] : 'null'; ?>;
+
+        window.addEventListener('load', function() {
+    // Verificamos si la página activa es 'methods'
+    if (typeof $active_page !== 'undefined' && $active_page === 'methods') {
+        // Seleccionamos el contenedor con la clase flickity-slider
+        const slider = document.querySelector('.flickity-slider');
+        
+        if (slider) {
+            // Aplicamos el estilo transform: translateX(-54.11%)
+            slider.style.transform = 'translateX(-54.11%)';
+        }
+
+        // Seleccionamos las celdas del carousel
+        const carouselCells = document.querySelectorAll('.carousel-cell');
+        
+        if (carouselCells.length >= 2 && secondCarouselCell) {
+            // A la primera celda le quitamos la clase 'is-selected'
+            carouselCells[0].classList.remove('is-selected');
+            
+            // Le agregamos la clase 'is-selected' a la segunda celda
+            carouselCells[1].classList.add('is-selected');
+        }
+    }
+});
+
     </script>
     <!-- /.row -->
     <!-- /.container -->
