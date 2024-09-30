@@ -739,6 +739,8 @@ get_header();
         if (slider) {
             // Aplicamos el estilo transform: translateX(-54.11%)
             slider.style.transform = 'translateX(-54.11%)';
+            console.log('translate')
+
         }
 
         // Seleccionamos las celdas del carousel
@@ -750,6 +752,7 @@ get_header();
             
             // Le agregamos la clase 'is-selected' a la segunda celda
             carouselCells[1].classList.add('is-selected');
+            console.log('funciono')
         }
     }
 });
