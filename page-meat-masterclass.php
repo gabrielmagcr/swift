@@ -293,26 +293,20 @@ get_header();
     <?php elseif ($active_page == 'methods'): ?>
         <script>
                window.addEventListener('load', function() {
-    // Verificamos si la página activa es 'methods'
     
-        // Seleccionamos el contenedor con la clase flickity-slider
         const slider = document.querySelector('.flickity-slider');
         
         if (slider) {
-            // Aplicamos el estilo transform: translateX(-54.11%)
             slider.style.transform = 'translateX(-54.11%)';
             console.log('translate')
 
         }
 
-        // Seleccionamos las celdas del carousel
         const carouselCells = document.querySelectorAll('.carousel-cell');
         
-        if (carouselCells.length >= 2 && secondCarouselCell) {
-            // A la primera celda le quitamos la clase 'is-selected'
+        if (carouselCells.length >= 2) {
             carouselCells[0].classList.remove('is-selected');
             
-            // Le agregamos la clase 'is-selected' a la segunda celda
             carouselCells[1].classList.add('is-selected');
             console.log('funciono')
         }
