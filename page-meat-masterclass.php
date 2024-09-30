@@ -303,12 +303,14 @@ get_header();
         }
 
         const carouselCells = document.querySelectorAll('.carousel-cell');
+        const dots= document.querySelectorAll('.dot');
         
         if (carouselCells.length >= 2) {
             carouselCells[0].classList.remove('is-selected');
+            dot[0].classList.remove('is-selected');
             
             carouselCells[1].classList.add('is-selected');
-            console.log('funciono')
+            dot[1].classList.add('is-selected');
         }
     
 });
