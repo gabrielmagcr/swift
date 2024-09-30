@@ -135,7 +135,7 @@ get_header();
             <div class="mmc-page-nav-item--text">Get to Know <br><span>The Basics</span></div>
         </div>
         <div id="carrousel-cell-2" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;">
-            <a class="stretched-link" href="<?php print get_the_permalink(); ?>methods#carrousel-cell-2"></a>
+            <a class="stretched-link" href="<?php print get_the_permalink(); ?>methods"></a>
             <div class="mmc-page-nav-item--text">Cooking Methods To <br><span>Up Your Game</span></div>
 
         </div>
