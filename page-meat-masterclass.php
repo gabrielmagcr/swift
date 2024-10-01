@@ -424,6 +424,10 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
+                                    <div  class="mmc-content-card"><span></span>
+                                        <h5>title</h5>
+                                        <p></p>
+                                </div>
                                     <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-1.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
