@@ -347,7 +347,10 @@
     .padded {
         padding: 2rem 0;
     }
+    @media (min-width:1023px) {
+        padding: 48px 0;
 
+    }
 
 }
   .mmc-page-art-of {

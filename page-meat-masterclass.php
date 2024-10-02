@@ -362,8 +362,9 @@ get_header();
                     <div class="hm-sear mmc-game-nav-content gn-open">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>SEAR</span></div>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>SEARING</span>
                                 <p>While it doesn't take long to make a good sear, the results will go a long way and speak for themselves. Searing builds a textured crust that surrounds the inner, tender delicacy within. It locks in flavor with a caramelized crust and brings a professional edge to whatever you're making. If a recipe ever says searing is an optional step &ndash; trust us &ndash; sear the meat. The difference a good sear can make is palatable.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -371,8 +372,9 @@ get_header();
                     <div class="hm-roast mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>ROAST</span></div>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>ROAST</span>
                                 <p>While it may not seem like one would come from the other, if you're looking to create tender, juicy flavors from the inside-out, look no further than dry heat. Well, a dry-heat cooking style known as roasting. This style of cooking really allows the protein to take center stage and uses simple ingredients to pack a flavorful punch. The best part? No matter what protein you use, you'll create a showstopping meal that will bring everyone together.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -380,8 +382,9 @@ get_header();
                     <div class="hm-grill mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>GRILL</span></div>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>GRILL</span>
                                 <p>Let's face it, grilling isn't a cooking technique, it's a national pastime. In fact, it's a whole culture. And knowing your grill, having the right tools, and using quality meat can turn a simple grill out into a whole get together. A clean grill at the start of every session can yield results every backyard griller dreams of. So crack one open and fire 'em up. </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -389,8 +392,9 @@ get_header();
                     <div class="hm-smoke mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>SMOKING</span></div>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>SMOKING</span>
                                 <p>The art of smoking is one that requires time and patience. But what you're rewarded with is a full-bodied, smoky-flavored scrumptious piece of heaven that'll have everyone gathering around. But before you run to throw your protein on the rack, be sure to flavorize it with plenty of marinades, sauces or rubs. Leave it on its back to cook through, but keep an eye on the temperature and ventilation while you sit back and crack open a cold one. </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -398,8 +402,9 @@ get_header();
                     <div class="hm-braise mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>BRAISE</span></div>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>BRAISE</span>
                                 <p>Braising meat is the art of fall-off-the-bone indulgence. This style of cooking is for those who like their flavor bold from letting the seasonings soak into the meat over time. Because this longer cooking method produces meat that is more tender and delectable as time goes on, it also makes it harder to overcook. Meaning it is especially helpful when cooking tougher cuts of meat like short ribs, brisket, pork shoulder (pulled pork), chuck roast (pot roast). </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -407,16 +412,18 @@ get_header();
                     <div class="hm-sv mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>SOUS VIDE</span></div>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>SOUS VIDE</span>
                                 <p>If precision is your name, then sous vide is your game. Pronounced like "Sue-Veed," this slow cooking method dials into exact temperatures, down to the half degree. Using a vacuum-sealed bag, you can and should cook multiple pieces of meat all at once and surround them with aromatics and seasonings. This allows for maximum flavor to penetrate your proteins as they cook. </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="hm-quick-p mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>QUICK PREP</span></div>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">THE ART OF<br><span>QUICK PREP</span>
                                 <p>Ready to eat and ideal for those who prefer to spend their time and energy exploring new flavors and food combinations, Quick Prep requires little, if any, cooking effort. And with Swift constantly bringing new products to the table, you’ll always have fresh, innovative options that help you think—and snack—outside the box. </p>
+                                </div>
                             </div>
                         </div>
                     </div>
