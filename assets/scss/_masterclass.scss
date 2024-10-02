@@ -371,12 +371,14 @@
       @media (min-width:1023px) {
         flex-direction: row;
         gap: 45px;
+        align-items: center;
+
       }
   }
   .mmc-page-art-of-title{
     display: flex;
     flex-direction: column;
-    @media (min-width:1023) {
+    @media (min-width:1023px) {
         justify-content: center;
         min-width: 40%;
 
