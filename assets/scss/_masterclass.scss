@@ -378,6 +378,8 @@
     flex-direction: column;
     @media (min-width:1023) {
         justify-content: center;
+        min-width: 40%;
+
     }
   }
 .mmc-ordered-list {
