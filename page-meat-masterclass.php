@@ -111,19 +111,19 @@ get_header();
 <section id="know-your-cuts" >
     <div class="mmc-page-nav container container-meat">
         <div class="mmc-page-nav-item <?php print is_mmc_active('') ? 'active' : ''; ?>">
-            <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
+            <a class="stretched-link mmc-stretched-link " href="<?php print get_the_permalink(); ?>"></a>
             <div class="mmc-page-nav-item--text">Get to Know<br><span>The Basics</span></div>
             <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;"></div>
         </div>
 
         <div class="mmc-page-nav-item <?php print is_mmc_active('methods') ? 'active' : ''; ?>">
-            <a class="stretched-link" href="<?php print get_the_permalink(); ?>/methods"></a>
+            <a class="stretched-link mmc-stretched-link" href="<?php print get_the_permalink(); ?>/methods"></a>
             <div class="mmc-page-nav-item--text">Cooking Methods To<br><span>Up Your Game</span></div>
             <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;"></div>
         </div>
 
         <div class="mmc-page-nav-item <?php print is_mmc_active('tips') ? 'active' : ''; ?>">
-            <a class="stretched-link" href="/tips-recipes"></a>
+            <a class="stretched-link mmc-stretched-link" href="/tips-recipes"></a>
             <div class="mmc-page-nav-item--text">Recipes For<br><span>Any Occasion</span></div>
             <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;"></div>
         </div>
@@ -131,16 +131,16 @@ get_header();
     </div>
     <div class="main-carousel" data-flickity='{ "prevNextButtons": false }'>
         <div id="carrousel-cell-1" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Get-to-know2024.webp') no-repeat center / cover;">
-            <a class="stretched-link" href="<?php print get_the_permalink(); ?>"></a>
+            <a class="stretched-link mmc-stretched-link" href="<?php print get_the_permalink(); ?>"></a>
             <div class="mmc-page-nav-item--text">Get to Know <br><span>The Basics</span></div>
         </div>
         <div id="carrousel-cell-2" class="carousel-cell <?php print is_mmc_active('tips') ? 'c-active' : ''; ?>" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;">
-            <a class="stretched-link" href="<?php print get_the_permalink(); ?>methods"></a>
+            <a class="stretched-link mmc-stretched-link" href="<?php print get_the_permalink(); ?>methods"></a>
             <div class="mmc-page-nav-item--text">Cooking Methods To <br><span>Up Your Game</span></div>
 
         </div>
         <div id="carrousel-cell-3" class="carousel-cell" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Recipes2024.webp') no-repeat center / cover;">
-            <a class="stretched-link" href="/tips-recipes"></a>
+            <a class="stretched-link mmc-stretched-link" href="/tips-recipes"></a>
             <div class="mmc-page-nav-item--text">Recipes For <br><span>Any Occasion</span></div>
         </div>
         ...
