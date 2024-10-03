@@ -432,16 +432,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-1.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-2.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-3.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-4.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -478,16 +478,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-1.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-2.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-3.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-4.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -522,16 +522,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-1.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-2.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-3.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-4.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -563,16 +563,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-1.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-2.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-3.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-4.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -607,16 +607,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-1.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-2.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-3.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-4.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -651,16 +651,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-1.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-2.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-3.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-4.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -695,16 +695,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-1.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-2.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-3.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-4.png" style="width: 100%;" />
+                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
