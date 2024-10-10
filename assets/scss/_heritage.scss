@@ -1,7 +1,51 @@
 .hero-heritage{
     background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/Heritage-mobile.webp') no-repeat bottom right / cover;
-    height: 100dvh;
+    padding: 10px 25px;
+    
     @media (min-width:1023px) {
         background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/Heritage-Desktop.webp') no-repeat bottom right / cover;
     }
+    .h-h-our-story h1{
+        font-family: "TrendSansFour";
+        color: white;
+        font-size: 4.5rem;
+    }
+    .h-h-our-story p{
+        color: #28334A;
+        font-family: BourtonBase;
+        font-size: 21px;
+    }
+    .h-h-biography-left img{
+        width: 275px;
+        margin-bottom: 20px;
+    }
+    .h-h-biography-right img{
+        margin-bottom: 20px;
+    }
+    .h-h-biography-end{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: #C61A1D;
+        font-family: BourtonBase;
+        margin-bottom: 500px;
+    }
+    .h-h-biography-end span{
+        max-width: 300px;
+    }
+    .h-h-biography-end img{
+        animation: floating 3s ease-in-out infinite;
+
+    }
+    @keyframes floating {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
 }
