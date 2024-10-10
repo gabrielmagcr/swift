@@ -118,7 +118,11 @@
     height: 100px;
     display: flex;
     .dates{
-        padding-left: 25px;
+        padding: 0 25px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        overflow-x: scroll;
     }
     .date a{
         color: #C61A1D;
