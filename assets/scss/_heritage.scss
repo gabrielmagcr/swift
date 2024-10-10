@@ -129,14 +129,26 @@
         font-family: BourtonBase;
         font-size: 32px;
     }
+    .date a {
+        position: relative;
+        text-decoration: none;
+    }
     .date img{
         display: none;
     }
     .date-active img{
         display: block;
+        position: absolute;
+        width: 95px;
+    }
+    .date-active a{
+        bottom: 3px;
     }
     .date-active span{
         color: #fff;
         z-index: 10;
+        position: relative;
+        top: 3px;
+        left: 13px;
     }
 }
