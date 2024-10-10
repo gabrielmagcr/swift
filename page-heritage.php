@@ -25,20 +25,20 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/S
 </section>
 <section class="dates-badge">
     <div class="dates">
-        <div class="date date-active"><a href="#1855"><img src="<?php $swiftImg ?>"><span>1855</span></a></div>
-        <div class="date"><a href="#1861"><img src="<?php $swiftImg ?>"><span>1861</span></a></div>
-        <div class="date"><a href="#1862"><img src="<?php $swiftImg ?>"><span>1862</span></a></div>
-        <div class="date"><a href="#1872"><img src="<?php $swiftImg ?>"><span>1872</span></a></div>
-        <div class="date"><a href="#1875"><img src="<?php $swiftImg ?>"><span>1875</span></a></div>
-        <div class="date"><a href="#1878"><img src="<?php $swiftImg ?>"><span>1878</span></a></div>
-        <div class="date"><a href="#1880"><img src="<?php $swiftImg ?>"><span>1880</span></a></div>
-        <div class="date"><a href="#1893"><img src="<?php $swiftImg ?>"><span>1893</span></a></div>
-        <div class="date"><a href="#1900"><img src="<?php $swiftImg ?>"><span>1900</span></a></div>
-        <div class="date"><a href="#1903"><img src="<?php $swiftImg ?>"><span>1903</span></a></div>
-        <div class="date"><a href="#1915"><img src="<?php $swiftImg ?>"><span>1915</span></a></div>
-        <div class="date"><a href="1924"><img src="<?php $swiftImg ?>"><span>1924</span></a></div>
-        <div class="date"><a href="#1943"><img src="<?php $swiftImg ?>"><span>1943</span></a></div>
-        <div class="date"><a href="#1964"><img src="<?php $swiftImg ?>"><span>1964</span></a></div>
+        <div class="date date-active"><a href="#1855"><img src="<?php echo $swiftImg ?>"><span>1855</span></a></div>
+        <div class="date"><a href="#1861"><img src="<?php echo $swiftImg ?>"><span>1861</span></a></div>
+        <div class="date"><a href="#1862"><img src="<?php echo $swiftImg ?>"><span>1862</span></a></div>
+        <div class="date"><a href="#1872"><img src="<?php echo $swiftImg ?>"><span>1872</span></a></div>
+        <div class="date"><a href="#1875"><img src="<?php echo $swiftImg ?>"><span>1875</span></a></div>
+        <div class="date"><a href="#1878"><img src="<?php echo $swiftImg ?>"><span>1878</span></a></div>
+        <div class="date"><a href="#1880"><img src="<?php echo $swiftImg ?>"><span>1880</span></a></div>
+        <div class="date"><a href="#1893"><img src="<?php echo $swiftImg ?>"><span>1893</span></a></div>
+        <div class="date"><a href="#1900"><img src="<?php echo $swiftImg ?>"><span>1900</span></a></div>
+        <div class="date"><a href="#1903"><img src="<?php echo $swiftImg ?>"><span>1903</span></a></div>
+        <div class="date"><a href="#1915"><img src="<?php echo $swiftImg ?>"><span>1915</span></a></div>
+        <div class="date"><a href="1924"><img src="<?php echo $swiftImg ?>"><span>1924</span></a></div>
+        <div class="date"><a href="#1943"><img src="<?php echo $swiftImg ?>"><span>1943</span></a></div>
+        <div class="date"><a href="#1964"><img src="<?php echo $swiftImg ?>"><span>1964</span></a></div>
     </div>
 </section>
 <?php get_footer(); ?>
