@@ -124,9 +124,19 @@
         align-items: center;
         overflow-x: scroll;
     }
-    .date a{
+    .date span{
         color: #C61A1D;
         font-family: BourtonBase;
         font-size: 32px;
+    }
+    .date img{
+        display: none;
+    }
+    .date-active img{
+        display: block;
+    }
+    .date-active span{
+        color: #fff;
+        z-index: 10;
     }
 }

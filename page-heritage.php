@@ -22,20 +22,23 @@
 </section>
 <section class="dates-badge">
     <div class="dates">
-        <div class="date"><a href="#1855">1855</a></div>
-        <div class="date"><a href="#1861">1861</a></div>
-        <div class="date"><a href="#1862">1862</a></div>
-        <div class="date"><a href="#1872">1872</a></div>
-        <div class="date"><a href="#1875">1875</a></div>
-        <div class="date"><a href="#1878">1878</a></div>
-        <div class="date"><a href="#1880">1880</a></div>
-        <div class="date"><a href="#1893">1893</a></div>
-        <div class="date"><a href="#1900">1900</a></div>
-        <div class="date"><a href="#1903">1903</a></div>
-        <div class="date"><a href="#1915">1915</a></div>
-        <div class="date"><a href="1924">1924</a></div>
-        <div class="date"><a href="#1943">1943</a></div>
-        <div class="date"><a href="#1964">1964</a></div>
+        <?php 
+            $swiftImg="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/SWIFT.svg"
+        ?>
+        <div class="date date-active"><a href="#1855"><img href="<?php $swiftImg ?>"><span>1855</span></a></div>
+        <div class="date"><a href="#1861"><img href="<?php $swiftImg ?>"><span>1861</span></a></div>
+        <div class="date"><a href="#1862"><img href="<?php $swiftImg ?>"><span>1862</span></a></div>
+        <div class="date"><a href="#1872"><img href="<?php $swiftImg ?>"><span>1872</span></a></div>
+        <div class="date"><a href="#1875"><img href="<?php $swiftImg ?>"><span>1875</span></a></div>
+        <div class="date"><a href="#1878"><img href="<?php $swiftImg ?>"><span>1878</span></a></div>
+        <div class="date"><a href="#1880"><img href="<?php $swiftImg ?>"><span>1880</span></a></div>
+        <div class="date"><a href="#1893"><img href="<?php $swiftImg ?>"><span>1893</span></a></div>
+        <div class="date"><a href="#1900"><img href="<?php $swiftImg ?>"><span>1900</span></a></div>
+        <div class="date"><a href="#1903"><img href="<?php $swiftImg ?>"><span>1903</span></a></div>
+        <div class="date"><a href="#1915"><img href="<?php $swiftImg ?>"><span>1915</span></a></div>
+        <div class="date"><a href="1924"><img href="<?php $swiftImg ?>"><span>1924</span></a></div>
+        <div class="date"><a href="#1943"><img href="<?php $swiftImg ?>"><span>1943</span></a></div>
+        <div class="date"><a href="#1964"><img href="<?php $swiftImg ?>"><span>1964</span></a></div>
     </div>
 </section>
 <?php get_footer(); ?>
