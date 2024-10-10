@@ -2,9 +2,6 @@
     background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/Heritage-mobile.png') no-repeat bottom right / cover;
     padding: 10px 25px;
     
-    @media (min-width:1023px) {
-        background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/Heritage-Desktop.webp') no-repeat bottom right / cover;
-    }
     .h-h-our-story h1{
         font-family: "TrendSansFour";
         color: white;
@@ -48,4 +45,25 @@
           transform: translateY(0);
         }
       }
+      @media (min-width:767px) {
+        .hero-heritage .h-h-biography-left img {
+            width: 350px;
+        }
+        .h-h-biography-end{
+            margin-bottom: 325px;
+        }
+      }
+      @media (min-width:1023px) {
+        background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/Heritage-Desktop.webp') no-repeat bottom right / cover;
+        .h-h-our-story{
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 100px;
+        }
+        .h-h-our-story h1{
+            content: "Our <br> Story";
+            font-size: 7rem;
+        }
+    }
 }
