@@ -102,7 +102,7 @@
             margin-bottom: 215px;
     }
     }
-    @media (min-width:1929px) {
+    @media (min-width:1919px) {
         .h-h-biography-end {
             margin-bottom: 300px;
     }
@@ -111,5 +111,18 @@
         .h-h-biography-end {
             margin-bottom: 500px;
     }
+    }
+}
+.dates-badge{
+    background: #FFAA2B;
+    height: 100px;
+    display: flex;
+    .dates{
+        padding-left: 25px;
+    }
+    .date a{
+        color: #C61A1D;
+        font-family: BourtonBase;
+        font-size: 32px;
     }
 }

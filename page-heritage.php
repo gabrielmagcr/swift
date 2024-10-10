@@ -20,5 +20,22 @@
         <span>Discover the timeline of events that made Swift the brand it is today.</span>
     </div>
 </section>
-<section class="dates-badge"></section>
+<section class="dates-badge">
+    <div class="dates">
+        <div class="date"><a href="#1855">1855</a></div>
+        <div class="date"><a href="#1861">1861</a></div>
+        <div class="date"><a href="#1862">1862</a></div>
+        <div class="date"><a href="#1872">1872</a></div>
+        <div class="date"><a href="#1875">1875</a></div>
+        <div class="date"><a href="#1878">1878</a></div>
+        <div class="date"><a href="#1880">1880</a></div>
+        <div class="date"><a href="#1893">1893</a></div>
+        <div class="date"><a href="#1900">1900</a></div>
+        <div class="date"><a href="#1903">1903</a></div>
+        <div class="date"><a href="#1915">1915</a></div>
+        <div class="date"><a href="1924">1924</a></div>
+        <div class="date"><a href="#1943">1943</a></div>
+        <div class="date"><a href="#1964">1964</a></div>
+    </div>
+</section>
 <?php get_footer(); ?>
