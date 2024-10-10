@@ -765,4 +765,19 @@ dots.forEach((dot, index) => {
   });
 });
 
+// Select all elements with the 'date' class
+const dates = document.querySelectorAll('.date');
+
+// Add a click event listener to each element
+dates.forEach(date => {
+    date.addEventListener('click', function() {
+        // Remove the 'date-active' class from the currently active element
+        document.querySelector('.date-active').classList.remove('date-active');
+        
+        // Add the 'date-active' class to the clicked element
+        this.classList.add('date-active');
+    });
+});
+
+
 });
