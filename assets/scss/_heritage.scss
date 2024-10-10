@@ -1,0 +1,7 @@
+.hero-heritage{
+    background: url('/wp-content/themes/swift/assets/img/heritage/Redesign-2024/Heritage-mobile.webp') no-repeat bottom right / cover;
+    height: 100dvh;
+    @media (min-width:1023px) {
+        background: url('/wp-content/themes/swift/assets/img/heritage/Redesign-2024/Heritage-Desktop.webp') no-repeat bottom right / cover;
+    }
+}
