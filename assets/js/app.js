@@ -765,18 +765,37 @@ dots.forEach((dot, index) => {
   });
 });
 
-// Select all elements with the 'date' class
+// Select the date elements and the corresponding sections
 const dates = document.querySelectorAll('.date');
+const sections = document.querySelectorAll('section');
 
-// Add a click event listener to each element
-dates.forEach(date => {
-    date.addEventListener('click', function() {
-        // Remove the 'date-active' class from the currently active element
-        document.querySelector('.date-active').classList.remove('date-active');
-        
-        // Add the 'date-active' class to the clicked element
-        this.classList.add('date-active');
+// Function to activate the 'date-active' class
+const activateDate = (targetId) => {
+    // Remove 'date-active' class from any currently active element
+    document.querySelector('.date-active')?.classList.remove('date-active');
+    
+    // Find the date element that matches the visible section and add the 'date-active' class
+    const activeDate = document.querySelector(`.date[data-target="${targetId}"]`);
+    if (activeDate) {
+        activeDate.classList.add('date-active');
+    }
+};
+
+// Set up the Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // When the section is in the viewport, activate the corresponding date
+            activateDate(entry.target.id);
+        }
     });
+}, {
+    threshold: 0.5 // Triggers when 50% of the section is visible
+});
+
+// Observe each section
+sections.forEach(section => {
+    observer.observe(section);
 });
 
 
