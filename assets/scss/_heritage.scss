@@ -64,6 +64,8 @@
             gap: 40px;
             margin-top: 100px;
             max-width: 1000px;
+            z-index: 10;
+
         }
         .h-h-our-story h1{
             content: "Our <br> Story";
@@ -75,6 +77,7 @@
             position: relative;
             z-index: 1;
             top: -60px;
+            max-width: 1000px;
         }
         .h-h-biography-left{
             position: relative;
@@ -93,5 +96,20 @@
         .h-h-biography-end span {
             max-width: 200px;
         }
+    }
+    @media (min-width:1439px) {
+        .h-h-biography-end {
+            margin-bottom: 215px;
+    }
+    }
+    @media (min-width:1929px) {
+        .h-h-biography-end {
+            margin-bottom: 300px;
+    }
+    }
+    @media (min-width:2100px) {
+        .h-h-biography-end {
+            margin-bottom: 500px;
+    }
     }
 }
