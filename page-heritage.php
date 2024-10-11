@@ -91,11 +91,11 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         </div>
     </div>
 </section>
-<section id='1872'>
+<section id='1872' class="year-1872">
     <div class="container">
         <div class="container-1872">
             <div class="left-1872">
-                <img src="" alt="">
+                <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1872-1875/Handshake.png" alt="HandShake SwiftMeats">
             </div>
             <div class="right1872">
                 <div class="years"><span class="year">1872</span></div>
@@ -114,7 +114,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
                 </div>
             </div>
             <div class="right-1875">
-                <img src="" alt="">
+                <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1872-1875/1875.png" alt="SwiftMeats 1875">
             </div>
         </div>
     </div>
