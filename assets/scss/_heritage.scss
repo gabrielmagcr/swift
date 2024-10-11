@@ -119,7 +119,7 @@
     display: flex;
     position: sticky;
     top: 80px;
-    z-index: 10;
+    z-index: 100;
     .dates{
         padding: 0 25px;
         display: flex;
@@ -252,6 +252,7 @@
         }
         .right-1862{
             margin-bottom: 60px;
+            padding-bottom: 30px;
         }
     }
 }
@@ -269,12 +270,12 @@
             padding-top: 50px;
     
         }
-        .right-1862{
+        .right-1872{
             .h-text{
-                margin-top: -83px;
-                padding-bottom: 20px;
+                margin-top: -60px;
             }
         }
+       
     }
    
     .container-1875{
@@ -298,7 +299,7 @@
             .years{
                 position: relative;
                 top: -170px;
-                z-index: 10;
+                z-index: 5;
             }
     }
     img{

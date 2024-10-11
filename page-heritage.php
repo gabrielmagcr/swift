@@ -97,7 +97,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             <div class="left-1872">
                 <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1872-1875/Handshake.png" alt="HandShake SwiftMeats">
             </div>
-            <div class="right1872">
+            <div class="right-1872">
                 <div class="years"><span class="year">1872</span></div>
                 <div class="h-text">
                     <h3>Butchers in business</h3>
@@ -107,7 +107,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         </div>
         <div class="container-1875">
             <div class="left-1875">
-            <div class="years"><span class="year">1875</span></div>
+                <div class="years"><span class="year">1875</span></div>
                 <div class="h-text">
                     <h3>A new beginning</h3>
                     <p>Gustavus wants to expand his business, so he packs up his family and moves to Chicago to the Union Stockyards. He opens a small slaughterhouse and plans to transport live beef to the eastern states by rail.</p>
@@ -117,6 +117,27 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
                 <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1872-1875/1875.png" alt="SwiftMeats 1875">
             </div>
         </div>
+    </div>
+</section>
+<section id="1878" class="year-1878">
+    <div class="ribbon">
+        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/Ribbon.png" alt="Swift Meats Ribbon">
+    </div>
+    <div class="container container-1878">
+        <div class="left-1878">
+            <div class="years"><span class="year">1878</span></div>
+            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/swiftmeats-newspaper.png" alt="Swiftmeats Newspaper">
+        </div>
+        <div class="right-1878 h-text">
+            <h3 class="h-white">Gustavus vs. The Railroad Industry</h3>
+            <p class="h-white">A roadblock now stands in the way of Gustavus reaching his goal of transporting live beef to the eastern states by rail. The live shipment of cattle from the stockyard is a poor system, and the cattle would arrive at their destination in unfavorable conditions, losing their value. Gustavus is now determined to change the system by slaughtering cattle and hogs and packing the meat in Chicago before shipping it east; however, the industry lacks an adequate distribution system to ship fresh meat to widespread markets, and meat processing is restricted to the cold winter months to prevent it from spoiling.<br>
+                <br>
+                To combat the situation, Swift initiates the design of a new type of railcar, one that will carry fresh butchered meat. This boxcar uses large blocks of ice that are deposited into the hatches overhead each car, creating chilled airflow and cool temperatures for the meat stored below. This radically alters the meat business.
+            </p>
+        </div>
+    </div>
+    <div class="train">
+        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-1.png" alt="SwiftMeats Train"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-2.png" alt="SwiftMeats Train"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-3.png" alt="SwiftMeats Train">
     </div>
 </section>
 <?php get_footer(); ?>
