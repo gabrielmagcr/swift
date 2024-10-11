@@ -331,25 +331,21 @@
         }
     }
     .train {
-        display: flex;
-        gap: 10px;
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        animation: moveTrain 10s linear infinite;
-      }
+        display: none;
+    }
       
       .train img {
         width: auto;
         height: 100px;
       }
       
-      @keyframes moveTrain {
-        0% {
-            background-position: 0 0;
-        }
-        100% {
-            background-position: 0 1000px;
-        }
-      }
+   @media (min-width:1023px) {
+    .train{
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+        width: 100%;
+      
+    }
+   }
 }
