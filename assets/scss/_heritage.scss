@@ -260,6 +260,46 @@
     .years{
         color: #FFAA2B;
         background: #fff; 
+        position: relative;
+        top: -200px;
+    
+    }
+    .container-1872{
+        .left-1872{
+            padding-top: 50px;
+    
+        }
+        .right-1862{
+            .h-text{
+                margin-top: -83px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+   
+    .container-1875{
+            display: flex;
+            flex-direction: column-reverse;
+            .right-1875{
+                display: flex;
+                justify-content: flex-end;
+            
+            }
+            .right-1875 img{
+                position: relative;
+                right: -15px;
+                width: 90%;
+            }
+            .h-text{
+                margin-top: -75px;
+                padding-bottom: 30px;
+
+            }
+            .years{
+                position: relative;
+                top: -170px;
+                z-index: 10;
+            }
     }
     img{
         width: 100%;
