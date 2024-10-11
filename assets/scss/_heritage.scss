@@ -215,10 +215,11 @@
     }
 }
 .year-1861-1862{
+    background-color: #fff;
     .container-1861{
         .h-images{
             position: relative;
-            padding: 50px 0 30px;
+            padding: 70px 0 30px;
         }
         .h-images img{
             width: 80%;
@@ -227,7 +228,7 @@
         .years{
             position: absolute;
             right: 27px;
-            top: 2px;
+            top: 20px;
         }
         .love-1861{
             background: url(/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1861-1862/cowFace.png) no-repeat center / contain;
@@ -235,13 +236,22 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-bottom: 30px;
+          
         }
     }
     .container-1862{
         .h-images img{
             width: 100%;
 
+        }
+        .left-1862{
+            .years{
+                margin-bottom: 30px;
+
+            }
+        }
+        .right-1862{
+            margin-bottom: 60px;
         }
     }
 }

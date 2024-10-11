@@ -65,9 +65,9 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     <div class="container">
         <div class="container-1861">
             <div class="h-images">
-            <div class="years"><span class="year">1861</span></div>
+                <div class="years"><span class="year">1861</span></div>
                 <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1861-1862/1861.png" alt="1861 SwiftMeats">
-             
+
             </div>
             <div class="love-1861 h-text">
                 <h3>A love through war</h3>
@@ -76,16 +76,45 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         </div>
         <div class="container-1862">
             <div class="left-1862">
-                    <div class="years"><span class="year">1861</span></div>
-                
+                <div class="years"><span class="year">1861</span></div>
+
                 <div class="matrimony-1862 h-text">
                     <h3>Meat & Matrimony</h3>
-                    <p>The newlyweds open a small butcher shop and slaughterhouse in Sagamore, Massachusetts, and the sale of live cattle takes off, becoming the primary focus of the business.
+                    <p>The newlyweds open a
+                        small butcher shop and slaughterhouse in Sagamore, Massachusetts, and the sale of live cattle takes off, becoming the primary focus of the business.
                     </p>
                 </div>
             </div>
             <div class="right-1862 h-images">
                 <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1861-1862/1862.png" alt="SwiftMeats Massachusetts">
+            </div>
+        </div>
+    </div>
+</section>
+<section id='1872'>
+    <div class="container">
+        <div class="container-1872">
+            <div class="left-1872">
+                <img src="" alt="">
+            </div>
+            <div class="right1872">
+                <div class="years"><span class="year">1872</span></div>
+                <div class="h-text">
+                    <h3>Butchers in business</h3>
+                    <p>Swift becomes partner in a new venture named Hathaway and Swift. James A. Hathaway is a renowned meat dealer in Boston, and together they relocate the meat dealing business to Buffalo, New York.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-1875">
+            <div class="left-1875">
+            <div class="years"><span class="year">1875</span></div>
+                <div class="h-text">
+                    <h3>A new beginning</h3>
+                    <p>Gustavus wants to expand his business, so he packs up his family and moves to Chicago to the Union Stockyards. He opens a small slaughterhouse and plans to transport live beef to the eastern states by rail.</p>
+                </div>
+            </div>
+            <div class="right-1875">
+                <img src="" alt="">
             </div>
         </div>
     </div>
