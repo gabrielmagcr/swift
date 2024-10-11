@@ -293,7 +293,7 @@
             }
             .h-text{
                 margin-top: -75px;
-                padding-bottom: 30px;
+                padding-bottom: 45px;
 
             }
             .years{
@@ -305,4 +305,49 @@
     img{
         width: 100%;
     }
+}
+.year-1878{
+    .ribbon{
+        height: 80px;
+    }
+    .ribbon img{
+        position: relative;
+        top: -45px;
+        left: 15px;
+    }
+    .container-1878{
+        .left-1878{
+            display: flex;
+            justify-content: flex-end;
+            padding: 30px 0;
+            position: relative;
+
+        }
+
+        .years{
+            position: absolute;
+            left: -15px;
+            top: 55px;
+        }
+    }
+    .train{
+        display: flex;
+        overflow: hidden;
+        gap: 20px;
+        width: 100%;
+    }
+    .train img {
+        width: auto;
+        height: 100px;
+        animation: moveTrain 5s linear infinite;
+      }
+      
+      @keyframes moveTrain {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
 }
