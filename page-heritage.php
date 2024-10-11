@@ -61,21 +61,21 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         </div>
     </div>
 </section>
-<section id="1861">
+<section id="1861" class="year-1861-1862">
     <div class="container">
         <div class="container-1861">
             <div class="h-images">
+            <div class="years"><span class="year">1861</span></div>
                 <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1861-1862/1861.png" alt="1861 SwiftMeats">
-                <div class="years"><span class="year">1861</span></div>
+             
             </div>
             <div class="love-1861 h-text">
                 <h3>A love through war</h3>
                 <p>A new chapter begins as Gustavus marries Annie Maria Higgins. As their love blooms, war ensues around them. The American Civil War causes many disruptions in daily life, but the beef industry grows significantly. There is substantial demand for food to supply the Union and Confederate armies, and beef, a primary protein source, is high in demand.</p>
             </div>
         </div>
-        <div class="container1862">
+        <div class="container-1862">
             <div class="left-1862">
-                
                     <div class="years"><span class="year">1861</span></div>
                 
                 <div class="matrimony-1862 h-text">

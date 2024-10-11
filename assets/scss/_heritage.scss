@@ -172,14 +172,14 @@
 .years{
     font-family: "TrendSansFour";
     color: white;
-    font-size: 3rem;
-    width: 150px;
-    height: 150px;
+    font-size: 2rem;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
     background: #FFAA2B;
     .year{
         position: relative;
-        top: 35px;
+        top: 25px;
         left: 10px;
     
     }
@@ -194,7 +194,7 @@
         }
        
         .first-store-1885 img{
-            width: 290px;
+            width: 100%;
            }
     }
     .h-text{
@@ -203,7 +203,7 @@
         }
     }
     .cow-1885 img{
-        width: 170px;
+        width: 50%;
         margin: 25px 0;
     }
     @media (min-width:1023px) {
@@ -211,6 +211,37 @@
             display: block;
             position: sticky;
             height: 100%;
+        }
+    }
+}
+.year-1861-1862{
+    .container-1861{
+        .h-images{
+            position: relative;
+            padding: 50px 0 30px;
+        }
+        .h-images img{
+            width: 80%;
+
+        }
+        .years{
+            position: absolute;
+            right: 27px;
+            top: 2px;
+        }
+        .love-1861{
+            background: url(/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1861-1862/cowFace.png) no-repeat center / contain;
+            height: 40dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+    }
+    .container-1862{
+        .h-images img{
+            width: 100%;
+
         }
     }
 }
