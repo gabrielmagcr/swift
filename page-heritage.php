@@ -1,6 +1,6 @@
 <?php get_header();
 
-$swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/SWIFT.svg"
+$swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/OurStory/SWIFT.svg"
 ?>
 <section class="hero-heritage">
     <div class="h-h-our-story">
@@ -9,17 +9,17 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/S
     </div>
     <div class="h-h-biography">
         <div class="h-h-biography-left">
-            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/Frame-214.webp" alt="Gustavus Swift">
+            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/OurStory/Frame-214.webp" alt="Gustavus Swift">
         </div>
         <div class="h-h-biography-right">
-            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/Old-Swift.webp" alt="Old Swift">
+            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/OurStory/Old-Swift.webp" alt="Old Swift">
             <p>
                 Swift then branches out to Brighton, Massachusetts, Albany, and Buffalo, New York. His next stop is the windy city of Chicago, where he establishes business there in 1875.<br><br>Take a journey with us, and discover the timeline of events that made Swift the brand it is today.<br><br>See how we’ve been inspiring the extraordinary since 1855.
             </p>
         </div>
     </div>
     <div class="h-h-biography-end">
-        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/pointer-1.webp" alt="Pointer SwiftMeats">
+        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/OurStory/pointer-1.webp" alt="Pointer SwiftMeats">
         <span>Discover the timeline of events that made Swift the brand it is today.</span>
     </div>
 </section>
@@ -39,6 +39,21 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/S
         <div class="date"><a href="1924"><img src="<?php echo $swiftImg ?>"><span>1924</span></a></div>
         <div class="date"><a href="#1943"><img src="<?php echo $swiftImg ?>"><span>1943</span></a></div>
         <div class="date"><a href="#1964"><img src="<?php echo $swiftImg ?>"><span>1964</span></a></div>
+    </div>
+</section>
+<section id="1855">
+    <div class="years"><span class="year">1855</span></div>
+    <div class="h-text">
+        <h3 class="h-white">From a Dream <br>
+        <span class="h-yellow">to Reality</span></h3>
+        <p class="h-white">Living on Cape Cod and working for his brother’s business, Gustavus dreams of bigger things. He wants to change the meat industry, and his father, believing in his dream, offers Gustavus $20. With only the money from his father, Gustavus purchases his own mature heifer and then butchers, packages, and sells it to his neighbors. From here, his vision of changing the meat industry becomes a reality.</p>
+    </div>
+    <div class="h-images">
+        <div class="1885-dollar"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/20.png" alt="20$ 1855"></div>
+        <div class="1885-first-store"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/Frame216.png" alt="Swift Meats First Store"></div>
+    </div>
+    <div class="1885-cow">
+        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/cow.png" alt="Cow SwiftMeats">
     </div>
 </section>
 <?php get_footer(); ?>
