@@ -41,19 +41,22 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         <div class="date"><a href="#1964"><img src="<?php echo $swiftImg ?>"><span>1964</span></a></div>
     </div>
 </section>
-<section id="1855">
-    <div class="years"><span class="year">1855</span></div>
-    <div class="h-text">
-        <h3 class="h-white">From a Dream <br>
-        <span class="h-yellow">to Reality</span></h3>
-        <p class="h-white">Living on Cape Cod and working for his brother’s business, Gustavus dreams of bigger things. He wants to change the meat industry, and his father, believing in his dream, offers Gustavus $20. With only the money from his father, Gustavus purchases his own mature heifer and then butchers, packages, and sells it to his neighbors. From here, his vision of changing the meat industry becomes a reality.</p>
-    </div>
-    <div class="h-images">
-        <div class="1885-dollar"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/20.png" alt="20$ 1855"></div>
-        <div class="1885-first-store"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/Frame216.png" alt="Swift Meats First Store"></div>
-    </div>
-    <div class="1885-cow">
-        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/cow.png" alt="Cow SwiftMeats">
+<section id="1855" class="year-1855">
+    <div class="container">
+        <div class="years"><span class="year">1855</span></div>
+        <div class="h-text">
+            <h3 class="h-white">From a Dream <br>
+                <span class="h-yellow">to Reality</span>
+            </h3>
+            <p class="h-white">Living on Cape Cod and working for his brother’s business, Gustavus dreams of bigger things. He wants to change the meat industry, and his father, believing in his dream, offers Gustavus $20. With only the money from his father, Gustavus purchases his own mature heifer and then butchers, packages, and sells it to his neighbors. From here, his vision of changing the meat industry becomes a reality.</p>
+        </div>
+        <div class="h-images">
+            <div class="dollar-1885"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/20.png" alt="20$ 1855"></div>
+            <div class="first-store-1885"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/Frame216.png" alt="Swift Meats First Store"></div>
+        </div>
+        <div class="cow-1885">
+            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/cow.png" alt="Cow SwiftMeats">
+        </div>
     </div>
 </section>
 <?php get_footer(); ?>

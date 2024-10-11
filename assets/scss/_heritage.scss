@@ -156,3 +156,51 @@
         left: 13px;
     }
 }
+.h-white{
+    color: #fff;
+}
+.h-yellow{
+    color: #FFAA2B;
+}
+.h-text h3{
+    font-family: BourtonBase;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 90%;
+}
+.years{
+    font-family: "TrendSansFour";
+    color: white;
+    font-size: 3rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background: #FFAA2B;
+    .year{
+        position: relative;
+        top: 35px;
+        left: 10px;
+    
+    }
+}
+.year-1855{
+    .years{
+        margin-top: 75px;
+    }
+    .h-images{
+        .dollar-1885{
+            display: none;
+        }
+       
+        .first-store-1885 img{
+            width: 300px;
+           }
+    }
+    @media (min-width:1023px) {
+        .dollar-1885{
+            display: block;
+            position: sticky;
+            height: 100%;
+        }
+    }
+}
