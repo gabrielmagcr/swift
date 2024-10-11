@@ -1,6 +1,6 @@
 .hero-heritage{
     background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/OurStory/Heritage-mobile.png') no-repeat bottom right / cover;
-    padding: 10px 25px;
+    padding: 10px 0px;
     
     .h-h-our-story h1{
         font-family: "TrendSansFour";
@@ -119,6 +119,7 @@
     display: flex;
     position: sticky;
     top: 80px;
+    z-index: 10;
     .dates{
         padding: 0 25px;
         display: flex;
@@ -193,8 +194,17 @@
         }
        
         .first-store-1885 img{
-            width: 300px;
+            width: 290px;
            }
+    }
+    .h-text{
+        h3{
+            margin-top: 30px;
+        }
+    }
+    .cow-1885 img{
+        width: 170px;
+        margin: 25px 0;
     }
     @media (min-width:1023px) {
         .dollar-1885{
