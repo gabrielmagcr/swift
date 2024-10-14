@@ -160,9 +160,13 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1893/1893.png" alt="Northwestern University SwiftMeats">
         </div>
         <div class="right-1893">
-        <div class="years"><span class="year">1893</span></div>
-        <h3 class="h-white">In Memory: Annie May Swift</h3>
-        <p class="h-white">Northwestern University decides to build a headquarters for its new School of Oratory and turns to Gustavus. His donation of $12,500 came with the right to name the building. In remembrance of his sweet daughter, Annie May, a former Northwestern student who passed in 1889, Gustavus officially names the building Annie May Swift Hall.</p>
+            <div class="years"><span class="year">1893</span></div>
+            <div class="h-text">
+
+
+                <h3 class="h-white">In Memory: Annie May Swift</h3>
+                <p class="h-white">Northwestern University decides to build a headquarters for its new School of Oratory and turns to Gustavus. His donation of $12,500 came with the right to name the building. In remembrance of his sweet daughter, Annie May, a former Northwestern student who passed in 1889, Gustavus officially names the building Annie May Swift Hall.</p>
+            </div>
         </div>
     </div>
 </section>
