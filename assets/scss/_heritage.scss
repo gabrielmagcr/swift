@@ -426,15 +426,18 @@
 .year-1880 {
     background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1880/1880-bg.webp') no-repeat bottom center / cover;
 
-    .year-1880::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
+    .container-1880{
+        background-color: #bf1c1fd6;
+        padding-top: 40px;
+    }
+    .years{
+        margin-bottom: 30px;
+    }
+    .year{
+        left: 2px;
+    }
+    .h-images{
         width: 100%;
-        height: 100%;
-        background-color: #C61A1D;
-        mix-blend-mode: multiply;
-        pointer-events: none;
+        padding: 30px 0 40px;
     }
 }

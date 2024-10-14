@@ -141,14 +141,16 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
 </section>
 <section id="1880" class="year-1880">
-    <div class="container">
-    <div class="years"><span class="year">1880</span></div>
-        <div class="h-text">
-            <h3 class="h-white">The Swift Refrigerator Line (SRL)</h3>
-            <p class="h-white">To capitalize on the company’s engineering feat, Gustavus purchases railcars from the Peninsular Car Company and converts them into refrigerated railcars, and finally the Swift Refrigerator Line (SRL) is born.</p>
-        </div>
-        <div class="h-images">
-            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1880/1880.webp" alt="SwiftMeats Refrigerator Line">
+    <div class="container-1880">
+        <div class="container">
+            <div class="years"><span class="year">1880</span></div>
+            <div class="h-text">
+                <h3 class="h-white">The Swift Refrigerator Line (SRL)</h3>
+                <p class="h-white">To capitalize on the company’s engineering feat, Gustavus purchases railcars from the Peninsular Car Company and converts them into refrigerated railcars, and finally the Swift Refrigerator Line (SRL) is born.</p>
+            </div>
+            <div class="h-images">
+                <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1880/1880.webp" alt="SwiftMeats Refrigerator Line">
+            </div>
         </div>
     </div>
 </section>
