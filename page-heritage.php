@@ -251,4 +251,20 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         </div>
     </div>
 </section>
+<section id="1964" class="year-1964">
+    <div class="container container-1964">
+        <div class="left-1964">
+        <div class="years"><span class="year">1964</span></div>
+        <div class="h-text">
+            <h3>Swift’s Premium Franks For All</h3>
+            <p>Swift wants to remind customers that “meats make the meal nourishing as well as wonderful.” So, in the 1964 issue of Good Housekeeping, we introduce the world to Swift’s Premium Franks.</p>
+        </div>
+        </div>
+        <div class="right-1964">
+            <div class="h-images">
+                <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1964/1964-1.png" alt="SwiftMeats HotDog premium"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1964/1964-2.png" alt="SwiftMeats HotDog">
+            </div>
+        </div>
+    </div>
+</section>
 <?php get_footer(); ?>
