@@ -576,11 +576,16 @@
         .h-text{
             padding-top: 25px;
             p{
-                padding-bottom: 100px;
+                padding-bottom: 150px;
             }
         }
     }
 }
 .year-1943{
-
+    .news-1943{
+        overflow-x: scroll;
+        padding: 0 20px;
+        position: relative;
+        top: -130px;
+    }
 }

@@ -236,14 +236,19 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     <div class="news-1943">
         <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1943/1943-news.png" alt="SwiftMeat WW2">
     </div>
-    <div class="left-1943">
-        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1943/1943.jpg" alt="SwiftMeats in the war">
-        <div class="years"><span class="year">1943</span></div>
-    </div>
-    <div class="right-1943 h-text">
-        <h3 class="h-white">Accounting For War, Again</h3>
-        <p class="h-white">During World War II, 20,300 men and women of the Swift organization were called to serve in the military and auxiliary services. Though this is a time of struggle, the demand for meat is so high that Swift can continue to operate at total capacity, and sales exceed $1.4 billion. 
-        </p>
+    <div class="container container-1943">
+        <div class="left-1943">
+            <div class="h-images">
+                <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1943/1943.jpg" alt="SwiftMeats in the war">
+            </div>
+
+            <div class="years"><span class="year">1943</span></div>
+        </div>
+        <div class="right-1943 h-text">
+            <h3 class="h-white">Accounting For War, Again</h3>
+            <p class="h-white">During World War II, 20,300 men and women of the Swift organization were called to serve in the military and auxiliary services. Though this is a time of struggle, the demand for meat is so high that Swift can continue to operate at total capacity, and sales exceed $1.4 billion. 
+            </p>
+        </div>
     </div>
 </section>
 <?php get_footer(); ?>
