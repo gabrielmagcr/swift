@@ -642,8 +642,31 @@
 
 }
 .year-today{
+    background: #FFAA2B;
     .today-banner{
         background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/today/today.webp') no-repeat  center / cover;
-        height: 40dvh;
+        height: 20dvh;
+    }
+    .left-today{
+        .years{
+            font-size: 1.6rem;
+            width: 115px;
+            height: 115px;
+            position: relative;
+            top: -40px;
+        
+            .year{
+                top: 40px;
+                left: 7px;
+            }
+        }
+        .h-text{
+            margin-top: -10px;
+        }
+    }
+    .right-today{
+        span{
+            padding-bottom: 40px;
+        }
     }
 }

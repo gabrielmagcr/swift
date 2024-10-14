@@ -270,11 +270,11 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 <section id="today" class="year-today">
     <div class="today-banner"></div>
     <div class="container container-today">
-        <div class="right-today h-text">
+        <div class="left-today h-text">
         <div class="years"><span class="year">TODAY</span></div>
             <h3>See what We’re up to now.</h3>
         </div>
-        <div class="left-today">
+        <div class="right-today h-images">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1943/1943.jpg" alt="SwiftMeats todays Video">
             <span>waiting for video Link</span>
         </div>
