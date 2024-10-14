@@ -539,4 +539,27 @@
 
 .year-1915{
     background: #FFAA2B;
+    .left-1915{
+        .years{
+            color: #FFAA2B;
+            background-color: white;
+            position: relative;
+            top: -50px;
+            left: 15px;
+        }
+        .h-text{
+            margin-top: -20px;
+        }
+    }
+    .right-1915{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 40px;
+    
+    }
+}
+
+.year-1924{
+    background: #C61A1D;
 }

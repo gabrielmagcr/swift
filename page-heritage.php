@@ -216,4 +216,20 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         </div>
     </div>
 </section>
+<section id="1924" class="year-1924">
+    <div class="container container-1924">
+        <div class="left-1924 h-images">
+            <img src="" alt=""><img src="" alt="">
+        </div>
+        <div class="right-1924">
+        <div class="years"><span class="year">1915</span></div>
+        <div class="h-text">
+            <h3 class="h-white">The Royal We</h3>
+            <p class="h-white">On behalf of the British Empire, the Prince of Wales visits Chicago to thank American meat producers for the vast quantities of meat sent to the British lines throughout the First World War. The new representative of the industry, Louis F. Swift, son of Gustavus, hosts the Prince and gives him a tour of the Chicago stockyards.
+            </p>
+        </div>
+        </div>
+    </div>
+
+</section>
 <?php get_footer(); ?>
