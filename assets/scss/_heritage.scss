@@ -1,25 +1,29 @@
-.hero-heritage{
+.hero-heritage {
     background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/OurStory/Heritage-mobile.png') no-repeat bottom right / cover;
     padding: 10px 0px;
-    
-    .h-h-our-story h1{
+
+    .h-h-our-story h1 {
         font-family: "TrendSansFour";
         color: white;
         font-size: 4.5rem;
     }
-    .h-h-our-story p{
+
+    .h-h-our-story p {
         color: #28334A;
         font-family: BourtonBase;
         font-size: 21px;
     }
-    .h-h-biography-left img{
+
+    .h-h-biography-left img {
         width: 275px;
         margin-bottom: 20px;
     }
-    .h-h-biography-right img{
+
+    .h-h-biography-right img {
         margin-bottom: 20px;
     }
-    .h-h-biography-end{
+
+    .h-h-biography-end {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -27,38 +31,47 @@
         font-family: BourtonBase;
         margin-bottom: 500px;
     }
-    .h-h-biography-end span{
+
+    .h-h-biography-end span {
         max-width: 300px;
     }
-    .h-h-biography-end img{
+
+    .h-h-biography-end img {
         animation: floating 3s ease-in-out infinite;
 
     }
+
     @keyframes floating {
         0% {
-          transform: translateY(0);
+            transform: translateY(0);
         }
+
         50% {
-          transform: translateY(-10px);
+            transform: translateY(-10px);
         }
+
         100% {
-          transform: translateY(0);
+            transform: translateY(0);
         }
-      }
-      @media (min-width:767px) {
+    }
+
+    @media (min-width:767px) {
         .hero-heritage .h-h-biography-left img {
             width: 350px;
         }
-        .h-h-biography-end{
+
+        .h-h-biography-end {
             margin-bottom: 325px;
         }
-      }
-      @media (min-width:1023px) {
+    }
+
+    @media (min-width:1023px) {
         background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/OurStory/Heritage-Desktop.webp') no-repeat bottom right / cover;
         display: flex;
         flex-direction: column;
         align-items: center;
-        .h-h-our-story{
+
+        .h-h-our-story {
             display: flex;
             justify-content: center;
             gap: 40px;
@@ -67,11 +80,13 @@
             z-index: 10;
 
         }
-        .h-h-our-story h1{
+
+        .h-h-our-story h1 {
             content: "Our <br> Story";
             font-size: 7rem;
         }
-        .h-h-biography{
+
+        .h-h-biography {
             display: flex;
             gap: 120px;
             position: relative;
@@ -79,77 +94,92 @@
             top: -60px;
             max-width: 1000px;
         }
-        .h-h-biography-left{
+
+        .h-h-biography-left {
             position: relative;
             left: 75px;
             z-index: 2;
         }
+
         .h-h-biography-left img {
             width: 350px;
         }
-        .h-h-biography-end{
+
+        .h-h-biography-end {
             position: relative;
             left: -255px;
             top: -50px;
             margin-bottom: 180px;
         }
+
         .h-h-biography-end span {
             max-width: 200px;
         }
     }
+
     @media (min-width:1439px) {
         .h-h-biography-end {
             margin-bottom: 215px;
+        }
     }
-    }
+
     @media (min-width:1919px) {
         .h-h-biography-end {
             margin-bottom: 300px;
+        }
     }
-    }
+
     @media (min-width:2100px) {
         .h-h-biography-end {
             margin-bottom: 500px;
-    }
+        }
     }
 }
-.dates-badge{
+
+.dates-badge {
     background: #FFAA2B;
     height: 100px;
     display: flex;
     position: sticky;
     top: 80px;
     z-index: 100;
-    .dates{
+
+    .dates {
         padding: 0 25px;
         display: flex;
         gap: 40px;
         align-items: center;
         overflow-x: scroll;
     }
-    .date span{
+
+    .date span {
         color: #C61A1D;
         font-family: BourtonBase;
         font-size: 32px;
     }
+
     .date a {
         position: relative;
         text-decoration: none;
     }
-    .date img{
+
+    .date img {
         display: none;
     }
-    .date-active img{
+
+    .date-active img {
         display: block;
         position: absolute;
         width: 95px;
     }
-    .date-active a{
+
+    .date-active a {
         bottom: 3px;
         right: 10px;
 
     }
-    .date-active span{
+
+    .date-active span {
         color: #fff;
         z-index: 10;
         position: relative;
@@ -157,19 +187,23 @@
         left: 13px;
     }
 }
-.h-white{
+
+.h-white {
     color: #fff;
 }
-.h-yellow{
+
+.h-yellow {
     color: #FFAA2B;
 }
-.h-text h3{
+
+.h-text h3 {
     font-family: BourtonBase;
     font-size: 3rem;
     text-transform: uppercase;
     line-height: 90%;
 }
-.years{
+
+.years {
     font-family: "TrendSansFour";
     color: white;
     font-size: 2rem;
@@ -177,146 +211,172 @@
     height: 100px;
     border-radius: 100%;
     background: #FFAA2B;
-    .year{
+
+    .year {
         position: relative;
         top: 25px;
         left: 10px;
-    
+
     }
 }
-.year-1855{
-    .years{
+
+.year-1855 {
+    .years {
         margin-top: 75px;
     }
-    .h-images{
-        .dollar-1885{
+
+    .h-images {
+        .dollar-1885 {
             display: none;
         }
-       
-        .first-store-1885 img{
+
+        .first-store-1885 img {
             width: 100%;
-           }
+        }
     }
-    .h-text{
-        h3{
+
+    .h-text {
+        h3 {
             margin-top: 30px;
         }
     }
-    .cow-1885 img{
+
+    .cow-1885 img {
         width: 50%;
         margin: 25px 0;
     }
+
     @media (min-width:1023px) {
-        .dollar-1885{
+        .dollar-1885 {
             display: block;
             position: sticky;
             height: 100%;
         }
     }
 }
-.year-1861-1862{
+
+.year-1861-1862 {
     background-color: #fff;
-    .container-1861{
-        .h-images{
+
+    .container-1861 {
+        .h-images {
             position: relative;
             padding: 70px 0 30px;
         }
-        .h-images img{
+
+        .h-images img {
             width: 80%;
 
         }
-        .years{
+
+        .years {
             position: absolute;
             right: 27px;
             top: 20px;
         }
-        .love-1861{
+
+        .love-1861 {
             background: url(/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1861-1862/cowFace.png) no-repeat center / contain;
             height: 40dvh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-          
+
         }
     }
-    .container-1862{
-        .h-images img{
+
+    .container-1862 {
+        .h-images img {
             width: 100%;
 
         }
-        .left-1862{
-            .years{
+
+        .left-1862 {
+            .years {
                 margin-bottom: 30px;
 
             }
         }
-        .right-1862{
+
+        .right-1862 {
             margin-bottom: 60px;
             padding-bottom: 30px;
         }
     }
 }
-.year-1872{
+
+.year-1872 {
     background: #FFAA2B;
-    .years{
+
+    .years {
         color: #FFAA2B;
-        background: #fff; 
+        background: #fff;
         position: relative;
         top: -200px;
-    
+
     }
-    .container-1872{
-        .left-1872{
+
+    .container-1872 {
+        .left-1872 {
             padding-top: 50px;
-    
+
         }
-        .right-1872{
-            .h-text{
+
+        .right-1872 {
+            .h-text {
                 margin-top: -60px;
             }
         }
-       
-    }
-   
-    .container-1875{
-            display: flex;
-            flex-direction: column-reverse;
-            .right-1875{
-                display: flex;
-                justify-content: flex-end;
-            
-            }
-            .right-1875 img{
-                position: relative;
-                right: -15px;
-                width: 90%;
-            }
-            .h-text{
-                margin-top: -75px;
-                padding-bottom: 45px;
 
-            }
-            .years{
-                position: relative;
-                top: -170px;
-                z-index: 5;
-            }
     }
-    img{
+
+    .container-1875 {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .right-1875 {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        .right-1875 img {
+            position: relative;
+            right: -15px;
+            width: 90%;
+        }
+
+        .h-text {
+            margin-top: -75px;
+            padding-bottom: 45px;
+
+        }
+
+        .years {
+            position: relative;
+            top: -170px;
+            z-index: 5;
+        }
+    }
+
+    img {
         width: 100%;
     }
 }
-.year-1878{
-    .ribbon{
+
+.year-1878 {
+    .ribbon {
         height: 80px;
     }
-    .ribbon img{
+
+    .ribbon img {
         position: relative;
         top: -45px;
         left: 15px;
     }
-    .container-1878{
-        .left-1878{
+
+    .container-1878 {
+        .left-1878 {
             display: flex;
             justify-content: flex-end;
             flex-direction: column;
@@ -324,41 +384,57 @@
             position: relative;
 
         }
-        .left-1878 img{
+
+        .left-1878 img {
             margin-left: 25px;
         }
-        .right-1878{
-            .h-white{
+
+        .right-1878 {
+            .h-white {
                 margin-bottom: 40px;
             }
         }
-        .years{
+
+        .years {
             position: absolute;
             left: -15px;
             top: 55px;
         }
     }
 }
+
+.train {
+    display: none;
+}
+
+.train img {
+    width: auto;
+    height: 100px;
+}
+
+@media (min-width:1023px) {
     .train {
-        display: none;
-    }
-      .train img {
-        width: auto;
-        height: 100px;
-      }
-      
-   @media (min-width:1023px) {
-    .train{
         display: flex;
         gap: 10px;
         overflow: hidden;
         width: 100%;
-      
+
     }
 
-   }
+}
 
-   .year-1880{
+.year-1880 {
     background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1880/1880-bg.webp') no-repeat bottom center / cover;
-    
-   }
+
+    .year-1880::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #C61A1D;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+    }
+}
