@@ -202,9 +202,11 @@
     text-transform: uppercase;
     line-height: 90%;
 }
-.h img{
+
+.h-images img {
     width: 100%;
 }
+
 .years {
     font-family: "TrendSansFour";
     color: white;
@@ -428,36 +430,48 @@
 .year-1880 {
     background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1880/1880-bg.webp') no-repeat bottom center / cover;
 
-    .container-1880{
+    .container-1880 {
         background-color: #bf1c1fd6;
         padding-top: 40px;
     }
-    .years{
+
+    .years {
         margin-bottom: 30px;
     }
-    .year{
+
+    .year {
         left: 2px;
     }
-    .h-images img{
+
+    .h-images img {
         padding: 30px 0 40px;
     }
 }
 
-.year-1893{
-    .left-1893{
+.year-1893 {
+    .left-1893 {
         padding-top: 40px;
     }
-    .year{
-        left: 7px;
+
+    .years {
+        position: relative;
+        top: -40px;
+        left: 40px;
+
+        .year {
+            left: 7px;
+        }
     }
-    .h-text{
-      
-        h3{
+
+    .h-text {
+
+        h3 {
             margin-top: -30px;
         }
-        p{
+
+        p {
             padding-bottom: 40px;
         }
     }
-    
+
 }
