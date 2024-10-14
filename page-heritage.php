@@ -219,7 +219,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 <section id="1924" class="year-1924">
     <div class="container container-1924">
         <div class="left-1924 h-images">
-            <img src="" alt=""><img src="" alt="">
+            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1924/1924-1.png" alt="SwiftMeats on the Brithish Empire"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1924/1924-2.png" alt="SwiftMeats on the Brithish Empire">
         </div>
         <div class="right-1924">
         <div class="years"><span class="year">1915</span></div>
