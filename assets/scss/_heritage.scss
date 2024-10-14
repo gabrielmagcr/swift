@@ -489,6 +489,8 @@
             z-index: 10;
             color: #FFAA2B;
             background-color: white;
+            left: 20px;
+
         }
         .h-images{
             display: flex;
@@ -503,5 +505,16 @@
         p{
             padding-bottom: 60px;
         }
+    }
+}
+.year-1903{
+    .right-1903{
+        .h-text h3{
+            font-family: "TrendSansFour";
+        }
+    }
+    .bg-1903 {
+        background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903-bg.jpg') no-repeat  center / cover;
+        height: 40dvh;
     }
 }

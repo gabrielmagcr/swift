@@ -173,16 +173,32 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 <section id="1900" class="year-1900">
     <div class="container container-1900">
         <div class="left-1900 ">
-            <div class="years"><span class="year">1893</span></div>
+            <div class="years"><span class="year">1900</span></div>
             <div class="h-images">
-            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1900/1900.png" alt="SwiftMeats Boat 1900">
+                <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1900/1900.png" alt="SwiftMeats Boat 1900">
             </div>
-         
+
         </div>
         <div class="right-1900 h-text">
             <h3>The Year We Set Sail</h3>
             <p>By 1900, Swift has meat-packing plants across the Midwest, from Kansas City, Missouri, to St. Paul, Minnesota. From starting at home in Massachusetts and moving on to Chicago, Gustavus's vision for his business goes beyond his initial thoughts, and he opens Swift shops overseas in London, England.</p>
         </div>
+    </div>
+</section>
+<section id="1903" class="year-1903">
+    <div class="container container-1903">
+        <div class="left-1903">
+            <div class="years"><span class="year">1903</span></div>
+            <div class="h-images"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903.jpg" alt=""></div>
+        </div>
+        <div class="right-1903 h-text">
+            <div class="years"><span class="year">1903</span></div>
+            <h3>A Lasting Legacy</h3>
+            <p>On March 29, 1903, Gustavus Franklin Swift passes away. His vision for end-to-end production control, ensuring quality, efficiency, and cost-effectiveness, remains a cornerstone of modern strategies. His pioneering spirit lives on, shaping the way we approach transportation and storage to this day. His innovation and perseverance continue to inspire the extraordinary.</p>
+        </div>
+    </div>
+    <div class="bg-1903">
+
     </div>
 </section>
 <?php get_footer(); ?>
