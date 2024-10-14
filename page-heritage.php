@@ -222,14 +222,28 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1924/1924-1.png" alt="SwiftMeats on the Brithish Empire"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1924/1924-2.png" alt="SwiftMeats on the Brithish Empire">
         </div>
         <div class="right-1924">
-        <div class="years"><span class="year">1915</span></div>
-        <div class="h-text">
-            <h3 class="h-white">The Royal We</h3>
-            <p class="h-white">On behalf of the British Empire, the Prince of Wales visits Chicago to thank American meat producers for the vast quantities of meat sent to the British lines throughout the First World War. The new representative of the industry, Louis F. Swift, son of Gustavus, hosts the Prince and gives him a tour of the Chicago stockyards.
-            </p>
-        </div>
+            <div class="years"><span class="year">1924</span></div>
+            <div class="h-text">
+                <h3 class="h-white">The Royal We</h3>
+                <p class="h-white">On behalf of the British Empire, the Prince of Wales visits Chicago to thank American meat producers for the vast quantities of meat sent to the British lines throughout the First World War. The new representative of the industry, Louis F. Swift, son of Gustavus, hosts the Prince and gives him a tour of the Chicago stockyards.
+                </p>
+            </div>
         </div>
     </div>
 
+</section>
+<section id="1943" class="year-1943">
+    <div class="news-1943">
+        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1943/1943-news.png" alt="SwiftMeat WW2">
+    </div>
+    <div class="left-1943">
+        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1943/1943.jpg" alt="SwiftMeats in the war">
+        <div class="years"><span class="year">1943</span></div>
+    </div>
+    <div class="right-1943 h-text">
+        <h3 class="h-white">Accounting For War, Again</h3>
+        <p class="h-white">During World War II, 20,300 men and women of the Swift organization were called to serve in the military and auxiliary services. Though this is a time of struggle, the demand for meat is so high that Swift can continue to operate at total capacity, and sales exceed $1.4 billion. 
+        </p>
+    </div>
 </section>
 <?php get_footer(); ?>

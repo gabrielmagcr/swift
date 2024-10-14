@@ -562,4 +562,25 @@
 
 .year-1924{
     background: #C61A1D;
+    .left-1924{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 0 40px; 
+        img{
+            width: 45%;
+            height: 250px;
+        }
+    }
+    .right-1924{
+        .h-text{
+            padding-top: 25px;
+            p{
+                padding-bottom: 100px;
+            }
+        }
+    }
+}
+.year-1943{
+
 }
