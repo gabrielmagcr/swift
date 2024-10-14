@@ -172,9 +172,12 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 </section>
 <section id="1900" class="year-1900">
     <div class="container container-1900">
-        <div class="left-1900 h-images">
+        <div class="left-1900 ">
             <div class="years"><span class="year">1893</span></div>
+            <div class="h-images">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1900/1900.png" alt="SwiftMeats Boat 1900">
+            </div>
+         
         </div>
         <div class="right-1900 h-text">
             <h3>The Year We Set Sail</h3>

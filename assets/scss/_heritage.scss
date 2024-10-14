@@ -470,8 +470,38 @@
         }
 
         p {
-            padding-bottom: 40px;
+            padding-bottom: 60px;
         }
     }
 
+}
+.year-1900{
+    background-color: #FFAA2B;
+
+    .left-1900{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        top: -40px;
+        .years{
+            position: absolute;
+            z-index: 10;
+            color: #FFAA2B;
+            background-color: white;
+        }
+        .h-images{
+            display: flex;
+            justify-content: flex-end; 
+            img{
+                width: 80%;
+                margin-right: -15px; 
+            }
+        }
+    }
+    .right-1900{
+        p{
+            padding-bottom: 60px;
+        }
+    }
 }
