@@ -203,12 +203,14 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 </section>
 <section id="1915" class="year-1915">
     <div class="container container-1915">
-        <div class="left-1915">    
-    <div class="h-text">
-            <h3>Safety above all</h3>
-            <p>Swift creates a ‘Safety First’ campaign to ensure the safety of its employees. This campaign cuts plant accidents in half.
-            </p>
-        </div></div>
+        <div class="left-1915">
+            <div class="years"><span class="year">1915</span></div>
+            <div class="h-text">
+                <h3>Safety above all</h3>
+                <p>Swift creates a ‘Safety First’ campaign to ensure the safety of its employees. This campaign cuts plant accidents in half.
+                </p>
+            </div>
+        </div>
         <div class="right-1915 h-images">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1915/1915-1.png" alt="Safety First SwiftMeats-1"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1915/1915-2.png" alt="Safety First SwiftMeats-2">
         </div>
