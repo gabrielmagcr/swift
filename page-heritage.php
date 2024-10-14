@@ -156,7 +156,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 </section>
 <section id="1893" class="year-1893">
     <div class="container">
-        <div class="left-1893">
+        <div class="left-1893 h-images">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1893/1893.png" alt="Northwestern University SwiftMeats">
         </div>
         <div class="right-1893">
@@ -167,6 +167,18 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
                 <h3 class="h-white">In Memory: Annie May Swift</h3>
                 <p class="h-white">Northwestern University decides to build a headquarters for its new School of Oratory and turns to Gustavus. His donation of $12,500 came with the right to name the building. In remembrance of his sweet daughter, Annie May, a former Northwestern student who passed in 1889, Gustavus officially names the building Annie May Swift Hall.</p>
             </div>
+        </div>
+    </div>
+</section>
+<section id="1900" class="year-1900">
+    <div class="container container-1900">
+        <div class="left-1900 h-images">
+            <div class="years"><span class="year">1893</span></div>
+            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1900/1900.png" alt="SwiftMeats Boat 1900">
+        </div>
+        <div class="right-1900 h-text">
+            <h3>The Year We Set Sail</h3>
+            <p>By 1900, Swift has meat-packing plants across the Midwest, from Kansas City, Missouri, to St. Paul, Minnesota. From starting at home in Massachusetts and moving on to Chicago, Gustavus's vision for his business goes beyond his initial thoughts, and he opens Swift shops overseas in London, England.</p>
         </div>
     </div>
 </section>
