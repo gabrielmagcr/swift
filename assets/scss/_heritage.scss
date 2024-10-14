@@ -588,4 +588,26 @@
         position: relative;
         top: -130px;
     }
+    .left-1943{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: -90px;
+        .years{
+            position: absolute;
+            margin-bottom: 90px;
+        }
+        .h-images{
+            width: 90%;
+            margin-left: -15px;
+        }
+    }
+    .right-1943{
+        h3{
+            padding-top: 40px;
+        }
+        p{
+            padding-bottom: 40px;
+        }
+    }
 }
