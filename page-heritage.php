@@ -210,7 +210,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             </p>
         </div></div>
         <div class="right-1915 h-images">
-            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1915-1/1915-1.png" alt=""><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1915-2/1915-2.png" alt="">
+            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1915/1915-1.png" alt="Safety First SwiftMeats-1"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1915/1915-2.png" alt="Safety First SwiftMeats-2">
         </div>
     </div>
 </section>
