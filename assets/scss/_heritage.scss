@@ -507,14 +507,32 @@
         }
     }
 }
+
+
 .year-1903{
+    background-color: white;
+
+    .left-1903{
+        display: flex;
+        align-items: center;
+        .years{
+            position: absolute;
+            .year{
+                left: 3px;
+            }
+        }
+    }
     .right-1903{
-        .h-text h3{
+        .years{
+            display: none;
+        }
+        h3{
             font-family: "TrendSansFour";
+            font-size: 3.5rem;
         }
     }
     .bg-1903 {
         background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903-bg.jpg') no-repeat  center / cover;
-        height: 40dvh;
+        height: 400px;
     }
 }
