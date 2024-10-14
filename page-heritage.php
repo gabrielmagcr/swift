@@ -157,7 +157,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 <section id="1893" class="year-1893">
     <div class="container">
         <div class="left-1893">
-            <img src="" alt="">
+            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1893/1893.png" alt="Northwestern University SwiftMeats">
         </div>
         <div class="right-1893">
         <div class="years"><span class="year">1893</span></div>
