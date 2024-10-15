@@ -168,7 +168,7 @@
     background: #FFAA2B;
     height: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     position: sticky;
     top: 80px;
     z-index: 100;
@@ -288,12 +288,14 @@
     }
 
     @media (min-width:1023px) {
+        .h-images {
         .dollar-1885 {
             display: block;
             position: sticky;
             height: 100%;
         }
     }
+}
 }
 
 .year-1861-1862 {
@@ -624,7 +626,7 @@
         position: relative;
         top: -130px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
     }
     .left-1943{
         display: flex;

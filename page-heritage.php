@@ -26,7 +26,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
 </section>
 <section class="dates-badge">
-    <div class="dates hideScrollbar">
+    <div class="dates hideScrollbar" id="1855">
         <div class="date date-active"><a href="#1855"><img src="<?php echo $swiftImg ?>"><span>1855</span></a></div>
         <div class="date"><a href="#1861"><img src="<?php echo $swiftImg ?>"><span>1861</span></a></div>
         <div class="date"><a href="#1862"><img src="<?php echo $swiftImg ?>"><span>1862</span></a></div>
@@ -38,12 +38,12 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         <div class="date"><a href="#1900"><img src="<?php echo $swiftImg ?>"><span>1900</span></a></div>
         <div class="date"><a href="#1903"><img src="<?php echo $swiftImg ?>"><span>1903</span></a></div>
         <div class="date"><a href="#1915"><img src="<?php echo $swiftImg ?>"><span>1915</span></a></div>
-        <div class="date"><a href="1924"><img src="<?php echo $swiftImg ?>"><span>1924</span></a></div>
+        <div class="date"><a href="#1924"><img src="<?php echo $swiftImg ?>"><span>1924</span></a></div>
         <div class="date"><a href="#1943"><img src="<?php echo $swiftImg ?>"><span>1943</span></a></div>
         <div class="date"><a href="#1964"><img src="<?php echo $swiftImg ?>"><span>1964</span></a></div>
     </div>
 </section>
-<section id="1855" class="year-1855">
+<section class="year-1855">
     <div class="container">
         <div class="years"><span class="year">1855</span></div>
         <div class="h-text">
@@ -56,10 +56,10 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             <div class="dollar-1885"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/20.png" alt="20$ 1855"></div>
             <div class="first-store-1885"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/Frame216.png" alt="Swift Meats First Store"></div>
         </div>
-        <div class="cow-1885">
+    </div>
+    <div class="cow-1885">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/cow.png" alt="Cow SwiftMeats">
         </div>
-    </div>
 </section>
 <section id="1861" class="year-1861-1862">
     <div class="container">
