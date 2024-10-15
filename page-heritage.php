@@ -3,7 +3,7 @@
 $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/OurStory/SWIFT.svg"
 ?>
 <section class="hero-heritage">
-    <div class="container">
+    <div class="container container-heritage">
         <div class="h-h-our-story">
             <h1>Our Story</h1>
             <p>At age 16, Gustavus Swift founds his butcher shop business in Eastham, Massachusetts. With help from his family, Swift’s father advances him $20 for a heifer, with which he makes a $10 profit. Later, his uncle lends him $400 to start his business in earnest.</p>
