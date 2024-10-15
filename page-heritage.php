@@ -44,7 +44,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
 </section>
 <section class="year-1855">
-    <div class="container">
+    <div class="container container-1855">
         <div class="years"><span class="year">1855</span></div>
         <div class="h-text">
             <h3 class="h-white">From a Dream <br>
@@ -57,7 +57,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             <div class="first-store-1885"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/Frame216.png" alt="Swift Meats First Store"></div>
         </div>
     </div>
-    <div class="cow-1885">
+    <div class="cow-1885 container">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/cow.png" alt="Cow SwiftMeats">
         </div>
 </section>
