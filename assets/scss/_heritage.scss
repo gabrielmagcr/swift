@@ -163,10 +163,12 @@
     }
 }
 
+
 .dates-badge {
     background: #FFAA2B;
     height: 100px;
     display: flex;
+    justify-content: center;
     position: sticky;
     top: 80px;
     z-index: 100;
@@ -176,8 +178,9 @@
         display: flex;
         gap: 40px;
         align-items: center;
-        overflow-x: scroll;
+        
     }
+    
 
     .date span {
         color: #C61A1D;
@@ -214,7 +217,14 @@
         left: 13px;
     }
 }
-
+.hideScrollbar{
+    overflow-x: scroll;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+.hideScrollbar::-webkit-scrollbar{
+    display: none;
+}
 .h-white {
     color: #fff;
 }
@@ -610,10 +620,11 @@
 }
 .year-1943{
     .news-1943{
-        overflow-x: scroll;
         padding: 0 20px;
         position: relative;
         top: -130px;
+        display: flex;
+        justify-content: center;
     }
     .left-1943{
         display: flex;

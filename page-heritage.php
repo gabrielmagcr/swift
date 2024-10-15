@@ -26,7 +26,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
 </section>
 <section class="dates-badge">
-    <div class="dates">
+    <div class="dates hideScrollbar">
         <div class="date date-active"><a href="#1855"><img src="<?php echo $swiftImg ?>"><span>1855</span></a></div>
         <div class="date"><a href="#1861"><img src="<?php echo $swiftImg ?>"><span>1861</span></a></div>
         <div class="date"><a href="#1862"><img src="<?php echo $swiftImg ?>"><span>1862</span></a></div>
@@ -233,7 +233,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 
 </section>
 <section id="1943" class="year-1943">
-    <div class="news-1943">
+    <div class="news-1943 hideScrollbar">
         <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1943/1943-news.png" alt="SwiftMeat WW2">
     </div>
     <div class="container container-1943">
