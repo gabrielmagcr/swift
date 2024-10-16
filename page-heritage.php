@@ -24,9 +24,10 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             <span>Discover the timeline of events that made Swift the brand it is today.</span>
         </div>
     </div>
+    <div id="1855"></div>
 </section>
 <section class="dates-badge">
-    <div class="dates hideScrollbar" id="1855">
+    <div class="dates hideScrollbar" >
         <div class="date date-active"><a href="#1855"><img src="<?php echo $swiftImg ?>"><span>1855</span></a></div>
         <div class="date"><a href="#1861"><img src="<?php echo $swiftImg ?>"><span>1861</span></a></div>
         <div class="date"><a href="#1862"><img src="<?php echo $swiftImg ?>"><span>1862</span></a></div>
