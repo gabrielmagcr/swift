@@ -290,12 +290,42 @@
     @media (min-width:1023px) {
         .container-1855{
             display: flex;
+            padding-top: 150px;
+            gap: 50px;
+            max-width: 100%;
+            margin-right: -15px;
+
+            .h-text{
+                width: 55%;
+                margin-right: -70px;
+            }
         }
         .h-images {
+            display: flex;
+
         .dollar-1885 {
             display: block;
-            position: sticky;
-            height: 100%;
+            position: relative;
+            left: 55px;
+            img{
+                padding-top: 25px;
+                position: sticky;
+                z-index: 10;
+                top: 200px; 
+            }
+        }
+        .years{
+            font-size: 3rem;
+            width: 150px;
+            height: 150px;
+            .year{
+                top: 36px;
+
+            }
+        }
+        .cow-1885 img {
+            width: 300px;
+            margin: 25px 0 0 190px;
         }
     }
 }
