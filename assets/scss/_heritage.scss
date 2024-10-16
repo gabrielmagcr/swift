@@ -79,14 +79,15 @@
             max-width: 1000px;
             z-index: 10;
             position: relative;
+
             h1 {
                 content: "Our <br> Story";
                 font-size: 7rem;
             }
-          
+
         }
 
-      
+
 
         .h-h-biography {
             display: flex;
@@ -120,29 +121,35 @@
     }
 
     @media (min-width:1439px) {
-        .container-heritage{
+        .container-heritage {
             max-width: 1400px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .h-h-our-story{
+
+        .h-h-our-story {
             max-width: 100%;
-            h1{
+
+            h1 {
                 font-size: 9rem;
             }
-            p{
+
+            p {
                 padding-top: 20px;
             }
         }
-        .h-h-biography{
+
+        .h-h-biography {
             top: -90px;
             left: 20px;
 
         }
-        .h-h-biography-left img{
+
+        .h-h-biography-left img {
             width: 380px;
         }
+
         .h-h-biography-end {
             margin-bottom: 215px;
             left: -215px;
@@ -178,9 +185,9 @@
         display: flex;
         gap: 40px;
         align-items: center;
-        
+
     }
-    
+
 
     .date span {
         color: #C61A1D;
@@ -217,14 +224,17 @@
         left: 13px;
     }
 }
-.hideScrollbar{
+
+.hideScrollbar {
     overflow-x: scroll;
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
-.hideScrollbar::-webkit-scrollbar{
+
+.hideScrollbar::-webkit-scrollbar {
     display: none;
 }
+
 .h-white {
     color: #fff;
 }
@@ -288,39 +298,44 @@
     }
 
     @media (min-width:1023px) {
-        .container-1855{
+        .container-1855 {
             display: flex;
             padding-top: 150px;
             gap: 50px;
             max-width: 100%;
             margin-right: -15px;
 
-            .h-text{
+            .h-text {
                 width: 55%;
                 margin-right: -70px;
             }
+
+            .years {
+                font-size: 3rem;
+                width: 150px;
+                height: 150px;
+
+                .year {
+                    top: 36px;
+
+                }
+            }
         }
+
         .h-images {
             display: flex;
 
-        .dollar-1885 {
-            display: block;
-            position: relative;
-            left: 55px;
-            img{
-                padding-top: 25px;
-                position: sticky;
-                z-index: 10;
-                top: 200px; 
-            }
-        }
-        .years{
-            font-size: 3rem;
-            width: 150px;
-            height: 150px;
-            .year{
-                top: 36px;
+            .dollar-1885 {
+                display: block;
+                position: relative;
+                left: 55px;
 
+                img {
+                    padding-top: 25px;
+                    position: sticky;
+                    z-index: 10;
+                    top: 200px;
+                }
             }
         }
         .cow-1885 img {
@@ -328,7 +343,6 @@
             margin: 25px 0 0 190px;
         }
     }
-}
 }
 
 .year-1861-1862 {
@@ -547,16 +561,18 @@
     }
 
 }
-.year-1900{
+
+.year-1900 {
     background-color: #FFAA2B;
 
-    .left-1900{
+    .left-1900 {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         position: relative;
         top: -40px;
-        .years{
+
+        .years {
             position: absolute;
             z-index: 10;
             color: #FFAA2B;
@@ -564,181 +580,213 @@
             left: 20px;
 
         }
-        .h-images{
+
+        .h-images {
             display: flex;
-            justify-content: flex-end; 
-            img{
+            justify-content: flex-end;
+
+            img {
                 width: 80%;
-                margin-right: -15px; 
+                margin-right: -15px;
             }
         }
     }
-    .right-1900{
-        p{
+
+    .right-1900 {
+        p {
             padding-bottom: 60px;
         }
     }
 }
 
 
-.year-1903{
+.year-1903 {
     background-color: white;
 
-    .left-1903{
+    .left-1903 {
         display: flex;
         align-items: center;
-        .years{
+
+        .years {
             position: absolute;
-            .year{
+
+            .year {
                 left: 3px;
             }
         }
     }
-    .right-1903{
-        .years{
+
+    .right-1903 {
+        .years {
             display: none;
         }
-        h3{
+
+        h3 {
             font-family: "TrendSansFour";
             font-size: 3.5rem;
         }
     }
+
     .bg-1903 {
-        background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903-bg.jpg') no-repeat  center / cover;
+        background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903-bg.jpg') no-repeat center / cover;
         height: 400px;
     }
 }
 
-.year-1915{
+.year-1915 {
     background: #FFAA2B;
-    .left-1915{
-        .years{
+
+    .left-1915 {
+        .years {
             color: #FFAA2B;
             background-color: white;
             position: relative;
             top: -50px;
             left: 15px;
         }
-        .h-text{
+
+        .h-text {
             margin-top: -20px;
         }
     }
-    .right-1915{
+
+    .right-1915 {
         display: flex;
         flex-direction: column;
         gap: 20px;
         padding-bottom: 40px;
-    
+
     }
 }
 
-.year-1924{
+.year-1924 {
     background: #C61A1D;
-    .left-1924{
+
+    .left-1924 {
         display: flex;
         justify-content: center;
         gap: 20px;
-        padding: 50px 0 40px; 
-        img{
+        padding: 50px 0 40px;
+
+        img {
             width: 45%;
             height: 250px;
         }
     }
-    .right-1924{
-        .h-text{
+
+    .right-1924 {
+        .h-text {
             padding-top: 25px;
-            p{
+
+            p {
                 padding-bottom: 150px;
             }
         }
     }
 }
-.year-1943{
-    .news-1943{
+
+.year-1943 {
+    .news-1943 {
         padding: 0 20px;
         position: relative;
         top: -130px;
         display: flex;
         justify-content: flex-start;
     }
-    .left-1943{
+
+    .left-1943 {
         display: flex;
         align-items: center;
         justify-content: flex-end;
         margin-top: -90px;
-        .years{
+
+        .years {
             position: absolute;
             margin-bottom: 90px;
         }
-        .h-images{
+
+        .h-images {
             width: 90%;
             margin-left: -15px;
         }
     }
-    .right-1943{
-        h3{
+
+    .right-1943 {
+        h3 {
             padding-top: 40px;
         }
-        p{
+
+        p {
             padding-bottom: 40px;
         }
     }
 }
 
-.year-1964{
+.year-1964 {
     background-color: white;
-    .left-1964{
-        background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1964/pig.svg') no-repeat  center / cover;
+
+    .left-1964 {
+        background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1964/pig.svg') no-repeat center / cover;
         padding: 40px 0;
-        .years{
-            .year{
+
+        .years {
+            .year {
                 left: 7px;
 
             }
         }
-        .h-text{
+
+        .h-text {
             padding-top: 30px;
         }
     }
-    .right-1964{
-     padding: 20px 0 40px; 
-        .h-images{
+
+    .right-1964 {
+        padding: 20px 0 40px;
+
+        .h-images {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;   
-            img{
+            gap: 20px;
+
+            img {
                 width: 50%;
             }
         }
     }
 
 }
-.year-today{
+
+.year-today {
     background: #FFAA2B;
-    .today-banner{
-        background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/today/today.webp') no-repeat  center / cover;
+
+    .today-banner {
+        background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/today/today.webp') no-repeat center / cover;
         height: 20dvh;
     }
-    .left-today{
-        .years{
+
+    .left-today {
+        .years {
             font-size: 1.6rem;
             width: 115px;
             height: 115px;
             position: relative;
             top: -40px;
-        
-            .year{
+
+            .year {
                 top: 40px;
                 left: 7px;
             }
         }
-        .h-text{
+
+        .h-text {
             margin-top: -10px;
         }
     }
-    .right-today{
-        span{
+
+    .right-today {
+        span {
             padding-bottom: 40px;
         }
     }
