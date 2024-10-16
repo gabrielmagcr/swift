@@ -387,7 +387,12 @@
                 }
                
             } 
-               
+            .h-text{
+                width: 30%;
+                h3{
+                    font-size: 4rem;
+                }
+            }   
             
         }
         .cow-1885{
@@ -395,6 +400,32 @@
                 margin: 25px 0 0 210px;
             }
         } 
+    }
+    @media (min-width:1900px) {
+        .container-1855{
+            .h-text{
+                width: 30%;
+                h3{
+                    font-size: 4rem;
+                }
+            }   
+            .h-images{
+                .first-store-1885{
+                    img {
+                        width: 700px;
+                        height: 500px;
+                    }
+                }
+                .dollar-1885{
+                    img{
+                        width: 200px;
+                    }
+                }
+                
+            } 
+        }
+    
+        
     }
 }
 
