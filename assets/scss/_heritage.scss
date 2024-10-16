@@ -223,6 +223,9 @@
         top: 3px;
         left: 13px;
     }
+    @media (min-width:1439px) {
+        justify-content: center;
+    }
 }
 
 .hideScrollbar {
@@ -269,6 +272,26 @@
         left: 10px;
 
     }
+    @media (min-width:1023px) {
+            font-size: 3rem;
+            width: 150px;
+            height: 150px;
+            .year {
+                top: 36px;
+
+            }
+        
+        
+    }
+    @media (min-width:1439px) {
+        font-size: 3.5rem;
+        width: 200px;
+        height: 200px;
+        .year{
+            top: 55px;
+            left: 25px;
+        }
+    }
 }
 
 .year-1855 {
@@ -300,30 +323,31 @@
     @media (min-width:1023px) {
         .container-1855 {
             display: flex;
-            padding-top: 150px;
+            justify-content: flex-end;
+            padding-top: 100px;
             gap: 50px;
             max-width: 100%;
-            margin-right: -15px;
-
+            margin-right: 0;
+            padding-right: 0;
             .h-text {
                 width: 55%;
                 margin-right: -70px;
             }
 
             .years {
-                font-size: 3rem;
-                width: 150px;
-                height: 150px;
-
-                .year {
-                    top: 36px;
-
-                }
+                padding-right: 30px;
             }
         }
 
         .h-images {
             display: flex;
+
+            .first-store-1885 {
+                img {
+                    width: 400px;
+                    height: 350px;
+                }
+            }
 
             .dollar-1885 {
                 display: block;
@@ -335,13 +359,42 @@
                     position: sticky;
                     z-index: 10;
                     top: 200px;
+                    width: 150px;
                 }
             }
         }
-        .cow-1885 img {
-            width: 300px;
-            margin: 25px 0 0 190px;
+
+        .cow-1885{
+            img {
+                width: 300px;
+                margin: 25px 0 0 180px;
+            }
+        } 
+    }
+    @media (min-width:1439px) {
+        .container-1855{
+            .years{
+                margin-left: 150px;
+                margin-top: 0;
+                padding-right: 30px;
+            }
+            .h-images{
+                .first-store-1885{
+                    img {
+                        width: 630px;
+                        height: 450px;
+                    }
+                }
+               
+            } 
+               
+            
         }
+        .cow-1885{
+            img {
+                margin: 25px 0 0 210px;
+            }
+        } 
     }
 }
 
