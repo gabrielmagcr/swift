@@ -376,7 +376,7 @@
             .years{
                 margin-left: 150px;
                 margin-top: 0;
-                padding-right: 30px;
+                padding-right: 60px;
             }
             .h-images{
                 .first-store-1885{
@@ -392,7 +392,7 @@
         }
         .cow-1885{
             img {
-                margin: 25px 0 0 210px;
+                margin: 25px 0 0 250px;
             }
         } 
     }
@@ -403,6 +403,10 @@
                 h3{
                     font-size: 4rem;
                 }
+                p{
+                    width: 75%;
+                    font-size: 1.2rem;
+                }
             }   
             .h-images{
                 .first-store-1885{
@@ -412,15 +416,20 @@
                     }
                 }
                 .dollar-1885{
+                    left: 115px;
                     img{
-                        width: 200px;
+                        width: 230px;
                     }
                 }
                 
             } 
         }
     
-        
+        .cow-1885{
+            img {
+                margin: 0px 0 0 75px;
+        } 
+        }
     }
 }
 
