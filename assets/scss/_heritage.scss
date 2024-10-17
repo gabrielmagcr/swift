@@ -477,6 +477,7 @@
             display: flex;
             gap: 70px;
             margin-right: -45px;
+            padding-top: 30px;
           .h-images{
             img {
                 width: 400px;
@@ -484,13 +485,27 @@
           } 
           .love-1861{
             justify-content: flex-end;
+            width: 700px;
             p{
                 padding-bottom: 30px;
+                width: 500px;
             }
           }
           .years{
             right: -50px;
           }
+        }
+        @media (min-width:1439px) {
+            gap: 140px;
+            margin-right: -150px;
+            .h-images{
+                img {
+                    width: 4750px;
+                  }
+              } 
+              .years{
+                right: -100px;
+              }
         }
     }
 
@@ -516,6 +531,16 @@
             .h-images{
                 img{
                     width: 400px;
+                }
+            }
+        }
+        @media (min-width:1439px) {
+            gap: 140px;
+            padding-bottom: 60px;
+            .h-images{
+                margin-right: -30px;
+                img{
+                    width: 500px;
                 }
             }
         }
