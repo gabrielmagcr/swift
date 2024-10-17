@@ -575,7 +575,10 @@
             padding-top: 50px;
             gap: 40px;
             .left-1872 {
-                width: 70%;
+                width: auto;
+                img{
+                    width: 600px;
+                }
             }
             .right-1872{
                 width: 50%;
@@ -585,6 +588,23 @@
                 .h-text{
                     margin: 30px 0;
 
+                }
+            }
+        }
+        @media (min-width:1439px) {
+            .left-1872{
+                margin-left: -150px;
+                img{
+                    width: 700px;
+                }
+            }
+        }
+        @media (min-width:1900px) {
+            padding-top: 100px;
+            .left-1872{
+                margin-left: -250px;
+                img{
+                    width: 900px;
                 }
             }
         }
