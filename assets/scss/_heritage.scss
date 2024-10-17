@@ -473,6 +473,25 @@
             justify-content: center;
 
         }
+        @media (min-width:1023px) {
+            display: flex;
+            gap: 70px;
+            margin-right: -45px;
+          .h-images{
+            img {
+                width: 400px;
+              }
+          } 
+          .love-1861{
+            justify-content: flex-end;
+            p{
+                padding-bottom: 30px;
+            }
+          }
+          .years{
+            right: -50px;
+          }
+        }
     }
 
     .container-1862 {
@@ -490,6 +509,15 @@
 
         .right-1862 {
             padding-bottom: 50px;
+        }
+        @media (min-width:1023px) {
+            display: flex;
+            gap: 70px;
+            .h-images{
+                img{
+                    width: 400px;
+                }
+            }
         }
     }
 }
