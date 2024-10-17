@@ -233,7 +233,10 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
-
+.empty-div{
+    width: 0;
+    height: 0;
+}
 .hideScrollbar::-webkit-scrollbar {
     display: none;
 }
@@ -317,7 +320,7 @@
 
     .cow-1885 img {
         width: 50%;
-        margin: 25px 0;
+        margin: 25px 0 0;
     }
 
     @media (min-width:1023px) {
