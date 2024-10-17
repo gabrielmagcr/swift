@@ -76,10 +76,11 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
                 <h3>A love through war</h3>
                 <p>A new chapter begins as Gustavus marries Annie Maria Higgins. As their love blooms, war ensues around them. The American Civil War causes many disruptions in daily life, but the beef industry grows significantly. There is substantial demand for food to supply the Union and Confederate armies, and beef, a primary protein source, is high in demand.</p>
             </div>
+        <div id='1862' class="empty-div"></div>
         </div>
         <div class="container-1862">
             <div class="left-1862">
-                <div class="years"><span class="year">1861</span></div>
+                <div class="years"><span class="year">1862</span></div>
 
                 <div class="matrimony-1862 h-text">
                     <h3>Meat & Matrimony</h3>

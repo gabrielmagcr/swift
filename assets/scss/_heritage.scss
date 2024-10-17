@@ -486,6 +486,7 @@
           .love-1861{
             justify-content: flex-end;
             width: 700px;
+            height: 500px;
             p{
                 padding-bottom: 30px;
                 width: 500px;
@@ -500,7 +501,7 @@
             margin-right: -150px;
             .h-images{
                 img {
-                    width: 4750px;
+                    width: 500px;
                   }
               } 
               .years{
@@ -569,7 +570,24 @@
                 margin-top: -60px;
             }
         }
+        @media (min-width:1023px) {
+            display: flex;
+            padding-top: 50px;
+            gap: 40px;
+            .left-1872 {
+                width: 70%;
+            }
+            .right-1862{
+                width: 50%;
+                .years{
+                    top: 0;
+                }
+                .h-text{
+                    margin: 30px 0;
 
+                }
+            }
+        }
     }
 
     .container-1875 {
