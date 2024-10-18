@@ -1042,6 +1042,38 @@
             margin-bottom: 0;
         }
     }
+    @media (min-width:1023px) {
+
+        .container-1900{
+            display: flex;
+            flex-direction: row-reverse;
+            height: 400px;
+            align-items: center;
+            .left-1900{
+                top: -100px;
+                .years{
+                    left: 35px;
+                    width: 165px;
+                    height: 165px;
+                    .year{
+                        top: 45px;
+                        left: 7px;
+                    }
+                }
+                .h-images{
+                    img{
+                        width: 425px;
+                    }
+                }
+            }
+            .right-1900{
+                margin-top: -40px;
+                p{
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
 }
 
 
