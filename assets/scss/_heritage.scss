@@ -1378,14 +1378,19 @@
     }
     @media (min-width:1023px) {
         display: flex;
+        gap: 100px;
+        padding-bottom: 75px;
         .left-1943{
+            justify-content: normal;
+            position: relative;
             .h-images{
                 img{
-                    width: 500px;
+                    width: 450px;
                 }
             }
             .years{
-                position: relative;
+                right: -85px;
+                bottom: 170px;
             }
         }
     }
