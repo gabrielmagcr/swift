@@ -1370,11 +1370,13 @@
         .left-1943 {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: flex-start;
             margin-top: -90px;
-
+            position: relative;
             .years {
                 position: absolute;
+                right: 0;
+                top: 5%;
                 margin-bottom: 90px;
             }
 
@@ -1393,7 +1395,13 @@
                 padding-bottom: 40px;
             }
         }
-
+        @media (min-width:767px) {
+            .left-1943{
+                .years{
+                    right: 40px;
+                }
+            }
+        }
         @media (min-width:1023px) {
             display: flex;
             align-items: center;
@@ -1402,7 +1410,6 @@
 
             .left-1943 {
                 justify-content: normal;
-                position: relative;
                 margin-top: 0;
 
                 .h-images {
@@ -1431,10 +1438,13 @@
 
         @media (min-width:1439px) {
             max-width: 1300px;
-
+            gap: 140px;
             .left-1943 {
                 .years {
                     right: -115px;
+                    .year{
+                        top: 60px;
+                    }
                 }
 
                 .h-images {
