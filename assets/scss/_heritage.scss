@@ -1179,6 +1179,13 @@
                     }
                 }
             }
+            .right-1903{
+                .years{
+                    .year{
+                        left: 14px;
+                    }
+                }
+            }
         }
     }
 }
@@ -1190,6 +1197,12 @@
         
         @media (min-width:1023px) {
         height: 75dvh;
+         }
+         @media (min-width:1800px) {
+            height: 1600px;
+         }
+         @media (min-width:2300px) {
+            height: 1850px;
          }
     }
    
