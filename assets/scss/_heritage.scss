@@ -1092,6 +1092,7 @@
                 .years {
                     width: 185px;
                     height: 185px;
+
                     .year {
                         top: 50px;
                         left: 5px;
@@ -1114,74 +1115,83 @@
 
 .year-1903 {
     background-color: white;
-    .container-1903{
+
+    .container-1903 {
         .left-1903 {
             display: flex;
             align-items: center;
-    
+
             .years {
                 position: absolute;
-    
+
                 .year {
                     left: 3px;
                 }
             }
         }
-    
+
         .right-1903 {
             .years {
                 display: none;
             }
-    
+
             h3 {
                 font-family: "TrendSansFour";
                 font-size: 3.5rem;
             }
         }
+
         @media (min-width:1023px) {
             display: flex;
             flex-direction: row-reverse;
             padding-top: 40px;
             gap: 50px;
-        
+
             .right-1903 {
                 .years {
                     display: block;
-                    .year{
+
+                    .year {
                         left: 6px;
                     }
                 }
-                h3{
+
+                h3 {
                     padding: 40px 0 30px;
                 }
-                p{
+
+                p {
                     width: 500px;
                 }
             }
+
             .left-1903 {
-                .years{
+                .years {
                     display: none;
                 }
-                .h-images{
-                    img{
-                       width: 375px; 
+
+                .h-images {
+                    img {
+                        width: 375px;
                     }
                 }
             }
-            
+
         }
+
         @media (min-width:1439px) {
             .left-1903 {
-            
-                .h-images{
-                    img{
-                       width: 500px; 
+
+                .h-images {
+                    img {
+                        width: 500px;
                     }
                 }
             }
-            .right-1903{
-                .years{
-                    .year{
+
+            .right-1903 {
+                .years {
+                    .year {
                         left: 14px;
                     }
                 }
@@ -1189,48 +1199,86 @@
         }
     }
 }
-    
 
-    .bg-1903 {
-        background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903-bg.jpg') no-repeat center / cover;
-        height: 400px;
-        
-        @media (min-width:1023px) {
+
+.bg-1903 {
+    background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903-bg.jpg') no-repeat center / cover;
+    height: 400px;
+
+    @media (min-width:1023px) {
         height: 75dvh;
-         }
-         @media (min-width:1800px) {
-            height: 1600px;
-         }
-         @media (min-width:2300px) {
-            height: 1850px;
-         }
     }
-   
+
+    @media (min-width:1439px) {
+        height: 1400px;
+    }
+
+    @media (min-width:1800px) {
+        height: 1600px;
+    }
+
+    @media (min-width:2300px) {
+        height: 1850px;
+    }
+}
+
 
 
 .year-1915 {
     background: #FFAA2B;
 
-    .left-1915 {
-        .years {
-            color: #FFAA2B;
-            background-color: white;
-            position: relative;
-            top: -50px;
-            left: 15px;
+    .container-1915 {
+        .left-1915 {
+            .years {
+                color: #FFAA2B;
+                background-color: white;
+                position: relative;
+                top: -50px;
+                left: 15px;
+            }
+
+            .h-text {
+                margin-top: -20px;
+            }
         }
 
-        .h-text {
-            margin-top: -20px;
+        .right-1915 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 40px;
+
         }
-    }
-
-    .right-1915 {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding-bottom: 40px;
-
+        @media (min-width:1023px) {
+            display: flex;
+            gap: 40px;
+            padding-bottom: 50px;
+            justify-content: center;
+            .right-1915{
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+                padding-top: 40px;
+                img{
+                    width: 300px;
+                }
+            }
+            .left-1915{
+                .h-text{
+                    width: 260px;
+                }
+            }
+        }
+        @media (min-width:1439px) {
+            padding-bottom: 85px;
+            gap: 80px;
+            .right-1915{
+                padding-top: 100PX;
+                img{
+                    width: 450px;
+                }
+            }
+        }
     }
 }
 
