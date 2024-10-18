@@ -1278,22 +1278,30 @@
                     width: 450px;
                 }
             }
+            .left-1915{
+                .years{
+                    top: -95px;
+                }
+            }
         }
     }
 }
 
 .year-1924 {
     background: #C61A1D;
+    .container-1924{
 
+ 
     .left-1924 {
         display: flex;
         justify-content: center;
         gap: 20px;
         padding: 50px 0 40px;
+        flex-direction: row-reverse;
 
         img {
             width: 45%;
-            height: 250px;
+          
         }
     }
 
@@ -1306,6 +1314,18 @@
             }
         }
     }
+    @media (min-width:1023px) {
+        display: flex;
+        padding: 80px 0 200px;
+        gap: 60px;
+        .left-1924{
+            padding: 0;
+        }
+        .right-1924{
+            width: 400px;
+        }
+    }
+}
 }
 
 .year-1943 {
