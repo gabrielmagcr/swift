@@ -1114,36 +1114,86 @@
 
 .year-1903 {
     background-color: white;
-
-    .left-1903 {
-        display: flex;
-        align-items: center;
-
-        .years {
-            position: absolute;
-
-            .year {
-                left: 3px;
+    .container-1903{
+        .left-1903 {
+            display: flex;
+            align-items: center;
+    
+            .years {
+                position: absolute;
+    
+                .year {
+                    left: 3px;
+                }
+            }
+        }
+    
+        .right-1903 {
+            .years {
+                display: none;
+            }
+    
+            h3 {
+                font-family: "TrendSansFour";
+                font-size: 3.5rem;
+            }
+        }
+        @media (min-width:1023px) {
+            display: flex;
+            flex-direction: row-reverse;
+            padding-top: 40px;
+            gap: 50px;
+        
+            .right-1903 {
+                .years {
+                    display: block;
+                    .year{
+                        left: 6px;
+                    }
+                }
+                h3{
+                    padding: 40px 0 30px;
+                }
+                p{
+                    width: 500px;
+                }
+            }
+            .left-1903 {
+                .years{
+                    display: none;
+                }
+                .h-images{
+                    img{
+                       width: 375px; 
+                    }
+                }
+            }
+            
+        }
+        @media (min-width:1439) {
+            .left-1903 {
+            
+                .h-images{
+                    img{
+                       width: 450px; 
+                    }
+                }
             }
         }
     }
-
-    .right-1903 {
-        .years {
-            display: none;
-        }
-
-        h3 {
-            font-family: "TrendSansFour";
-            font-size: 3.5rem;
-        }
-    }
+}
+    
 
     .bg-1903 {
         background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903-bg.jpg') no-repeat center / cover;
         height: 400px;
+        
+        @media (min-width:1023px) {
+        height: 75dvh;
+         }
     }
-}
+   
+
 
 .year-1915 {
     background: #FFAA2B;
