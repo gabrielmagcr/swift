@@ -1393,12 +1393,29 @@
             .years{
                 right: -85px;
                 margin-bottom: 0;
-                bottom: 170px;
+               top: 5%;
             }
         }
         .right-1943{
             h3{
                 padding-top: 0;
+            }
+            p{
+                padding-bottom: 0;
+            }
+        }
+    }
+    @media (min-width:1439px) {
+        max-width: 1300px;
+        .left-1973{
+            .years{
+                right: -115px;
+            }
+            .h-images{
+                img{
+                    width: 760px;
+                
+                }
             }
         }
     }
