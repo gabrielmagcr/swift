@@ -876,7 +876,7 @@
         .container{
             display: flex;
             align-items: center;
-            height: 600px;
+            height: 400px;
             gap: 30px;
             justify-content: center;
             .years{
@@ -889,6 +889,7 @@
         .container{
             gap: 60px;
             max-width: 1200px;
+            height: 600px;
             .years{
                 .year{
                     left: 14px;
@@ -905,31 +906,60 @@
 }
 
 .year-1893 {
-    .left-1893 {
-        padding-top: 40px;
-    }
-
-    .years {
-        position: relative;
-        top: -40px;
-        left: 40px;
-
-        .year {
-            left: 7px;
+    .container-1893{
+        .left-1893 {
+            padding-top: 40px;
         }
-    }
-
-    .h-text {
-
-        h3 {
-            margin-top: -30px;
+    
+        .years {
+            position: relative;
+            top: -40px;
+            left: 40px;
+    
+            .year {
+                left: 7px;
+            }
         }
-
-        p {
-            padding-bottom: 60px;
+    
+        .h-text {
+    
+            h3 {
+                margin-top: -30px;
+            }
+    
+            p {
+                padding-bottom: 60px;
+            }
         }
+ 
+        @media (min-width:1023px) {
+            display: flex;
+            gap: 60px;
+            margin: 100px auto;
+            justify-content: center;
+            .left-1893{
+                padding-top: 0;
+                img{
+                    width: 450px;
+                }
+            }
+            .right-1893{
+                .years{
+                    position: static;
+                }
+                .h-text{
+                    width: 400px;
+                    margin-top: 40px;
+                    p{
+                        padding-bottom: 0;
+                    }
+                }
+            }
+          
+        }
+    
     }
-
+   
 }
 
 .year-1900 {
