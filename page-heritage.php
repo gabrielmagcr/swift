@@ -273,9 +273,9 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 </section>
 <section id="today" class="year-today">
     <div class="today-banner"></div>
+    <div class="years"><span class="year">TODAY</span></div>
     <div class="container container-today">
         <div class="left-today h-text">
-        <div class="years"><span class="year">TODAY</span></div>
             <h3>See what We’re up to now.</h3>
         </div>
         <div class="right-today h-images">
