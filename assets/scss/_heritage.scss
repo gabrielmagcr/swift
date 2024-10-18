@@ -1378,11 +1378,13 @@
     }
     @media (min-width:1023px) {
         display: flex;
+        align-items: center;
         gap: 100px;
-        padding-bottom: 75px;
+        padding-bottom: 105px;
         .left-1943{
             justify-content: normal;
             position: relative;
+            margin-top: 0;
             .h-images{
                 img{
                     width: 450px;
@@ -1390,7 +1392,13 @@
             }
             .years{
                 right: -85px;
+                margin-bottom: 0;
                 bottom: 170px;
+            }
+        }
+        .right-1943{
+            h3{
+                padding-top: 0;
             }
         }
     }
