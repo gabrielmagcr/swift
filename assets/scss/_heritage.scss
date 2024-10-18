@@ -1248,37 +1248,45 @@
             padding-bottom: 40px;
 
         }
+
         @media (min-width:1023px) {
             display: flex;
             gap: 40px;
             padding-bottom: 50px;
             justify-content: center;
-            .right-1915{
+
+            .right-1915 {
                 flex-direction: row;
                 align-items: center;
                 gap: 20px;
                 padding-top: 40px;
-                img{
+
+                img {
                     width: 300px;
                 }
             }
-            .left-1915{
-                .h-text{
+
+            .left-1915 {
+                .h-text {
                     width: 260px;
                 }
             }
         }
+
         @media (min-width:1439px) {
             padding-bottom: 85px;
             gap: 80px;
-            .right-1915{
+
+            .right-1915 {
                 padding-top: 100PX;
-                img{
+
+                img {
                     width: 450px;
                 }
             }
-            .left-1915{
-                .years{
+
+            .left-1915 {
+                .years {
                     top: -95px;
                 }
             }
@@ -1288,52 +1296,59 @@
 
 .year-1924 {
     background: #C61A1D;
-    .container-1924{
 
- 
-    .left-1924 {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 50px 0 40px;
-        flex-direction: row-reverse;
+    .container-1924 {
 
-        img {
-            width: 45%;
-          
-        }
-    }
 
-    .right-1924 {
-        .h-text {
-            padding-top: 25px;
+        .left-1924 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 0 40px;
+            flex-direction: row-reverse;
 
-            p {
-                padding-bottom: 150px;
+            img {
+                width: 45%;
+
             }
         }
-    }
-    @media (min-width:1023px) {
-        display: flex;
-        padding: 80px 0 200px;
-        gap: 60px;
-        .left-1924{
-            padding: 0;
-            img{
-                width: 50%;
+
+        .right-1924 {
+            .h-text {
+                padding-top: 25px;
+
+                p {
+                    padding-bottom: 150px;
+                }
             }
         }
-        .right-1924{
-            width: 450px;
-            .h-text{
-                padding-top: 70px;
-                p{
-                    padding-bottom: 50px;
+
+        @media (min-width:1023px) {
+            display: flex;
+            padding: 80px 0 200px;
+            gap: 60px;
+
+            .left-1924 {
+                padding: 0;
+
+                img {
+                    width: 50%;
+                }
+            }
+
+            .right-1924 {
+                width: 450px;
+
+                .h-text {
+                    padding-top: 70px;
+
+                    p {
+                        padding-bottom: 50px;
+                    }
                 }
             }
         }
     }
-}
 }
 
 .year-1943 {
@@ -1343,83 +1358,94 @@
         top: -130px;
         display: flex;
         justify-content: flex-start;
+
         @media (min-width:1023px) {
             justify-content: center;
         }
     }
-    .container-1943{
+
+    .container-1943 {
 
 
-    .left-1943 {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        margin-top: -90px;
+        .left-1943 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: -90px;
 
-        .years {
-            position: absolute;
-            margin-bottom: 90px;
+            .years {
+                position: absolute;
+                margin-bottom: 90px;
+            }
+
+            .h-images {
+                width: 90%;
+                margin-left: -15px;
+            }
         }
 
-        .h-images {
-            width: 90%;
-            margin-left: -15px;
-        }
-    }
+        .right-1943 {
+            h3 {
+                padding-top: 40px;
+            }
 
-    .right-1943 {
-        h3 {
-            padding-top: 40px;
+            p {
+                padding-bottom: 40px;
+            }
         }
 
-        p {
-            padding-bottom: 40px;
-        }
-    }
-    @media (min-width:1023px) {
-        display: flex;
-        align-items: center;
-        gap: 100px;
-        padding-bottom: 105px;
-        .left-1943{
-            justify-content: normal;
-            position: relative;
-            margin-top: 0;
-            .h-images{
-                img{
-                    width: 450px;
+        @media (min-width:1023px) {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            padding-bottom: 105px;
+
+            .left-1943 {
+                justify-content: normal;
+                position: relative;
+                margin-top: 0;
+
+                .h-images {
+                    img {
+                        width: 450px;
+                    }
+                }
+
+                .years {
+                    right: -85px;
+                    margin-bottom: 0;
+                    top: 5%;
                 }
             }
-            .years{
-                right: -85px;
-                margin-bottom: 0;
-               top: 5%;
-            }
-        }
-        .right-1943{
-            h3{
-                padding-top: 0;
-            }
-            p{
-                padding-bottom: 0;
-            }
-        }
-    }
-    @media (min-width:1439px) {
-        max-width: 1300px;
-        .left-1973{
-            .years{
-                right: -115px;
-            }
-            .h-images{
-                img{
-                    width: 760px;
-                
+
+            .right-1943 {
+                h3 {
+                    padding-top: 0;
+                }
+
+                p {
+                    padding-bottom: 0;
                 }
             }
         }
+
+        @media (min-width:1439px) {
+            max-width: 1300px;
+
+            .left-1943 {
+                .years {
+                    right: -115px;
+                }
+
+                .h-images {
+                    img {
+                        width: 760px;
+
+                    }
+                }
+            }
+        }
     }
-}
 }
 
 .year-1964 {
