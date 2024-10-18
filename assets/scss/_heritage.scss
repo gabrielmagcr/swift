@@ -561,7 +561,7 @@
 
     .container-1872 {
         .left-1872 {
-            padding-top: 50px;
+            padding-top: 70px;
             img{
                 width: 100%;
             }
@@ -642,6 +642,7 @@
         @media (min-width:1023px) {
             flex-direction: row;
             gap: 40px;
+            padding-top: 40px;
             .right-1875{
                 display: block;
                 img{
@@ -660,6 +661,23 @@
                 }
             }
            
+        }
+        @media (min-width:1439px) {
+            padding-top: 60px;
+
+        }
+        @media (min-width:1900px) {
+            padding-top: 100px;
+            margin-left: -50px;
+            gap: 140px;
+            .left-1875{
+                .h-text{
+                    p{
+                        width: 400px;
+                    }
+                }
+            }
+            
         }
     }
 
