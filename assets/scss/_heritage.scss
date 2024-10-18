@@ -793,10 +793,10 @@
             overflow: hidden;
             width: 100%;
             justify-content: center;
-            
+
             img{
                 width: auto;
-                height: 100px;
+                height: 120px;
             }
         }
         .container-1878{
@@ -820,7 +820,36 @@
             }
         }
     }
+    @media (min-width:1439px) {
+        .container-1878{
+            gap: 100px;
+            max-width: 1200px;
+            .left-1878{
+                gap: 100px;
+                .years{
+                    top: 0;
+                }
+            }
+          
+        }
+        .train{
+            img{
+                height: 150px;
+            }
+        }
+       
+    }
+
+    @media (min-width:1900px) {
+        .train{
+            img{
+                height: 170px;
+            }
+        }
+    }
 }
+    
+
 
 
 .year-1880 {
