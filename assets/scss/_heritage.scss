@@ -1543,6 +1543,7 @@
         height: 115px;
         position: relative;
         top: -40px;
+        left: 5%;
         background: white;
         color: #FFAA2B;;
         .year {
@@ -1550,19 +1551,50 @@
             left: 7px;
         }
     }
-    .left-today {
+    .container-today{
+        .left-today {
       
-        .h-text {
-            margin-top: -10px;
+            .h-text {
+                margin-top: -10px;
+            }
+        }
+    
+        .right-today {
+            span {
+                padding-bottom: 40px;
+            }
         }
     }
-
-    .right-today {
-        span {
-            padding-bottom: 40px;
-        }
-    }
+   
     @media (min-width:1023px) {
-        
+        .container-today{
+            display: flex;
+            align-items: center;
+            margin-top: -50px;
+            padding-bottom: 40px;
+            gap: 40px;
+        }
+        .years{
+            font-size: 2rem;
+            width: 150px;
+            height: 150px;
+            top: -65px;
+            .year{
+                top: 50px;
+                left: 10px;
+            }
+        }
+    }
+    @media (min-width:1439px) {
+        .years {
+            font-size: 2.7rem;
+            width: 200px;
+            height: 200px;
+            top: -90px;
+            .year{
+                top: 65px;
+                left: 12px;
+            }
+        }
     }
 }
