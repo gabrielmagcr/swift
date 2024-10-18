@@ -562,7 +562,9 @@
     .container-1872 {
         .left-1872 {
             padding-top: 50px;
-
+            img{
+                width: 100%;
+            }
         }
 
         .right-1872 {
@@ -637,11 +639,30 @@
             top: -170px;
             z-index: 5;
         }
+        @media (min-width:1023px) {
+            flex-direction: row;
+            gap: 40px;
+            .right-1875{
+                display: block;
+                img{
+                    position: static;
+                    width: 100%
+                }
+            }
+            .left-1875{
+                max-width: 45%;
+                .years{
+                    top: 0;
+                }
+                .h-text{
+                    margin-top: 40px;
+                    padding-bottom: 100px;
+                }
+            }
+           
+        }
     }
 
-    img {
-        width: 100%;
-    }
 }
 
 .year-1878 {
