@@ -987,6 +987,7 @@
             gap: 120px;
             max-width: 1200px;
             margin: 140px auto;
+
             .left-1893 {
                 img {
                     width: 500px;
@@ -1042,54 +1043,64 @@
             margin-bottom: 0;
         }
     }
+
     @media (min-width:1023px) {
 
-        .container-1900{
+        .container-1900 {
             display: flex;
             flex-direction: row-reverse;
             height: 400px;
             align-items: center;
-            .left-1900{
+
+            .left-1900 {
                 top: -100px;
-                .years{
+
+                .years {
                     left: 35px;
                     width: 165px;
                     height: 165px;
                     position: relative;
-                    .year{
+
+                    .year {
                         top: 45px;
                         left: 7px;
                     }
                 }
-                .h-images{
-                    img{
+
+                .h-images {
+                    img {
                         width: 425px;
                     }
                 }
             }
-            .right-1900{
+
+            .right-1900 {
                 margin-top: -40px;
-                p{
+
+                p {
                     padding-bottom: 0;
                 }
             }
         }
     }
+
     @media (min-width:1439px) {
-        .container-1900{
+        .container-1900 {
             height: 500px;
-            .left-1900{
-                width: 185px;
-                height: 185px;
-                .years{
-                    .year{
+
+            .left-1900 {
+                .years {
+                    width: 185px;
+                    height: 185px;
+                    .year {
                         top: 50px;
                         left: 5px;
-                
+
                     }
                 }
-                .h-images{
-                    img{
+
+                .h-images {
+                    img {
                         width: 500px;
                         height: 450px;
 
