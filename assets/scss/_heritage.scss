@@ -1055,6 +1055,7 @@
                     left: 35px;
                     width: 165px;
                     height: 165px;
+                    position: relative;
                     .year{
                         top: 45px;
                         left: 7px;
@@ -1070,6 +1071,29 @@
                 margin-top: -40px;
                 p{
                     padding-bottom: 0;
+                }
+            }
+        }
+    }
+    @media (min-width:1439px) {
+        .container-1900{
+            height: 500px;
+            .left-1900{
+                width: 185px;
+                height: 185px;
+                .years{
+                    .year{
+                        top: 50px;
+                        left: 5px;
+                
+                    }
+                }
+                .h-images{
+                    img{
+                        width: 500px;
+                        height: 450px;
+
+                    }
                 }
             }
         }
