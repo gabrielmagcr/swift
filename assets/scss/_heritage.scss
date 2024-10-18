@@ -737,6 +737,7 @@
 .year-1878 {
     .ribbon {
         height: 80px;
+
         img {
             position: relative;
             top: -45px;
@@ -782,11 +783,12 @@
 
 
     @media (min-width:1023px) {
-        .ribbon{
-            img{
+        .ribbon {
+            img {
                 left: 55%;
             }
         }
+
         .train {
             display: flex;
             gap: 10px;
@@ -794,61 +796,69 @@
             width: 100%;
             justify-content: center;
 
-            img{
+            img {
                 width: auto;
                 height: 120px;
             }
         }
-        .container-1878{
+
+        .container-1878 {
             display: flex;
             justify-content: center;
             gap: 30px;
             padding: 60px 0;
             ;
-            .left-1878{
+
+            .left-1878 {
                 flex-direction: row-reverse;
                 gap: 30px;
-                img{
+
+                img {
                     margin: 0;
                     width: 355px;
                     height: 445px;
                 }
-                .years{
+
+                .years {
                     left: 0;
                     position: relative;
                 }
             }
         }
     }
+
     @media (min-width:1439px) {
-        .container-1878{
+        .container-1878 {
             gap: 100px;
             max-width: 1200px;
-            .left-1878{
+
+            .left-1878 {
                 gap: 100px;
-                .years{
+
+                .years {
                     top: 0;
                 }
             }
-          
+
         }
-        .train{
-            img{
+
+        .train {
+            img {
                 height: 150px;
             }
         }
-       
+
     }
 
     @media (min-width:1900px) {
-        .train{
-            img{
+        .train {
+            img {
                 height: 170px;
             }
         }
     }
 }
-    
+
 
 
 
@@ -858,45 +868,51 @@
     .container-1880 {
         background-color: #bf1c1fd6;
         padding-top: 40px;
-        .container{
+
+        .container {
             .years {
                 margin-bottom: 30px;
             }
-        
+
             .year {
                 left: 2px;
             }
-        
+
             .h-images img {
                 padding: 30px 0 40px;
             }
         }
     }
+
     @media (min-width:1023px) {
-        .container{
+        .container {
             display: flex;
             align-items: center;
             height: 400px;
             gap: 30px;
             justify-content: center;
-            .years{
+
+            .years {
                 margin: 0;
                 padding-right: 30px;
             }
         }
     }
+
     @media (min-width:1439px) {
-        .container{
+        .container {
             gap: 60px;
             max-width: 1200px;
             height: 600px;
-            .years{
-                .year{
+
+            .years {
+                .year {
                     left: 14px;
                 }
             }
+
             .h-images {
-                img{
+                img {
                     width: auto;
                     height: 350px;
                 }
@@ -906,60 +922,88 @@
 }
 
 .year-1893 {
-    .container-1893{
+    .container-1893 {
         .left-1893 {
             padding-top: 40px;
         }
-    
+
         .years {
             position: relative;
             top: -40px;
             left: 40px;
-    
+
             .year {
                 left: 7px;
             }
         }
-    
+
         .h-text {
-    
+
             h3 {
                 margin-top: -30px;
             }
-    
+
             p {
                 padding-bottom: 60px;
             }
         }
- 
+
         @media (min-width:1023px) {
             display: flex;
             gap: 60px;
             margin: 100px auto;
             justify-content: center;
-            .left-1893{
+
+            .left-1893 {
                 padding-top: 0;
-                img{
+
+                img {
                     width: 450px;
                 }
             }
-            .right-1893{
-                .years{
+
+            .right-1893 {
+                .years {
                     position: static;
                 }
-                .h-text{
+
+                .h-text {
                     width: 400px;
                     margin-top: 40px;
-                    p{
+
+                    h3 {
+                        margin-top: 0;
+                    }
+
+                    p {
                         padding-bottom: 0;
                     }
                 }
             }
-          
+
         }
-    
+
+        @media (min-width:1439px) {
+            gap: 120px;
+            max-width: 1200px;
+            margin: 140px auto;
+            .left-1893 {
+                img {
+                    width: 500px;
+                }
+            }
+
+            .right-1893 {
+                .years {
+                    .year {
+                        left: 22px;
+                    }
+                }
+            }
+        }
+
     }
-   
+
 }
 
 .year-1900 {
