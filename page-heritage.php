@@ -27,7 +27,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     <div id="1855" class="empty-div"></div>
 </section>
 <section class="dates-badge">
-    <div class="dates hideScrollbar" >
+    <div class="dates hideScrollbar">
         <div class="date date-active"><a href="#1855"><img src="<?php echo $swiftImg ?>"><span>1855</span></a></div>
         <div class="date"><a href="#1861"><img src="<?php echo $swiftImg ?>"><span>1861</span></a></div>
         <div class="date"><a href="#1862"><img src="<?php echo $swiftImg ?>"><span>1862</span></a></div>
@@ -60,11 +60,11 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
     <div class="empty-div" id="1861"></div>
     <div class="cow-1885 container">
-            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/cow.png" alt="Cow SwiftMeats">
-        </div>
-      
+        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1855/cow.png" alt="Cow SwiftMeats">
+    </div>
+
 </section>
-<section  class="year-1861-1862">
+<section class="year-1861-1862">
     <div class="container">
         <div class="container-1861">
             <div class="h-images">
@@ -76,7 +76,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
                 <h3>A love through war</h3>
                 <p>A new chapter begins as Gustavus marries Annie Maria Higgins. As their love blooms, war ensues around them. The American Civil War causes many disruptions in daily life, but the beef industry grows significantly. There is substantial demand for food to supply the Union and Confederate armies, and beef, a primary protein source, is high in demand.</p>
             </div>
-        <div id='1862' class="empty-div"></div>
+            <div id='1862' class="empty-div"></div>
         </div>
         <div class="container-1862">
             <div class="left-1862">
@@ -96,7 +96,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
     <div id='1872' class="empty-div"></div>
 </section>
-<section  class="year-1872">
+<section class="year-1872">
     <div class="container">
         <div class="container-1872">
             <div class="left-1872">
@@ -122,8 +122,8 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             <div class="right-1875">
                 <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1872-1875/1875.png" alt="SwiftMeats 1875">
             </div>
-            <div id='1878' class="empty-div"></div>
         </div>
+        <div id='1878' class="empty-div"></div>
     </div>
 </section>
 <section class="year-1878">
@@ -177,7 +177,6 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
                 <p class="h-white">Northwestern University decides to build a headquarters for its new School of Oratory and turns to Gustavus. His donation of $12,500 came with the right to name the building. In remembrance of his sweet daughter, Annie May, a former Northwestern student who passed in 1889, Gustavus officially names the building Annie May Swift Hall.</p>
             </div>
         </div>
-        <div id='1900' class="empty-div"></div>
 
     </div>
 </section>
@@ -186,6 +185,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         <div class="left-1900 ">
             <div class="years"><span class="year">1900</span></div>
             <div class="h-images">
+                <div id='1900' class="empty-div"></div>
                 <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1900/1900.png" alt="SwiftMeats Boat 1900">
             </div>
 
@@ -197,7 +197,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         <div id='1903' class="empty-div"></div>
     </div>
 </section>
-<section  class="year-1903">
+<section class="year-1903">
     <div class="container container-1903">
         <div class="left-1903">
             <div class="years"><span class="year">1903</span></div>
@@ -228,9 +228,8 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         <div class="right-1915 h-images">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1915/1915-1.png" alt="Safety First SwiftMeats-1"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1915/1915-2.png" alt="Safety First SwiftMeats-2">
         </div>
-        <div id='1924' class="empty-div"></div>
-
     </div>
+    <div id='1924' class="empty-div"></div>
 </section>
 <section class="year-1924">
     <div class="container container-1924">
@@ -245,12 +244,11 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
                 </p>
             </div>
         </div>
-        <div id='1943' class="empty-div"></div>
-
     </div>
+    <div id='1943' class="empty-div"></div>
 
 </section>
-<section  class="year-1943">
+<section class="year-1943">
     <div class="news-1943 hideScrollbar">
         <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1943/1943-news.png" alt="SwiftMeat WW2">
     </div>
@@ -268,17 +266,17 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             </p>
         </div>
         <div id='1964' class="empty-div"></div>
-
     </div>
+
 </section>
 <section class="year-1964">
     <div class="container container-1964">
         <div class="left-1964">
-        <div class="years"><span class="year">1964</span></div>
-        <div class="h-text">
-            <h3>Swift’s Premium Franks For All</h3>
-            <p>Swift wants to remind customers that “meats make the meal nourishing as well as wonderful.” So, in the 1964 issue of Good Housekeeping, we introduce the world to Swift’s Premium Franks.</p>
-        </div>
+            <div class="years"><span class="year">1964</span></div>
+            <div class="h-text">
+                <h3>Swift’s Premium Franks For All</h3>
+                <p>Swift wants to remind customers that “meats make the meal nourishing as well as wonderful.” So, in the 1964 issue of Good Housekeeping, we introduce the world to Swift’s Premium Franks.</p>
+            </div>
         </div>
         <div class="right-1964">
             <div class="h-images">
