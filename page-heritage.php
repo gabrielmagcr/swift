@@ -94,8 +94,9 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             </div>
         </div>
     </div>
+    <div id='1872' class="empty-div"></div>
 </section>
-<section id='1872' class="year-1872">
+<section  class="year-1872">
     <div class="container">
         <div class="container-1872">
             <div class="left-1872">
@@ -108,6 +109,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
                     <p>Swift becomes partner in a new venture named Hathaway and Swift. James A. Hathaway is a renowned meat dealer in Boston, and together they relocate the meat dealing business to Buffalo, New York.</p>
                 </div>
             </div>
+            <div id='1875' class="empty-div"></div>
         </div>
         <div class="container-1875">
             <div class="left-1875">
@@ -120,10 +122,11 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             <div class="right-1875">
                 <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1872-1875/1875.png" alt="SwiftMeats 1875">
             </div>
+            <div id='1878' class="empty-div"></div>
         </div>
     </div>
 </section>
-<section id="1878" class="year-1878">
+<section class="year-1878">
     <div class="ribbon">
         <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/Ribbon.png" alt="Swift Meats Ribbon">
     </div>
@@ -142,9 +145,10 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
     <div class="train">
         <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-1.png" alt="SwiftMeats Train"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-2.png" alt="SwiftMeats Train"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-3.png" alt="SwiftMeats Train">
+        <div id="1880" class="empty-div"></div>
     </div>
 </section>
-<section id="1880" class="year-1880">
+<section class="year-1880">
     <div class="container-1880">
         <div class="container">
             <div class="years"><span class="year">1880</span></div>
@@ -156,9 +160,10 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
                 <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1880/1880.webp" alt="SwiftMeats Refrigerator Line">
             </div>
         </div>
+        <div id='1893' class="empty-div"></div>
     </div>
 </section>
-<section id="1893" class="year-1893">
+<section class="year-1893">
     <div class="container container-1893">
         <div class="left-1893 h-images">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1893/1893.png" alt="Northwestern University SwiftMeats">
@@ -172,9 +177,11 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
                 <p class="h-white">Northwestern University decides to build a headquarters for its new School of Oratory and turns to Gustavus. His donation of $12,500 came with the right to name the building. In remembrance of his sweet daughter, Annie May, a former Northwestern student who passed in 1889, Gustavus officially names the building Annie May Swift Hall.</p>
             </div>
         </div>
+        <div id='1900' class="empty-div"></div>
+
     </div>
 </section>
-<section id="1900" class="year-1900">
+<section class="year-1900">
     <div class="container container-1900">
         <div class="left-1900 ">
             <div class="years"><span class="year">1900</span></div>
@@ -187,9 +194,10 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             <h3>The Year We Set Sail</h3>
             <p>By 1900, Swift has meat-packing plants across the Midwest, from Kansas City, Missouri, to St. Paul, Minnesota. From starting at home in Massachusetts and moving on to Chicago, Gustavus's vision for his business goes beyond his initial thoughts, and he opens Swift shops overseas in London, England.</p>
         </div>
+        <div id='1903' class="empty-div"></div>
     </div>
 </section>
-<section id="1903" class="year-1903">
+<section  class="year-1903">
     <div class="container container-1903">
         <div class="left-1903">
             <div class="years"><span class="year">1903</span></div>
@@ -204,8 +212,10 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     <div class="bg-1903">
 
     </div>
+    <div id='1915' class="empty-div"></div>
+
 </section>
-<section id="1915" class="year-1915">
+<section class="year-1915">
     <div class="container container-1915">
         <div class="left-1915">
             <div class="years"><span class="year">1915</span></div>
@@ -218,9 +228,11 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         <div class="right-1915 h-images">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1915/1915-1.png" alt="Safety First SwiftMeats-1"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1915/1915-2.png" alt="Safety First SwiftMeats-2">
         </div>
+        <div id='1924' class="empty-div"></div>
+
     </div>
 </section>
-<section id="1924" class="year-1924">
+<section class="year-1924">
     <div class="container container-1924">
         <div class="left-1924 h-images">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1924/1924-1.png" alt="SwiftMeats on the Brithish Empire"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1924/1924-2.png" alt="SwiftMeats on the Brithish Empire">
@@ -233,10 +245,12 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
                 </p>
             </div>
         </div>
+        <div id='1943' class="empty-div"></div>
+
     </div>
 
 </section>
-<section id="1943" class="year-1943">
+<section  class="year-1943">
     <div class="news-1943 hideScrollbar">
         <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1943/1943-news.png" alt="SwiftMeat WW2">
     </div>
@@ -253,9 +267,11 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             <p class="h-white">During World War II, 20,300 men and women of the Swift organization were called to serve in the military and auxiliary services. Though this is a time of struggle, the demand for meat is so high that Swift can continue to operate at total capacity, and sales exceed $1.4 billion. 
             </p>
         </div>
+        <div id='1964' class="empty-div"></div>
+
     </div>
 </section>
-<section id="1964" class="year-1964">
+<section class="year-1964">
     <div class="container container-1964">
         <div class="left-1964">
         <div class="years"><span class="year">1964</span></div>

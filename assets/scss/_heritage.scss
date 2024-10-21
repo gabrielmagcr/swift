@@ -91,7 +91,7 @@
 
         .h-h-biography {
             display: flex;
-            gap: 120px;
+            gap: 170px;
             position: relative;
             z-index: 1;
             top: -60px;
@@ -163,7 +163,7 @@
         }
     }
 
-    @media (min-width:2100px) {
+    @media (min-width:2500px) {
         .h-h-biography-end {
             margin-bottom: 500px;
         }
