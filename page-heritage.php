@@ -298,4 +298,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         </div>
     </div>
 </section>
-<?php get_footer(); ?>
+
+<?php
+get_template_part('parts/pre-footer-ctas');
+ get_footer(); ?>
