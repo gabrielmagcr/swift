@@ -144,7 +144,9 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         </div>
     </div>
     <div class="train">
-        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-1.png" alt="SwiftMeats Train"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-2.png" alt="SwiftMeats Train"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-3.png" alt="SwiftMeats Train">
+        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-1.png" alt="SwiftMeats Train">
+        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-2.png" alt="SwiftMeats Train" class="yellowTrain">
+        <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/train-3.png" alt="SwiftMeats Train">
         <div id="1880" class="empty-div"></div>
     </div>
 </section>
@@ -301,4 +303,4 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 
 <?php
 get_template_part('parts/pre-footer-ctas');
- get_footer(); ?>
+get_footer(); ?>
