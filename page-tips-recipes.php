@@ -160,21 +160,22 @@
                     if ($type == 'recipe') {
             ?>
                         <?php
-                        $cooking_styles = get_field('cooking_style'); 
+                       $cooking_styles = get_field('cooking_style');
 
-                        if ($cooking_styles): 
-                            $cooking_styles_classes = implode(' ', $cooking_styles); 
-                        endif;
-                        ?>
-
-                        <a href="<?php the_permalink(); ?>" class="tips-link all <?= the_field('ingredient_item'); ?> <?= $cooking_styles_classes; ?>">
-                            <div class="tips all <?= the_field('ingredient_item'); ?> <?= $cooking_styles_classes; ?>">
-                                <div class="tips-bg lazy" data-bg="<?= the_field('image'); ?>"></div>
-                                <div class="tips-title-wrap">
-                                    <span><?php the_title(); ?></span>
-                                </div>
-                            </div>
-                        </a>
+                       $cooking_styles_classes = '';                        
+                       if ($cooking_styles && is_array($cooking_styles)) { 
+                           $cooking_styles_classes = implode(' ', $cooking_styles); 
+                       }
+                       ?>
+                       
+                       <a href="<?php the_permalink(); ?>" class="tips-link all <?= esc_attr(the_field('ingredient_item')); ?> <?= esc_attr($cooking_styles_classes); ?>">
+                           <div class="tips all <?= esc_attr(the_field('ingredient_item')); ?> <?= esc_attr($cooking_styles_classes); ?>">
+                               <div class="tips-bg lazy" data-bg="<?= esc_attr(the_field('image')); ?>"></div>
+                               <div class="tips-title-wrap">
+                                   <span><?php the_title(); ?></span>
+                               </div>
+                           </div>
+                       </a>
             <?php
                     }
                 }
