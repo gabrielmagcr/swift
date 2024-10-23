@@ -158,8 +158,15 @@
 
                     if ($type == 'recipe') {
             ?>
-                        <a href="<?php the_permalink(); ?>" class="tips-link all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
-                            <div class="tips all <?= the_field('ingredient_item'); ?> <?= the_field('cooking_style'); ?>">
+            <?php
+$cooking_styles = get_field('cooking_style'); 
+
+if( $cooking_styles ): 
+    $cooking_styles_classes = implode(' ', $cooking_styles); 
+endif;
+?>
+                        <a href="<?php the_permalink(); ?>" class="tips-link all <?= the_field('ingredient_item'); ?> <?= $cooking_styles_classes; ?>">
+                            <div class="tips all <?= the_field('ingredient_item'); ?> <?= $cooking_styles_classes; ?>">
                                 <div class="tips-bg lazy" data-bg="<?= the_field('image'); ?>"></div>
                                 <div class="tips-title-wrap">
                                     <span><?php the_title(); ?></span>
