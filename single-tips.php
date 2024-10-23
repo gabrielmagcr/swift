@@ -107,6 +107,7 @@
     .tips-i-left-section li,
     .tips-i-right-section p {
         font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
     }
 
     .tips-i-left-section p {
@@ -115,6 +116,9 @@
 
     .tips-i-left-section {
         padding: 50px;
+        color: white;
+    font-size: 1.2rem;
+
     }
 
     .tips-i-right-section {
