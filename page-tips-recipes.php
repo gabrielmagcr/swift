@@ -109,13 +109,12 @@
                         </div>
                         <ul id="cooking-style-dd" class="wil-dropdown-menu r-filter-group" data-filter-group="method">
                             <li data-filter=".all">All</li>
-                            <li data-filter=".skillet">Skillet</li>
-                            <li data-filter=".oven">Oven</li>
-                            <li data-filter=".grill">Grill</li>
-                            <li data-filter=".smoker">Smoker</li>
-                            <li data-filter=".multicooker">Multicooker</li>
-                            <li data-filter=".sous">Sous Vide</li>
-                            <li data-filter=".fryer">Fryer</li>
+                            <li data-filter=".main">Main Entrée</li>
+                            <li data-filter=".side">Side Dish</li>
+                            <li data-filter=".sandwiches">Sandwiches and Wraps</li>
+                            <li data-filter=".appetizer">Appetizer</li>
+                            <li data-filter=".salad">Salad</li>
+                            <li data-filter=".breakfast">Breakfast</li>
                         </ul>
                     </div>
 
