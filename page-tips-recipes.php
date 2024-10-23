@@ -44,24 +44,25 @@
     .tips-link:hover {
         text-decoration: none;
     }
+
     .tips-link {
-    width: 100%;
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    display: block;
-}
+        width: 100%;
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        display: block;
+    }
 
-.tips-link.hidden {
-    opacity: 0;
-    transform: scale(0.9);
-    pointer-events: none;
-}
+    .tips-link.hidden {
+        opacity: 0;
+        transform: scale(0.9);
+        pointer-events: none;
+    }
 
-.tips-link.showing {
-    opacity: 1;
-    transform: scale(1);
-}
+    .tips-link.showing {
+        opacity: 1;
+        transform: scale(1);
+    }
 
 
     @media (min-width: 1399px) {
@@ -158,13 +159,14 @@
 
                     if ($type == 'recipe') {
             ?>
-            <?php
-$cooking_styles = get_field('cooking_style'); 
+                        <?php
+                        $cooking_styles = get_field('cooking_style'); 
 
-if( $cooking_styles ): 
-    $cooking_styles_classes = implode(' ', $cooking_styles); 
-endif;
-?>
+                        if ($cooking_styles): 
+                            $cooking_styles_classes = implode(' ', $cooking_styles); 
+                        endif;
+                        ?>
+
                         <a href="<?php the_permalink(); ?>" class="tips-link all <?= the_field('ingredient_item'); ?> <?= $cooking_styles_classes; ?>">
                             <div class="tips all <?= the_field('ingredient_item'); ?> <?= $cooking_styles_classes; ?>">
                                 <div class="tips-bg lazy" data-bg="<?= the_field('image'); ?>"></div>
@@ -183,74 +185,23 @@ endif;
     </div>
 </section>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Filter logic
-    const container = document.getElementById('tips-content-wrap');
-    const filters = document.querySelectorAll('.r-filter-group li');
+    document.addEventListener("DOMContentLoaded", function() {
+        // Filter logic
+        const container = document.getElementById('tips-content-wrap');
+        const filters = document.querySelectorAll('.r-filter-group li');
 
-    const selectedFilters = {
-        protein: '.all',
-        method: '.all'
-    };
+        const selectedFilters = {
+            protein: '.all',
+            method: '.all'
+        };
 
-    function applyFilters() {
-        const items = container.querySelectorAll('.tips-link');
-        items.forEach(function(item) {
-            const matchesProtein = selectedFilters.protein === '.all' || item.classList.contains(selectedFilters.protein.slice(1));
-            const matchesMethod = selectedFilters.method === '.all' || item.classList.contains(selectedFilters.method.slice(1));
-
-            if (matchesProtein && matchesMethod) {
-                item.classList.remove('hidden');
-                item.classList.add('showing');
-                item.style.display = 'block';
-            } else {
-                item.classList.remove('showing');
-                item.classList.add('hidden');
-                setTimeout(function() {
-                    item.style.display = 'none';
-                }, 300); // Make sure this matches the CSS transition duration
-            }
-        });
-
-        // Re-initialize lazy load after filtering
-        $('.lazy').Lazy();
-    }
-
-    filters.forEach(function(filter) {
-        filter.addEventListener('click', function() {
-            const filterGroup = this.closest('.r-filter-group').dataset.filterGroup;
-            const filterValue = this.dataset.filter;
-
-            // Update the active class
-            this.parentElement.querySelectorAll('li').forEach(function(li) {
-                li.classList.remove('active');
-            });
-            this.classList.add('active');
-
-            // Update the selected filter for the group
-            selectedFilters[filterGroup] = filterValue;
-
-            // Apply filters
-            applyFilters();
-        });
-    });
-
-    // Search logic
-    const searchInput = document.getElementById('tip-search');
-    searchInput.addEventListener('keyup', function() {
-        const searchText = this.value.toLowerCase();
-
-        if (searchText === '') {
-            // If search is cleared, reapply the filters
-            applyFilters();
-        } else {
-            container.querySelectorAll('.tips-link').forEach(function(item) {
-                const title = item.querySelector('.tips-title-wrap span').textContent.toLowerCase();
+        function applyFilters() {
+            const items = container.querySelectorAll('.tips-link');
+            items.forEach(function(item) {
                 const matchesProtein = selectedFilters.protein === '.all' || item.classList.contains(selectedFilters.protein.slice(1));
                 const matchesMethod = selectedFilters.method === '.all' || item.classList.contains(selectedFilters.method.slice(1));
 
-                // Display items that match the search text and currently selected filters
-                if (title.includes(searchText) && matchesProtein && matchesMethod) {
+                if (matchesProtein && matchesMethod) {
                     item.classList.remove('hidden');
                     item.classList.add('showing');
                     item.style.display = 'block';
@@ -262,14 +213,63 @@ document.addEventListener("DOMContentLoaded", function() {
                     }, 300); // Make sure this matches the CSS transition duration
                 }
             });
+
+            // Re-initialize lazy load after filtering
+            $('.lazy').Lazy();
         }
 
-        // Re-initialize lazy load after search
-        $('.lazy').Lazy();
+        filters.forEach(function(filter) {
+            filter.addEventListener('click', function() {
+                const filterGroup = this.closest('.r-filter-group').dataset.filterGroup;
+                const filterValue = this.dataset.filter;
+
+                // Update the active class
+                this.parentElement.querySelectorAll('li').forEach(function(li) {
+                    li.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                // Update the selected filter for the group
+                selectedFilters[filterGroup] = filterValue;
+
+                // Apply filters
+                applyFilters();
+            });
+        });
+
+        // Search logic
+        const searchInput = document.getElementById('tip-search');
+        searchInput.addEventListener('keyup', function() {
+            const searchText = this.value.toLowerCase();
+
+            if (searchText === '') {
+                // If search is cleared, reapply the filters
+                applyFilters();
+            } else {
+                container.querySelectorAll('.tips-link').forEach(function(item) {
+                    const title = item.querySelector('.tips-title-wrap span').textContent.toLowerCase();
+                    const matchesProtein = selectedFilters.protein === '.all' || item.classList.contains(selectedFilters.protein.slice(1));
+                    const matchesMethod = selectedFilters.method === '.all' || item.classList.contains(selectedFilters.method.slice(1));
+
+                    // Display items that match the search text and currently selected filters
+                    if (title.includes(searchText) && matchesProtein && matchesMethod) {
+                        item.classList.remove('hidden');
+                        item.classList.add('showing');
+                        item.style.display = 'block';
+                    } else {
+                        item.classList.remove('showing');
+                        item.classList.add('hidden');
+                        setTimeout(function() {
+                            item.style.display = 'none';
+                        }, 300); // Make sure this matches the CSS transition duration
+                    }
+                });
+            }
+
+            // Re-initialize lazy load after search
+            $('.lazy').Lazy();
+        });
     });
-});
-
-
 </script>
 
 
