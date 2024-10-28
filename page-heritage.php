@@ -301,7 +301,8 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             </video>
         </div>
     </div>
-</section><script>
+</section>
+<script>
     // Selecciona todos los elementos de fechas y las secciones correspondientes a los años
     const dates = document.querySelectorAll('.date');
     const sections = document.querySelectorAll('.year-badge');
@@ -317,7 +318,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     const observerOptions = {
         root: null, // Usa la ventana completa
         rootMargin: '0px',
-        threshold: 0.7 // Activa cuando al menos el 70% de la sección esté en vista
+        threshold: 0.5 // Activa cuando al menos el 50% de la sección esté en vista
     };
 
     // Función para observar las intersecciones
@@ -326,9 +327,12 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             const year = entry.target.id; // ID de la sección (año)
             
             if (entry.isIntersecting) {
+                console.log(`Sección activa: ${year}`); // Mensaje de depuración
                 // Cuando la sección está en vista, activar la clase date-active en la fecha correspondiente
                 Object.values(dateMap).forEach(date => date.classList.remove('date-active')); // Remover de todos
-                dateMap[year]?.classList.add('date-active'); // Agregar solo al activo
+                if (dateMap[year]) {
+                    dateMap[year].classList.add('date-active'); // Agregar solo al activo
+                }
             }
         });
     }
@@ -338,7 +342,9 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 
     // Observar cada sección
     sections.forEach(section => observer.observe(section));
+
 </script>
+
 
 <?php
 get_template_part('parts/pre-footer-ctas');
