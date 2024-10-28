@@ -303,31 +303,42 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
 </section>
 <script>
-    // Selecciona los elementos de las fechas y las secciones de los años
+    // Selecciona todos los elementos de fechas y las secciones correspondientes a los años
 const dates = document.querySelectorAll('.date');
 const sections = document.querySelectorAll('.empty-div');
 
-// Función para activar la clase 'date-active' según el año en vista
-function activateDateOnScroll() {
-    let currentIndex = -1;
+// Mapeo de IDs de sección con los elementos de fecha para facilitar la activación de la clase
+const dateMap = {};
+dates.forEach(date => {
+    const year = date.querySelector('a').getAttribute('href').substring(1); // Obtener el año del href (sin el '#')
+    dateMap[year] = date;
+});
 
-    sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect();
+// Configuración del IntersectionObserver
+const observerOptions = {
+    root: null, // Usa la ventana completa
+    rootMargin: '0px',
+    threshold: 0.5 // Activa cuando al menos el 50% de la sección esté en vista
+};
+
+// Función para observar las intersecciones
+function handleIntersection(entries) {
+    entries.forEach(entry => {
+        const year = entry.target.id; // ID de la sección (año)
         
-        // Verifica si la sección está en el centro de la pantalla
-        if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
-            currentIndex = index;
+        if (entry.isIntersecting) {
+            // Cuando la sección está en vista, activar la clase date-active en la fecha correspondiente
+            Object.values(dateMap).forEach(date => date.classList.remove('date-active')); // Remover de todos
+            dateMap[year]?.classList.add('date-active'); // Agregar solo al activo
         }
-    });
-
-    // Remueve 'date-active' de todas las fechas y activa solo la correspondiente
-    dates.forEach((date, index) => {
-        date.classList.toggle('date-active', index === currentIndex);
     });
 }
 
-// Escucha el evento 'scroll' para activar la clase 'date-active' cuando se hace scroll
-window.addEventListener('scroll', activateDateOnScroll);
+// Crear el observer con la configuración y la función
+const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+// Observar cada sección
+sections.forEach(section => observer.observe(section));
 
 </script>
 <?php
