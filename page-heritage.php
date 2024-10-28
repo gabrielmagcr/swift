@@ -305,7 +305,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 <script>
     // Selecciona todos los elementos de fechas y las secciones correspondientes a los años
 const dates = document.querySelectorAll('.date');
-const sections = document.querySelectorAll('.year-badge');
+const sections = document.querySelectorAll('.empty-div');
 
 // Mapeo de IDs de sección con los elementos de fecha para facilitar la activación de la clase
 const dateMap = {};
@@ -318,7 +318,7 @@ dates.forEach(date => {
 const observerOptions = {
     root: null, // Usa la ventana completa
     rootMargin: '0px',
-    threshold: 0.5 // Activa cuando al menos el 50% de la sección esté en vista
+    threshold: 0.8 // Activa cuando al menos el 50% de la sección esté en vista
 };
 
 // Función para observar las intersecciones
