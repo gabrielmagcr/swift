@@ -295,8 +295,10 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
             <h3>See what We’re up to now.</h3>
         </div>
         <div class="right-today h-images">
-            <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1943/1943.jpg" alt="SwiftMeats todays Video">
-            <span>waiting for video Link</span>
+            <video poster="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/today/today-poster.webp">
+                <source src="https://2b55b1bc4dda0a8f7d27-4bc354aaf4dd039e32ab4999a2f8c0b0.ssl.cf1.rackcdn.com/Sustainability/SWIF2101_Swift_FamilyFuture_30s_YouTube_4_13_21%20(1).mp4" type="video/mp4">
+                <source src="https://2b55b1bc4dda0a8f7d27-4bc354aaf4dd039e32ab4999a2f8c0b0.ssl.cf1.rackcdn.com/Sustainability/SWIF2101_Swift_FamilyFuture_30s_YouTube_4_13_21%20(1).webm" type="video/webm">
+            </video>
         </div>
     </div>
 </section>
