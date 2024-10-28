@@ -318,7 +318,7 @@ dates.forEach(date => {
 const observerOptions = {
     root: null, // Usa la ventana completa
     rootMargin: '0px',
-    threshold: 0.5 // Activa cuando al menos el 50% de la sección esté en vista
+    threshold: 0.7 // Activa cuando al menos el 50% de la sección esté en vista
 };
 
 // Función para observar las intersecciones
