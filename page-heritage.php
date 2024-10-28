@@ -302,7 +302,39 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         </div>
     </div>
 </section>
+<script>
+    // Selecciona los elementos de las fechas y las secciones de los años
+const dates = document.querySelectorAll('.date');
+const sections = document.querySelectorAll('.empty-div');
 
+// Función para activar la clase 'date-active' según el año en vista
+function activateDateOnScroll() {
+    let index = sections.length;
+
+    // Recorre cada sección para verificar si está en vista
+    sections.forEach((section, i) => {
+        const rect = section.getBoundingClientRect();
+
+        // Verifica si la parte superior de la sección está visible en el viewport
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            index = i;
+        }
+    });
+
+    // Remueve la clase 'date-active' de todas las fechas y activa solo la correspondiente
+    dates.forEach((date, i) => {
+        if (i === index) {
+            date.classList.add('date-active');
+        } else {
+            date.classList.remove('date-active');
+        }
+    });
+}
+
+// Escucha el evento 'scroll' para activar la clase 'date-active' cuando se hace scroll
+window.addEventListener('scroll', activateDateOnScroll);
+
+</script>
 <?php
 get_template_part('parts/pre-footer-ctas');
 get_footer(); ?>
