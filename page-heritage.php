@@ -303,22 +303,22 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
 </section>
 <script>
-    // Selecciona todos los elementos de fechas y las secciones correspondientes a los años
+// Selecciona todos los elementos de fechas y las secciones correspondientes a los años
 const dates = document.querySelectorAll('.date');
-const sections = document.querySelectorAll('.empty-div');
+const sections = document.querySelectorAll('.year-badge');
 
 // Mapeo de IDs de sección con los elementos de fecha para facilitar la activación de la clase
 const dateMap = {};
 dates.forEach(date => {
     const year = date.querySelector('a').getAttribute('href').substring(1); // Obtener el año del href (sin el '#')
-    dateMap[year] = date;
+    dateMap[year] = date; // Guardar el elemento de fecha en el mapa con el año como clave
 });
 
 // Configuración del IntersectionObserver
 const observerOptions = {
     root: null, // Usa la ventana completa
     rootMargin: '0px',
-    threshold: 0.8 // Activa cuando al menos el 50% de la sección esté en vista
+    threshold: 0 // Activa cuando la sección comienza a entrar en vista
 };
 
 // Función para observar las intersecciones
@@ -340,6 +340,9 @@ const observer = new IntersectionObserver(handleIntersection, observerOptions);
 // Observar cada sección
 sections.forEach(section => observer.observe(section));
 
+// Observar el div vacío que indica el comienzo de cada sección
+const emptyDivs = document.querySelectorAll('.empty-div');
+emptyDivs.forEach(emptyDiv => observer.observe(emptyDiv));
 </script>
 
 
