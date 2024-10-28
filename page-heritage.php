@@ -309,25 +309,20 @@ const sections = document.querySelectorAll('.empty-div');
 
 // Función para activar la clase 'date-active' según el año en vista
 function activateDateOnScroll() {
-    let index = sections.length;
+    let currentIndex = -1;
 
-    // Recorre cada sección para verificar si está en vista
-    sections.forEach((section, i) => {
+    sections.forEach((section, index) => {
         const rect = section.getBoundingClientRect();
-
-        // Verifica si la parte superior de la sección está visible en el viewport
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            index = i;
+        
+        // Verifica si la sección está en el centro de la pantalla
+        if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+            currentIndex = index;
         }
     });
 
-    // Remueve la clase 'date-active' de todas las fechas y activa solo la correspondiente
-    dates.forEach((date, i) => {
-        if (i === index) {
-            date.classList.add('date-active');
-        } else {
-            date.classList.remove('date-active');
-        }
+    // Remueve 'date-active' de todas las fechas y activa solo la correspondiente
+    dates.forEach((date, index) => {
+        date.classList.toggle('date-active', index === currentIndex);
     });
 }
 
