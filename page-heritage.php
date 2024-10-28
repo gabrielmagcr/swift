@@ -44,7 +44,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         <div class="date"><a href="#1964"><img src="<?php echo $swiftImg ?>"><span>1964</span></a></div>
     </div>
 </section>
-<section class="year-1855">
+<section class="year-1855 year-badge">
     <div class="container container-1855">
         <div class="years"><span class="year">1855</span></div>
         <div class="h-text">
@@ -64,7 +64,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
 
 </section>
-<section class="year-1861-1862">
+<section class="year-1861 year-badge-1862">
     <div class="container">
         <div class="container-1861">
             <div class="h-images">
@@ -96,7 +96,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
     <div id='1872' class="empty-div"></div>
 </section>
-<section class="year-1872">
+<section class="year-1872 year-badge">
     <div class="container">
         <div class="container-1872">
             <div class="left-1872">
@@ -126,7 +126,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         <div id='1878' class="empty-div"></div>
     </div>
 </section>
-<section class="year-1878">
+<section class="year-1878 year-badge">
     <div class="ribbon">
         <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1878/Ribbon.png" alt="Swift Meats Ribbon">
     </div>
@@ -150,7 +150,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         <div id="1880" class="empty-div"></div>
     </div>
 </section>
-<section class="year-1880">
+<section class="year-1880 year-badge">
     <div class="container-1880">
         <div class="container">
             <div class="years"><span class="year">1880</span></div>
@@ -165,7 +165,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         <div id='1893' class="empty-div"></div>
     </div>
 </section>
-<section class="year-1893">
+<section class="year-1893 year-badge">
     <div class="container container-1893">
         <div class="left-1893 h-images">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1893/1893.png" alt="Northwestern University SwiftMeats">
@@ -182,7 +182,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 
     </div>
 </section>
-<section class="year-1900">
+<section class="year-1900 year-badge">
     <div class="container container-1900">
         <div class="left-1900 ">
             <div class="years"><span class="year">1900</span></div>
@@ -199,7 +199,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
         <div id='1903' class="empty-div"></div>
     </div>
 </section>
-<section class="year-1903">
+<section class="year-1903 year-badge">
     <div class="container container-1903">
         <div class="left-1903">
             <div class="years"><span class="year">1903</span></div>
@@ -217,7 +217,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     <div id='1915' class="empty-div"></div>
 
 </section>
-<section class="year-1915">
+<section class="year-1915 year-badge">
     <div class="container container-1915">
         <div class="left-1915">
             <div class="years"><span class="year">1915</span></div>
@@ -233,7 +233,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
     <div id='1924' class="empty-div"></div>
 </section>
-<section class="year-1924">
+<section class="year-1924 year-badge">
     <div class="container container-1924">
         <div class="left-1924 h-images">
             <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1924/1924-1.png" alt="SwiftMeats on the Brithish Empire"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1924/1924-2.png" alt="SwiftMeats on the Brithish Empire">
@@ -250,7 +250,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     <div id='1943' class="empty-div"></div>
 
 </section>
-<section class="year-1943">
+<section class="year-1943 year-badge">
     <div class="news-1943 hideScrollbar">
         <img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1943/1943-news.png" alt="SwiftMeat WW2">
     </div>
@@ -271,7 +271,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
 
 </section>
-<section class="year-1964">
+<section class="year-1964 year-badge">
     <div class="container container-1964">
         <div class="left-1964">
             <div class="years"><span class="year">1964</span></div>
@@ -305,7 +305,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 <script>
     // Selecciona todos los elementos de fechas y las secciones correspondientes a los años
 const dates = document.querySelectorAll('.date');
-const sections = document.querySelectorAll('.empty-div');
+const sections = document.querySelectorAll('.year-badge');
 
 // Mapeo de IDs de sección con los elementos de fecha para facilitar la activación de la clase
 const dateMap = {};
