@@ -1577,8 +1577,9 @@
         }
     
         .right-today {
-            span {
+            video {
                 padding-bottom: 40px;
+                width: 100%;
             }
         }
     }
@@ -1606,11 +1607,25 @@
         .today-banner{
             height: 250px;
         }
+        .container-today{
+            max-width: 1300px;
+            .left-today{
+                h3{
+                    width: 370px;
+                }
+            }
+            .right-today{
+                video{
+                    width: 900px;
+                }
+            }
+        }
         .years {
             font-size: 2.7rem;
             width: 200px;
             height: 200px;
             top: -90px;
+            left:13%;
             .year{
                 top: 65px;
                 left: 12px;
