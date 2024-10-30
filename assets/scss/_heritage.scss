@@ -1215,7 +1215,9 @@
 .bg-1903 {
     background: url('/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903-bg.jpg') no-repeat center / cover;
     height: 400px;
-
+    @media (min-width:767px) {
+        height: 700px;
+    }
     @media (min-width:1023px) {
         height: 90dvh;
     }

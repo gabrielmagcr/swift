@@ -201,7 +201,6 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 <section class="year-1903 year-badge">
     <div class="container container-1903">
         <div class="left-1903" >
-            <div class="years" ><span class="year">1903</span></div>
             <div class="h-images"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903.jpg" alt=""></div>
         </div>
         <div class="right-1903 h-text">
