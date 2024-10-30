@@ -302,7 +302,7 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
 </section>
 <script>
-document.querySelectorAll('.date').forEach(anchor => {
+document.querySelectorAll('.dates .date a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     
