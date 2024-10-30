@@ -310,59 +310,45 @@ document.querySelectorAll('.dates .date a').forEach(anchor => {
     const targetElement = document.getElementById(targetId);
     
     if (targetElement) {
-      const yOffset = -300; // ajuste de -300px
+      const yOffset = -300; 
       const yPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
       
       window.scrollTo({
         top: yPosition,
-        behavior: 'smooth' // animación de desplazamiento suave
+        behavior: 'smooth' 
       });
     }
   });
 });
 
+// Selecciona todas las secciones de años y las fechas en la barra lateral
+const yearSections = document.querySelectorAll('.year-badge .years');
+const dateLinks = document.querySelectorAll('.dates .date');
 
-// Selecciona todos los elementos de fechas y las secciones correspondientes a los años
-const dates = document.querySelectorAll('.date');
-const sections = document.querySelectorAll('.year-badge');
-
-// Mapeo de IDs de sección con los elementos de fecha para facilitar la activación de la clase
-const dateMap = {};
-dates.forEach(date => {
-    const year = date.querySelector('a').getAttribute('href').substring(1); // Obtener el año del href (sin el '#')
-    dateMap[year] = date; // Guardar el elemento de fecha en el mapa con el año como clave
+// Crea un IntersectionObserver
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // ID de la sección en el viewport
+      const yearId = entry.target.id;
+      
+      // Remueve la clase 'date-active' de todas las fechas
+      dateLinks.forEach(date => date.classList.remove('date-active'));
+      
+      // Encuentra y activa la fecha correspondiente al año visible
+      const activeDate = document.querySelector(`.dates .date a[href="#${yearId}"]`).parentElement;
+      if (activeDate) {
+        activeDate.classList.add('date-active');
+      }
+    }
+  });
+}, {
+  root: null,         // Observa en la ventana del navegador
+  threshold: 0.6      // Activa cuando el 60% de la sección es visible
 });
 
-// Configuración del IntersectionObserver
-const observerOptions = {
-    root: null, // Usa la ventana completa
-    rootMargin: '0px',
-    threshold: 0 // Activa cuando la sección comienza a entrar en vista
-};
-
-// Función para observar las intersecciones
-function handleIntersection(entries) {
-    entries.forEach(entry => {
-        const year = entry.target.id; // ID de la sección (año)
-        
-        if (entry.isIntersecting) {
-            // Cuando la sección está en vista, activar la clase date-active en la fecha correspondiente
-            Object.values(dateMap).forEach(date => date.classList.remove('date-active')); // Remover de todos
-            dateMap[year]?.classList.add('date-active'); // Agregar solo al activo
-        }
-    });
-}
-
-// Crear el observer con la configuración y la función
-const observer = new IntersectionObserver(handleIntersection, observerOptions);
-
-// Observar cada sección
-sections.forEach(section => observer.observe(section));
-
-// Observar el div vacío que indica el comienzo de cada sección
-const emptyDivs = document.querySelectorAll('.empty-div');
-emptyDivs.forEach(emptyDiv => observer.observe(emptyDiv));
-
+// Observa cada sección de año
+yearSections.forEach(section => observer.observe(section));
 
 
 </script>
