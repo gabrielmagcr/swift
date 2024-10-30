@@ -201,11 +201,11 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 <section class="year-1903 year-badge">
     <div class="container container-1903">
         <div class="left-1903" >
-            <div class="years" id='1903'><span class="year">1903</span></div>
+            <div class="years" ><span class="year">1903</span></div>
             <div class="h-images"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903.jpg" alt=""></div>
         </div>
         <div class="right-1903 h-text">
-            <div class="years"><span class="year">1903</span></div>
+            <div class="years" id='1903'><span class="year">1903</span></div>
             <h3>A Lasting Legacy</h3>
             <p>On March 29, 1903, Gustavus Franklin Swift passes away. His vision for end-to-end production control, ensuring quality, efficiency, and cost-effectiveness, remains a cornerstone of modern strategies. His pioneering spirit lives on, shaping the way we approach transportation and storage to this day. His innovation and perseverance continue to inspire the extraordinary.</p>
         </div>
