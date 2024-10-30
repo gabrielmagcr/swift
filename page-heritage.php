@@ -200,8 +200,8 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
 </section>
 <section class="year-1903 year-badge">
     <div class="container container-1903">
-        <div class="left-1903">
-            <div class="years" id='1903'><span class="year">1903</span></div>
+        <div class="left-1903" id='1903'>
+            <div class="years"><span class="year">1903</span></div>
             <div class="h-images"><img src="/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/1903/1903.jpg" alt=""></div>
         </div>
         <div class="right-1903 h-text">
@@ -302,6 +302,26 @@ $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/O
     </div>
 </section>
 <script>
+document.querySelectorAll('.date').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      const yOffset = -300; // ajuste de -300px
+      const yPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      
+      window.scrollTo({
+        top: yPosition,
+        behavior: 'smooth' // animación de desplazamiento suave
+      });
+    }
+  });
+});
+
+
 // Selecciona todos los elementos de fechas y las secciones correspondientes a los años
 const dates = document.querySelectorAll('.date');
 const sections = document.querySelectorAll('.year-badge');
@@ -342,6 +362,9 @@ sections.forEach(section => observer.observe(section));
 // Observar el div vacío que indica el comienzo de cada sección
 const emptyDivs = document.querySelectorAll('.empty-div');
 emptyDivs.forEach(emptyDiv => observer.observe(emptyDiv));
+
+
+
 </script>
 
 
