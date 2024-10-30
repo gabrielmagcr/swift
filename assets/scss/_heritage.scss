@@ -1132,18 +1132,14 @@
             display: flex;
             align-items: center;
 
-            .years {
-                position: absolute;
-
-                .year {
-                    left: 3px;
-                }
-            }
+           
         }
 
         .right-1903 {
+            position: relative;
             .years {
-                display: none;
+                position: absolute;
+                top: -255px;
             }
 
             h3 {
@@ -1151,7 +1147,13 @@
                 font-size: 3.5rem;
             }
         }
-
+        @media (min-width:767px) {
+            .right-1903{
+                .years{
+                    top: -500px;
+                }
+            }
+        }
         @media (min-width:1023px) {
             display: flex;
             flex-direction: row-reverse;
@@ -1160,7 +1162,8 @@
 
             .right-1903 {
                 .years {
-                    display: block;
+                    position: relative;
+                    top: 0;
 
                     .year {
                         left: 6px;
@@ -1248,6 +1251,9 @@
                 position: relative;
                 top: -50px;
                 left: 15px;
+                .year{
+                    left: 8px;
+                }
             }
 
             .h-text {
