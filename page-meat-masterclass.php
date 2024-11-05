@@ -117,7 +117,7 @@ get_header();
         </div>
 
         <div class="mmc-page-nav-item <?php print is_mmc_active('methods') ? 'active' : ''; ?>">
-            <a class="stretched-link mmc-stretched-link" href="<?php print get_the_permalink(); ?>/methods"></a>
+            <a class="stretched-link mmc-stretched-link" href="<?php print get_the_permalink(); ?>methods"></a>
             <div class="mmc-page-nav-item--text">Cooking Methods To<br><span>Up Your Game</span></div>
             <div class="mmc-page-nav-item--bg" style="background: url('<?= get_template_directory_uri(); ?>/assets/img/mmc/Cooking-Methods2024.webp') no-repeat center / cover;"></div>
         </div>
