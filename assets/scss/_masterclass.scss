@@ -73,11 +73,15 @@
     align-items: center;
     justify-content: center;
     min-height: auto !important;
+    padding: 2rem 0 !important;
     h1{
         text-align: center;
         font-family: BourtonBase;
         font-size: 32px;
         color: #FFF;
+    }
+    @media (min-width:1023px) {
+        padding: 4rem 0 !important;
     }
     @media (min-width:1023px) {
         h1{
