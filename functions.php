@@ -13,6 +13,9 @@ require_once(get_template_directory().'/functions/cleanup.php');
 // Register scripts and stylesheets
 require_once(get_template_directory().'/functions/enqueue-scripts.php'); 
 
+require_once(get_template_directory().'/functions/page-styles.php'); 
+
+
 // Register custom menus and menu walkers
 require_once(get_template_directory().'/functions/menu.php'); 
 
