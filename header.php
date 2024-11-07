@@ -12,7 +12,7 @@
 <head>
 	<meta charset="utf-8">
 	<!-- Osano Cookie Consent -->
-	<script async  src=https://cmp.osano.com/169m5QToXBlu63VAe/9c1544c8-47fb-4f1c-9688-c9f7d54a48cb/osano.js></script>
+	<script async src=https://cmp.osano.com/169m5QToXBlu63VAe/9c1544c8-47fb-4f1c-9688-c9f7d54a48cb/osano.js></script>
 	<!-- Force IE to use the latest rendering engine available -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- Mobile Meta -->
@@ -27,7 +27,17 @@
 	<?php } ?>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<script async src="https://kit.fontawesome.com/ee01b20d7e.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<script>
+  function loadFlickityStyles() {
+    if (!document.getElementById("flickity-stylesheet")) {
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "https://unpkg.com/flickity@2/dist/flickity.min.css";
+      link.id = "flickity-stylesheet";
+      document.head.appendChild(link);
+    }
+  };
+</script>
 	<?php wp_head(); ?>
 	<script async src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 	<!-- Google Tag Manager -->
