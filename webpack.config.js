@@ -1,27 +1,34 @@
-process.traceDeprecation = true
-const path = require('path')
-const webpack = require('webpack')
-const fs = require('fs')
-const ExtractCssChunks = require("extract-css-chunks-webpack-plugin")
-const WebpackBuildNotifierPlugin = require('webpack-build-notifier')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const MinifyPlugin = require("babel-minify-webpack-plugin")
-const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const WriteFilePlugin = require('write-file-webpack-plugin')
-const DashboardPlugin = require('webpack-dashboard/plugin')
-const devMode = process.env.NODE_ENV !== 'production'
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+process.traceDeprecation = true;
+const path = require('path');
+const webpack = require('webpack');
+const fs = require('fs');
+const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const MinifyPlugin = require("babel-minify-webpack-plugin");
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const WriteFilePlugin = require('write-file-webpack-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
+const devMode = process.env.NODE_ENV !== 'production';
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const PROXY = 'https://swift.local'
-const PUBLIC_PATH = '/wp-content/themes/swift/'
+const PROXY = 'https://swift.local';
+const PUBLIC_PATH = '/wp-content/themes/swift/';
 
 const config = {
     mode: !devMode ? 'production' : 'development',
+
+    // Modificación: Definir múltiples entradas para cada página
     entry: {
-        app: path.resolve(__dirname, './assets/js/app.js'),
+        app: path.resolve(__dirname, './assets/js/app.js'), // Script principal
+        products: path.resolve(__dirname, './assets/scss/products.scss'),  // Estilos para la página de productos
+        recipes: path.resolve(__dirname, './assets/scss/recipes.scss'),    // Estilos para la página de recetas
+        masterclass: path.resolve(__dirname, './assets/scss/masterclass.scss'), // Estilos para la página de masterclass
+        // Agrega más entradas según las páginas que necesites
     },
+
     devServer: !devMode ? undefined : {
         port: 9494,
         host: '0.0.0.0',
@@ -48,12 +55,15 @@ const config = {
             }
         }
     },
+
     devtool: devMode ? 'inline-source-map' : undefined,
+
     output: {
-        filename: 'scripts/[name].js',
+        filename: 'scripts/[name].js',  // Salida para scripts JS
         path: path.resolve(__dirname, './dist'),
         publicPath: PUBLIC_PATH
     },
+
     resolve: {
         extensions: ['.js', '.vue', '.json'],
         alias: {
@@ -61,9 +71,7 @@ const config = {
             '@': path.resolve(__dirname, '.')
         }
     },
-    externals: {
-        
-    },
+
     module: {
        rules: [
             {
@@ -99,7 +107,7 @@ const config = {
                    {
                        loader: 'sass-loader',
                        options: {
-                        //    data: '@import "assets/scss/variables";'
+                           // Importar variables globales o mixins si es necesario
                        }
                    },
                ],
@@ -124,14 +132,13 @@ const config = {
             }
         ]
     },
+
     plugins: [
-        new CopyWebpackPlugin([
-            
-        ]),
+        new CopyWebpackPlugin([]),
         new VueLoaderPlugin(),
         new ExtractCssChunks({
             hot: true,
-            filename: 'styles/[name].css',
+            filename: 'styles/[name].css', // Genera un archivo CSS por cada entrada
         }),
         new WebpackBuildNotifierPlugin({
             sound: 'Funk',
@@ -139,21 +146,21 @@ const config = {
         }),
         new WriteFilePlugin({
             force: true,
-	        test: /^(?!.*(hot)).*/,
+            test: /^(?!.*(hot)).*/,
         }),
     ],
-}
+};
 
-if ( process.env.NODE_ENV === 'production' ) {
+// Configuración de plugins para producción
+if (process.env.NODE_ENV === 'production') {
     config.plugins.push(
         // new CleanWebpackPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"production"'
         }),
         new MinifyPlugin(),
-        new OptimizeCssAssetsPlugin()
-        // new ProgressBarPlugin()
-    )
+        new OptimizeCssAssetsPlugin()  // Optimización y minificación de los CSS generados
+    );
 }
 
-module.exports = config
+module.exports = config;

@@ -105,6 +105,7 @@ get_header();
 
 
 ?>
+<link rel="stylesheet" href="/wp-content/themes/swift/dist/styles/masterclass.css" media="all">
 
 <!-- /#masterclass-hero -->
 <?php get_template_part('components/blocks'); ?>
