@@ -23,10 +23,21 @@ const config = {
     // Modificación: Definir múltiples entradas para cada página
     entry: {
         app: path.resolve(__dirname, './assets/js/app.js'), // Script principal
-        products: path.resolve(__dirname, './assets/scss/products.scss'),  // Estilos para la página de productos
-        recipes: path.resolve(__dirname, './assets/scss/recipes.scss'),    // Estilos para la página de recetas
-        masterclass: path.resolve(__dirname, './assets/scss/masterclass.scss'), // Estilos para la página de masterclass
-        // Agrega más entradas según las páginas que necesites
+        sweepstakes: path.resolve(__dirname, './assets/scss/sweepstakes.scss'),
+        contact: path.resolve(__dirname, './assets/scss/contact.scss'),
+        heritage: path.resolve(__dirname, './assets/scss/heritage.scss'),
+        veal: path.resolve(__dirname, './assets/scss/veal.scss'),
+        lowes: path.resolve(__dirname, './assets/scss/lowes.scss'),
+        masterclass: path.resolve(__dirname, './assets/scss/masterclass.scss'),
+        offers: path.resolve(__dirname, './assets/scss/offers.scss'),
+        privacy: path.resolve(__dirname, './assets/scss/privacy.scss'),
+        products: path.resolve(__dirname, './assets/scss/products.scss'),
+        locator: path.resolve(__dirname, './assets/scss/locator.scss'),
+        sustain: path.resolve(__dirname, './assets/scss/sustain.scss'),
+        tailgate_with_swift: path.resolve(__dirname, './assets/scss/tailgate_with_swift.scss'),
+        tips: path.resolve(__dirname, './assets/scss/tips.scss'),
+        search: path.resolve(__dirname, './assets/scss/search.scss'),
+        recipes: path.resolve(__dirname, './assets/scss/recipes.scss'),
     },
 
     devServer: !devMode ? undefined : {
