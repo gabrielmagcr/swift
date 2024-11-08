@@ -1,6 +1,6 @@
 <?php 
 /* 
- Template Name: page-store-locator
+ Template Name: page-cometogetherandgrill
  */
     get_header(); 
 ?>
