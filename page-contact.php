@@ -1,4 +1,8 @@
-<?php get_header();
+<?php
+/* 
+ Template Name: page-contact
+ */
+ get_header();
 the_post(); ?>
 <section id="contact-wrap">
     <div class="container">

@@ -1,4 +1,8 @@
-<?php get_header();?>
+<?php
+    /* 
+ Template Name: page-sustainability
+ */
+get_header();?>
 <section id="sustain-hero">
     <div id="sustain-trigger" class="vid-btn"></div>
     <video poster="/wp-content/uploads/2021/04/Screen-Shot-2021-04-14-at-2.47.20-PM.png" preload="none" controls>

@@ -1,4 +1,7 @@
 <?php 
+/* 
+ Template Name: page-store-locator
+ */
     get_header(); 
 ?>
 <section id="sweepstakes-hero">

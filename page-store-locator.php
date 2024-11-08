@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+/* 
+ Template Name: page-heritage
+ */
+get_header(); ?>
 <section id="locator-hero">
     <div class="container">
         <div class="row">

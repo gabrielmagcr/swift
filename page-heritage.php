@@ -1,4 +1,8 @@
-<?php get_header();
+<?php
+/* 
+ Template Name: page-heritage
+ */
+get_header();
 
 $swiftImg = "/wp-content/themes/swiftMeatsv2/assets/img/heritage/Redesign-2024/OurStory/SWIFT.svg"
 ?>

@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+      /* 
+ Template Name: page-tips-recipes
+ */
+get_header(); ?>
 
 
 <section id="tips-recipes-wrap">

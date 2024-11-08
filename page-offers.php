@@ -1,4 +1,7 @@
 <?php
+/* 
+ Template Name: page-offers
+ */
 get_header();
 the_post();
 $thumbnail = get_the_post_thumbnail_url();

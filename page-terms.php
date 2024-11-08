@@ -1,4 +1,8 @@
-<?php get_header();
+<?php
+    /* 
+ Template Name: page-term
+ */
+get_header();
 the_post(); ?>
 <section id="privacy-wrap">
     <div class="container">

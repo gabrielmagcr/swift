@@ -1,4 +1,8 @@
-<?php get_header();?>
+<?php
+    /* 
+ Template Name: page-lowes
+ */    
+get_header();?>
 <section id="lowes-hero">
     <div class="hh-content">
         <h2>Let's Cook Up A </h2>

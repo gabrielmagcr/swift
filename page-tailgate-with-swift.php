@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+    /* 
+ Template Name: page-tailgate-with-swift
+ */
+get_header(); ?>
 
 <img src="<?php print get_template_directory_uri(); ?>/assets/img/tailgate/hero.jpg" style="width: 100%;" class="d-none d-md-block" alt="Tailgates Come Together With Swift. From the stadium to your backyard, game time means coming together with good friends, good times, and Swift on the grill." />
 <img src="<?php print get_template_directory_uri(); ?>/assets/img/tailgate/hero-mobile.jpg" style="width: 100%;" class="d-md-none" alt="Tailgates Come Together With Swift. From the stadium to your backyard, game time means coming together with good friends, good times, and Swift on the grill." />
