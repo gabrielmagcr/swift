@@ -1,10 +1,7 @@
 <?php
 function enqueue_template_styles() {
     // Encola el estilo global, disponible para todas las páginas
-    wp_enqueue_style(
-        'global-style', 
-        get_template_directory_uri() . '/dist/styles/app.css'
-    );
+
 
     // Mapea las plantillas de página a los archivos de estilos específicos
     $template_styles = array(
