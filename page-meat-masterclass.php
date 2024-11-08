@@ -2,6 +2,9 @@
 
 <?php
 
+/* 
+ Template Name: page-meat-masterclass
+ */
 
 $active_page = get_query_var('mmc');
 switch ($active_page) {
