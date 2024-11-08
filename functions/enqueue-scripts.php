@@ -17,7 +17,7 @@ function site_scripts() {
         'page-heritage.php'             => 'heritage.css',
         'page-lamb.php'                 => 'veal.css',
         'page-lowes.php'                => 'lowes.css',
-        'page-meat-masterclass'     => 'masterclass.css',
+        'page-meat-masterclass.php'     => 'masterclass.css',
         'page-offers.php'               => 'offers.css',
         'page-privacy-policy.php'       => 'privacy.css',
         'page-products.php'             => 'products.css',
