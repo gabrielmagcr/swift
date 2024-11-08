@@ -1,6 +1,6 @@
-<head>
+
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/styles/masterclass.css" media="all">
-</head>
+
 <?php
 
 
