@@ -9,6 +9,8 @@ function site_scripts() {
     wp_enqueue_script( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array( 'jquery' ), '', true );
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/dist/scripts/app.js', array( 'jquery' ), '', true );
     
+    // Register main stylesheet
+    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/dist/styles/app.css', array(), filemtime( get_template_directory().'/dist/styles/app.css' ) );
 
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
