@@ -1,6 +1,6 @@
 <?php
 /* 
- Template Name: page-heritage
+ Template Name: page-store-locator
  */
 get_header(); ?>
 <section id="locator-hero">
