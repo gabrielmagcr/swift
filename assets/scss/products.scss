@@ -54,10 +54,18 @@
     }
 }
 
-// .product-item.beef .pi-bottom img {
-//     max-width: 50%;
-// }
+a.product-link {
+    display: table;
+    background: #28334a;
+    padding: 1rem;
+    color: #fff;
+    margin: 0 auto;
+}
 
+.single-allergens {
+    color: #fff;
+    font-size: 1.6rem;
+}
 .filter-dropdown-wrap {
     width: 30%;
     display: flex;
