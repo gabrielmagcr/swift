@@ -3,11 +3,14 @@
 </script>
 <?php get_header(); ?>
 <style>
-   
+
 </style>
-<meta property="og:title" content="<?php the_title(); ?>" />
-<meta property="og:description" content="<?= the_field('description'); ?>" />
-<meta property="og:site_name" content="<?php site_url(); ?>" />
+
+<head>
+    <meta property="og:title" content="<?php the_title(); ?>" />
+    <meta property="og:description" content="<?= the_field('description'); ?>" />
+    <meta property="og:site_name" content="<?php site_url(); ?>" />
+</head>
 <section class="sm-prodhero recipe-hero" itemscope itemtype="http://schema.org/Recipe">
     <div class="container">
         <div class="row">
@@ -28,9 +31,9 @@
                 <figure>
                     <img class="u-photo" src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
                     <div class="image-source">
-                    <?php if ($imageSource = get_field('image_source')): ?>
-                        <?php echo $imageSource; ?>
-                    <?php endif; ?>
+                        <?php if ($imageSource = get_field('image_source')): ?>
+                            <?php echo $imageSource; ?>
+                        <?php endif; ?>
                     </div>
                 </figure>
                 <?php $made_with = get_field('made_with');
@@ -122,8 +125,8 @@
     <div class="tips-i-left-section recipe-ingredients">
         <?php echo get_field('content'); ?>
         <?php if ($recipeSource = get_field('recipe_source')): ?>
-    <div class="recipe-source"><?php echo $recipeSource; ?></div>
-<?php endif; ?>
+            <div class="recipe-source"><?php echo $recipeSource; ?></div>
+        <?php endif; ?>
     </div>
 
     <div class="tips-i-right-section">
