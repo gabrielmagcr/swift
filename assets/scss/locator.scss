@@ -115,6 +115,10 @@ ul.locator-nav {
     margin: 0 auto;
 
 }
+.locations-dd{
+    overflow: auto;
+    height: 100%;
+}
 
 @media (max-width: 1200px) {
     #locator-hero {
@@ -125,8 +129,5 @@ ul.locator-nav {
         justify-content: center;
         align-items: center;
     }
-    .locations-dd{
-        overflow: auto;
-        height: 100%;
-    }
+  
 }
