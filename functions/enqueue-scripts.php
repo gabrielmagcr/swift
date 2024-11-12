@@ -30,7 +30,7 @@ function site_scripts() {
         'page-veal.php'                 => 'veal.css',
         'search.php'                    => 'search.css',
         'single-tips.php'               => 'recipes.css',
-        'single-products.php'           => 'products.css',
+        'single-products.php'           => 'product.css',
     );
 
     // Lógica para encolar estilos según la plantilla o tipo de página

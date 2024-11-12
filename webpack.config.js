@@ -38,6 +38,7 @@ const config = {
         tips: path.resolve(__dirname, './assets/scss/tips.scss'),
         search: path.resolve(__dirname, './assets/scss/search.scss'),
         recipes: path.resolve(__dirname, './assets/scss/recipes.scss'),
+        product: path.resolve(__dirname, './assets/scss/single-products.scss'),
     },
 
     devServer: !devMode ? undefined : {

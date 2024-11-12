@@ -1,0 +1,441 @@
+@import 'variables';
+@import 'dropdowns';
+.sm-prodhero {
+    background-color: #fff;
+    padding: 2rem 0 4rem;
+
+ 
+}
+
+.sm-prodhero--info {
+    h1 {
+        font-size: 3.5rem;
+    }
+    p {
+        font-family: $helv;
+    }
+}
+
+.sm-prodhero--wtb {
+    padding: 1rem 0 0;
+}
+
+.sm-prodhero--cut-img {
+    max-width: 365px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.sm-prodhero--breadcrumb {
+    padding: 0 0 2rem;
+
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        color: #C1C1C1;
+
+        &:after {
+            content: '>';
+            display: inline-block;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+
+        a {
+            color: #C1C1C1;
+            text-decoration: none;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}
+.sm-prodhero--img {
+    figure {
+        margin: 0;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+.sm-badgebar {
+    background: #FFAA2B;
+    padding: 2.5rem 0 2rem;
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .sm-badges {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    .sm-badges--usda,
+    .sm-badges--protein {
+        width: 130px;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+
+
+.sm-prod-nutrition {
+    background: $blue;
+    color: #fff;
+    padding: 0 0 2.5rem;
+
+    .sm-products--view-more {
+        padding: 3rem 0 2rem;
+    }
+
+    .sm-products--view-more button {
+        color: #fff;
+        font-size: 2.5rem;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &.is-open {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+        svg path { fill: #fff; }
+    }
+}
+
+#sm-prod-nutrition-info {
+    height: 0;
+    overflow: hidden;
+    align-items: flex-start;
+}
+
+
+
+
+.sm-nextlevel-item {
+    background: #fff;
+    border-radius: 4px;
+    overflow: clip;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 0.925;
+    }
+
+    figure {
+        height: 12rem;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.sm-nextlevel-heading {
+    font-size: 2.5rem;
+}
+
+.sm-nextlevel-item--body {
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    padding: 0.5rem 1rem 1.5rem;
+    min-height: 135px;
+
+    h3 {
+        margin-bottom: 0 !important;
+    }
+}
+
+
+
+#up-your-game {
+    padding-bottom: unset;
+    padding-top: 2rem;
+    background: $blue;
+
+    .col-12 {
+        border-bottom: 2px solid #516896;
+    }
+
+    .sm-product-cook-tabs {
+        margin-top: 0;
+
+        .gn-item {
+            height: auto;
+            width: auto;
+            display: block;
+            font-size: 1.65rem;
+            background: $blue;
+            border-radius: 0;
+            border: 0;
+            padding: 1rem;
+            color: #516896;
+            margin: 0;
+            opacity: 0.7;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -3px; 
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: $gold;
+                opacity: 0;
+            }
+
+            &.active {
+                opacity: 1;
+                color: #fff;
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+#product-game-target {
+    padding-bottom: 5rem;
+
+    
+}
+
+
+@media (min-width: 767px) {
+    .sm-badgebar {
+        padding: 1rem 0;
+
+     
+
+        h3 {
+            position: relative;
+            font-size: 1.75rem;
+            padding-left: 5rem;
+            padding-bottom: 1rem;
+            margin-top: 2rem;
+    
+            span {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                font-size: 6rem;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    
+      
+}
+
+
+@media (min-width: 1199px) {
+    #up-your-game {
+        .sm-product-cook-tabs {
+            .gn-item {
+                padding: 1.2rem 2rem;
+                line-height: 1;
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+
+    .product-next-level-container {
+        max-width: 1400px;
+    }
+}
+
+.sm-nextlevel-item--body {
+    padding: 0rem 1rem 1.5rem;
+}
+
+.sm-nextlevel-item--body h3 {
+    text-align: start !important;
+}
+
+.blue-btn {
+    color: #fff;
+    background-color: #28334A;
+    border-radius: 6px;
+    padding: 24px 40px;
+    border: none;
+}
+
+.blue-btn:hover {
+    background-color: #C61A1D;
+}
+
+
+
+.hovered-background img {
+    transform: scale(1.10);
+}
+
+.default-background {
+    background-color: #fff;
+}
+
+.sm-nextlevel-item--body span {
+    color: #C61A1D;
+    font-size: 0.95rem;
+
+}
+
+.hovered-background {
+    background-color: #C61A1D;
+}
+
+.hovered-background h3,
+.hovered-background span {
+    color: #fff;
+}
+
+.sm-nextlevel-item figure {
+    height: 15rem;
+}
+
+.pgt-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.pgt-card video {
+    height: 100%;
+}
+
+.first-card {
+    background-color: #C61A1D;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.second-card-img {
+    height: 40dvh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sm-badgebar h3 span {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+
+.textcenter{
+    justify-content: center;
+}
+
+
+
+@media (min-width: 767px) {
+    .sm-badgebar h3 span {
+        top: 35%;
+        font-size: 8rem;
+    }
+
+    .pgt-media {
+        min-width: 95%;
+    }
+
+    .pgt-cards {
+        flex-direction: row-reverse;
+    }
+
+    .pgt-card {
+        width: 50%;
+    }
+
+    .first-card {
+        padding: 40px;
+    }
+
+    .first-card h3 {
+        font-size: 32px
+    }
+
+    .second-card-img {
+        height: 60dvh;
+
+    }
+
+    .sm-nextlevel-item--body h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1023px) {
+    .sm-nextlevel-item--body h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1339px) {
+    .first-card {
+        padding: 116px;
+    }
+
+    .first-card h3 {
+        font-size: 64px
+    }
+
+    .sm-nextlevel-item--body h3 {
+        font-size: 1.7rem;
+    }
+
+}
+
+@media (min-width: 1919px) {
+
+    .pgt-media {
+        min-width: 1850px;
+    }
+}
