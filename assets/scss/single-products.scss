@@ -477,3 +477,28 @@
         }
     }
 }
+
+
+.product-nutrition img {
+    max-width: 90%;
+    max-height: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-other-item {
+    cursor: pointer;
+    margin-bottom: 2rem;
+    .inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+        h3 {
+            color: #fff;
+            z-index: 10;
+        }
+    }
+}
