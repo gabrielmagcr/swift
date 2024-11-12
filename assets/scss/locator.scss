@@ -115,3 +115,18 @@ ul.locator-nav {
     margin: 0 auto;
 
 }
+
+@media (max-width: 1200px) {
+    #locator-hero {
+        background: url(/wp-content/themes/swift/assets/img/mobile-location-hero.png) center center no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .locations-dd{
+        overflow: auto;
+        height: 100%;
+    }
+}
