@@ -41,9 +41,9 @@
     "vue-svg-loader": "^0.11.0",
     "vue-template-compiler": "^2.6.10",
     "vuex": "^3.1.0",
-    "webpack": "^4.32.2",
+    "webpack": "^4.47.0",
     "webpack-build-notifier": "^0.1.31",
-    "webpack-cli": "^3.3.2",
+    "webpack-cli": "^3.3.12",
     "webpack-dashboard": "^3.0.0",
     "webpack-dev-server": "^3.4.1",
     "write-file-webpack-plugin": "^4.5.0"
