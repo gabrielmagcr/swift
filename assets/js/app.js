@@ -750,7 +750,41 @@ jQuery(document).ready(function($) {
     item.addEventListener('mouseleave', removeHoverClass);
   });
 
-
+  const dots = document.querySelectorAll('.pagination-dot');
+  const navItems = document.querySelectorAll('.mmc-page-nav-item');
+  
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      document.querySelector('.mmc-page-nav').scrollTo({
+        left: navItems[index].offsetLeft,
+        behavior: 'smooth'
+      });
+  
+      document.querySelector('.pagination-dot.active').classList.remove('active');
+      dot.classList.add('active');
+    });
+  });
+  
+  
+  
+  document.querySelectorAll('.dates .date a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        const yOffset = -300; 
+        const yPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        
+        window.scrollTo({
+          top: yPosition,
+          behavior: 'smooth' 
+        });
+      }
+    });
+  });
 
 
 });
