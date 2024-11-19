@@ -48,6 +48,18 @@ function site_scripts() {
                 filemtime(get_template_directory() . "/dist/styles/{$style_file}"), 
                 'all'
             );
+
+            // Lógica para encolar JS específico si existe
+            $js_file = get_template_directory() . "/dist/scripts/" . basename($style_file, '.css') . ".js";
+            if (file_exists($js_file)) {
+                wp_enqueue_script(
+                    basename($style_file, '.css') . "-script",
+                    get_template_directory_uri() . "/dist/scripts/" . basename($style_file, '.css') . ".js",
+                    array('jquery'),
+                    filemtime($js_file),
+                    true
+                );
+            }
         }
     }
 }
