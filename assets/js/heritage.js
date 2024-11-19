@@ -12,3 +12,4 @@ dots.forEach((dot, index) => {
     dot.classList.add('active');
   });
 });
+
