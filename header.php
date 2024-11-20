@@ -26,7 +26,6 @@
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
 	<?php } ?>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-	<script async src="https://kit.fontawesome.com/ee01b20d7e.js" crossorigin="anonymous"></script>
 	<script>
   function loadFlickityStyles() {
     if (!document.getElementById("flickity-stylesheet")) {
