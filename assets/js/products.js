@@ -68,4 +68,54 @@ jQuery(document).ready(function($) {
         $grid.isotope({ filter: theFilterValue });
         $('ul#protein-dd')
     }
+
+
+       // store filter for each group
+       var filters = {};
+
+       $('.filter-group').on( 'click', 'li', function() {
+       var $this = $(this);
+       // get group key
+       var $buttonGroup = $this.parents('.filter-group');
+       var filterGroup = $buttonGroup.attr('data-filter-group');
+       // set filter for group
+       filters[ filterGroup ] = $this.attr('data-filter');
+       // combine filters
+       var filterValue = concatValues( filters );
+       $prodgrid.isotope({ filter: filterValue });
+       });
+   
+       // flatten object by concatting values
+       function concatValues( obj ) {
+       var value = '';
+       for ( var prop in obj ) {
+           value += obj[ prop ];
+       }
+       return value;
+       }
+   
+       var rfilters = {};
+   
+       $('.r-filter-group').on( 'click', 'li', function() {
+       var $this = $(this);
+       // get group key
+       var $buttonGroup = $this.parents('.r-filter-group');
+       var filterGroup = $buttonGroup.attr('data-filter-group');
+       // set filter for group
+       rfilters[ filterGroup ] = $this.attr('data-filter');
+       // combine filters
+       var filterValue = concatValues( rfilters );
+       console.log(filterValue)
+       $grid.isotope({ filter: filterValue });
+       });
+   
+       // flatten object by concatting values
+       function concatValues( obj ) {
+       var value = '';
+       for ( var prop in obj ) {
+           value += obj[ prop ];
+       }
+       return value;
+       }
+       
     })
