@@ -1,6 +1,5 @@
 
 
-// Selecciona todas las secciones de años y las fechas en la barra lateral
 const yearSections = document.querySelectorAll('.year-badge .years');
 const dateLinks = document.querySelectorAll('.dates .date');
 
