@@ -11,8 +11,7 @@
 <html class="no-js"  <?php language_attributes(); ?>>
 <head>
 	<meta charset="utf-8">
-	<!-- Osano Cookie Consent -->
-	<script async src=https://cmp.osano.com/169m5QToXBlu63VAe/9c1544c8-47fb-4f1c-9688-c9f7d54a48cb/osano.js></script>
+	
 	<!-- Force IE to use the latest rendering engine available -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- Mobile Meta -->
