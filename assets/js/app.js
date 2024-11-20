@@ -1,4 +1,3 @@
-import '../scss/app.scss';
 import './_tabbed_carousel';
 import './_product_carousel';
 // import 'bootstrap';
@@ -273,31 +272,7 @@ jQuery(document).ready(function($) {
     return value;
     }
     
-    function viewMore() {
-        console.log('view more');
-        $('.product-item.hidden').removeClass('hidden');
-        $('#sm-products-view-more').remove();
-        setTimeout(function() {
-            resetgrid();
-        }, 50);
-    }
-
    
-
-  /* view all products button */
-  $('#sm-products-view-more').on('click', viewMore);
-   
-
-    /* accordion / drawer */
-    $('button[data-toggle]').on('click', function() {
-        var $this = $(this);
-        var $target = $('#' + $this.data('toggle'));
-        if (!$target) return;
-        const open = $target.css('height') !== '0px';
-        $target.css({ height: open ? '0px' : 'auto' });
-        $this.toggleClass('is-open');
-    });
-
     $('#conveyor-wrap').flickity({
         // options
         draggable: true,
@@ -605,42 +580,7 @@ jQuery(document).ready(function($) {
         observer.observe(wrapper)
     });
 
-     // Select all elements with the class sm-nextlevel-item
-  const nextLevelItems = document.querySelectorAll('.sm-nextlevel-item');
-  // Select the h3 element inside #product-next-level
-  const productNextLevelH3 = document.querySelector('#product-next-level h3');
-
-  // Function to add hover classes
-  const addHoverClass = (event) => {
-    event.target.classList.add('hovered-background');
-    const nextLevelBody = event.target.querySelector('.sm-nextlevel-item--body');
-    if (nextLevelBody) {
-      nextLevelBody.classList.add('hovered-background');
-    }
-    if (productNextLevelH3) {
-      productNextLevelH3.classList.add('hovered-text');
-      productNextLevelH3.classList.remove('default-text');
-    }
-  };
-
-  // Function to remove hover classes
-  const removeHoverClass = (event) => {
-    event.target.classList.remove('hovered-background');
-    const nextLevelBody = event.target.querySelector('.sm-nextlevel-item--body');
-    if (nextLevelBody) {
-      nextLevelBody.classList.remove('hovered-background');
-    }
-    if (productNextLevelH3) {
-      productNextLevelH3.classList.remove('hovered-text');
-      productNextLevelH3.classList.add('default-text');
-    }
-  };
-
-  // Add event listeners to each element
-  nextLevelItems.forEach(item => {
-    item.addEventListener('mouseenter', addHoverClass);
-    item.addEventListener('mouseleave', removeHoverClass);
-  });
+ 
 
  
   
