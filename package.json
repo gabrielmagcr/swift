@@ -23,7 +23,7 @@
     "babel-loader": "^8.0.6",
     "babel-minify-webpack-plugin": "^0.3.1",
     "bootstrap": "^4.3.1",
-    "clean-webpack-plugin": "^2.0.1",
+    "clean-webpack-plugin": "^2.0.2",
     "copy-webpack-plugin": "^5.0.4",
     "core-js": "^3.1.4",
     "css-loader": "^2.1.1",
