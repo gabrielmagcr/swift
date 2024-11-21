@@ -1,8 +1,4 @@
-<?php
-    /* 
- Template Name: page-products
- */
-get_header(); ?>
+<?php get_header(); ?>
 <style>
     #products-wrap {
         overflow: hidden;
@@ -126,108 +122,29 @@ get_header(); ?>
 
             ?>
 
-                    <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4">
-                        <div class="pi-top">
-
-                            <div class="pi-top--shim">
-                                <div class="pi-top--shim-bg" style="background-image: url('<?= the_field("product_image"); ?>');"></div>
-                            </div>
-
-                            <div class="title-wrap">
-                                <div class="title">
-                                    <?php the_title(); ?>
+                    <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4">                        <div class="pi-top">
+                            <a class="product-link" href="<?php the_permalink(); ?>">
+                                <div class="pi-top--shim">
+                                    <div class="pi-top--shim-bg" style="background-image: url('<?= the_field("product_image"); ?>');"></div>
                                 </div>
-                                <!-- /.title -->
-                            </div>
-                            <!-- /.title-wrap -->
+                            </a>
+                            <a class="product-link" href="<?php the_permalink(); ?>">
+                                <div class="title-wrap">
+                                    <div class="title">
+                                        <?php the_title(); ?>
+                                    </div>
+                          
+                            <!-- /.title -->
                         </div>
-                        <!-- /.pi-top -->
-                        <div class="pi-bottom">
-                            <?php if (get_field('cut_image')) { ?>
-                                <img src="<?= the_field("cut_image"); ?>" alt="<?php the_title(); ?>" class="pi-cut-img">
-                            <?php } ?>
-                            <?php if (get_field('product_description')) { ?>
-                                <p><?= the_field("product_description"); ?></p>
-                            <?php } ?>
-
-                            <?php
-                            // Count the number of variation images
-                            $variation_images_count = 0;
-                            if (have_rows('variation_images')) {
-                                while (have_rows('variation_images')) {
-                                    the_row();
-                                    $variation_images_count++;
-                                }
-                            }
-
-                            // Reset the loop to reuse have_rows
-                            if (have_rows('variation_images')) {
-                                reset_rows();
-                            }
-
-                            if ($variation_images_count > 1) {
-                            ?>
-                                <div class="variation-carousel">
-                                    <?php while (have_rows('variation_images')) : the_row(); ?>
-                                        <div class="carousel-cell">
-                                            <img src="<?= the_sub_field('image'); ?>" alt="Variation">
-                                        </div>
-                                        <!-- /.carousel-cell -->
-                                    <?php endwhile; ?>
-                                </div>
-                                <!-- /.variation-carousel -->
-                                <?php } elseif ($variation_images_count == 1) {
-                                // Display the single image without the carousel
-                                if (have_rows('variation_images')) {
-                                    the_row();
-                                    $single_image = get_sub_field('image');
-                                ?>  
-                                    <img class="pi-product-img" src="<?= $single_image; ?>" alt="Variation">
-                                <?php }
-                            } else {
-                                // If there are no variation images, display the product image if available
-                                if (get_field('product_image')) { ?>
-                                    <img src="<?= the_field("product_image"); ?>" alt="<?php the_title(); ?>" class="pi-product-img">
-                            <?php }
-                            } ?>
-
-                            <?php if (get_field('also_available_in')) { ?>
-                                <p>Available in:<?= the_field("also_available_in"); ?></p>
-                                <!-- /.ingredients-list -->
-                            <?php } ?>
-                            <?php if (get_field('highlights')) { ?>
-                                <p class="ing-list">
-                                    <?= the_field("highlights"); ?>
-                                </p>
-                                <!-- /.ingredients-list -->
-                            <?php } ?>
-                            <?php if (get_field('ingredients')) { ?>
-                                <p class="ing-list">
-                                    <span>Ingredients:</span> <?= the_field("ingredients"); ?>
-                                </p>
-                                <!-- /.ingredients-list -->
-                            <?php } ?>
-                            <?php if (get_field('allergens')) { ?>
-                                <p class="ing-list">
-                                    <span>Allergens:</span> <?= the_field("allergens"); ?>
-                                </p>
-                                <!-- /.ingredients-list -->
-                            <?php } ?>
-                            <?php if (get_field('nutrition_facts')) { ?>
-                                <img class="pi-ingredients" src="<?= the_field("nutrition_facts"); ?>" alt="Nutrition Facts">
-                            <?php } ?>
-                            <?php if (get_field('image_source')) { ?>
-                                <div class="product-img-cite"><?= the_field('image_source'); ?></div>
-                            <?php } ?>
-                            <!-- /.product-img-cite -->
-                            <?php if (get_field('has_product_page') == 1) { ?>
-                                <a class="product-link" href="<?php the_permalink(); ?>">Read More</a>
-                            <?php } ?>
-                        </div>
-                        <!-- /.pi-bottom -->
+                        </a>
+                        <!-- /.title-wrap -->
                     </div>
-                    <!-- /.col-lg-6 col-sm-12 col-xs-12 col-md-6 -->
-            <?php
+
+                    <!-- /.pi-top -->
+
+        </div>
+        <!-- /.col-lg-6 col-sm-12 col-xs-12 col-md-6 -->
+<?php
                 }
             } else {
                 echo "No products";
@@ -235,26 +152,26 @@ get_header(); ?>
 
             // Restore original Post Data
             wp_reset_postdata();
-            ?>
+?>
 
-        </div>
-        <!-- /.row -->
+    </div>
+    <!-- /.row -->
 
-        <div class="sm-products--view-more">
-            <button id="sm-products-view-more">
-                <span>View More Products</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" fill="none">
-                    <g clip-path="url(#clip0_350_1057)">
-                        <path d="M27.4366 0L14.9936 12.443L2.55051 0L0.77832 1.77219L13.2214 14.2152L14.9936 16L29.2214 1.77219L27.4366 0Z" fill="#28334A" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_350_1057">
-                            <rect width="28.443" height="16" fill="white" transform="translate(0.77832)" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </button>
-        </div>
+    <div class="sm-products--view-more">
+        <button id="sm-products-view-more">
+            <span>View More Products</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" fill="none">
+                <g clip-path="url(#clip0_350_1057)">
+                    <path d="M27.4366 0L14.9936 12.443L2.55051 0L0.77832 1.77219L13.2214 14.2152L14.9936 16L29.2214 1.77219L27.4366 0Z" fill="#28334A" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_350_1057">
+                        <rect width="28.443" height="16" fill="white" transform="translate(0.77832)" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </button>
+    </div>
     </div>
     <!-- /.container -->
 </section>

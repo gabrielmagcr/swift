@@ -85,7 +85,7 @@ the_post(); ?>
         </div>
     </div>
 </section>
-
+<!--
 <section class="sm-badgebar">
     <div class="container">
         <div class="row">
@@ -93,12 +93,12 @@ the_post(); ?>
                 <h3><span>0</span> Artificial Ingredients</h3>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12">
-                <?php get_template_part('parts/badges'); ?>
+                <?php /**get_template_part('parts/badges'); */?> 
             </div>
         </div>
     </div>
 </section>
-
+                    -->
 
 <?php
 /*
