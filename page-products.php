@@ -122,8 +122,8 @@
 
             ?>
 
-                    <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4">
-                    <a class="product-link" href="<?php the_permalink(); ?>">
+                    <a class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4" href="<?php the_permalink(); ?>">
+                   
                     <div class="pi-top">
 
                             <div class="pi-top--shim">
@@ -138,10 +138,10 @@
                             </div>
                             <!-- /.title-wrap -->
                         </div>
-                        </a>    
+                          
                         <!-- /.pi-top -->
                      
-                    </div>
+                </a>
                     <!-- /.col-lg-6 col-sm-12 col-xs-12 col-md-6 -->
             <?php
                 }
