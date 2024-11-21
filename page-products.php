@@ -127,8 +127,8 @@
                                 <div class="pi-top--shim">
                                     <div class="pi-top--shim-bg" style="background-image: url('<?= the_field("product_image"); ?>');"></div>
                                 </div>
-                           
-                            
+                            </a>
+                            <a class="product-link" href="<?php the_permalink(); ?>">
                                 <div class="title-wrap">
                                     <div class="title">
                                         <?php the_title(); ?>
@@ -136,13 +136,12 @@
                           
                             <!-- /.title -->
                         </div>
-                     
-                        <!-- /.title-wrap -->
                         </a>
+                        <!-- /.title-wrap -->
                     </div>
 
                     <!-- /.pi-top -->
-               
+
         </div>
         <!-- /.col-lg-6 col-sm-12 col-xs-12 col-md-6 -->
 <?php
