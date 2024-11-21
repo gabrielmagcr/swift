@@ -123,7 +123,8 @@
             ?>
 
                     <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4">
-                        <div class="pi-top">
+                    <a class="product-link" href="<?php the_permalink(); ?>">
+                    <div class="pi-top">
 
                             <div class="pi-top--shim">
                                 <div class="pi-top--shim-bg" style="background-image: url('<?= the_field("product_image"); ?>');"></div>
@@ -137,8 +138,10 @@
                             </div>
                             <!-- /.title-wrap -->
                         </div>
+                        </a>    
                         <!-- /.pi-top -->
-                        <div class="pi-bottom">
+                         <!--
+                        <div class="pi-bottom"> -->
                             <?php if (get_field('cut_image')) { ?>
                                 <img src="<?= the_field("cut_image"); ?>" alt="<?php the_title(); ?>" class="pi-cut-img">
                             <?php } ?>
@@ -219,8 +222,8 @@
                             <?php if (get_field('has_product_page') == 1) { ?>
                                 <a class="product-link" href="<?php the_permalink(); ?>">Read More</a>
                             <?php } ?>
-                        </div>
-                        <!-- /.pi-bottom -->
+                       <!--</div>-->
+                      <!--  /.pi-bottom -->
                     </div>
                     <!-- /.col-lg-6 col-sm-12 col-xs-12 col-md-6 -->
             <?php
