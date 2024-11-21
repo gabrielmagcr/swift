@@ -122,28 +122,29 @@
 
             ?>
 
-                    <a class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4" href="<?php the_permalink(); ?>">
-                   
-                    <div class="pi-top">
-
-                            <div class="pi-top--shim">
-                                <div class="pi-top--shim-bg" style="background-image: url('<?= the_field("product_image"); ?>');"></div>
-                            </div>
-
-                            <div class="title-wrap">
-                                <div class="title">
-                                    <?php the_title(); ?>
+                    <div class="product-item all <?= the_field('type'); ?> <?= $methods; ?> <?= $hidden; ?> col-lg-4 col-sm-6 col-xs-12 col-md-4">                        <div class="pi-top">
+                            <a class="product-link" href="<?php the_permalink(); ?>">
+                                <div class="pi-top--shim">
+                                    <div class="pi-top--shim-bg" style="background-image: url('<?= the_field("product_image"); ?>');"></div>
                                 </div>
-                                <!-- /.title -->
-                            </div>
-                            <!-- /.title-wrap -->
-                        </div>
+                            </a>
+                            <a class="product-link" href="<?php the_permalink(); ?>">
+                                <div class="title-wrap">
+                                    <div class="title">
+                                        <?php the_title(); ?>
+                                    </div>
                           
-                        <!-- /.pi-top -->
-                     
-                </a>
-                    <!-- /.col-lg-6 col-sm-12 col-xs-12 col-md-6 -->
-            <?php
+                            <!-- /.title -->
+                        </div>
+                        </a>
+                        <!-- /.title-wrap -->
+                    </div>
+
+                    <!-- /.pi-top -->
+
+        </div>
+        <!-- /.col-lg-6 col-sm-12 col-xs-12 col-md-6 -->
+<?php
                 }
             } else {
                 echo "No products";
@@ -151,26 +152,26 @@
 
             // Restore original Post Data
             wp_reset_postdata();
-            ?>
+?>
 
-        </div>
-        <!-- /.row -->
+    </div>
+    <!-- /.row -->
 
-        <div class="sm-products--view-more">
-            <button id="sm-products-view-more">
-                <span>View More Products</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" fill="none">
-                    <g clip-path="url(#clip0_350_1057)">
-                        <path d="M27.4366 0L14.9936 12.443L2.55051 0L0.77832 1.77219L13.2214 14.2152L14.9936 16L29.2214 1.77219L27.4366 0Z" fill="#28334A" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_350_1057">
-                            <rect width="28.443" height="16" fill="white" transform="translate(0.77832)" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </button>
-        </div>
+    <div class="sm-products--view-more">
+        <button id="sm-products-view-more">
+            <span>View More Products</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" fill="none">
+                <g clip-path="url(#clip0_350_1057)">
+                    <path d="M27.4366 0L14.9936 12.443L2.55051 0L0.77832 1.77219L13.2214 14.2152L14.9936 16L29.2214 1.77219L27.4366 0Z" fill="#28334A" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_350_1057">
+                        <rect width="28.443" height="16" fill="white" transform="translate(0.77832)" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </button>
+    </div>
     </div>
     <!-- /.container -->
 </section>
