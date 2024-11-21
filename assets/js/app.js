@@ -199,7 +199,25 @@ jQuery(document).ready(function($) {
             layoutMode: 'masonry'
             });
     }
-
+/*
+    $('.pi-top').click(function(e) {
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active')
+            $(this).next().removeClass('open')
+            setTimeout(resetgrid, 400);
+            
+        } else {
+            $('.active').removeClass('active')
+            $('.open').removeClass('open')
+            $(this).addClass('active')
+            $(this).next().addClass('open')
+            resetgridm();
+            // setTimeout(resetgridm, 200);
+            
+        }
+        e.preventDefault();
+    })
+*/
     $('.locations-dd li').click(function() {
         let $img = $(this).data('image')
         $('#locator-map img').attr('src', $img);
