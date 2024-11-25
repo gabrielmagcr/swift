@@ -1,3 +1,4 @@
+import '../scss/app.scss';
 import './_tabbed_carousel';
 import './_product_carousel';
 // import 'bootstrap';
@@ -120,6 +121,73 @@ jQuery(document).ready(function($) {
     //       $(target).addClass('cuts-shown');
     //   });
 
+    const resetProductTabs = (wrapper) => {
+        const tabsWrapper = wrapper.querySelector('.mmc-product-tabs');
+        if(!tabsWrapper) return;
+        
+        tabsWrapper.querySelectorAll('.mmc-product-tab,.mmc-product-link').forEach(tab => {
+            if(tab.getAttribute('data-product-index') == '1') tab.classList.add('active');
+            else tab.classList.remove('active');
+        })
+    }
+
+    const setupProductTabs = (wrapper) => {
+        const tabsWrapper = wrapper.querySelector('.mmc-product-tabs');
+        if(!tabsWrapper) return;
+
+        tabsWrapper.querySelectorAll('.mmc-product-link').forEach(link => {
+
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const meat = link.getAttribute('data-meat');
+                const cut = link.getAttribute('data-cut-number');
+                const index = link.getAttribute('data-product-index');
+                const tab = tabsWrapper.querySelector(`.mmc-product-tab[data-meat="${meat}"][data-cut-number="${cut}"][data-product-index="${index}"]`);
+                
+                
+                tabsWrapper.querySelectorAll('.mmc-product-link').forEach(l => {
+                    if(l == link) {
+                        l.classList.add('active');
+                    } else {
+                        l.classList.remove('active');
+                    }
+                })
+
+                tabsWrapper.querySelectorAll('.mmc-product-tab').forEach(t => {
+                    if(t == tab) {
+                        t.classList.add('active');
+                    } else {
+                        t.classList.remove('active');
+                    }
+                })
+
+                resetProductTabs();
+            })
+
+        })
+    }
+
+    document.querySelectorAll('.path-item[data-target],.cow-path-item[data-target]').forEach(button => {
+        const target = button.getAttribute('data-target');
+        const targetEl = document.querySelector(target);
+        
+        if(!targetEl) return;
+
+        const toggle = (event) => {
+            event.preventDefault();
+            document.querySelectorAll('.path-item.filled,.cow-path-item.filled').forEach(cut => cut.classList.remove('filled'));
+            document.querySelectorAll('.cut-item.cuts-shown').forEach(cut => cut.classList.remove('cuts-shown'));
+            button.classList.add('filled');
+            targetEl.classList.add('cuts-shown');
+
+            resetProductTabs(targetEl);
+        }
+
+        setupProductTabs(targetEl);
+        resetProductTabs(targetEl);
+
+        button.addEventListener('click', toggle)
+    })
 
     document.querySelectorAll('.mmc-gn-item').forEach(button => {
         const target = button.getAttribute('data-target');
@@ -200,31 +268,127 @@ jQuery(document).ready(function($) {
             });
     }
 
-    $('.pi-top').click(function(e) {
-        if($(this).hasClass('active')) {
-            $(this).removeClass('active')
-            $(this).next().removeClass('open')
-            setTimeout(resetgrid, 400);
-            
-        } else {
-            $('.active').removeClass('active')
-            $('.open').removeClass('open')
-            $(this).addClass('active')
-            $(this).next().addClass('open')
-            resetgridm();
-            // setTimeout(resetgridm, 200);
-            
-        }
-      
-    })
+  
+      $('.wil-dropdown').click(function () {
+        $(this).attr('tabindex', 1).focus();
+        $(this).toggleClass('active');
+        $(this).find('.wil-dropdown-menu').slideToggle(300);
+    });
+    $('.wil-dropdown').focusout(function () {
+        $(this).removeClass('active');
+        $(this).find('.wil-dropdown-menu').slideUp(300);
+    });
+    $('.wil-dropdown .wil-dropdown-menu li').click(function () {
+        $(this).parents('.wil-dropdown').find('span').text($(this).text());
+        $(this).parents('.wil-dropdown').find('').text($(this).text());
+        viewMore();
+        // $(this).parents('.wil-dropdown').find('input').attr('value', $(this).attr('id'));
+    });
+    /*End Dropdown Menu*/
 
     $('.locations-dd li').click(function() {
         let $img = $(this).data('image')
         $('#locator-map img').attr('src', $img);
     });
 
- 
+    // store filter for each group
+    var filters = {};
+
+    $('.filter-group').on( 'click', 'li', function() {
+    var $this = $(this);
+    // get group key
+    var $buttonGroup = $this.parents('.filter-group');
+    var filterGroup = $buttonGroup.attr('data-filter-group');
+    // set filter for group
+    filters[ filterGroup ] = $this.attr('data-filter');
+    // combine filters
+    var filterValue = concatValues( filters );
+    $prodgrid.isotope({ filter: filterValue });
+    });
+
+    // flatten object by concatting values
+    function concatValues( obj ) {
+    var value = '';
+    for ( var prop in obj ) {
+        value += obj[ prop ];
+    }
+    return value;
+    }
+
+    var rfilters = {};
+
+    $('.r-filter-group').on( 'click', 'li', function() {
+    var $this = $(this);
+    // get group key
+    var $buttonGroup = $this.parents('.r-filter-group');
+    var filterGroup = $buttonGroup.attr('data-filter-group');
+    // set filter for group
+    rfilters[ filterGroup ] = $this.attr('data-filter');
+    // combine filters
+    var filterValue = concatValues( rfilters );
+    console.log(filterValue)
+    $grid.isotope({ filter: filterValue });
+    });
+
+    // flatten object by concatting values
+    function concatValues( obj ) {
+    var value = '';
+    for ( var prop in obj ) {
+        value += obj[ prop ];
+    }
+    return value;
+    }
+    
+    function viewMore() {
+        console.log('view more');
+        $('.product-item.hidden').removeClass('hidden');
+        $('#sm-products-view-more').remove();
+        setTimeout(function() {
+            resetgrid();
+        }, 50);
+    }
+
+    let urlParams = new URLSearchParams(window.location.search)
+    if(urlParams.has('filter')) {
+        if(urlParams.get('filter') == 'pork') {
+            let param = ".Pork"
+            filter_from_param(param)
+            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Pork");
+        } else if (urlParams.get('filter')=='beef'){
+            let param = ".Beef"
+            filter_from_param(param)
+            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Beef");
+        }   else if (urlParams.get('filter')=='bacon') {
+            let param = ".Bacon"
+            filter_from_param(param)
+            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Bacon");
+        } else if (urlParams.get('filter')=='lamb') {
+            let param = ".Lamb"
+            filter_from_param(param)
+            $('.wil-dropdown #protein-dd li').parents('.wil-dropdown').find('span').text("Lamb");
+        }
+        
+    }
+    function filter_from_param(param) {
+        let theFilterValue = param
+        $grid.isotope({ filter: theFilterValue });
+        $('ul#protein-dd')
+    }
+
+  /* view all products button */
+  $('#sm-products-view-more').on('click', viewMore);
    
+
+    /* accordion / drawer */
+    $('button[data-toggle]').on('click', function() {
+        var $this = $(this);
+        var $target = $('#' + $this.data('toggle'));
+        if (!$target) return;
+        const open = $target.css('height') !== '0px';
+        $target.css({ height: open ? '0px' : 'auto' });
+        $this.toggleClass('is-open');
+    });
+
     $('#conveyor-wrap').flickity({
         // options
         draggable: true,
@@ -532,9 +696,58 @@ jQuery(document).ready(function($) {
         observer.observe(wrapper)
     });
 
- 
+     // Select all elements with the class sm-nextlevel-item
+  const nextLevelItems = document.querySelectorAll('.sm-nextlevel-item');
+  // Select the h3 element inside #product-next-level
+  const productNextLevelH3 = document.querySelector('#product-next-level h3');
 
- 
-  
-  
+  // Function to add hover classes
+  const addHoverClass = (event) => {
+    event.target.classList.add('hovered-background');
+    const nextLevelBody = event.target.querySelector('.sm-nextlevel-item--body');
+    if (nextLevelBody) {
+      nextLevelBody.classList.add('hovered-background');
+    }
+    if (productNextLevelH3) {
+      productNextLevelH3.classList.add('hovered-text');
+      productNextLevelH3.classList.remove('default-text');
+    }
+  };
+
+  // Function to remove hover classes
+  const removeHoverClass = (event) => {
+    event.target.classList.remove('hovered-background');
+    const nextLevelBody = event.target.querySelector('.sm-nextlevel-item--body');
+    if (nextLevelBody) {
+      nextLevelBody.classList.remove('hovered-background');
+    }
+    if (productNextLevelH3) {
+      productNextLevelH3.classList.remove('hovered-text');
+      productNextLevelH3.classList.add('default-text');
+    }
+  };
+
+  // Add event listeners to each element
+  nextLevelItems.forEach(item => {
+    item.addEventListener('mouseenter', addHoverClass);
+    item.addEventListener('mouseleave', removeHoverClass);
   });
+
+  const dots = document.querySelectorAll('.pagination-dot');
+const navItems = document.querySelectorAll('.mmc-page-nav-item');
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    document.querySelector('.mmc-page-nav').scrollTo({
+      left: navItems[index].offsetLeft,
+      behavior: 'smooth'
+    });
+
+    document.querySelector('.pagination-dot.active').classList.remove('active');
+    dot.classList.add('active');
+  });
+});
+
+
+
+});
