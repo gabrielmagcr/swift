@@ -209,7 +209,7 @@ if (have_rows('product_page_next_level')) : ?>
                 <?php endwhile; ?>
             </div>
         </div>
-        <a href="/tips-recipes"><button class="blue-btn">VIEW MORE RECIPES</button></a>
+        <a href="/tips-recipes" class="view-more-recipes-btn"><button class="blue-btn">VIEW MORE RECIPES</button></a>
 
         <!-- /.container -->
     </section>
