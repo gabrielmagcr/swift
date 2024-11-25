@@ -250,6 +250,9 @@
         display: flex;
         justify-content: center;
     }
+    .view-more-recipes-btn:hover{
+        text-decoration: none;
+    }
 }
 @media (min-width: 767px) {
     .sm-badgebar {
