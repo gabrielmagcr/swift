@@ -172,43 +172,32 @@ if (have_rows('product_page_next_level')) : ?>
                 <!-- /.col-xl-12 col-lg-12 col-md-12 col-12 col-xs-12 -->
             </div>
             <!-- /.row -->
-            <div class="row">
-                <?php while (have_rows('product_page_next_level')) : the_row(); ?>
-                    <?php
-                    $item_id = get_sub_field('recipe_video');
-                    $dificulty_lvl = get_field('dificulty_level', $item_id);
-                    $item = get_post($item_id);
-                    $type = $item->type;
-                    $thaimage = wp_get_attachment_image_src($item->image, 'full');
+            <div class="row recipes-next-level">
+    <?php while (have_rows('product_page_next_level')) : the_row(); ?>
+        <?php
+        $item_id = get_sub_field('recipe_video');
+        $item = get_post($item_id);
+        $type = $item->type;
+        $thaimage = wp_get_attachment_image_src($item->image, 'full');
 
-                    if ($thaimage != "") {
-                        $image = $thaimage[0];
-                    } else {
-                        $image = get_template_directory_uri() . "/assets/img/tips/recipe-ex.jpg";
-                    }
-
-                    ?>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-12 col-xs-12 product-other-item" data-toggle="modal" data-target="#tip-<?= $item_id; ?>">
-                        <a href="<?php echo get_permalink($item_id); ?>" title="<?= $item->post_title; ?>" class="nl-links">
-                            <div class="sm-nextlevel-item">
-                                <figure>
-                                    <img src="<?= $image; ?>" alt="<?= $item->post_title; ?>">
-                                </figure>
-                                <div class="sm-nextlevel-item--body">
-                                    <?php if ($dificulty_lvl) : ?>
-                                        <span>DIFICULTY LEVEL - <?= $dificulty_lvl; ?>/10</span>
-                                    <?php endif; ?>
-                                    <h3><?= $item->post_title; ?> </h3>
-                                </div>
-                            </div>
-                        </a>
+        $image = $thaimage != "" ? $thaimage[0] : get_template_directory_uri() . "/assets/img/tips/recipe-ex.jpg";
+        $item_link = get_permalink($item_id);
+        ?>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-12 col-xs-12 product-other-item " data-toggle="modal" data-target="#tip-<?= $item_id; ?>">
+            <div class="sm-nextlevel-item">
+                <a href="<?= esc_url($item_link); ?>">
+                    <figure>
+                        <img src="<?= esc_url($image); ?>" alt="<?= esc_attr($item->post_title); ?>">
+                    </figure>
+                    <div class="sm-nextlevel-item--body">
+                        <h3><?= esc_html($item->post_title); ?></h3>
                     </div>
-                    <!-- /.col-xl-4 col-lg-4 col-md-4 col-12 -->
-
-
-                <?php endwhile; ?>
+                </a>
             </div>
         </div>
+    <?php endwhile; ?>
+</div>
+
         <a href="/tips-recipes" class="view-more-recipes-btn"><button class="blue-btn">VIEW MORE RECIPES</button></a>
 
         <!-- /.container -->
