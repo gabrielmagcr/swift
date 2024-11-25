@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+/* 
+ Template Name: page-products
+ */
+get_header(); ?>
+
 <style>
     #products-wrap {
         overflow: hidden;
