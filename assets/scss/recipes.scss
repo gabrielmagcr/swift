@@ -729,6 +729,45 @@
     }
 }
 
+.sm-nextlevel-item {
+    background: #fff;
+    border-radius: 4px;
+    overflow: clip;
+    transition: opacity 0.2s ease;
+    a:hover{
+        text-decoration: none;
+    }
+    &:hover {
+        opacity: 0.925;
+    }
+
+    figure {
+        height: 12rem;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.sm-nextlevel-heading {
+    font-size: 2.5rem;
+}
+
+.sm-nextlevel-item--body {
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    padding: 0.5rem 1rem 1.5rem;
+    min-height: 135px;
+
+    h3 {
+        margin-bottom: 0 !important;
+    }
+}
+
+
 .sm-products--view-more {
     text-align: center;
     padding: 1rem 0;
