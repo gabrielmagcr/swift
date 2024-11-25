@@ -1,4 +1,3 @@
-import '../scss/app.scss';
 import './_tabbed_carousel';
 import './_product_carousel';
 // import 'bootstrap';
