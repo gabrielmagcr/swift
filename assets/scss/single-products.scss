@@ -148,7 +148,9 @@
     border-radius: 4px;
     overflow: clip;
     transition: opacity 0.2s ease;
-
+    a:hover{
+        text-decoration: none;
+    }
     &:hover {
         opacity: 0.925;
     }
@@ -243,7 +245,12 @@
     
 }
 
-
+.product-next-level-container{
+    .view-more-recipes-btn{
+        display: flex;
+        justify-content: center;
+    }
+}
 @media (min-width: 767px) {
     .sm-badgebar {
         padding: 1rem 0;
