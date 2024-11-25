@@ -818,3 +818,50 @@
         text-decoration: none;
     }
 }
+
+
+.hovered-background img {
+    transform: scale(1.10);
+}
+
+.default-background {
+    background-color: #fff;
+}
+
+.sm-nextlevel-item--body span {
+    color: #C61A1D;
+    font-size: 0.95rem;
+
+}
+
+.hovered-background {
+    background-color: #C61A1D;
+}
+
+.hovered-background h3,
+.hovered-background span {
+    color: #fff;
+}
+
+.sm-nextlevel-item figure {
+    height: 15rem;
+}
+.sm-nextlevel-item--body {
+    padding: 0rem 1rem 1.5rem;
+}
+
+.sm-nextlevel-item--body h3 {
+    text-align: start !important;
+}
+
+.blue-btn {
+    color: #fff;
+    background-color: #28334A;
+    border-radius: 6px;
+    padding: 24px 40px;
+    border: none;
+}
+
+.blue-btn:hover {
+    background-color: #C61A1D;
+}
