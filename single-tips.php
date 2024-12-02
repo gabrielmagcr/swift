@@ -22,14 +22,14 @@
                     </ol>
                 </div>
                 <h1 itemprop="name" class="p-name recipe-title"><?php the_title(); ?></h1>
-                <p class="p-summary"><?= the_field('description'); ?></p>
+                <p class="p-summary" itemprop="description"><?= the_field('description'); ?></p>
                 <form class="sm-prodhero--wtb" action="/products" method="GET">
                     <button class="btn btn-outline-red" type="submit">Find your Protein</button>
                 </form>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--img recipe-img">
                 <figure>
-                    <img class="u-photo" src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
+                    <img class="u-photo" itemprop="contentUrl" src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
                     <div class="image-source">
                         <?php if ($imageSource = get_field('image_source')): ?>
                             <?php echo $imageSource; ?>

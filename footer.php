@@ -34,6 +34,17 @@
 </style>
 <!-- Osano Cookie Consent -->
 	<script async src=https://cmp.osano.com/169m5QToXBlu63VAe/9c1544c8-47fb-4f1c-9688-c9f7d54a48cb/osano.js></script>
+	<!-- Pixel code -->
+	<script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            ttd_dom_ready( function() {
+                if (typeof TTDUniversalPixelApi === 'function') {
+                    var universalPixelApi = new TTDUniversalPixelApi();
+                    universalPixelApi.init("9xyg7sk", ["c8wf0o2"], "https://insight.adsrvr.org/track/up");
+                }
+            });
+        </script>
+
 <section id="footer">
 	<img class="ft-logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Swift Meats">
 	<div id="ft-nav">
