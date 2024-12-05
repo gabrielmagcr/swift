@@ -1,16 +1,10 @@
+<!DOCTYPE html>
 <script>
     var activeTip = <?php print get_the_ID(); ?>;
 </script>
 <?php get_header(); ?>
-<style>
 
-</style>
 
-<head>
-    <meta property="og:title" content="<?php the_title(); ?>" />
-    <meta property="og:description" content="<?= the_field('description'); ?>" />
-    <meta property="og:site_name" content="<?php site_url(); ?>" />
-</head>
 <section class="sm-prodhero recipe-hero" itemscope itemtype="http://schema.org/Recipe">
     <div class="container">
         <div class="row">
@@ -29,7 +23,7 @@
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-xs-12 sm-prodhero--img recipe-img">
                 <figure>
-                    <img class="u-photo" itemprop="contentUrl" src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
+                    <img class="u-photo" itemprop="image" src="<?= the_field("image"); ?>" alt="<?php the_title(); ?> in packaging">
                     <div class="image-source">
                         <?php if ($imageSource = get_field('image_source')): ?>
                             <?php echo $imageSource; ?>
@@ -81,10 +75,10 @@
             <h3> INGREDIENTS</h3>
         </div>
         <div class="badgebar tips-time">
-            <img src='/wp-content/uploads/2024/07/Vector.svg'><span><?php echo $preparation_time; ?></span>
+            <img alt="swiftMeats Time" src='/wp-content/uploads/2024/07/Vector.svg'><span><?php echo $preparation_time; ?></span>
         </div>
         <div class="badgebar tips-servings">
-            <img src='/wp-content/uploads/2024/07/Group.svg'><span itemprop="recipeYield"><?php echo $servings; ?></span>
+            <img alt="swiftMeats Serving" src='/wp-content/uploads/2024/07/Group.svg'><span itemprop="recipeYield"><?php echo $servings; ?></span>
             <h3>SERVINGS</h3>
         </div>
         <div class="badgebar tips-cooking-style">

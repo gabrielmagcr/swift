@@ -94,7 +94,7 @@ function render_cut_products($meat, $cut_id)
 
                 <div class="mmc-product-tab" data-meat="<?php print $meat; ?>" data-cut-number="<?php print $cut_id; ?>" data-product-index="<?php print $i; ?>">
                     <div class="mmc-product-tab-inner">
-                        <img src="<?php print get_sub_field('product_image'); ?>" />
+                        <img src="<?php print get_sub_field('product_image'); ?>"  alt="product Image SwiftMeats"/>
                     </div>
                     <?php if ($link = get_sub_field('linked_product')): ?><div class="text-center mt-4"><a href="<?php print $link; ?>" class="btn btn-gold">View Product</a></div><?php endif; ?>
                 </div>
@@ -157,7 +157,7 @@ get_header();
         <div class="container">
             <div class="row mb-4">
                 <div class="col-12">
-                    <h2 class="text-white">Know your Cuts</h2>
+                    <h1 class="text-white">Know your Cuts</h1>
                 </div>
                 <!-- /.col-12 -->
             </div>
@@ -437,16 +437,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-1-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Sear" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-2-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Sear" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-3-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Sear" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-4-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Sear" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sear-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -483,16 +483,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-1-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Roasts" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-2-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Roasts" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-3-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Roasts" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-4-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Roasts" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-roast-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -527,16 +527,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-1-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Grill" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-2-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Grill" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-3-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Grill" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-4-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Grill" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-grill-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -568,16 +568,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-1-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Smoke" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-2-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Smoke" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-3-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Smoke" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-4-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Smoke" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-smoke-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -612,16 +612,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-1-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Braise" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-2-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Braise" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-3-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Braise" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-4-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Braise" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-braise-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -656,16 +656,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-1-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Sous Vide" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-2-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Sous Vide" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-3-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Sous Vide" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-4-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Sous Vide" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-sv-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -700,16 +700,16 @@ get_header();
                         <div class="container padded">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-1-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Quick Preparation" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-1-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-2-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Quick Preparation" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-2-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-3-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Quick Preparation" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-3-v2.png" style="width: 100%;" />
                                 </div>
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-4-v2.png" style="width: 100%;" />
+                                    <img alt="SwiftMeats Quick Preparation" src="<?= get_template_directory_uri(); ?>/assets/img/mmc/mmc-quick-p-4-v2.png" style="width: 100%;" />
                                 </div>
                             </div>
                         </div>
