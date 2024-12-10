@@ -92,10 +92,9 @@ function render_cut_products($meat, $cut_id)
                 <?php
                 // Get the image ID from the custom field.
                 $product_image_id = get_sub_field('product_image');
-                var_dump($product_image_id);
                 // Retrieve the image URL and alt text.
                 $image_url = wp_get_attachment_url($product_image_id);
-                $image_alt = get_post_meta($product_image_id, '_wp_attachment_image_alt', true) ?: 'Default Product Image Description';
+                $image_alt = get_post_meta($product_image_id, '_wp_attachment_image_alt', true) ?: 'Meat Masterclass SwiftMeats';
                 ?>
 
                 <div class="mmc-product-tab" data-meat="<?php print esc_attr($meat); ?>" data-cut-number="<?php print esc_attr($cut_id); ?>" data-product-index="<?php print esc_attr($i); ?>">
