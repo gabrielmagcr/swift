@@ -98,7 +98,7 @@ function render_cut_products($meat, $cut_id)
                 ?>
                 <div class="mmc-product-tab" data-meat="<?php print $meat; ?>" data-cut-number="<?php print $cut_id; ?>" data-product-index="<?php print $i; ?>">
                     <div class="mmc-product-tab-inner">
-                        <img src="<?php print print esc_url($product_image); ?>"  alt="<?php print esc_attr($image_alt); ?>" />
+                        <img src="<?php print esc_url($product_image); ?>"  alt="<?php print esc_attr($image_alt); ?>" />
                     </div>
                     <?php if ($link = get_sub_field('linked_product')): ?><div class="text-center mt-4"><a href="<?php print $link; ?>" class="btn btn-gold">View Product</a></div><?php endif; ?>
                 </div>
