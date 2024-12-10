@@ -11,6 +11,7 @@ get_header();?>
         <source src="https://2b55b1bc4dda0a8f7d27-4bc354aaf4dd039e32ab4999a2f8c0b0.ssl.cf1.rackcdn.com/Sustainability/SWIF2101_Swift_FamilyFuture_30s_YouTube_4_13_21%20(1).webm" type="video/webm">
         Your browser does not support the video tag.
     </video>
+    <h1 class="hideh1">A Future for Every Family</h1>
 </section>
 <!-- /#sustain-hero -->
 <section id="sustain-environment">
@@ -235,5 +236,11 @@ get_header();?>
     </div>
     <!-- /.container -->
 </section>
+<style>
+    .hideh1{
+        width: 0px;
+        height: 0px;
+    }
+</style>
 <!-- /#additional-progress -->
 <?php get_footer();?>

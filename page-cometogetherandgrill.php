@@ -26,7 +26,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>GOOD FOOD, GOOD TIMES, ONE GREAT PRIZE</h2>
+                <h1 style='color:#fff;text-align: center;'>GOOD FOOD, GOOD TIMES, ONE GREAT PRIZE</h1>
                 <p>Celebrate grilling season with three chances to win an awesome bundle of premium Swift meats and a brand new Oakford Pellet Grill by Nexgrill. Entering is easy. If you love hosting BBQ celebrations or just hanging by the grill, hop on Instagram to show off how you #ComeTogetherAndGrill—and tell us what grilling means to you. Our celebrity judges will pick the winning entries for Memorial Day, Father's Day and 4th of July.</p>
             </div>
         </div>
