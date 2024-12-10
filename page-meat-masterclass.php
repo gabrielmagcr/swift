@@ -92,12 +92,13 @@ function render_cut_products($meat, $cut_id)
             while (have_rows('meat_cuts')): the_row(); ?>
                 <?php if (!mmc_check_product($meat, $term)) continue; ?>
                 <?php 
+                  $product_image = get_sub_field('product_image'); 
                   $image_alt = is_numeric($product_image) ? get_post_meta($product_image, '_wp_attachment_image_alt', true) : 'Default Product Image Description';
 
                 ?>
                 <div class="mmc-product-tab" data-meat="<?php print $meat; ?>" data-cut-number="<?php print $cut_id; ?>" data-product-index="<?php print $i; ?>">
                     <div class="mmc-product-tab-inner">
-                        <img src="<?php print get_sub_field('product_image'); ?>"  alt="<?php print esc_attr($image_alt); ?>" />
+                        <img src="<?php print print esc_url($product_image); ?>"  alt="<?php print esc_attr($image_alt); ?>" />
                     </div>
                     <?php if ($link = get_sub_field('linked_product')): ?><div class="text-center mt-4"><a href="<?php print $link; ?>" class="btn btn-gold">View Product</a></div><?php endif; ?>
                 </div>
