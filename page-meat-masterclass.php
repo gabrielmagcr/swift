@@ -1,5 +1,3 @@
-
-
 <?php
 
 /* 
@@ -91,16 +89,24 @@ function render_cut_products($meat, $cut_id)
             <?php $i = 1;
             while (have_rows('meat_cuts')): the_row(); ?>
                 <?php if (!mmc_check_product($meat, $term)) continue; ?>
-                <?php 
-                  $product_image = get_sub_field('product_image'); 
-                  $image_alt = is_numeric($product_image) ? get_post_meta($product_image, '_wp_attachment_image_alt', true) : 'Default Product Image Description';
+                <?php
+                // Get the image ID from the custom field.
+                $product_image_id = get_sub_field('product_image');
 
+                // Retrieve the image URL and alt text.
+                $image_url = wp_get_attachment_url($product_image_id);
+                $image_alt = get_post_meta($product_image_id, '_wp_attachment_image_alt', true) ?: 'Default Product Image Description';
                 ?>
-                <div class="mmc-product-tab" data-meat="<?php print $meat; ?>" data-cut-number="<?php print $cut_id; ?>" data-product-index="<?php print $i; ?>">
+
+                <div class="mmc-product-tab" data-meat="<?php print esc_attr($meat); ?>" data-cut-number="<?php print esc_attr($cut_id); ?>" data-product-index="<?php print esc_attr($i); ?>">
                     <div class="mmc-product-tab-inner">
-                        <img src="<?php print esc_url($product_image); ?>"  alt="<?php print esc_attr($image_alt); ?>" />
+                        <img src="<?php print esc_url($image_url); ?>" alt="<?php print esc_attr($image_alt); ?>" />
                     </div>
-                    <?php if ($link = get_sub_field('linked_product')): ?><div class="text-center mt-4"><a href="<?php print $link; ?>" class="btn btn-gold">View Product</a></div><?php endif; ?>
+                    <?php if ($link = get_sub_field('linked_product')): ?>
+                        <div class="text-center mt-4">
+                            <a href="<?php print esc_url($link); ?>" class="btn btn-gold">View Product</a>
+                        </div>
+                    <?php endif; ?>
                 </div>
             <?php $i++;
             endwhile; ?>
@@ -117,7 +123,7 @@ get_header();
 
 <!-- /#masterclass-hero -->
 <?php get_template_part('components/blocks'); ?>
-<section id="know-your-cuts" >
+<section id="know-your-cuts">
     <div class="mmc-page-nav container container-meat">
         <div class="mmc-page-nav-item <?php print is_mmc_active('') ? 'active' : ''; ?>">
             <a class="stretched-link mmc-stretched-link " href="<?php print get_the_permalink(); ?>"></a>
@@ -301,29 +307,29 @@ get_header();
 
     <?php elseif ($active_page == 'methods'): ?>
         <script>
-               window.addEventListener('load', function() {
-    
-        const slider = document.querySelector('.flickity-slider');
-        
-        if (slider) {
-            slider.style.transform = 'translateX(-54.11%)';
-            console.log('translate')
+            window.addEventListener('load', function() {
 
-        }
+                const slider = document.querySelector('.flickity-slider');
 
-        const carouselCells = document.querySelectorAll('.carousel-cell');
-        const dots = document.querySelectorAll('.dot');
+                if (slider) {
+                    slider.style.transform = 'translateX(-54.11%)';
+                    console.log('translate')
 
-        
-        if (carouselCells.length >= 2) {
-            carouselCells[0].classList.remove('is-selected');
-            dots[0].classList.remove('is-selected');
-            
-            carouselCells[1].classList.add('is-selected');
-            dots[1].classList.add('is-selected');
-        }
-    
-});
+                }
+
+                const carouselCells = document.querySelectorAll('.carousel-cell');
+                const dots = document.querySelectorAll('.dot');
+
+
+                if (carouselCells.length >= 2) {
+                    carouselCells[0].classList.remove('is-selected');
+                    dots[0].classList.remove('is-selected');
+
+                    carouselCells[1].classList.add('is-selected');
+                    dots[1].classList.add('is-selected');
+                }
+
+            });
         </script>
         <section class="">
             <div class="container container-meat cooking-methods">
@@ -371,8 +377,9 @@ get_header();
                     <div class="hm-sear mmc-game-nav-content gn-open">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of"><div class="mmc-page-art-of-title">THE ART OF<br><span>SEARING</span></div>
-                                <p>While it doesn't take long to make a good sear, the results will go a long way and speak for themselves. Searing builds a textured crust that surrounds the inner, tender delicacy within. It locks in flavor with a caramelized crust and brings a professional edge to whatever you're making. If a recipe ever says searing is an optional step &ndash; trust us &ndash; sear the meat. The difference a good sear can make is palatable.</p>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">
+                                    <div class="mmc-page-art-of-title">THE ART OF<br><span>SEARING</span></div>
+                                    <p>While it doesn't take long to make a good sear, the results will go a long way and speak for themselves. Searing builds a textured crust that surrounds the inner, tender delicacy within. It locks in flavor with a caramelized crust and brings a professional edge to whatever you're making. If a recipe ever says searing is an optional step &ndash; trust us &ndash; sear the meat. The difference a good sear can make is palatable.</p>
                                 </div>
                             </div>
                         </div>
@@ -381,8 +388,9 @@ get_header();
                     <div class="hm-roast mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of"><div class="mmc-page-art-of-title">THE ART OF<br><span>ROAST</span></div>
-                                <p>While it may not seem like one would come from the other, if you're looking to create tender, juicy flavors from the inside-out, look no further than dry heat. Well, a dry-heat cooking style known as roasting. This style of cooking really allows the protein to take center stage and uses simple ingredients to pack a flavorful punch. The best part? No matter what protein you use, you'll create a showstopping meal that will bring everyone together.</p>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">
+                                    <div class="mmc-page-art-of-title">THE ART OF<br><span>ROAST</span></div>
+                                    <p>While it may not seem like one would come from the other, if you're looking to create tender, juicy flavors from the inside-out, look no further than dry heat. Well, a dry-heat cooking style known as roasting. This style of cooking really allows the protein to take center stage and uses simple ingredients to pack a flavorful punch. The best part? No matter what protein you use, you'll create a showstopping meal that will bring everyone together.</p>
                                 </div>
                             </div>
                         </div>
@@ -391,8 +399,9 @@ get_header();
                     <div class="hm-grill mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of"><div class="mmc-page-art-of-title"> THE ART OF<br><span>GRILL</span></div>
-                                <p>Let's face it, grilling isn't a cooking technique, it's a national pastime. In fact, it's a whole culture. And knowing your grill, having the right tools, and using quality meat can turn a simple grill out into a whole get together. A clean grill at the start of every session can yield results every backyard griller dreams of. So crack one open and fire 'em up. </p>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">
+                                    <div class="mmc-page-art-of-title"> THE ART OF<br><span>GRILL</span></div>
+                                    <p>Let's face it, grilling isn't a cooking technique, it's a national pastime. In fact, it's a whole culture. And knowing your grill, having the right tools, and using quality meat can turn a simple grill out into a whole get together. A clean grill at the start of every session can yield results every backyard griller dreams of. So crack one open and fire 'em up. </p>
                                 </div>
                             </div>
                         </div>
@@ -401,8 +410,9 @@ get_header();
                     <div class="hm-smoke mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of"><div class="mmc-page-art-of-title"> THE ART OF<br><span>SMOKING</span></div>
-                                <p>The art of smoking is one that requires time and patience. But what you're rewarded with is a full-bodied, smoky-flavored scrumptious piece of heaven that'll have everyone gathering around. But before you run to throw your protein on the rack, be sure to flavorize it with plenty of marinades, sauces or rubs. Leave it on its back to cook through, but keep an eye on the temperature and ventilation while you sit back and crack open a cold one. </p>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">
+                                    <div class="mmc-page-art-of-title"> THE ART OF<br><span>SMOKING</span></div>
+                                    <p>The art of smoking is one that requires time and patience. But what you're rewarded with is a full-bodied, smoky-flavored scrumptious piece of heaven that'll have everyone gathering around. But before you run to throw your protein on the rack, be sure to flavorize it with plenty of marinades, sauces or rubs. Leave it on its back to cook through, but keep an eye on the temperature and ventilation while you sit back and crack open a cold one. </p>
                                 </div>
                             </div>
                         </div>
@@ -411,8 +421,9 @@ get_header();
                     <div class="hm-braise mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of"><div class="mmc-page-art-of-title"> THE ART OF<br><span>BRAISE</span></div>
-                                <p>Braising meat is the art of fall-off-the-bone indulgence. This style of cooking is for those who like their flavor bold from letting the seasonings soak into the meat over time. Because this longer cooking method produces meat that is more tender and delectable as time goes on, it also makes it harder to overcook. Meaning it is especially helpful when cooking tougher cuts of meat like short ribs, brisket, pork shoulder (pulled pork), chuck roast (pot roast). </p>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">
+                                    <div class="mmc-page-art-of-title"> THE ART OF<br><span>BRAISE</span></div>
+                                    <p>Braising meat is the art of fall-off-the-bone indulgence. This style of cooking is for those who like their flavor bold from letting the seasonings soak into the meat over time. Because this longer cooking method produces meat that is more tender and delectable as time goes on, it also makes it harder to overcook. Meaning it is especially helpful when cooking tougher cuts of meat like short ribs, brisket, pork shoulder (pulled pork), chuck roast (pot roast). </p>
                                 </div>
                             </div>
                         </div>
@@ -421,8 +432,9 @@ get_header();
                     <div class="hm-sv mmc-game-nav-content">
                         <div class="row">
                             <div class="col-12 col-md-10 mx-auto">
-                                <div class="mmc-page-nav-item--text mmc-page-art-of"> <div class="mmc-page-art-of-title"> THE ART OF<br><span>SOUS VIDE</span></div>
-                                <p>If precision is your name, then sous vide is your game. Pronounced like "Sue-Veed," this slow cooking method dials into exact temperatures, down to the half degree. Using a vacuum-sealed bag, you can and should cook multiple pieces of meat all at once and surround them with aromatics and seasonings. This allows for maximum flavor to penetrate your proteins as they cook. </p>
+                                <div class="mmc-page-nav-item--text mmc-page-art-of">
+                                    <div class="mmc-page-art-of-title"> THE ART OF<br><span>SOUS VIDE</span></div>
+                                    <p>If precision is your name, then sous vide is your game. Pronounced like "Sue-Veed," this slow cooking method dials into exact temperatures, down to the half degree. Using a vacuum-sealed bag, you can and should cook multiple pieces of meat all at once and surround them with aromatics and seasonings. This allows for maximum flavor to penetrate your proteins as they cook. </p>
                                 </div>
                             </div>
                         </div>
@@ -432,7 +444,7 @@ get_header();
                             <div class="col-12 col-md-10 mx-auto">
                                 <div class="mmc-page-nav-item--text mmc-page-art-of">
                                     <div class="mmc-page-art-of-title">THE ART OF<br><span>QUICK PREP</span></div>
-                                <p>Ready to eat and ideal for those who prefer to spend their time and energy exploring new flavors and food combinations, Quick Prep requires little, if any, cooking effort. And with Swift constantly bringing new products to the table, you’ll always have fresh, innovative options that help you think—and snack—outside the box. </p>
+                                    <p>Ready to eat and ideal for those who prefer to spend their time and energy exploring new flavors and food combinations, Quick Prep requires little, if any, cooking effort. And with Swift constantly bringing new products to the table, you’ll always have fresh, innovative options that help you think—and snack—outside the box. </p>
                                 </div>
                             </div>
                         </div>
@@ -771,9 +783,6 @@ get_header();
 
     <script>
         var activeTip = <?php print isset($_GET['tip']) ? $_GET['tip'] : 'null'; ?>;
-
-     
-
     </script>
     <!-- /.row -->
     <!-- /.container -->
