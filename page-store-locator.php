@@ -12,14 +12,15 @@ get_header(); ?>
     </div>
     <!-- /.container -->
 </section>
-<!-- /#locator-hero -->
+<!-- /#locator-hero 
 <section id="location-nav">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h2>Find Swift Meats close to home at select retailers:</h2>
-                <div class="filter-dropdown-wrap">
-                    <!-- /.dropdown-label -->
+                <div class="filter-dropdown-wrap"> -->
+                    <!-- /.dropdown-label --> 
+                    <!--
                     <div class="wil-dropdown">
                         <div class="wil-select">
                             <span>Filter By Retailer</span>
@@ -46,19 +47,24 @@ get_header(); ?>
                             <li id="kroger" data-image="<?= get_template_directory_uri();?>/assets/img/locations/kroger.jpg">Kroger</li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
                 <!-- /.filter-dropdown-wrap -->
+                 <!--
                 <div class="clearfix"></div>
                 <div id="locator-map">
                     <img src="<?= get_template_directory_uri();?>/assets/img/locations/default-map.jpg" alt="All Locations">
-                </div>
-                <!-- /#locator-map -->
+                </div> 
+                /#locator-map -->
+                <!--
             </div>
-            <!-- /.col-12 -->
+             /.col-12 -->
+             <!--
         </div>
-        <!-- /.row -->
+         /.row -->
+         <!--
     </div>
-    <!-- /.container -->
-</section>
+     /.container 
+</section> 
+-->
 <!-- /#location-nav -->
 <?php get_footer();?>
