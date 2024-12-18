@@ -12,6 +12,8 @@ get_header(); ?>
     </div>
     <!-- /.container -->
 </section>
+<?php get_template_part('components/blocks'); ?>
+
 <!-- /#locator-hero 
 <section id="location-nav">
     <div class="container">
