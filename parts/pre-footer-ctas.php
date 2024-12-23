@@ -21,3 +21,10 @@
         </form>
     </div>
 </section>
+
+<style>
+    .block.learn-from-the-meat-master:after{
+        height: auto;
+        background: none;
+    }
+</style>
