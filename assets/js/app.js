@@ -14,6 +14,7 @@ jQuery(document).ready(function($) {
         // options
         itemSelector: '.grid-item',
         filter: function() {
+            console.log('#1')
             return qsRegex ? $(this).text().match( qsRegex ) : true;
         }
         // layoutMode: 'fitRows'
@@ -21,6 +22,8 @@ jQuery(document).ready(function($) {
 
       $grid.imagesLoaded().progress( function() {
         $grid.isotope('layout');
+        console.log('#2')
+
       });
 
       let $prodgrid = $('.iso').isotope({
@@ -28,12 +31,15 @@ jQuery(document).ready(function($) {
         itemSelector: '.product-item',
         // layoutMode: 'masonry'
         layoutMode: 'fitRows'
+        
       });
 
       // use value of search field to filter
         var $quicksearch = $('.quicksearch').keyup( debounce( function() {
             qsRegex = new RegExp( $quicksearch.val(), 'gi' );
             $grid.isotope();
+            console.log('#3')
+
         }, 200 ) );
         
         // debounce so filtering doesn't happen every millisecond
@@ -48,14 +54,19 @@ jQuery(document).ready(function($) {
                 fn.apply( _this, args );
             }
             timeout = setTimeout( delayed, threshold );
+            console.log('#4');
             };
+           
+
         }
 
     $('.gn-item').click(function(e) {
         if($(this).hasClass('left-target')) {
             $("#game-target").addClass('target-left')
+            console.log('#5');
         } else {
             $("#game-target").removeClass('target-left')
+            console.log('#6');
         }
         $('.gn-open').css('display', 'none').removeClass('gn-open');
         $('.active').removeClass('active');
@@ -63,11 +74,13 @@ jQuery(document).ready(function($) {
         $(this).addClass('active');
         $(item).css('display', 'flex').addClass('gn-open');
         e.preventDefault();
+        console.log('#7');
         if (document.documentElement.clientWidth < 800) {
             var target = $('#game-target')
             $('html, body').animate({
                 scrollTop: target.offset().top
               }, 1000);
+              console.log('#8');
         }
     });
 
@@ -75,9 +88,11 @@ jQuery(document).ready(function($) {
         if($(this).hasClass('tl-left')) {
             var target = $("#tl-target-left");
             var target2 = $("#tl-target-right");
+            console.log('#9');
         } else {
             var target = $("#tl-target-right");
             var target2 = $("#tl-target-left");
+            console.log('#10');
         }
 
         var image = $(this).data('image');
@@ -95,6 +110,7 @@ jQuery(document).ready(function($) {
           } else {
               $('.open').removeClass('open')
               $(this).addClass('open');
+              console.log('#11');
           };
         }
       );
@@ -127,6 +143,7 @@ jQuery(document).ready(function($) {
         tabsWrapper.querySelectorAll('.mmc-product-tab,.mmc-product-link').forEach(tab => {
             if(tab.getAttribute('data-product-index') == '1') tab.classList.add('active');
             else tab.classList.remove('active');
+            console.log('#12');
         })
     }
 
@@ -138,6 +155,7 @@ jQuery(document).ready(function($) {
 
             link.addEventListener('click', e => {
                 e.preventDefault();
+                console.log('#13');
                 const meat = link.getAttribute('data-meat');
                 const cut = link.getAttribute('data-cut-number');
                 const index = link.getAttribute('data-product-index');
@@ -147,16 +165,20 @@ jQuery(document).ready(function($) {
                 tabsWrapper.querySelectorAll('.mmc-product-link').forEach(l => {
                     if(l == link) {
                         l.classList.add('active');
+                        console.log('#14');
                     } else {
                         l.classList.remove('active');
+                        console.log('#15');
                     }
                 })
 
                 tabsWrapper.querySelectorAll('.mmc-product-tab').forEach(t => {
                     if(t == tab) {
                         t.classList.add('active');
+                        console.log('#16');
                     } else {
                         t.classList.remove('active');
+                        console.log('#17');
                     }
                 })
 
@@ -169,7 +191,7 @@ jQuery(document).ready(function($) {
     document.querySelectorAll('.path-item[data-target],.cow-path-item[data-target]').forEach(button => {
         const target = button.getAttribute('data-target');
         const targetEl = document.querySelector(target);
-        
+        console.log('#18');
         if(!targetEl) return;
 
         const toggle = (event) => {
@@ -178,7 +200,7 @@ jQuery(document).ready(function($) {
             document.querySelectorAll('.cut-item.cuts-shown').forEach(cut => cut.classList.remove('cuts-shown'));
             button.classList.add('filled');
             targetEl.classList.add('cuts-shown');
-
+            console.log('#19');
             resetProductTabs(targetEl);
         }
 
@@ -186,12 +208,13 @@ jQuery(document).ready(function($) {
         resetProductTabs(targetEl);
 
         button.addEventListener('click', toggle)
+        console.log('#20');
     })
 
     document.querySelectorAll('.mmc-gn-item').forEach(button => {
         const target = button.getAttribute('data-target');
         const targetEls = document.querySelectorAll(target);
-        console.log(button, target, targetEls);
+        console.log('#21');
         if(!targetEls.length) return;
 
         const toggle = (event) => {
@@ -200,15 +223,17 @@ jQuery(document).ready(function($) {
             document.querySelectorAll('.gn-open').forEach(content => content.classList.remove('gn-open'));
             button.classList.add('active');
             targetEls.forEach(el => el.classList.add('gn-open'));
+            console.log('#22');
         }
 
         button.addEventListener('click', toggle)
+        console.log('#23');
     })
 
     document.querySelectorAll('.mmc-recipe-tabs > a').forEach(button => {
         const target = button.getAttribute('data-target');
         const targetEls = document.querySelectorAll(target);
-        console.log(button, target, targetEls);
+        console.log('#24');
         if(!targetEls.length) return;
 
         const toggle = (event) => {
@@ -218,6 +243,7 @@ jQuery(document).ready(function($) {
             document.querySelectorAll('.mmc-recipe-tabs-content.active').forEach(content => content.classList.remove('active'));
             button.classList.add('active');
             targetEls.forEach(el => el.classList.add('active'));
+            console.log('#25');
         }
 
         button.addEventListener('click', toggle)
@@ -257,6 +283,7 @@ jQuery(document).ready(function($) {
             itemSelector: '.product-item',
             layoutMode: 'fitRows'
             });
+            console.log('#26');
     }
 
     let resetgridm = function() {
@@ -265,6 +292,7 @@ jQuery(document).ready(function($) {
             itemSelector: '.product-item',
             layoutMode: 'masonry'
             });
+            console.log('#27');
     }
 
   
@@ -272,15 +300,18 @@ jQuery(document).ready(function($) {
         $(this).attr('tabindex', 1).focus();
         $(this).toggleClass('active');
         $(this).find('.wil-dropdown-menu').slideToggle(300);
+        console.log('#28');
     });
     $('.wil-dropdown').focusout(function () {
         $(this).removeClass('active');
         $(this).find('.wil-dropdown-menu').slideUp(300);
+        console.log('#29');
     });
     $('.wil-dropdown .wil-dropdown-menu li').click(function () {
         $(this).parents('.wil-dropdown').find('span').text($(this).text());
         $(this).parents('.wil-dropdown').find('').text($(this).text());
         viewMore();
+        console.log('#30');
         // $(this).parents('.wil-dropdown').find('input').attr('value', $(this).attr('id'));
     });
     /*End Dropdown Menu*/
@@ -339,7 +370,7 @@ jQuery(document).ready(function($) {
     }
     
     function viewMore() {
-        console.log('view more');
+        console.log('#31');
         $('.product-item.hidden').removeClass('hidden');
         $('#sm-products-view-more').remove();
         setTimeout(function() {
