@@ -57,3 +57,34 @@
         }
     }
 }
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.social-links img {
+transition: filter 0.3s ease;
+}
+
+.social-links img:hover {
+filter: brightness(1.2);
+}
+
+
+@keyframes flavorTrain2 {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -4381px 0; 
+    }
+}
+
+@media (min-width: 1201px) {
+    #ft-nav ul {
+        width: 65%;
+		}
+	}

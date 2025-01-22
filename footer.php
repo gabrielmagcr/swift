@@ -1,36 +1,11 @@
 <style>
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 10px;
-		margin-bottom: 15px;
-	}
 
-	.social-links img {
-  transition: filter 0.3s ease;
-}
-
-.social-links img:hover {
-  filter: brightness(1.2);
-}
-@keyframes flavorTrain2 {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: -4381px 0; 
-    }
-}
 .flavor-train {
 	background-image: url('<?php echo get_field('flavor_train_image'); ?>');
 	height: <?php echo get_field('flavor_train_heigth'); ?>px !important;
 	animation: flavorTrain2 35s linear infinite !important;
 }
-@media (min-width: 1201px) {
-    #ft-nav ul {
-        width: 65%;
-		}
-	}
+
 </style>
 <!-- Osano Cookie Consent -->
 	<script async src=https://cmp.osano.com/169m5QToXBlu63VAe/9c1544c8-47fb-4f1c-9688-c9f7d54a48cb/osano.js></script>
@@ -89,13 +64,7 @@
 </section>
 <!-- /#footer -->
 <?php wp_footer(); ?>
-<script>
-	jQuery(document).ready(function() {
-		jQuery('.flip-card-inner').flip({
-			axis: 'x'
-		});
-	});
-</script>
+
 <?php if (is_page('tips-recipes')) { ?>
 	<script>
 		jQuery(window).load(function() {
