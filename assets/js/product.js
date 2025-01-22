@@ -9,10 +9,13 @@
       const nextLevelBody = event.target.querySelector('.sm-nextlevel-item--body');
       if (nextLevelBody) {
         nextLevelBody.classList.add('hovered-background');
+        console.log('#hovered-background');
       }
       if (productNextLevelH3) {
         productNextLevelH3.classList.add('hovered-text');
         productNextLevelH3.classList.remove('default-text');
+        console.log('#hovered-text');
+
       }
     };
   
