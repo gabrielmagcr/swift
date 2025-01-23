@@ -1,6 +1,6 @@
 import './_tabbed_carousel';
 import './_product_carousel';
-import '../scss/app.scss';
+
 // import 'bootstrap';
 
 // jQuery(window).load(function($) {

@@ -168,7 +168,7 @@ const config = {
                 test: /app\.js$/,
                 terserOptions: {
                     compress: {
-                        drop_console: false, // Eliminar `console` en producción
+                        drop_console: true, // Eliminar `console` en producción
                     },
                 },
             }),
