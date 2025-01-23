@@ -168,7 +168,7 @@ const config = {
                 test: /app\.js$/,
                 terserOptions: {
                     compress: {
-                        drop_console: true, // Eliminar `console` en producción
+                        drop_console: false, // Eliminar `console` en producción
                     },
                 },
             }),
@@ -183,7 +183,7 @@ if (process.env.NODE_ENV === 'production') {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"production"'
         }),
-        // new CleanWebpackPlugin(), // Si lo deseas, limpia la carpeta de salida
+        //new CleanWebpackPlugin(), // Si lo deseas, limpia la carpeta de salida
     );
 }
 
